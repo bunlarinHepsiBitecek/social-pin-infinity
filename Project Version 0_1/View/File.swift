@@ -8,4 +8,6 @@
 
 import Foundation
 
+let erkut = "erkut"
+
 
