@@ -30,6 +30,8 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         continueButton.disableButton()
         manageForegroundActions()
         
+        navigationItem.setNavigationItemTitle()
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -24,7 +24,12 @@ class TempoaryAddImageViewController: UIViewController {
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(getProfilePhoto)))
         imageView.isUserInteractionEnabled = true
         
-        imageView.setRoundedDesignToProfilePictureImageViews()
+        self.imageView.setRoundedDesignToProfilePictureImageViews()
+        //self.imageView.setImageViewLike3dEffect()
+        userObject.displayAttributeValues()
+        
+        navigationItem.setNavigationItemTitle()
+        
         
     }
     
@@ -32,11 +37,9 @@ class TempoaryAddImageViewController: UIViewController {
         
         print("ttttt")
         
-        self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2
-        self.imageView.layer.masksToBounds = false
-        self.imageView.clipsToBounds = true
-        //self.imageView.layer.borderWidth = 1
- 
+        self.imageView.setRoundedDesignToProfilePictureImageViews()
+        //self.imageView.setImageViewLike3dEffect()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,10 +58,10 @@ class TempoaryAddImageViewController: UIViewController {
     
     @IBAction func gotoVerificationPage(_ sender: UIButton) {
         
-        let verificationViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "VerificationViewControllerID") as! VerificationViewController
+        let verificationViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "VerificationViewController_storyBoardID") as! VerificationViewController
         
         createUserAndLoadDataToStorage()
-        
+
         if sendVerificationMail() {
             
             verificationViewControllerObject.verificationInfoLabel.text = USER_EMAIL_VERIFICATION_NOTIF_SUCCESS

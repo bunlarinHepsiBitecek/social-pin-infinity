@@ -8,5 +8,5 @@
 
 import Foundation
 
-let CONSTANT_STRING_PROFILE_IMAGES = "ProfileImages"
-let CONSTANT_STRING_PROFILE_PICTURE_UNIQUE_ID = "profilePictureUniqueID"
+let CONSTANT_STRING_PROFILE_IMAGES : String = "ProfileImages"
+let CONSTANT_STRING_PROFILE_PICTURE_UNIQUE_ID : String = "profilePictureUniqueID"

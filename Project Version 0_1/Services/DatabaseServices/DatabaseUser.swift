@@ -43,7 +43,8 @@ class DatabaseUser {
     }
     
     func createFirbaseDatabaseUser(userID: String, userData: Dictionary<String, String>) {
-        
+        print("createFirbaseDatabaseUser starts")
+        print("userID : \(userID)")
         getDatabaseReferenceUser.child(userID).updateChildValues(userData)
         
     }

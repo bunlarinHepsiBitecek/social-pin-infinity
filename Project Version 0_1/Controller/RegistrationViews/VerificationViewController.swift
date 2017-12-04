@@ -14,9 +14,11 @@ class VerificationViewController: UIViewController {
 
     @IBOutlet var emailVerificationTextField: UITextField!
     
-    var emailStringValue : String = SPACE_CHARACTER
     var callerViewControllerID : String = SPACE_CHARACTER
+    
     var userObjectInVerificationView = User()
+    var verificationMessage = Information()
+    
     @IBOutlet var verificationInfoLabel: UILabel!
     
     override func viewDidLoad() {
@@ -26,12 +28,16 @@ class VerificationViewController: UIViewController {
         
         self.navigationController?.enableNavigationBar()
         self.manageForegroundActions()
+        navigationItem.setNavigationItemTitle()
         
         print("VerificationViewController starts")
         print("viewDidLoad : callerViewControllerID : \(callerViewControllerID)")
         
-        emailVerificationTextField.text = emailStringValue
+        emailVerificationTextField.text = userObjectInVerificationView.email
         
+        userObjectInVerificationView.displayAttributeValues()
+        
+        verificationInfoLabel.text = verificationMessage.verificationNotifMessage
         
     }
 

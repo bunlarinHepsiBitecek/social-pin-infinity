@@ -10,3 +10,4 @@ import Foundation
 
 let USER_EMAIL_VERIFICATION_NOTIF_SUCCESS : String = "Hesap activasyon linki mail adresine gönderilmiştir"
 let USER_EMAIL_VERIFICATION_NOTIF_FAILED : String = "Lütfen e-mail activasyon mailini yeniden gönderiniz"
+let USER_EMAIL_VERIFICATION_REQUIRED : String = "Hesabınız aktiflestirilmemiştir, Lütfen verification mailini yeniden gönderiniz!"

@@ -31,5 +31,11 @@ extension UITextField {
             
         }
     }
+    
+    func clearTextFiedl() {
+        
+        text = SPACE_CHARACTER
+        
+    }
         
 }

@@ -9,3 +9,4 @@
 import Foundation
 
 let BUNDLE_IDENTIFIER = "com.erkutbas.Project-Version-0-1"
+let PROJECT_PINBOOK : String = "PinBook"

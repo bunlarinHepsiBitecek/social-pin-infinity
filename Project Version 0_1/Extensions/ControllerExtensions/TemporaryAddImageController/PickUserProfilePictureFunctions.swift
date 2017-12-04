@@ -62,6 +62,8 @@ extension TempoaryAddImageViewController : UIImagePickerControllerDelegate, UINa
     //
     func decideHowProfilePictureLoads() {
         
+        print("decideHowProfilPictureLoads starts")
+        
         let profilePictureAlertController = UIAlertController(title: "Choose Profile Picture", message: nil, preferredStyle: .actionSheet)
         
         let cameraAlertAction = UIAlertAction(title: "Take a photo", style: .default) { (alertAction) in
@@ -87,6 +89,8 @@ extension TempoaryAddImageViewController : UIImagePickerControllerDelegate, UINa
     }
     
     func setSelectedImageToUser() {
+        
+        print("setSelectedImageToUser starts")
         
         self.userObject.setUserProfilePicture(inputUserProfileImage: self.imageView.image!)
         

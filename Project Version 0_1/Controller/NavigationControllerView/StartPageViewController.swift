@@ -18,6 +18,8 @@ class StartPageViewController: UINavigationController {
         print("Entrance view starts")
         print("KeyChainData : \(KeychainWrapper.standard.string(forKey: USER_ID))")
         
+        navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Noteworthy", size: 20)!]
+        
     }
     
     override func didReceiveMemoryWarning() {

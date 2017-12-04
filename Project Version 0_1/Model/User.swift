@@ -20,6 +20,7 @@ class User {
     private var _userProfilePicture : UIImage
     private var _userProfilePictureUrl : String
     private var _userProfilePictureUniqueID : String
+    private var _userPassword : String
     
     private var _userDictionary : Dictionary<String, String> = [:]
     
@@ -33,6 +34,7 @@ class User {
         self._birthday = SPACE_CHARACTER
         self._userProfilePictureUrl = SPACE_CHARACTER
         self._userProfilePictureUniqueID = SPACE_CHARACTER
+        self._userPassword = SPACE_CHARACTER
         
         self._userProfilePicture = UIImage()
         
@@ -49,6 +51,7 @@ class User {
         self._userProfilePicture = inputUserProfilePicture
         self._userProfilePictureUrl = inputUserProfilePictureUrl
         self._userProfilePictureUniqueID = inputUserProfilePictureUniqueID
+        self._userPassword = SPACE_CHARACTER
         
     }
     
@@ -90,6 +93,10 @@ class User {
     
     var userProfilePictureUniqueID : String {
         return _userProfilePictureUniqueID
+    }
+    
+    var userPassword : String {
+        return _userPassword
     }
     
     func setUserID(inputUserID : String) {
@@ -143,6 +150,27 @@ class User {
     func appendAttributeToDictionary(inputKey : String, inputValue : String) {
         
         self._userDictionary[inputKey] = inputValue
+        
+    }
+    
+    func setUserPassword(inputUserPassword : String) {
+        
+        self._userPassword = inputUserPassword
+        
+    }
+    
+    func setEmailAndPassword(inputUserEmail : String, inputUserPassword : String) {
+        
+        self._email = inputUserEmail
+        self._userPassword = inputUserPassword
+        
+    }
+    
+    func displayAttributeValues() {
+        
+        print("email : \(self._email)")
+        print("userID : \(self._userID)")
+        print("url : \(self._userProfilePictureUrl)")
         
     }
     

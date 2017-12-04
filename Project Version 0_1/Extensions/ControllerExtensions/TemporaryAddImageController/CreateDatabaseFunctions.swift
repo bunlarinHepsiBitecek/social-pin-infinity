@@ -15,7 +15,12 @@ extension TempoaryAddImageViewController {
     
     func createUserAndLoadDataToStorage() {
         
+        print("createUserAndLoadDataToStorage starts")
+        print("---> :\(CONSTANT_STRING_PROFILE_IMAGES)")
+        
         let imageName = NSUUID().uuidString
+        
+        print("imageName : \(imageName)")
         
         let storageReference = Storage.storage().reference().child(CONSTANT_STRING_PROFILE_IMAGES).child("\(imageName).png")
         
