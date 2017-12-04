@@ -72,6 +72,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // set user email and password to send verification page
         setUserData()
         
+        print("erkut")
         loginUserWithCredentials()
         
     }
