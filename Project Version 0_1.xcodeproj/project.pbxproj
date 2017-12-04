@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0476E4F9FFF99A10D02F1BB7 /* Pods_Project_Version_0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2EAC58EB2B78FDCBF4F5D0 /* Pods_Project_Version_0_1.framework */; };
 		A72705C11FC885B8006C2504 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705C01FC885B8006C2504 /* MainPageViewController.swift */; };
 		A72705C31FC8973F006C2504 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705C21FC8973F006C2504 /* NavigationBarController.swift */; };
 		A72705C51FC8A2A6006C2504 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705C41FC8A2A6006C2504 /* User.swift */; };
@@ -41,19 +40,42 @@
 		A778D9F11FC9D57300F38438 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A778D9E91FC9D57100F38438 /* image1.jpg */; };
 		A778D9F21FC9D57300F38438 /* female_default.png in Resources */ = {isa = PBXBuildFile; fileRef = A778D9EA1FC9D57200F38438 /* female_default.png */; };
 		A778D9F31FC9D57300F38438 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A778D9EB1FC9D57200F38438 /* image3.jpg */; };
-		A778D9F41FC9D57300F38438 /* male_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = A778D9EC1FC9D57300F38438 /* male_selected.png */; };
-		A778D9F51FC9D57300F38438 /* female_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = A778D9ED1FC9D57300F38438 /* female_selected.png */; };
 		A778D9F61FC9D57300F38438 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A778D9EE1FC9D57300F38438 /* image4.jpg */; };
-		A778D9F71FC9D57300F38438 /* male_default.png in Resources */ = {isa = PBXBuildFile; fileRef = A778D9EF1FC9D57300F38438 /* male_default.png */; };
 		A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9F81FC9D5DF00F38438 /* PageItemController.swift */; };
 		A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9F91FC9D5DF00F38438 /* PageViewController.swift */; };
 		A7AFE0371FC3376500656A02 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFE0361FC3376500656A02 /* File.swift */; };
+		AD251C121FD4AA060065B81F /* EntranceViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD251C111FD4AA060065B81F /* EntranceViewControllerExtention.swift */; };
+		AD267B931FCF489400FE0D5D /* female_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = AD267B921FCF489400FE0D5D /* female_selected.png */; };
+		AD267B951FCF4B5D00FE0D5D /* male_default.png in Resources */ = {isa = PBXBuildFile; fileRef = AD267B941FCF4B5C00FE0D5D /* male_default.png */; };
+		AD267B971FCF4B8400FE0D5D /* male_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = AD267B961FCF4B8300FE0D5D /* male_selected.png */; };
 		AD5E95951FCB3192000429D8 /* DatabaseAccessConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E95941FCB3192000429D8 /* DatabaseAccessConstant.swift */; };
+		AD5E95A21FCB458E000429D8 /* HideShowPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E95971FCB458E000429D8 /* HideShowPasswordTextField.swift */; };
+		AD5E95A31FCB458E000429D8 /* ic_eye_closed.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E95981FCB458E000429D8 /* ic_eye_closed.png */; };
+		AD5E95A41FCB458E000429D8 /* ic_eye_closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E95991FCB458E000429D8 /* ic_eye_closed@2x.png */; };
+		AD5E95A51FCB458E000429D8 /* ic_eye_closed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E959A1FCB458E000429D8 /* ic_eye_closed@3x.png */; };
+		AD5E95A61FCB458E000429D8 /* ic_eye_open.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E959B1FCB458E000429D8 /* ic_eye_open.png */; };
+		AD5E95A71FCB458E000429D8 /* ic_eye_open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E959C1FCB458E000429D8 /* ic_eye_open@2x.png */; };
+		AD5E95A81FCB458E000429D8 /* ic_eye_open@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E959D1FCB458E000429D8 /* ic_eye_open@3x.png */; };
+		AD5E95A91FCB458E000429D8 /* ic_password_checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E959E1FCB458E000429D8 /* ic_password_checkmark.png */; };
+		AD5E95AA1FCB458E000429D8 /* ic_password_checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E959F1FCB458E000429D8 /* ic_password_checkmark@2x.png */; };
+		AD5E95AB1FCB458E000429D8 /* ic_password_checkmark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E95A01FCB458E000429D8 /* ic_password_checkmark@3x.png */; };
+		AD5E95AC1FCB458E000429D8 /* PasswordToggleVisibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E95A11FCB458E000429D8 /* PasswordToggleVisibilityView.swift */; };
+		AD5E95AE1FCB5AA1000429D8 /* RegisterViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E95AD1FCB5AA1000429D8 /* RegisterViewControllerExtentions.swift */; };
+		AD6D85FC1FCF56F100628B26 /* Genders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6D85FB1FCF56F100628B26 /* Genders.swift */; };
+		ADD21F7D1FD47347008F6196 /* batman_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD21F7C1FD47347008F6196 /* batman_icon.png */; };
+		ADD21F7F1FD4734C008F6196 /* wonder_woman_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD21F7E1FD4734C008F6196 /* wonder_woman_icon.png */; };
+		ADD21F811FD47543008F6196 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD21F801FD47542008F6196 /* DesignableUITextField.swift */; };
+		ADD21F841FD47772008F6196 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD21F831FD47772008F6196 /* person.png */; };
+		ADD21F8A1FD4788D008F6196 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD21F851FD4788C008F6196 /* email.png */; };
+		ADD21F8B1FD4788D008F6196 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD21F861FD4788C008F6196 /* phone.png */; };
+		ADD21F8C1FD4788D008F6196 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD21F871FD4788D008F6196 /* password.png */; };
+		ADD21F8E1FD4788D008F6196 /* gender.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD21F891FD4788D008F6196 /* gender.png */; };
+		ADD21F901FD490D6008F6196 /* birthday.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD21F8F1FD490D6008F6196 /* birthday.png */; };
+		C7B0B2A09A4A1D53090BC398 /* Pods_Project_Version_0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4790EDA4ABBEEE76D7E90D9F /* Pods_Project_Version_0_1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		757CC8AC01F59DF3A869DAD9 /* Pods-Project Version 0_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.release.xcconfig"; sourceTree = "<group>"; };
-		A148C3682F780F8F696B8FB2 /* Pods-Project Version 0_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.debug.xcconfig"; sourceTree = "<group>"; };
+		4790EDA4ABBEEE76D7E90D9F /* Pods_Project_Version_0_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_Version_0_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72705C01FC885B8006C2504 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		A72705C21FC8973F006C2504 /* NavigationBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarController.swift; sourceTree = "<group>"; };
 		A72705C41FC8A2A6006C2504 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -90,15 +112,39 @@
 		A778D9E91FC9D57100F38438 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
 		A778D9EA1FC9D57200F38438 /* female_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female_default.png; sourceTree = "<group>"; };
 		A778D9EB1FC9D57200F38438 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
-		A778D9EC1FC9D57300F38438 /* male_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male_selected.png; sourceTree = "<group>"; };
-		A778D9ED1FC9D57300F38438 /* female_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female_selected.png; sourceTree = "<group>"; };
 		A778D9EE1FC9D57300F38438 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
-		A778D9EF1FC9D57300F38438 /* male_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male_default.png; sourceTree = "<group>"; };
 		A778D9F81FC9D5DF00F38438 /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		A778D9F91FC9D5DF00F38438 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		A7AFE0361FC3376500656A02 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		AC398319E252E70CA0C178A4 /* Pods-Project Version 0_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.debug.xcconfig"; sourceTree = "<group>"; };
+		AD251C111FD4AA060065B81F /* EntranceViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceViewControllerExtention.swift; sourceTree = "<group>"; };
+		AD267B921FCF489400FE0D5D /* female_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female_selected.png; sourceTree = "<group>"; };
+		AD267B941FCF4B5C00FE0D5D /* male_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male_default.png; sourceTree = "<group>"; };
+		AD267B961FCF4B8300FE0D5D /* male_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male_selected.png; sourceTree = "<group>"; };
 		AD5E95941FCB3192000429D8 /* DatabaseAccessConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseAccessConstant.swift; sourceTree = "<group>"; };
-		BF2EAC58EB2B78FDCBF4F5D0 /* Pods_Project_Version_0_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_Version_0_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD5E95971FCB458E000429D8 /* HideShowPasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideShowPasswordTextField.swift; sourceTree = "<group>"; };
+		AD5E95981FCB458E000429D8 /* ic_eye_closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_eye_closed.png; sourceTree = "<group>"; };
+		AD5E95991FCB458E000429D8 /* ic_eye_closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_closed@2x.png"; sourceTree = "<group>"; };
+		AD5E959A1FCB458E000429D8 /* ic_eye_closed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_closed@3x.png"; sourceTree = "<group>"; };
+		AD5E959B1FCB458E000429D8 /* ic_eye_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_eye_open.png; sourceTree = "<group>"; };
+		AD5E959C1FCB458E000429D8 /* ic_eye_open@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_open@2x.png"; sourceTree = "<group>"; };
+		AD5E959D1FCB458E000429D8 /* ic_eye_open@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_open@3x.png"; sourceTree = "<group>"; };
+		AD5E959E1FCB458E000429D8 /* ic_password_checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_password_checkmark.png; sourceTree = "<group>"; };
+		AD5E959F1FCB458E000429D8 /* ic_password_checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_password_checkmark@2x.png"; sourceTree = "<group>"; };
+		AD5E95A01FCB458E000429D8 /* ic_password_checkmark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_password_checkmark@3x.png"; sourceTree = "<group>"; };
+		AD5E95A11FCB458E000429D8 /* PasswordToggleVisibilityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordToggleVisibilityView.swift; sourceTree = "<group>"; };
+		AD5E95AD1FCB5AA1000429D8 /* RegisterViewControllerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerExtentions.swift; sourceTree = "<group>"; };
+		AD6D85FB1FCF56F100628B26 /* Genders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genders.swift; sourceTree = "<group>"; };
+		ADD21F7C1FD47347008F6196 /* batman_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batman_icon.png; sourceTree = "<group>"; };
+		ADD21F7E1FD4734C008F6196 /* wonder_woman_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wonder_woman_icon.png; sourceTree = "<group>"; };
+		ADD21F801FD47542008F6196 /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		ADD21F831FD47772008F6196 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
+		ADD21F851FD4788C008F6196 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
+		ADD21F861FD4788C008F6196 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
+		ADD21F871FD4788D008F6196 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		ADD21F891FD4788D008F6196 /* gender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender.png; sourceTree = "<group>"; };
+		ADD21F8F1FD490D6008F6196 /* birthday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = birthday.png; sourceTree = "<group>"; };
+		D52F3AD28596E5D32A4111B7 /* Pods-Project Version 0_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,13 +152,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0476E4F9FFF99A10D02F1BB7 /* Pods_Project_Version_0_1.framework in Frameworks */,
+				C7B0B2A09A4A1D53090BC398 /* Pods_Project_Version_0_1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1285D096113D1AF21A714701 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4790EDA4ABBEEE76D7E90D9F /* Pods_Project_Version_0_1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AA4DB4843F8A2169940E323 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC398319E252E70CA0C178A4 /* Pods-Project Version 0_1.debug.xcconfig */,
+				D52F3AD28596E5D32A4111B7 /* Pods-Project Version 0_1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A72705BF1FC885A6006C2504 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +187,8 @@
 		A72705CC1FC91DF3006C2504 /* ControllerExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				AD251C101FD4A9C90065B81F /* EntranceView */,
+				AD5E95AF1FCB646F000429D8 /* RegistrationViews */,
 				A72705CD1FC91E9D006C2504 /* TemporaryAddImageExtensionFunctions.swift */,
 			);
 			path = ControllerExtensions;
@@ -196,8 +261,8 @@
 			children = (
 				A75F40071FC0B7C600495228 /* Project Version 0_1 */,
 				A75F40061FC0B7C600495228 /* Products */,
-				B936969B24BCE5B06DBD9517 /* Pods */,
-				C502180E30BA6FDA6C25691D /* Frameworks */,
+				7AA4DB4843F8A2169940E323 /* Pods */,
+				1285D096113D1AF21A714701 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,6 +300,8 @@
 		A75F401B1FC0D5B400495228 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ADD21F801FD47542008F6196 /* DesignableUITextField.swift */,
+				AD5E95961FCB458E000429D8 /* HideShowPasswordTextField */,
 				A7AFE0361FC3376500656A02 /* File.swift */,
 			);
 			path = View;
@@ -264,6 +331,7 @@
 		A75F401E1FC0D5F300495228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AD6D85FA1FCF56D500628B26 /* Enums */,
 				A778D9E41FC9BC2700F38438 /* FirebaseModelConstants */,
 				A73828311FC36379003C1827 /* ConstantCharacters.swift */,
 				A7407F061FC705D000DAAF44 /* ConstanctUserKeyValues.swift */,
@@ -319,35 +387,76 @@
 		A778D9E71FC9CA5300F38438 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ADD21F821FD47763008F6196 /* Register */,
+				ADD21F7E1FD4734C008F6196 /* wonder_woman_icon.png */,
+				ADD21F7C1FD47347008F6196 /* batman_icon.png */,
 				A778D9EA1FC9D57200F38438 /* female_default.png */,
-				A778D9ED1FC9D57300F38438 /* female_selected.png */,
+				AD267B921FCF489400FE0D5D /* female_selected.png */,
 				A778D9E91FC9D57100F38438 /* image1.jpg */,
 				A778D9E81FC9D57100F38438 /* image2.jpg */,
 				A778D9EB1FC9D57200F38438 /* image3.jpg */,
 				A778D9EE1FC9D57300F38438 /* image4.jpg */,
-				A778D9EF1FC9D57300F38438 /* male_default.png */,
-				A778D9EC1FC9D57300F38438 /* male_selected.png */,
+				AD267B941FCF4B5C00FE0D5D /* male_default.png */,
+				AD267B961FCF4B8300FE0D5D /* male_selected.png */,
 				A72705C81FC8AA20006C2504 /* camera-icon.png */,
 				A72705CA1FC8AD32006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
 		};
-		B936969B24BCE5B06DBD9517 /* Pods */ = {
+		AD251C101FD4A9C90065B81F /* EntranceView */ = {
 			isa = PBXGroup;
 			children = (
-				A148C3682F780F8F696B8FB2 /* Pods-Project Version 0_1.debug.xcconfig */,
-				757CC8AC01F59DF3A869DAD9 /* Pods-Project Version 0_1.release.xcconfig */,
+				AD251C111FD4AA060065B81F /* EntranceViewControllerExtention.swift */,
 			);
-			name = Pods;
+			path = EntranceView;
 			sourceTree = "<group>";
 		};
-		C502180E30BA6FDA6C25691D /* Frameworks */ = {
+		AD5E95961FCB458E000429D8 /* HideShowPasswordTextField */ = {
 			isa = PBXGroup;
 			children = (
-				BF2EAC58EB2B78FDCBF4F5D0 /* Pods_Project_Version_0_1.framework */,
+				AD5E95981FCB458E000429D8 /* ic_eye_closed.png */,
+				AD5E95991FCB458E000429D8 /* ic_eye_closed@2x.png */,
+				AD5E959A1FCB458E000429D8 /* ic_eye_closed@3x.png */,
+				AD5E959B1FCB458E000429D8 /* ic_eye_open.png */,
+				AD5E959C1FCB458E000429D8 /* ic_eye_open@2x.png */,
+				AD5E959D1FCB458E000429D8 /* ic_eye_open@3x.png */,
+				AD5E959E1FCB458E000429D8 /* ic_password_checkmark.png */,
+				AD5E959F1FCB458E000429D8 /* ic_password_checkmark@2x.png */,
+				AD5E95A01FCB458E000429D8 /* ic_password_checkmark@3x.png */,
+				AD5E95971FCB458E000429D8 /* HideShowPasswordTextField.swift */,
+				AD5E95A11FCB458E000429D8 /* PasswordToggleVisibilityView.swift */,
 			);
-			name = Frameworks;
+			path = HideShowPasswordTextField;
+			sourceTree = "<group>";
+		};
+		AD5E95AF1FCB646F000429D8 /* RegistrationViews */ = {
+			isa = PBXGroup;
+			children = (
+				AD5E95AD1FCB5AA1000429D8 /* RegisterViewControllerExtentions.swift */,
+			);
+			path = RegistrationViews;
+			sourceTree = "<group>";
+		};
+		AD6D85FA1FCF56D500628B26 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AD6D85FB1FCF56F100628B26 /* Genders.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		ADD21F821FD47763008F6196 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				ADD21F8F1FD490D6008F6196 /* birthday.png */,
+				ADD21F851FD4788C008F6196 /* email.png */,
+				ADD21F891FD4788D008F6196 /* gender.png */,
+				ADD21F871FD4788D008F6196 /* password.png */,
+				ADD21F861FD4788C008F6196 /* phone.png */,
+				ADD21F831FD47772008F6196 /* person.png */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,12 +466,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A75F40171FC0B7C600495228 /* Build configuration list for PBXNativeTarget "Project Version 0_1" */;
 			buildPhases = (
-				424A16495C061549AD5F2A12 /* [CP] Check Pods Manifest.lock */,
+				EA0350278FC21A2A87FD7A08 /* [CP] Check Pods Manifest.lock */,
 				A75F40011FC0B7C600495228 /* Sources */,
 				A75F40021FC0B7C600495228 /* Frameworks */,
 				A75F40031FC0B7C600495228 /* Resources */,
-				92284B36024D6D7BFCEAB57E /* [CP] Embed Pods Frameworks */,
-				7950176CA3AE9510E4F082E7 /* [CP] Copy Pods Resources */,
+				843087B1EDA0AF2EFB7838A3 /* [CP] Embed Pods Frameworks */,
+				742FADD8A6A6D6EDB27A6429 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -419,25 +528,99 @@
 			files = (
 				A75F40131FC0B7C600495228 /* LaunchScreen.storyboard in Resources */,
 				A778D9F31FC9D57300F38438 /* image3.jpg in Resources */,
+				AD5E95A31FCB458E000429D8 /* ic_eye_closed.png in Resources */,
+				AD5E95A81FCB458E000429D8 /* ic_eye_open@3x.png in Resources */,
 				A72705CB1FC8AD33006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
+				ADD21F8A1FD4788D008F6196 /* email.png in Resources */,
+				AD267B931FCF489400FE0D5D /* female_selected.png in Resources */,
 				A75F40101FC0B7C600495228 /* Assets.xcassets in Resources */,
 				A72705C91FC8AA20006C2504 /* camera-icon.png in Resources */,
-				A778D9F41FC9D57300F38438 /* male_selected.png in Resources */,
+				AD5E95A51FCB458E000429D8 /* ic_eye_closed@3x.png in Resources */,
+				ADD21F8B1FD4788D008F6196 /* phone.png in Resources */,
 				A778D9F21FC9D57300F38438 /* female_default.png in Resources */,
+				AD5E95A41FCB458E000429D8 /* ic_eye_closed@2x.png in Resources */,
+				ADD21F8C1FD4788D008F6196 /* password.png in Resources */,
+				AD5E95A71FCB458E000429D8 /* ic_eye_open@2x.png in Resources */,
+				ADD21F841FD47772008F6196 /* person.png in Resources */,
+				ADD21F7F1FD4734C008F6196 /* wonder_woman_icon.png in Resources */,
 				A778D9F61FC9D57300F38438 /* image4.jpg in Resources */,
-				A778D9F71FC9D57300F38438 /* male_default.png in Resources */,
+				ADD21F7D1FD47347008F6196 /* batman_icon.png in Resources */,
+				AD267B951FCF4B5D00FE0D5D /* male_default.png in Resources */,
+				AD5E95A91FCB458E000429D8 /* ic_password_checkmark.png in Resources */,
 				A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */,
-				A778D9F51FC9D57300F38438 /* female_selected.png in Resources */,
+				ADD21F901FD490D6008F6196 /* birthday.png in Resources */,
 				A778D9F11FC9D57300F38438 /* image1.jpg in Resources */,
 				A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */,
+				AD5E95AA1FCB458E000429D8 /* ic_password_checkmark@2x.png in Resources */,
+				AD267B971FCF4B8400FE0D5D /* male_selected.png in Resources */,
+				AD5E95AB1FCB458E000429D8 /* ic_password_checkmark@3x.png in Resources */,
 				A778D9F01FC9D57300F38438 /* image2.jpg in Resources */,
+				ADD21F8E1FD4788D008F6196 /* gender.png in Resources */,
+				AD5E95A61FCB458E000429D8 /* ic_eye_open.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		424A16495C061549AD5F2A12 /* [CP] Check Pods Manifest.lock */ = {
+		742FADD8A6A6D6EDB27A6429 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		843087B1EDA0AF2EFB7838A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA0350278FC21A2A87FD7A08 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -455,51 +638,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7950176CA3AE9510E4F082E7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		92284B36024D6D7BFCEAB57E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
-				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -512,14 +650,20 @@
 				A72705C71FC8A7E2006C2504 /* TempoaryAddImageViewController.swift in Sources */,
 				AD5E95951FCB3192000429D8 /* DatabaseAccessConstant.swift in Sources */,
 				A7407F071FC705D000DAAF44 /* ConstanctUserKeyValues.swift in Sources */,
+				AD6D85FC1FCF56F100628B26 /* Genders.swift in Sources */,
 				A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */,
 				A75F402A1FC0E67400495228 /* ViewExtension.swift in Sources */,
 				A7407F011FC4A83800DAAF44 /* AddImageVerificationViewController.swift in Sources */,
+				AD5E95AE1FCB5AA1000429D8 /* RegisterViewControllerExtentions.swift in Sources */,
 				A778D9E31FC9AE6200F38438 /* DatabaseUser.swift in Sources */,
+				ADD21F811FD47543008F6196 /* DesignableUITextField.swift in Sources */,
 				A75F40221FC0D99D00495228 /* LoginViewController.swift in Sources */,
+				AD5E95AC1FCB458E000429D8 /* PasswordToggleVisibilityView.swift in Sources */,
+				AD251C121FD4AA060065B81F /* EntranceViewControllerExtention.swift in Sources */,
 				A75F40351FC238B600495228 /* StartPageViewController.swift in Sources */,
 				A778D9E61FC9BC4900F38438 /* UserAttributeNames.swift in Sources */,
 				A72705C51FC8A2A6006C2504 /* User.swift in Sources */,
+				AD5E95A21FCB458E000429D8 /* HideShowPasswordTextField.swift in Sources */,
 				A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */,
 				A7AFE0371FC3376500656A02 /* File.swift in Sources */,
 				A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */,
@@ -668,7 +812,7 @@
 		};
 		A75F40181FC0B7C600495228 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A148C3682F780F8F696B8FB2 /* Pods-Project Version 0_1.debug.xcconfig */;
+			baseConfigurationReference = AC398319E252E70CA0C178A4 /* Pods-Project Version 0_1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Project Version 0_1/Project Version 0_1.entitlements";
@@ -688,7 +832,7 @@
 		};
 		A75F40191FC0B7C600495228 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 757CC8AC01F59DF3A869DAD9 /* Pods-Project Version 0_1.release.xcconfig */;
+			baseConfigurationReference = D52F3AD28596E5D32A4111B7 /* Pods-Project Version 0_1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Project Version 0_1/Project Version 0_1.entitlements";

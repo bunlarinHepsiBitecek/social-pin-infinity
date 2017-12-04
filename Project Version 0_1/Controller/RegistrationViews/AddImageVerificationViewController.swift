@@ -9,13 +9,18 @@
 import UIKit
 
 class AddImageVerificationViewController: UIViewController {
-
+    
+    var user: User = User()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         self.navigationController?.enableNavigationBar()
+        
+        print("****************************")
+        user.printUserInfo()
     }
 
     override func didReceiveMemoryWarning() {

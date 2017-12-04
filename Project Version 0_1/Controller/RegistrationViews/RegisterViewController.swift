@@ -9,98 +9,74 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    var user: User = User()
     
+    let picker = UIDatePicker()
+
     @IBOutlet var scrollView: UIScrollView!
-    @IBOutlet var birthdateField: UITextField!
     
-    @IBOutlet var sexManButton: UIButton!
-    @IBOutlet var sexWomenButton: UIButton!
+    @IBOutlet var firstName: UITextField!
+    @IBOutlet var lastName: UITextField!
+    @IBOutlet var emailAddress: UITextField!
     
-    @IBAction func sexButtonTapped(_ sender: UIButton) {
-        sexSwitchControl(sender: sender)
+    
+    @IBOutlet var password: HideShowPasswordTextField!
+    @IBOutlet var birthdate: UITextField!
+    @IBOutlet var mobilePhone: UITextField!
+    
+    @IBOutlet var genderManButton: UIButton!
+    @IBOutlet var genderWomenButton: UIButton!
+    var gender: Gender = Gender.unkown
+    
+    @IBAction func genderButtonTapped(_ sender: UIButton) {
+        genderSwitchControl(sender: sender)
     }
     
     
-    let picker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set the maksimum height of device size
-        // iPhone 5s => 568
-        // iPhone 6s => 667
-        scrollView.contentSize.height = self.view.frame.height
+        self.navigationController?.enableNavigationBar()
+        // embeded navigation controller and scrollview slide down
+        self.automaticallyAdjustsScrollViewInsets = false
         
+        setGenderButtonTag()
+        setupPasswordTextField()
         createDatePicker()
-        setSexButtonTag()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func setSexButtonTag() {
-        sexManButton.tag = 1
-        sexWomenButton.tag = 2
-    }
-    
-    func sexSwitchControl(sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-        switch sender.tag {
-        case 1:
-            if(sexManButton.isSelected) {
-                sexWomenButton.isEnabled = false
-            }  else {
-                sexWomenButton.isEnabled = true
-            }
-            break;
-        case 2:
-            if(sexWomenButton.isSelected) {
-                sexManButton.isEnabled = false
-            } else {
-                sexManButton.isEnabled = true
-            }
-            break;
-        default: ()
-        break;
-        }
-    }
-    
-    func createDatePicker() {
-        //
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        let done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(donePressed))
-        toolbar.setItems([done], animated: false)
-        
-        birthdateField.inputAccessoryView = toolbar
-        birthdateField.inputView = picker
-        
-        picker.datePickerMode = UIDatePickerMode.date
-        
-    }
-    
-    @objc func donePressed() {
-        birthdateField.text = dateFormatText(datePicker: picker)
-        self.view.endEditing(true)
-    }
-    
-    func dateFormatText(datePicker: UIDatePicker) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
-        
-        return formatter.string(from: datePicker.date)
     }
     
     @IBAction func gotoAddImage(_ sender: Any) {
         
-        performSegue(withIdentifier: "gotoAddImageAndVerificationSend", sender: self)
+        setUserInfo()
+        
+        //performSegue(withIdentifier: "gotoAddImageAndVerificationSend", sender: self)
+        
+        let addImageVCObject = storyboard?.instantiateViewController(withIdentifier: "addImageVerificationVCID") as!  AddImageVerificationViewController
+        
+        addImageVCObject.user = self.user
+        navigationController?.pushViewController(addImageVCObject, animated: true)
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
     
 }
+
+
+
+
 

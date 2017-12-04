@@ -15,3 +15,6 @@ let CONSTANT_SURNAME : String = "surname"
 let CONSTANT_GENDER : String = "gender"
 let CONSTANT_BIRTHDAY : String = "birthday"
 let CONSTANT_EMAIL : String = "email"
+let CONSTANT_PASSWORD : String = "password"
+let CONSTANT_MOBILEPHONE : String = "mobilephone"
+

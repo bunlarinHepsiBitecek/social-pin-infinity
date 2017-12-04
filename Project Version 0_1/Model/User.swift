@@ -5,8 +5,8 @@
 //  Created by Erkut Baş on 24.11.2017.
 //  Copyright © 2017 Erkut Baş. All rights reserved.
 //
-
 import Foundation
+import UIKit
 
 class User {
     
@@ -14,10 +14,26 @@ class User {
     private var _userName : String
     private var _userNameSurname : String
     private var _email : String
+    private var _password : String
     private var _gender : String
     private var _birthday : String
+    private var _mobilePhone : String
+    private var _userProfilePicture : UIImage
+    private var _userProfilePictureUrl : String
+    private var _userProfilePictureUniqueID : String
     
     private var _userDictionary : Dictionary<String, String> = [:]
+    
+    func printUserInfo() {
+        print(CONSTANT_KEY_USERID + " :" + _userID)
+        print(CONSTANT_USERNAME + " :" + _userName)
+        print(CONSTANT_NAME_SURNAME + " :" + _userNameSurname)
+        print(CONSTANT_EMAIL + " :" + _email)
+        print(CONSTANT_PASSWORD + " :" + _password)
+        print(CONSTANT_GENDER + " :" + _gender)
+        print(CONSTANT_BIRTHDAY + " :" + _birthday)
+        print(CONSTANT_MOBILEPHONE + " :" + _mobilePhone)
+    }
     
     init() {
         
@@ -25,19 +41,30 @@ class User {
         self._userName = SPACE_CHARACTER
         self._userNameSurname = SPACE_CHARACTER
         self._email = SPACE_CHARACTER
+        self._password = SPACE_CHARACTER
         self._gender = SPACE_CHARACTER
         self._birthday = SPACE_CHARACTER
+        self._mobilePhone = SPACE_CHARACTER
+        self._userProfilePictureUrl = SPACE_CHARACTER
+        self._userProfilePictureUniqueID = SPACE_CHARACTER
+        
+        self._userProfilePicture = UIImage()
         
     }
     
-    init(inputUserID : String, inputUserName : String, inputUserNameSurname : String, inputUserEmail : String, inputUserGender : String, inputUserBirthday : String) {
+    init(inputUserID : String, inputUserName : String, inputUserNameSurname : String, inputUserEmail : String, inputUserPassword : String, inputUserGender : String, inputUserBirthday : String, inputUserMobilePhone : String, inputUserProfilePicture : UIImage, inputUserProfilePictureUrl : String, inputUserProfilePictureUniqueID : String) {
         
         self._userID = inputUserID
         self._userName = inputUserName
         self._userNameSurname = inputUserNameSurname
         self._email = inputUserEmail
+        self._password = inputUserPassword
         self._gender = inputUserGender
         self._birthday = inputUserBirthday
+        self._mobilePhone = inputUserMobilePhone
+        self._userProfilePicture = inputUserProfilePicture
+        self._userProfilePictureUrl = inputUserProfilePictureUrl
+        self._userProfilePictureUniqueID = inputUserProfilePictureUniqueID
         
     }
     
@@ -57,6 +84,10 @@ class User {
         return _email
     }
     
+    var password : String {
+        return _password
+    }
+    
     var gender : String {
         return _gender
     }
@@ -65,8 +96,24 @@ class User {
         return _birthday
     }
     
+    var mobilePhone : String {
+        return _mobilePhone
+    }
+    
     var userDictionary : Dictionary<String, String> {
         return _userDictionary
+    }
+    
+    var userProfilePicture : UIImage {
+        return _userProfilePicture
+    }
+    
+    var userProfilePictureUrl : String {
+        return _userProfilePictureUrl
+    }
+    
+    var userProfilePictureUniqueID : String {
+        return _userProfilePictureUniqueID
     }
     
     func setUserID(inputUserID : String) {
@@ -93,6 +140,12 @@ class User {
         
     }
     
+    func setUserPassword(inputPassword : String) {
+        
+        self._password = inputPassword
+        
+    }
+    
     func setUserGender(inputUserGender : String) {
         
         self._gender = inputUserGender
@@ -105,12 +158,32 @@ class User {
         
     }
     
+    func setUserMobilePhone(inputUserMobilePhone : String) {
+        self._mobilePhone = inputUserMobilePhone
+    }
+    
+    func setUserProfilePicture(inputUserProfileImage : UIImage) {
+        
+        self._userProfilePicture = inputUserProfileImage
+        
+    }
+    
+    func setUserProfilePictureUrl(inputUrl : String) {
+        
+        self._userProfilePictureUrl = inputUrl
+    }
+    
+    
     func appendAttributeToDictionary(inputKey : String, inputValue : String) {
         
         self._userDictionary[inputKey] = inputValue
         
     }
     
-    
+    func setUserProfilePictureUniqueID(inputUserProfilePictureUniqueID : String) {
+        
+        self._userProfilePictureUniqueID = inputUserProfilePictureUniqueID
+        
+    }
     
 }

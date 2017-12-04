@@ -9,3 +9,15 @@
 import Foundation
 
 let SPACE_CHARACTER = ""
+
+let TWITTER_CUSTOMER_KEY = "XGlCXDJxfqCfnhZJjcBob1WtS"
+let TWITTER_CUSTOMER_SECRETKEY = "q6n6kKRLwWQjEt78onlH1J2mqcKZORLrXXHe84W6MGwO4zFjam"
+
+struct Constants {
+    struct RegisterPage {
+        static let DATE_PICKER_FORMAT = "dd.MM.yyyy"
+    }
+    
+}
+
+

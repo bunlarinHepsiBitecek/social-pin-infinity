@@ -26,11 +26,25 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>gotoVerify</string>
+                <string>fb525271271169282</string>
+                 <string>twitterkit-XGlCXDJxfqCfnhZJjcBob1WtS</string>
 			</array>
 		</dict>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>1</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>FacebookAppID</key>
+    <string>525271271169282</string>
+    <key>FacebookDisplayName</key>
+    <string>Project Version 0_1</string>
+    <key>LSApplicationCategoryType</key>
+    <string></string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbauth2</string>
+        <string>twitter</string>
+        <string>twitterauth</string>
+    </array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

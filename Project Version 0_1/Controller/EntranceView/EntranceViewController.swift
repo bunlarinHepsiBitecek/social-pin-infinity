@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
+import TwitterKit
+import SwiftKeychainWrapper
 
-class EntranceViewController: UIViewController {
-
+class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
+    
+    @IBOutlet var facebookLoginButton: FBSDKLoginButton!
+    
+    @IBOutlet var twitterLoginButton: TWTRLogInButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,12 +25,16 @@ class EntranceViewController: UIViewController {
         
         self.navigationController?.disableNavigationBar()
         
+        // embeded navigation controller and scrollview slide down
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
     
         self.navigationController?.disableNavigationBar()
         
+        // facebook delegation
+        facebookLoginButton.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
