@@ -53,4 +53,42 @@ class VerificationViewController: UIViewController {
         
     }
     
+    @IBAction func activateAccount(_ sender: UIButton) {
+        
+        Auth.auth().currentUser?.reload(completion: { (error) in
+            
+            if error != nil {
+                
+                if let errorMessage = error as NSError? {
+                    
+                    print("LoginButtonClick : \(errorMessage)")
+                    print("LoginButtonClick : \(errorMessage.userInfo)")
+                    print("LoginButtonClick : \(errorMessage.localizedDescription)")
+                    
+                }
+                
+            } else {
+                
+                if let user = Auth.auth().currentUser {
+                    
+                    print("-----------------> user email verification : \(user.isEmailVerified)")
+                    
+                    if user.isEmailVerified {
+                        
+                        print("takasi bom bom")
+                        
+                    } else {
+                        
+                        print("sıcıs spor")
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        })
+        
+    }
+    
 }

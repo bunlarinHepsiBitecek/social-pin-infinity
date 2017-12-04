@@ -58,6 +58,7 @@
 		A767CEE71FD4AA4200E70B16 /* AlertControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEE61FD4AA4200E70B16 /* AlertControllerConstants.swift */; };
 		A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEE81FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift */; };
 		A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEEA1FD4E61000E70B16 /* UINavigationItem.swift */; };
+		A767CEF01FD5392400E70B16 /* UIAlertControllerCustomDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEEF1FD5392400E70B16 /* UIAlertControllerCustomDesign.swift */; };
 		A778D9E31FC9AE6200F38438 /* DatabaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */; };
 		A778D9E61FC9BC4900F38438 /* UserAttributeNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */; };
 		A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9F81FC9D5DF00F38438 /* PageItemController.swift */; };
@@ -131,6 +132,7 @@
 		A767CEE61FD4AA4200E70B16 /* AlertControllerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerConstants.swift; sourceTree = "<group>"; };
 		A767CEE81FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageExtensionFunctions.swift; sourceTree = "<group>"; };
 		A767CEEA1FD4E61000E70B16 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
+		A767CEEF1FD5392400E70B16 /* UIAlertControllerCustomDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerCustomDesign.swift; sourceTree = "<group>"; };
 		A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUser.swift; sourceTree = "<group>"; };
 		A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAttributeNames.swift; sourceTree = "<group>"; };
 		A778D9F81FC9D5DF00F38438 /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				A72AFBED1FCE796D0018254E /* UIImageViewExtensions.swift */,
 				A7DD2E361FD207CA0009322E /* UIViewExtensions.swift */,
 				A767CEEA1FD4E61000E70B16 /* UINavigationItem.swift */,
+				A767CEEF1FD5392400E70B16 /* UIAlertControllerCustomDesign.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				A75F40351FC238B600495228 /* StartPageViewController.swift in Sources */,
 				A71B49F51FD2F33C00B69E71 /* UILabelX.swift in Sources */,
 				A778D9E61FC9BC4900F38438 /* UserAttributeNames.swift in Sources */,
+				A767CEF01FD5392400E70B16 /* UIAlertControllerCustomDesign.swift in Sources */,
 				A72AFBE31FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift in Sources */,
 				A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */,
 				A71B49F61FD2F33C00B69E71 /* UIViewAnchorPoint.swift in Sources */,

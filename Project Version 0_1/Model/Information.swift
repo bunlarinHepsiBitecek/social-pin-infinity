@@ -15,6 +15,7 @@ class Information {
     private var _alertControllerObject : UIAlertController
     private var _alertActionObject : UIAlertAction
     
+    
     init() {
         
         self._verificationNotifMessage = SPACE_CHARACTER
@@ -45,7 +46,18 @@ class Information {
         
         self._alertControllerObject = UIAlertController(title: inputTitle, message: inputMessage, preferredStyle: .alert)
         
-        self._alertActionObject = UIAlertAction(title: "OK", style: .default, handler: nil)
+        //self._alertControllerObject.view.backgroundColor = UIColor(red: 255, green: 10, blue: 0, alpha: 0.5)
+        //self._alertControllerObject.view.tintColor = UIColor.blue
+        //self._alertControllerObject.view.backgroundColor = UIColor(red: 255, green: 224, blue: 71, alpha: 1)
+        //self._alertControllerObject.view.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        //self._alertControllerObject.setGradientBackground()
+        self._alertControllerObject.boko()
+        
+        print(self._alertControllerObject.view.backgroundColor?.cgColor)
+        
+        self._alertControllerObject.view.layer.cornerRadius = 30
+        
+        self._alertActionObject = UIAlertAction(title: "OK", style: .destructive, handler: nil)
         
         self._alertControllerObject.addAction(self._alertActionObject)
         
