@@ -58,17 +58,25 @@ class TempoaryAddImageViewController: UIViewController {
     
     @IBAction func gotoVerificationPage(_ sender: UIButton) {
         
+        print("gotoVerificationPage starts")
         let verificationViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "VerificationViewController_storyBoardID") as! VerificationViewController
         
         createUserAndLoadDataToStorage()
 
-        if sendVerificationMail() {
-            
-            verificationViewControllerObject.verificationInfoLabel.text = USER_EMAIL_VERIFICATION_NOTIF_SUCCESS
+        let informationMessage = Information()
+        
+        let emailSendResult : Bool = sendVerificationMail()
+        
+        if emailSendResult {
+            print("1_")
+            informationMessage.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_SUCCESS)
+            verificationViewControllerObject.verificationMessage = informationMessage
             
         } else {
             
-            verificationViewControllerObject.verificationInfoLabel.text = USER_EMAIL_VERIFICATION_NOTIF_FAILED
+            print("2_")
+            informationMessage.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_FAILED)
+            verificationViewControllerObject.verificationMessage = informationMessage
             
         }
         

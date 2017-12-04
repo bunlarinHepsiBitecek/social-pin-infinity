@@ -22,6 +22,17 @@ extension TempoaryAddImageViewController : UIImagePickerControllerDelegate, UINa
         self.present(picker, animated: true, completion: nil)
     }
     
+    @objc func takeProfilePhoto() {
+        
+        print("cameraya dokunduk")
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = UIImagePickerControllerSourceType.camera
+        picker.allowsEditing = true
+        self.present(picker, animated: true, completion: nil)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         print(info)
@@ -69,6 +80,7 @@ extension TempoaryAddImageViewController : UIImagePickerControllerDelegate, UINa
         let cameraAlertAction = UIAlertAction(title: "Take a photo", style: .default) { (alertAction) in
             print(alertAction)
             // function to take a photo
+            self.takeProfilePhoto()
         }
         
         let photoLibraryAlertAction = UIAlertAction(title: "Choose from library", style: .default) { (alertAction) in
