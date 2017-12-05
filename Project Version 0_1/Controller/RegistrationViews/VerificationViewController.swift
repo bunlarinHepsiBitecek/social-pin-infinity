@@ -85,8 +85,6 @@ class VerificationViewController: UIViewController {
                         
                         print("sıcıs spor")
                         
-                        //self.directCurrentPageToLoginPage()
-                        
                         let informationObject = Information()
                         informationObject.setAlertController(inputTitle: "Uyarı", inputMessage: "Boku yedin emailine bak!")
                         
