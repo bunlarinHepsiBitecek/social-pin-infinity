@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import AudioUnit
 
 class VerificationViewController: UIViewController {
 
@@ -29,6 +30,7 @@ class VerificationViewController: UIViewController {
         self.navigationController?.enableNavigationBar()
         self.manageForegroundActions()
         navigationItem.setNavigationItemTitle()
+        navigationItem.disableLeftBarItem_Back()
         
         print("VerificationViewController starts")
         print("viewDidLoad : callerViewControllerID : \(callerViewControllerID)")
@@ -77,9 +79,26 @@ class VerificationViewController: UIViewController {
                         
                         print("takasi bom bom")
                         
+                        self.directCurrentPageToMainPage()
+                        
                     } else {
                         
                         print("sıcıs spor")
+                        
+                        //self.directCurrentPageToLoginPage()
+                        
+                        let informationObject = Information()
+                        informationObject.setAlertController(inputTitle: "Uyarı", inputMessage: "Boku yedin emailine bak!")
+                        
+                        self.present(informationObject.alertControllerObject, animated: true, completion: nil)
+                        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                        
+                        let whenToCloseAlert = DispatchTime.now() + 2
+                        
+                        DispatchQueue.main.asyncAfter(deadline: whenToCloseAlert){
+                            
+                            informationObject.alertControllerObject.dismiss(animated: true, completion: nil)
+                        }
                         
                     }
                     

@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseStorage
 
-extension TempoaryAddImageViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+extension AddImageViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @objc func getProfilePhoto() {
         

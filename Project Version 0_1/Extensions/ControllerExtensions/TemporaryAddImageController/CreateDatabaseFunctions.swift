@@ -11,7 +11,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseStorage
 
-extension TempoaryAddImageViewController {
+extension AddImageViewController {
     
     func createUserAndLoadDataToStorage() {
         

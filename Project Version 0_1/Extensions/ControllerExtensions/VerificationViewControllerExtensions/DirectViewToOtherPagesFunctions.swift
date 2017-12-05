@@ -59,4 +59,12 @@ extension VerificationViewController {
         navigationController?.pushViewController(mainPageViewControllerObject, animated: true)
         
     }
+    
+    func directCurrentPageToLoginPage() {
+        
+        let loginPageViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "LoginViewController_storyBoardID") as! LoginViewController
+        
+        navigationController?.pushViewController(loginPageViewControllerObject, animated: true)
+        
+    }
 }

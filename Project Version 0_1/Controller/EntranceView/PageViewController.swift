@@ -14,8 +14,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     lazy var contentImages: [String] = {
         return getContentImages()
     }()
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +24,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         
         createPageViewController()
         setupPageControl()
+        
+        // _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(moveToNextPage), userInfo: nil, repeats: true)
+    }
+    
+    @objc func moveToNextPage (){
+        print("Remzi 2 sn geçti")
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,7 +49,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     
     private func createPageViewController() {
         
-        
         if contentImages.count > 0 {
             let firstController = getItemController(itemIndex: 0)!
             let startingViewControllers = [firstController]
@@ -56,7 +61,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let appearance = UIPageControl.appearance()
         appearance.pageIndicatorTintColor = UIColor.gray
         appearance.currentPageIndicatorTintColor = UIColor.white
-        appearance.backgroundColor = UIColor.darkGray
+        //appearance.backgroundColor = UIColor.darkGray
     }
     
     // MARK: - UIPageViewControllerDataSource
@@ -68,7 +73,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             return getItemController(itemIndex: itemController.itemIndex - 1)
         }
         
-        return nil
+        return getItemController(itemIndex: contentImages.count - 1)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
@@ -79,23 +84,23 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             return getItemController(itemIndex: itemController.itemIndex+1)
         }
         
-        return nil
+        return getItemController(itemIndex: 0)
     }
     
     private func getItemController(itemIndex: Int) -> PageItemController? {
-
+        
         if itemIndex < contentImages.count {
             let pageItemController = self.storyboard!.instantiateViewController(withIdentifier: "ItemController") as! PageItemController
             pageItemController.itemIndex = itemIndex
             pageItemController.imageName = contentImages[itemIndex]
-
+            
             return pageItemController
         }
         
         return nil
     }
-
-
+    
+    
     // when implement presentationCount and presentationIndex method then Page Indicator will be visible
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return contentImages.count

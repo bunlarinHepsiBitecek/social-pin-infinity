@@ -15,5 +15,9 @@ target 'Project Version 0_1' do
  pod 'IQKeyboardManagerSwift'
  pod 'SwiftKeychainWrapper'
  pod 'TextFieldEffects'
+ pod 'FBSDKCoreKit'
+ pod 'FBSDKLoginKit'
+ pod 'FBSDKShareKit'
+ pod 'TwitterKit'
 
 end

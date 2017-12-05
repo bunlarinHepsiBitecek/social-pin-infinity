@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
-extension TempoaryAddImageViewController {
+extension AddImageViewController {
     
     func sendVerificationMail() -> Bool {
         

@@ -15,8 +15,10 @@ class User {
     private var _userName : String
     private var _userNameSurname : String
     private var _email : String
+    private var _password : String
     private var _gender : String
     private var _birthday : String
+    private var _mobilePhone : String
     private var _userProfilePicture : UIImage
     private var _userProfilePictureUrl : String
     private var _userProfilePictureUniqueID : String
@@ -35,9 +37,22 @@ class User {
         self._userProfilePictureUrl = SPACE_CHARACTER
         self._userProfilePictureUniqueID = SPACE_CHARACTER
         self._userPassword = SPACE_CHARACTER
+        self._password = SPACE_CHARACTER
+        self._mobilePhone = SPACE_CHARACTER
         
         self._userProfilePicture = UIImage()
         
+    }
+    
+    func printUserInfo() {
+        print(CONSTANT_STRING_USERID + " :" + _userID)
+        print(CONSTANT_USERNAME + " :" + _userName)
+        print(CONSTANT_NAME_SURNAME + " :" + _userNameSurname)
+        print(CONSTANT_EMAIL + " :" + _email)
+        print(CONSTANT_PASSWORD + " :" + _password)
+        print(CONSTANT_GENDER + " :" + _gender)
+        print(CONSTANT_BIRTHDAY + " :" + _birthday)
+        print(CONSTANT_MOBILEPHONE + " :" + _mobilePhone)
     }
     
     init(inputUserID : String, inputUserName : String, inputUserNameSurname : String, inputUserEmail : String, inputUserGender : String, inputUserBirthday : String, inputUserProfilePicture : UIImage, inputUserProfilePictureUrl : String, inputUserProfilePictureUniqueID : String) {
@@ -52,7 +67,8 @@ class User {
         self._userProfilePictureUrl = inputUserProfilePictureUrl
         self._userProfilePictureUniqueID = inputUserProfilePictureUniqueID
         self._userPassword = SPACE_CHARACTER
-        
+        self._mobilePhone = SPACE_CHARACTER
+        self._password = SPACE_CHARACTER
     }
     
     var userID : String {
@@ -97,6 +113,14 @@ class User {
     
     var userPassword : String {
         return _userPassword
+    }
+    
+    var password : String {
+        return _password
+    }
+    
+    var mobilePhone : String {
+        return _mobilePhone
     }
     
     func setUserID(inputUserID : String) {
@@ -159,11 +183,21 @@ class User {
         
     }
     
+    func setUserPassword(inputPassword : String) {
+        
+        self._password = inputPassword
+        
+    }
+    
     func setEmailAndPassword(inputUserEmail : String, inputUserPassword : String) {
         
         self._email = inputUserEmail
         self._userPassword = inputUserPassword
         
+    }
+    
+    func setUserMobilePhone(inputUserMobilePhone : String) {
+        self._mobilePhone = inputUserMobilePhone
     }
     
     func displayAttributeValues() {

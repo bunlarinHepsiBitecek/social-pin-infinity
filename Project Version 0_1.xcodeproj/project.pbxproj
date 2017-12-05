@@ -23,7 +23,7 @@
 		A72705C11FC885B8006C2504 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705C01FC885B8006C2504 /* MainPageViewController.swift */; };
 		A72705C31FC8973F006C2504 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705C21FC8973F006C2504 /* NavigationBarController.swift */; };
 		A72705C51FC8A2A6006C2504 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705C41FC8A2A6006C2504 /* User.swift */; };
-		A72705C71FC8A7E2006C2504 /* TempoaryAddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705C61FC8A7E2006C2504 /* TempoaryAddImageViewController.swift */; };
+		A72705C71FC8A7E2006C2504 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705C61FC8A7E2006C2504 /* AddImageViewController.swift */; };
 		A72705CB1FC8AD33006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72705CA1FC8AD32006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */; };
 		A72705CE1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705CD1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift */; };
 		A72AFBCF1FCCBCF30018254E /* PrepareUserProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBCE1FCCBCF30018254E /* PrepareUserProfileData.swift */; };
@@ -36,6 +36,35 @@
 		A72AFBE61FCDEDA70018254E /* SendVerificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBE51FCDEDA70018254E /* SendVerificationExtensions.swift */; };
 		A72AFBE91FCDF77C0018254E /* InformationMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBE81FCDF77C0018254E /* InformationMessages.swift */; };
 		A72AFBEE1FCE796D0018254E /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBED1FCE796D0018254E /* UIImageViewExtensions.swift */; };
+		A72CAA581FD5AE0900308DED /* male_default.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA4B1FD5AE0700308DED /* male_default.png */; };
+		A72CAA591FD5AE0900308DED /* female_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA4C1FD5AE0700308DED /* female_selected.png */; };
+		A72CAA5A1FD5AE0900308DED /* batman_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA4D1FD5AE0700308DED /* batman_icon.png */; };
+		A72CAA5B1FD5AE0900308DED /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA4E1FD5AE0700308DED /* image3.jpg */; };
+		A72CAA5C1FD5AE0900308DED /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA4F1FD5AE0800308DED /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */; };
+		A72CAA5D1FD5AE0900308DED /* male_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA501FD5AE0800308DED /* male_selected.png */; };
+		A72CAA5E1FD5AE0900308DED /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA511FD5AE0800308DED /* image4.jpg */; };
+		A72CAA5F1FD5AE0900308DED /* female_default.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA521FD5AE0800308DED /* female_default.png */; };
+		A72CAA601FD5AE0900308DED /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA531FD5AE0800308DED /* image1.jpg */; };
+		A72CAA611FD5AE0900308DED /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA541FD5AE0900308DED /* image2.jpg */; };
+		A72CAA621FD5AE0900308DED /* wonder_woman_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA551FD5AE0900308DED /* wonder_woman_icon.png */; };
+		A72CAA631FD5AE0900308DED /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA561FD5AE0900308DED /* camera-icon.png */; };
+		A72CAA641FD5AE0900308DED /* Register in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA571FD5AE0900308DED /* Register */; };
+		A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA6B1FD5AF8200308DED /* DatabaseAccessConstant.swift */; };
+		A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA6D1FD5B18D00308DED /* DesignableUITextField.swift */; };
+		A72CAA7D1FD6855200308DED /* ic_eye_open@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA721FD6854F00308DED /* ic_eye_open@3x.png */; };
+		A72CAA7E1FD6855200308DED /* ic_eye_open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA731FD6855000308DED /* ic_eye_open@2x.png */; };
+		A72CAA7F1FD6855200308DED /* HideShowPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA741FD6855000308DED /* HideShowPasswordTextField.swift */; };
+		A72CAA801FD6855200308DED /* ic_eye_closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA751FD6855000308DED /* ic_eye_closed@2x.png */; };
+		A72CAA811FD6855200308DED /* ic_eye_closed.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA761FD6855000308DED /* ic_eye_closed.png */; };
+		A72CAA821FD6855200308DED /* ic_password_checkmark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA771FD6855000308DED /* ic_password_checkmark@3x.png */; };
+		A72CAA831FD6855200308DED /* ic_password_checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA781FD6855100308DED /* ic_password_checkmark@2x.png */; };
+		A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA791FD6855100308DED /* ic_eye_open.png */; };
+		A72CAA851FD6855200308DED /* ic_password_checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA7A1FD6855100308DED /* ic_password_checkmark.png */; };
+		A72CAA861FD6855200308DED /* PasswordToggleVisibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA7B1FD6855100308DED /* PasswordToggleVisibilityView.swift */; };
+		A72CAA871FD6855200308DED /* ic_eye_closed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA7C1FD6855200308DED /* ic_eye_closed@3x.png */; };
+		A72CAA8B1FD685E000308DED /* Genders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA8A1FD685DF00308DED /* Genders.swift */; };
+		A72CAA8F1FD689B200308DED /* RegisterViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA8E1FD689B200308DED /* RegisterViewControllerExtentions.swift */; };
+		A72CAA921FD689D100308DED /* EntranceViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA911FD689D100308DED /* EntranceViewControllerExtention.swift */; };
 		A73828301FC35DCB003C1827 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738282F1FC35DCB003C1827 /* Validation.swift */; };
 		A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828311FC36379003C1827 /* ConstantCharacters.swift */; };
 		A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828371FC3E196003C1827 /* VerificationViewController.swift */; };
@@ -94,7 +123,7 @@
 		A72705C01FC885B8006C2504 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		A72705C21FC8973F006C2504 /* NavigationBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarController.swift; sourceTree = "<group>"; };
 		A72705C41FC8A2A6006C2504 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A72705C61FC8A7E2006C2504 /* TempoaryAddImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoaryAddImageViewController.swift; sourceTree = "<group>"; };
+		A72705C61FC8A7E2006C2504 /* AddImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageViewController.swift; sourceTree = "<group>"; };
 		A72705CA1FC8AD32006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg"; sourceTree = "<group>"; };
 		A72705CD1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUserProfilePictureFunctions.swift; sourceTree = "<group>"; };
 		A72AFBCE1FCCBCF30018254E /* PrepareUserProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareUserProfileData.swift; sourceTree = "<group>"; };
@@ -107,6 +136,35 @@
 		A72AFBE51FCDEDA70018254E /* SendVerificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendVerificationExtensions.swift; sourceTree = "<group>"; };
 		A72AFBE81FCDF77C0018254E /* InformationMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessages.swift; sourceTree = "<group>"; };
 		A72AFBED1FCE796D0018254E /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		A72CAA4B1FD5AE0700308DED /* male_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male_default.png; sourceTree = "<group>"; };
+		A72CAA4C1FD5AE0700308DED /* female_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female_selected.png; sourceTree = "<group>"; };
+		A72CAA4D1FD5AE0700308DED /* batman_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batman_icon.png; sourceTree = "<group>"; };
+		A72CAA4E1FD5AE0700308DED /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		A72CAA4F1FD5AE0800308DED /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg"; path = "../../../../../Downloads/social-pin-infinity-remzi-register-v1/Project Version 0_1/Images/556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg"; sourceTree = "<group>"; };
+		A72CAA501FD5AE0800308DED /* male_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male_selected.png; sourceTree = "<group>"; };
+		A72CAA511FD5AE0800308DED /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
+		A72CAA521FD5AE0800308DED /* female_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female_default.png; sourceTree = "<group>"; };
+		A72CAA531FD5AE0800308DED /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		A72CAA541FD5AE0900308DED /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		A72CAA551FD5AE0900308DED /* wonder_woman_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wonder_woman_icon.png; sourceTree = "<group>"; };
+		A72CAA561FD5AE0900308DED /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-icon.png"; path = "../../../../../Downloads/social-pin-infinity-remzi-register-v1/Project Version 0_1/Images/camera-icon.png"; sourceTree = "<group>"; };
+		A72CAA571FD5AE0900308DED /* Register */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Register; sourceTree = "<group>"; };
+		A72CAA6B1FD5AF8200308DED /* DatabaseAccessConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAccessConstant.swift; sourceTree = "<group>"; };
+		A72CAA6D1FD5B18D00308DED /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		A72CAA721FD6854F00308DED /* ic_eye_open@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_open@3x.png"; sourceTree = "<group>"; };
+		A72CAA731FD6855000308DED /* ic_eye_open@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_open@2x.png"; sourceTree = "<group>"; };
+		A72CAA741FD6855000308DED /* HideShowPasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideShowPasswordTextField.swift; sourceTree = "<group>"; };
+		A72CAA751FD6855000308DED /* ic_eye_closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_closed@2x.png"; sourceTree = "<group>"; };
+		A72CAA761FD6855000308DED /* ic_eye_closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_eye_closed.png; sourceTree = "<group>"; };
+		A72CAA771FD6855000308DED /* ic_password_checkmark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_password_checkmark@3x.png"; sourceTree = "<group>"; };
+		A72CAA781FD6855100308DED /* ic_password_checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_password_checkmark@2x.png"; sourceTree = "<group>"; };
+		A72CAA791FD6855100308DED /* ic_eye_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_eye_open.png; sourceTree = "<group>"; };
+		A72CAA7A1FD6855100308DED /* ic_password_checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_password_checkmark.png; sourceTree = "<group>"; };
+		A72CAA7B1FD6855100308DED /* PasswordToggleVisibilityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordToggleVisibilityView.swift; sourceTree = "<group>"; };
+		A72CAA7C1FD6855200308DED /* ic_eye_closed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_closed@3x.png"; sourceTree = "<group>"; };
+		A72CAA8A1FD685DF00308DED /* Genders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genders.swift; sourceTree = "<group>"; };
+		A72CAA8E1FD689B200308DED /* RegisterViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerExtentions.swift; sourceTree = "<group>"; };
+		A72CAA911FD689D100308DED /* EntranceViewControllerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntranceViewControllerExtention.swift; sourceTree = "<group>"; };
 		A738282F1FC35DCB003C1827 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A73828311FC36379003C1827 /* ConstantCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantCharacters.swift; sourceTree = "<group>"; };
 		A73828371FC3E196003C1827 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +324,67 @@
 			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
+		A72CAA711FD6853400308DED /* HideShowPasswordTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A72CAA891FD6857900308DED /* DesignClass */,
+				A72CAA881FD6856300308DED /* Icons */,
+			);
+			name = HideShowPasswordTextField;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A72CAA881FD6856300308DED /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				A72CAA761FD6855000308DED /* ic_eye_closed.png */,
+				A72CAA751FD6855000308DED /* ic_eye_closed@2x.png */,
+				A72CAA7C1FD6855200308DED /* ic_eye_closed@3x.png */,
+				A72CAA791FD6855100308DED /* ic_eye_open.png */,
+				A72CAA731FD6855000308DED /* ic_eye_open@2x.png */,
+				A72CAA721FD6854F00308DED /* ic_eye_open@3x.png */,
+				A72CAA7A1FD6855100308DED /* ic_password_checkmark.png */,
+				A72CAA781FD6855100308DED /* ic_password_checkmark@2x.png */,
+				A72CAA771FD6855000308DED /* ic_password_checkmark@3x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		A72CAA891FD6857900308DED /* DesignClass */ = {
+			isa = PBXGroup;
+			children = (
+				A72CAA741FD6855000308DED /* HideShowPasswordTextField.swift */,
+				A72CAA7B1FD6855100308DED /* PasswordToggleVisibilityView.swift */,
+			);
+			path = DesignClass;
+			sourceTree = "<group>";
+		};
+		A72CAA8C1FD685E900308DED /* Gender */ = {
+			isa = PBXGroup;
+			children = (
+				A72CAA8A1FD685DF00308DED /* Genders.swift */,
+			);
+			path = Gender;
+			sourceTree = "<group>";
+		};
+		A72CAA8D1FD689A800308DED /* RegistrationViews */ = {
+			isa = PBXGroup;
+			children = (
+				A72CAA8E1FD689B200308DED /* RegisterViewControllerExtentions.swift */,
+			);
+			name = RegistrationViews;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A72CAA901FD689BE00308DED /* EntranceView */ = {
+			isa = PBXGroup;
+			children = (
+				A72CAA911FD689D100308DED /* EntranceViewControllerExtention.swift */,
+			);
+			name = EntranceView;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		A738282D1FC352F3003C1827 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,7 +416,7 @@
 				A75F40231FC0D9A600495228 /* RegisterViewController.swift */,
 				A73828371FC3E196003C1827 /* VerificationViewController.swift */,
 				A7407F001FC4A83800DAAF44 /* AddImageVerificationViewController.swift */,
-				A72705C61FC8A7E2006C2504 /* TempoaryAddImageViewController.swift */,
+				A72705C61FC8A7E2006C2504 /* AddImageViewController.swift */,
 			);
 			path = RegistrationViews;
 			sourceTree = "<group>";
@@ -373,6 +492,8 @@
 		A75F401B1FC0D5B400495228 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A72CAA711FD6853400308DED /* HideShowPasswordTextField */,
+				A72CAA6D1FD5B18D00308DED /* DesignableUITextField.swift */,
 				A7AFE0361FC3376500656A02 /* File.swift */,
 			);
 			path = View;
@@ -403,6 +524,7 @@
 		A75F401E1FC0D5F300495228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A72CAA8C1FD685E900308DED /* Gender */,
 				A767CEE51FD4AA2F00E70B16 /* Alert */,
 				A7DD2E3A1FD2DD7B0009322E /* Character */,
 				A72AFBE71FCDF7640018254E /* EmailMessages */,
@@ -423,6 +545,8 @@
 		A75F40201FC0D60500495228 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A72CAA901FD689BE00308DED /* EntranceView */,
+				A72CAA8D1FD689A800308DED /* RegistrationViews */,
 				A72AFBEC1FCE794C0018254E /* UIKitExtensions */,
 				A72705CC1FC91DF3006C2504 /* ControllerExtensions */,
 			);
@@ -456,6 +580,7 @@
 		A778D9E41FC9BC2700F38438 /* FirebaseModelConstants */ = {
 			isa = PBXGroup;
 			children = (
+				A72CAA6B1FD5AF8200308DED /* DatabaseAccessConstant.swift */,
 				A72AFBDD1FCDE8800018254E /* FirebaseDomainConstants.swift */,
 				A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */,
 				A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */,
@@ -466,6 +591,19 @@
 		A778D9E71FC9CA5300F38438 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A72CAA4F1FD5AE0800308DED /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */,
+				A72CAA4D1FD5AE0700308DED /* batman_icon.png */,
+				A72CAA561FD5AE0900308DED /* camera-icon.png */,
+				A72CAA521FD5AE0800308DED /* female_default.png */,
+				A72CAA4C1FD5AE0700308DED /* female_selected.png */,
+				A72CAA531FD5AE0800308DED /* image1.jpg */,
+				A72CAA541FD5AE0900308DED /* image2.jpg */,
+				A72CAA4E1FD5AE0700308DED /* image3.jpg */,
+				A72CAA511FD5AE0800308DED /* image4.jpg */,
+				A72CAA4B1FD5AE0700308DED /* male_default.png */,
+				A72CAA501FD5AE0800308DED /* male_selected.png */,
+				A72CAA571FD5AE0900308DED /* Register */,
+				A72CAA551FD5AE0900308DED /* wonder_woman_icon.png */,
 				A71B49FD1FD3112400B69E71 /* camera_icon_new.png */,
 				A72705CA1FC8AD32006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */,
 			);
@@ -620,12 +758,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A72CAA591FD5AE0900308DED /* female_selected.png in Resources */,
+				A72CAA5B1FD5AE0900308DED /* image3.jpg in Resources */,
+				A72CAA5C1FD5AE0900308DED /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
+				A72CAA7E1FD6855200308DED /* ic_eye_open@2x.png in Resources */,
 				A71B49FE1FD3112400B69E71 /* camera_icon_new.png in Resources */,
+				A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */,
+				A72CAA581FD5AE0900308DED /* male_default.png in Resources */,
+				A72CAA641FD5AE0900308DED /* Register in Resources */,
+				A72CAA831FD6855200308DED /* ic_password_checkmark@2x.png in Resources */,
 				A75F40131FC0B7C600495228 /* LaunchScreen.storyboard in Resources */,
+				A72CAA811FD6855200308DED /* ic_eye_closed.png in Resources */,
 				A72705CB1FC8AD33006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
+				A72CAA5E1FD5AE0900308DED /* image4.jpg in Resources */,
+				A72CAA851FD6855200308DED /* ic_password_checkmark.png in Resources */,
 				A75F40101FC0B7C600495228 /* Assets.xcassets in Resources */,
+				A72CAA631FD5AE0900308DED /* camera-icon.png in Resources */,
+				A72CAA801FD6855200308DED /* ic_eye_closed@2x.png in Resources */,
+				A72CAA7D1FD6855200308DED /* ic_eye_open@3x.png in Resources */,
 				A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */,
+				A72CAA821FD6855200308DED /* ic_password_checkmark@3x.png in Resources */,
+				A72CAA5A1FD5AE0900308DED /* batman_icon.png in Resources */,
+				A72CAA871FD6855200308DED /* ic_eye_closed@3x.png in Resources */,
+				A72CAA601FD5AE0900308DED /* image1.jpg in Resources */,
+				A72CAA5F1FD5AE0900308DED /* female_default.png in Resources */,
 				A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */,
+				A72CAA611FD5AE0900308DED /* image2.jpg in Resources */,
+				A72CAA621FD5AE0900308DED /* wonder_woman_icon.png in Resources */,
+				A72CAA5D1FD5AE0900308DED /* male_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,9 +816,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -672,6 +836,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -682,6 +850,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -702,13 +874,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */,
+				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
 				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
 				A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */,
 				A767CEE71FD4AA4200E70B16 /* AlertControllerConstants.swift in Sources */,
 				A7DD2E131FD1B1600009322E /* ServerAccessExtensionFunctions.swift in Sources */,
 				A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */,
 				A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */,
-				A72705C71FC8A7E2006C2504 /* TempoaryAddImageViewController.swift in Sources */,
+				A72705C71FC8A7E2006C2504 /* AddImageViewController.swift in Sources */,
+				A72CAA861FD6855200308DED /* PasswordToggleVisibilityView.swift in Sources */,
 				A71B49F11FD2F33C00B69E71 /* UIImageViewX.swift in Sources */,
 				A72AFBE61FCDEDA70018254E /* SendVerificationExtensions.swift in Sources */,
 				A7DD2E171FD1BEEE0009322E /* ValidationExtensionFunctions.swift in Sources */,
@@ -723,6 +898,7 @@
 				A75F40351FC238B600495228 /* StartPageViewController.swift in Sources */,
 				A71B49F51FD2F33C00B69E71 /* UILabelX.swift in Sources */,
 				A778D9E61FC9BC4900F38438 /* UserAttributeNames.swift in Sources */,
+				A72CAA921FD689D100308DED /* EntranceViewControllerExtention.swift in Sources */,
 				A767CEF01FD5392400E70B16 /* UIAlertControllerCustomDesign.swift in Sources */,
 				A72AFBE31FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift in Sources */,
 				A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */,
@@ -755,10 +931,13 @@
 				A71B49F81FD2F33C00B69E71 /* UITextFieldX.swift in Sources */,
 				A7DD2E391FD2DC110009322E /* Information.swift in Sources */,
 				A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */,
+				A72CAA8B1FD685E000308DED /* Genders.swift in Sources */,
+				A72CAA7F1FD6855200308DED /* HideShowPasswordTextField.swift in Sources */,
 				A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */,
 				A72AFBE91FCDF77C0018254E /* InformationMessages.swift in Sources */,
 				A71B49F41FD2F33C00B69E71 /* UIButtonX.swift in Sources */,
 				A7D1CBAE1FD460660082BC02 /* UITextFieldCustomDesign.swift in Sources */,
+				A72CAA8F1FD689B200308DED /* RegisterViewControllerExtentions.swift in Sources */,
 				A72705C11FC885B8006C2504 /* MainPageViewController.swift in Sources */,
 				A72AFBE01FCDE8D70018254E /* ProjectSettingsConstants.swift in Sources */,
 				A75F40261FC0DBCC00495228 /* EntranceViewController.swift in Sources */,

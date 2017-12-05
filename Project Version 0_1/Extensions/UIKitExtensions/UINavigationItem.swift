@@ -16,6 +16,12 @@ extension UINavigationItem {
         backBarButtonItem = UIBarButtonItem(title: SPACE_CHARACTER, style: .plain, target:nil, action:nil)
     }
     
+    func disableLeftBarItem_Back() {
+        
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        leftBarButtonItem = backButton
+
+    }
     
     
 }
