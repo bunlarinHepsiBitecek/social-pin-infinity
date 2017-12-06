@@ -128,7 +128,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func deneme(_ sender: UIButton) {
         
-        let temp = storyboard?.instantiateViewController(withIdentifier: "temporaryID") as! AddImageViewController
+        let temp = storyboard?.instantiateViewController(withIdentifier: "AddImageViewController_storyBorad_ID") as! AddImageViewController
         
         temp.userObject = userDatabaseObjectToPass
         
