@@ -65,6 +65,8 @@
 		A72CAA8B1FD685E000308DED /* Genders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA8A1FD685DF00308DED /* Genders.swift */; };
 		A72CAA8F1FD689B200308DED /* RegisterViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA8E1FD689B200308DED /* RegisterViewControllerExtentions.swift */; };
 		A72CAA921FD689D100308DED /* EntranceViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA911FD689D100308DED /* EntranceViewControllerExtention.swift */; };
+		A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C641FD85AA4008BE2D2 /* Pacifico.ttf */; };
+		A72D2C671FD85AA4008BE2D2 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C651FD85AA4008BE2D2 /* OFL.txt */; };
 		A73828301FC35DCB003C1827 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738282F1FC35DCB003C1827 /* Validation.swift */; };
 		A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828311FC36379003C1827 /* ConstantCharacters.swift */; };
 		A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828371FC3E196003C1827 /* VerificationViewController.swift */; };
@@ -165,6 +167,8 @@
 		A72CAA8A1FD685DF00308DED /* Genders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genders.swift; sourceTree = "<group>"; };
 		A72CAA8E1FD689B200308DED /* RegisterViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerExtentions.swift; sourceTree = "<group>"; };
 		A72CAA911FD689D100308DED /* EntranceViewControllerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntranceViewControllerExtention.swift; sourceTree = "<group>"; };
+		A72D2C641FD85AA4008BE2D2 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
+		A72D2C651FD85AA4008BE2D2 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		A738282F1FC35DCB003C1827 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A73828311FC36379003C1827 /* ConstantCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantCharacters.swift; sourceTree = "<group>"; };
 		A73828371FC3E196003C1827 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -385,6 +389,31 @@
 			path = "New Group1";
 			sourceTree = "<group>";
 		};
+		A72D2C621FD85738008BE2D2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A72D2C631FD85746008BE2D2 /* Text Fonts */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A72D2C631FD85746008BE2D2 /* Text Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A72D2C681FD85AB6008BE2D2 /* Pacifico */,
+			);
+			path = "Text Fonts";
+			sourceTree = "<group>";
+		};
+		A72D2C681FD85AB6008BE2D2 /* Pacifico */ = {
+			isa = PBXGroup;
+			children = (
+				A72D2C651FD85AA4008BE2D2 /* OFL.txt */,
+				A72D2C641FD85AA4008BE2D2 /* Pacifico.ttf */,
+			);
+			path = Pacifico;
+			sourceTree = "<group>";
+		};
 		A738282D1FC352F3003C1827 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +553,7 @@
 		A75F401E1FC0D5F300495228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A72D2C621FD85738008BE2D2 /* Fonts */,
 				A72CAA8C1FD685E900308DED /* Gender */,
 				A767CEE51FD4AA2F00E70B16 /* Alert */,
 				A7DD2E3A1FD2DD7B0009322E /* Character */,
@@ -758,6 +788,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A72D2C671FD85AA4008BE2D2 /* OFL.txt in Resources */,
 				A72CAA591FD5AE0900308DED /* female_selected.png in Resources */,
 				A72CAA5B1FD5AE0900308DED /* image3.jpg in Resources */,
 				A72CAA5C1FD5AE0900308DED /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
@@ -768,6 +799,7 @@
 				A72CAA641FD5AE0900308DED /* Register in Resources */,
 				A72CAA831FD6855200308DED /* ic_password_checkmark@2x.png in Resources */,
 				A75F40131FC0B7C600495228 /* LaunchScreen.storyboard in Resources */,
+				A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */,
 				A72CAA811FD6855200308DED /* ic_eye_closed.png in Resources */,
 				A72705CB1FC8AD33006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
 				A72CAA5E1FD5AE0900308DED /* image4.jpg in Resources */,

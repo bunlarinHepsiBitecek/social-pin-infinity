@@ -14,6 +14,7 @@ extension UINavigationItem {
         
         title = PROJECT_PINBOOK
         backBarButtonItem = UIBarButtonItem(title: SPACE_CHARACTER, style: .plain, target:nil, action:nil)
+        backBarButtonItem?.tintColor = UIColor.white
     }
     
     func disableLeftBarItem_Back() {
