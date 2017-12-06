@@ -23,7 +23,7 @@
                 let anchorPointlayer = CALayer()
                 anchorPointlayer.backgroundColor = UIColor.red.cgColor
                 anchorPointlayer.bounds = CGRect(x: 0, y: 0, width: 6, height: 6)
-                anchorPointlayer.cornerRadius = 3
+                anchorPointlayer.cornerRadius = 5
                 
                 let anchor = layer.anchorPoint
                 let size = layer.bounds.size
