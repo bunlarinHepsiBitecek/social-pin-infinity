@@ -259,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				A7DD2E0B1FD1A4860009322E /* LoginViewExtensionFunction */,
-				A72AFBE41FCDED7D0018254E /* AddImageViewExtensions */,
 				A72AFBD11FCCC1F80018254E /* VerificationViewControllerExtensions */,
 				A72AFBD01FCCC1A40018254E /* TemporaryAddImageController */,
 				A778D9FC1FCB271D00F38438 /* ExtensionLoginViewController */,
@@ -301,13 +300,6 @@
 				A72AFBDF1FCDE8D70018254E /* ProjectSettingsConstants.swift */,
 			);
 			path = IOS;
-			sourceTree = "<group>";
-		};
-		A72AFBE41FCDED7D0018254E /* AddImageViewExtensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AddImageViewExtensions;
 			sourceTree = "<group>";
 		};
 		A72AFBE71FCDF7640018254E /* EmailMessages */ = {
