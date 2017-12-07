@@ -215,6 +215,7 @@
                     </view>
                     <connections>
                         <outlet property="Login" destination="9od-WE-u6b" id="v3Z-hz-fBd"/>
+                        <outlet property="checkBoxButton" destination="G0z-aP-2Vf" id="6Q0-ej-fti"/>
                         <outlet property="email" destination="McH-dE-qna" id="rpl-NU-Z5r"/>
                         <outlet property="forgotPasswordButton" destination="GkR-T1-rPO" id="77g-u2-cXr"/>
                         <outlet property="password" destination="Olw-Hy-VV1" id="8dR-zj-1Wy"/>

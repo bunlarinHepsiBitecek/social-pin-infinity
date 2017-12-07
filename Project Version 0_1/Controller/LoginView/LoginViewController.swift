@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import SwiftKeychainWrapper
 import TextFieldEffects
+import CheckBox
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -18,6 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var password: UITextField!
     @IBOutlet var Login: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
+    @IBOutlet var checkBoxButton: CheckBox!
     
     var x = UIAlertController()
     
@@ -35,18 +37,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         self.navigationController?.enableNavigationBar()
         
+        /*
         email.text = "erkutbas007@gmail.com"
-        password.text = "123456"
+        password.text = "123456"*/
         
         self.Login.disableButton()
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         self.title = "PinBook"
-        //self.navigationItem.setNavigationBarItemTitleWithBrand()
         
-        
-        //self.manageForegroundActions()
-        
+        self.setRememberMeEnabledOrDisabled()
     }
     
     /*
@@ -179,6 +179,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func checkBoxTapped(_ sender: Any) {
         
         print("CheckBox tapped")
+        
+        registerdRememberMeUserData(inputEmail: email.text!, inputPassword: password.text!)
         
         
     }
