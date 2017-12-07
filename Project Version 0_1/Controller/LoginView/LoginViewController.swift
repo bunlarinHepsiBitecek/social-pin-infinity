@@ -30,16 +30,53 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("LoginView viewDidLoad activated")
 
         self.navigationController?.enableNavigationBar()
         
         email.text = "erkutbas007@gmail.com"
         password.text = "123456"
         
-        
         self.Login.disableButton()
         
-        navigationItem.setNavigationItemTitle()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        self.title = "PinBook"
+        //self.navigationItem.setNavigationBarItemTitleWithBrand()
+        
+        
+        //self.manageForegroundActions()
+        
+    }
+    
+    /*
+    override func viewDidAppear(_ animated: Bool) {
+     
+        super.viewDidAppear(true)
+        
+        self.navigationItem.setNavigationBarItemTitleWithBrand()
+        
+    }
+    */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        //self.navigationItem.setNavigationBarItemTitleWithBrand()
+    }
+    
+    func manageForegroundActions() {
+        
+        print("BABABABABABABB")
+        
+        let action = #selector(takasi)
+        
+        NotificationCenter.default.addObserver(self, selector: action, name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        
+    }
+    
+    @objc func takasi() {
+        
+        self.navigationItem.setNavigationBarItemTitleWithBrand()
         
     }
     
@@ -82,6 +119,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
      */
     @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
         
+        self.navigationItem.eraseNavigationBarItemTitle()
         performSegue(withIdentifier: "gotoForgotPasswordView", sender: self)
         
     }
@@ -128,11 +166,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func deneme(_ sender: UIButton) {
         
+        //self.navigationItem.eraseNavigationBarItemTitle()
+        
         let temp = storyboard?.instantiateViewController(withIdentifier: "AddImageViewController_storyBorad_ID") as! AddImageViewController
         
         temp.userObject = userDatabaseObjectToPass
         
         navigationController?.pushViewController(temp, animated: true)
+        
+    }
+    
+    @IBAction func checkBoxTapped(_ sender: Any) {
+        
+        print("CheckBox tapped")
+        
         
     }
     

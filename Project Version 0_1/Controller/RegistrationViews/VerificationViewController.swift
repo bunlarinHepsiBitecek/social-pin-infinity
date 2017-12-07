@@ -29,8 +29,8 @@ class VerificationViewController: UIViewController {
         
         self.navigationController?.enableNavigationBar()
         self.manageForegroundActions()
-        navigationItem.setNavigationItemTitle()
-        navigationItem.disableLeftBarItem_Back()
+        self.navigationItem.setNavigationBarItemTitleWithBrand()
+        //navigationItem.disableLeftBarItem_BackString()
         
         print("VerificationViewController starts")
         print("viewDidLoad : callerViewControllerID : \(callerViewControllerID)")

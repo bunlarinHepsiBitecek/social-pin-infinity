@@ -10,17 +10,16 @@ import UIKit
 
 extension UINavigationItem {
     
-    func setNavigationItemTitle()  {
+    func eraseNavigationBarItemTitle() {
         
-        title = PROJECT_PINBOOK
-        backBarButtonItem = UIBarButtonItem(title: SPACE_CHARACTER, style: .plain, target:nil, action:nil)
+        title = SPACE_CHARACTER
+        
     }
     
-    func disableLeftBarItem_Back() {
+    func setNavigationBarItemTitleWithBrand() {
         
-        let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        leftBarButtonItem = backButton
-
+        title = PROJECT_PINBOOK
+        
     }
     
     

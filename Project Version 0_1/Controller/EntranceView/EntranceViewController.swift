@@ -44,6 +44,8 @@ class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
     
     @IBAction func loginButton(_ sender: UIButton) {
         
+        navigationItem.title = SPACE_CHARACTER
+        
         performSegue(withIdentifier: "gotoLoginPage", sender: self)
         
     }

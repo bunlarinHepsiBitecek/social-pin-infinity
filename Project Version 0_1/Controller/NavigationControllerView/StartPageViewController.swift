@@ -18,7 +18,7 @@ class StartPageViewController: UINavigationController {
         print("Entrance view starts")
         print("KeyChainData : \(KeychainWrapper.standard.string(forKey: USER_ID))")
         
-        navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Noteworthy", size: 20)!]
+        navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Pacifico", size: 25)!, NSAttributedStringKey.foregroundColor: UIColor.white]
         
     }
     

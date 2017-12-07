@@ -15,7 +15,9 @@ class AddImageVerificationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        self.title = "PinBook"
         self.navigationController?.enableNavigationBar()
+
     }
 
     override func didReceiveMemoryWarning() {

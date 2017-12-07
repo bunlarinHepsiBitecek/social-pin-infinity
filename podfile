@@ -19,5 +19,6 @@ target 'Project Version 0_1' do
  pod 'FBSDKLoginKit'
  pod 'FBSDKShareKit'
  pod 'TwitterKit'
+ pod 'CheckBox'
 
 end

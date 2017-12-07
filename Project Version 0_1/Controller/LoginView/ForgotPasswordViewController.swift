@@ -30,7 +30,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         continueButton.disableButton()
         manageForegroundActions()
         
-        navigationItem.setNavigationItemTitle()
+        self.navigationItem.setNavigationBarItemTitleWithBrand()
         
     }
 
@@ -48,6 +48,8 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc private func checkUserPasswordResetAndPerformLoginPage() {
+        
+        self.navigationItem.eraseNavigationBarItemTitle()
         
         let loginViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "LoginViewController_storyBoardID") as! LoginViewController
         
