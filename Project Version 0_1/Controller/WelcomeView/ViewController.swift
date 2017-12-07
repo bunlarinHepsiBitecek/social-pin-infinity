@@ -20,7 +20,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        print("PinBook page starts")
+        
         self.navigationController?.disableNavigationBar()
+        //self.navigationItem.eraseNavigationBarItemTitle()
         
         runTimer()
         
@@ -61,6 +64,8 @@ class ViewController: UIViewController {
             
             if let resultKeyChainWrapper = KeychainWrapper.standard.string(forKey: USER_ID) {
                 
+                print("KeyChain datası dolu")
+                
                 if loggedInUser.uid == resultKeyChainWrapper {
                     
                     if loggedInUser.isEmailVerified {
@@ -82,6 +87,12 @@ class ViewController: UIViewController {
                     performSegue(withIdentifier: "gotoEntrancePage", sender: self)
                     
                 }
+                
+            } else {
+                
+                print("user keychain data is empty")
+                performSegue(withIdentifier: "gotoEntrancePage", sender: self)
+                
             }
             
         } else {

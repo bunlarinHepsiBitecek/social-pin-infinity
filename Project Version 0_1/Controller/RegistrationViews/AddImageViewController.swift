@@ -28,7 +28,9 @@ class AddImageViewController: UIViewController {
         //self.imageView.setImageViewLike3dEffect()
         userObject.displayAttributeValues()
         
-        navigationItem.setNavigationItemTitle()
+        self.title = "PinBook"
+        //self.navigationItem.setNavigationBarItemTitleWithBrand()
+        //self.navigationItem.backBarButtonItem?.title = SPACE_CHARACTER
         
         
     }
@@ -57,6 +59,8 @@ class AddImageViewController: UIViewController {
     }
     
     @IBAction func gotoVerificationPage(_ sender: UIButton) {
+        
+        self.navigationItem.eraseNavigationBarItemTitle()
         
         print("gotoVerificationPage starts")
         let verificationViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "VerificationViewController_storyBoardID") as! VerificationViewController

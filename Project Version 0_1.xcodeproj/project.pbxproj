@@ -67,6 +67,7 @@
 		A72CAA921FD689D100308DED /* EntranceViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA911FD689D100308DED /* EntranceViewControllerExtention.swift */; };
 		A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C641FD85AA4008BE2D2 /* Pacifico.ttf */; };
 		A72D2C671FD85AA4008BE2D2 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C651FD85AA4008BE2D2 /* OFL.txt */; };
+		A72D2C6A1FD86C24008BE2D2 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C691FD86C24008BE2D2 /* back.png */; };
 		A73828301FC35DCB003C1827 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738282F1FC35DCB003C1827 /* Validation.swift */; };
 		A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828311FC36379003C1827 /* ConstantCharacters.swift */; };
 		A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828371FC3E196003C1827 /* VerificationViewController.swift */; };
@@ -169,6 +170,7 @@
 		A72CAA911FD689D100308DED /* EntranceViewControllerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntranceViewControllerExtention.swift; sourceTree = "<group>"; };
 		A72D2C641FD85AA4008BE2D2 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 		A72D2C651FD85AA4008BE2D2 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		A72D2C691FD86C24008BE2D2 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		A738282F1FC35DCB003C1827 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A73828311FC36379003C1827 /* ConstantCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantCharacters.swift; sourceTree = "<group>"; };
 		A73828371FC3E196003C1827 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -497,6 +499,7 @@
 		A75F40071FC0B7C600495228 /* Project Version 0_1 */ = {
 			isa = PBXGroup;
 			children = (
+				A72D2C691FD86C24008BE2D2 /* back.png */,
 				A7D1CB9F1FD4494D0082BC02 /* DesignableClasses */,
 				A71B49E41FD2F32500B69E71 /* takasi */,
 				A778D9E71FC9CA5300F38438 /* Images */,
@@ -815,6 +818,7 @@
 				A72CAA601FD5AE0900308DED /* image1.jpg in Resources */,
 				A72CAA5F1FD5AE0900308DED /* female_default.png in Resources */,
 				A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */,
+				A72D2C6A1FD86C24008BE2D2 /* back.png in Resources */,
 				A72CAA611FD5AE0900308DED /* image2.jpg in Resources */,
 				A72CAA621FD5AE0900308DED /* wonder_woman_icon.png in Resources */,
 				A72CAA5D1FD5AE0900308DED /* male_selected.png in Resources */,
@@ -869,6 +873,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CheckBox/CheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
@@ -883,6 +888,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",

@@ -6,7 +6,11 @@
 	<dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
-<<<<<<< erkut-login-v1
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CheckBox.xcscheme</key>
+		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
@@ -24,105 +28,46 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-=======
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>FBSDKCoreKit.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>FBSDKLoginKit.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>FBSDKShareKit.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
->>>>>>> local
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< erkut-login-v1
-=======
-			<key>orderHint</key>
-			<integer>5</integer>
->>>>>>> local
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< erkut-login-v1
-=======
-			<key>orderHint</key>
-			<integer>4</integer>
->>>>>>> local
 		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< erkut-login-v1
-=======
-			<key>orderHint</key>
-			<integer>6</integer>
->>>>>>> local
 		</dict>
 		<key>Pods-Project Version 0_1.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< erkut-login-v1
-=======
-			<key>orderHint</key>
-			<integer>9</integer>
->>>>>>> local
 		</dict>
 		<key>SwiftKeychainWrapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< erkut-login-v1
-=======
-			<key>orderHint</key>
-			<integer>10</integer>
->>>>>>> local
 		</dict>
 		<key>TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< erkut-login-v1
-=======
-			<key>orderHint</key>
-			<integer>11</integer>
->>>>>>> local
 		</dict>
 		<key>leveldb-library.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< erkut-login-v1
-=======
-			<key>orderHint</key>
-			<integer>7</integer>
->>>>>>> local
 		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< erkut-login-v1
-=======
-			<key>orderHint</key>
-			<integer>8</integer>
->>>>>>> local
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

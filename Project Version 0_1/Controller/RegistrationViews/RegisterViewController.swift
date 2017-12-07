@@ -32,8 +32,6 @@ class RegisterViewController: UIViewController {
         genderSwitchControl(sender: sender)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +43,8 @@ class RegisterViewController: UIViewController {
         setupPasswordTextField()
         createDatePicker()
         
+        self.navigationItem.setNavigationBarItemTitleWithBrand()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,6 +52,8 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func gotoAddImage(_ sender: Any) {
+        
+        self.navigationItem.eraseNavigationBarItemTitle()
         
         setUserInfo()
         

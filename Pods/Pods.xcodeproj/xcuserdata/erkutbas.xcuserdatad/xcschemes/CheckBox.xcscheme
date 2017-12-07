@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D6FC5A1088B721126B8E4BE5267C8F9C'
-               BlueprintName = 'TextFieldEffects'
+               BlueprintIdentifier = '2DE7AD5617BEB0E201DD624FA0437E7D'
+               BlueprintName = 'CheckBox'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'TextFieldEffects.framework'>
+               BuildableName = 'CheckBox.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

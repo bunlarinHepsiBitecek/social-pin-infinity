@@ -5,6 +5,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - CheckBox (0.1.2)
   - FBSDKCoreKit (4.27.1):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.27.1):
@@ -69,6 +70,7 @@ PODS:
     - TwitterCore (>= 3.0.2)
 
 DEPENDENCIES:
+  - CheckBox
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
@@ -83,6 +85,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CheckBox: 9231523d31e1f372f1762180573385e114ce8efe
   FBSDKCoreKit: 03365dad5d790249196ffad8be4f6d8a2d98f932
   FBSDKLoginKit: 66ff53b73cffd967ab773e32fac39e90a60e6d46
   FBSDKShareKit: 6a6a0ef9e850c741e4e1d7a7d21335205e997ec1
@@ -103,6 +106,6 @@ SPEC CHECKSUMS:
   TwitterCore: e0420b01e02e7d20e94690e37f43e75de219ab8d
   TwitterKit: 205ac89824bbfe9e85a16c420d30bb7bcbedac45
 
-PODFILE CHECKSUM: 2cd60e5ae508b225d0910c9ca06c384d28805d47
+PODFILE CHECKSUM: fafbdfdfc3dd0bdbcbb67e778f4306e9d0b5bedf
 
 COCOAPODS: 1.3.1
