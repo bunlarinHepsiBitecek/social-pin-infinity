@@ -129,6 +129,36 @@ extension RegisterViewController {
 }
 
 extension RegisterViewController {
+    func checkValidateEmail() {
+        let responseEmailFieldValidation = Validation.shared.validate(values: (type: ValidationFields.emailField, inputValue: emailAddress.text!))
+        
+        switch responseEmailFieldValidation {
+        case .success:
+            print("email validation is ok")
+            user.setUserEmail(inputEmail: emailAddress.text!)
+        default:
+            print("email validation is failed")
+            showError()
+        }
+    }
+    
+    func showError() {
+        let appearance = SCLAlertView.SCLAppearance(
+            // action here
+           // showCloseButton: false
+        )
+        
+        let timeoutAction: SCLAlertView.SCLTimeoutConfiguration.ActionType = {
+            // action here
+        }
+        let alertView = SCLAlertView(appearance: appearance)
+        
+        alertView.showError("", subTitle: "Email address is invalid", closeButtonTitle: "Dismiss", timeout:SCLAlertView.SCLTimeoutConfiguration(timeoutValue: 2.0, timeoutAction:timeoutAction))
+    }
+    
+}
+
+extension RegisterViewController {
     func  setUserInfo() {
         
         user.setUserGender(inputUserGender: gender.rawValue)

@@ -14,6 +14,8 @@ import SwiftKeychainWrapper
 
 class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
     
+    var user: User = User()
+    
     @IBOutlet var facebookLoginButton: FBSDKLoginButton!
     
     @IBOutlet var twitterLoginButton: TWTRLogInButton!
@@ -27,6 +29,8 @@ class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
         
         // embeded navigation controller and scrollview slide down
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        twitterLogin()
     }
     
     override func viewDidAppear(_ animated: Bool) {

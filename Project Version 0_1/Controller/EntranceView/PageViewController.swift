@@ -40,8 +40,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     private func getContentImages() -> [String] {
         var images = [String]()
         
-        for x in 1...4 {
-            images.append("image\(x).jpg")
+        for x in 1...3 {
+            images.append("image\(x).png")
         }
         
         return images

@@ -19,7 +19,7 @@ extension LoginViewController {
     */
     func createUserWithCredentials() {
         
-        Auth.auth().createUser(withEmail: self.userDatabaseObjectToPass.email, password: self.userDatabaseObjectToPass.userPassword) { (user, error) in
+        Auth.auth().createUser(withEmail: self.userDatabaseObjectToPass.email, password: self.userDatabaseObjectToPass.password) { (user, error) in
             
             if error != nil {
                 print("createUserWithCredentials : Unable to authenticate with Firebase using email")
@@ -80,7 +80,7 @@ extension LoginViewController {
         
         startSpinner()
         
-        Auth.auth().signIn(withEmail: userDatabaseObjectToPass.email, password: userDatabaseObjectToPass.userPassword) { (user, error) in
+        Auth.auth().signIn(withEmail: userDatabaseObjectToPass.email, password: userDatabaseObjectToPass.password) { (user, error) in
             
             /*
              error handling onto firebase ???

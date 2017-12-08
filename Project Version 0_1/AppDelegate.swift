@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import IQKeyboardManagerSwift
+import FBSDKLoginKit
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         IQKeyboardManager.sharedManager().enable = true
+        
+        //Facebook
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        //Twitter
+        Twitter.sharedInstance().start(withConsumerKey: TWITTER_CUSTOMER_KEY, consumerSecret: TWITTER_CUSTOMER_SECRETKEY)
+        
         return true
     }
 

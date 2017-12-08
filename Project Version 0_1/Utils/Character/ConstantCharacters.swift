@@ -10,8 +10,8 @@ import Foundation
 
 let SPACE_CHARACTER = ""
 
-let TWITTER_CUSTOMER_KEY = "XGlCXDJxfqCfnhZJjcBob1WtS"
-let TWITTER_CUSTOMER_SECRETKEY = "q6n6kKRLwWQjEt78onlH1J2mqcKZORLrXXHe84W6MGwO4zFjam"
+let TWITTER_CUSTOMER_KEY = "VeQxZvXMp0rdAdAbhqwpQ7a9T"
+let TWITTER_CUSTOMER_SECRETKEY = "nPRTbxaonteKlAZg7ltOPpZ2MQ8giEGJCOujehp7ywJlA4CzRK"
 
 struct Constants {
     struct RegisterPage {

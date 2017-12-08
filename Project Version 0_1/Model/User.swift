@@ -19,10 +19,11 @@ class User {
     private var _gender : String
     private var _birthday : String
     private var _mobilePhone : String
+    private var _provider: String
+    private var _providerId: String
     private var _userProfilePicture : UIImage
     private var _userProfilePictureUrl : String
     private var _userProfilePictureUniqueID : String
-    private var _userPassword : String
     
     private var _userDictionary : Dictionary<String, String> = [:]
     
@@ -36,9 +37,10 @@ class User {
         self._birthday = SPACE_CHARACTER
         self._userProfilePictureUrl = SPACE_CHARACTER
         self._userProfilePictureUniqueID = SPACE_CHARACTER
-        self._userPassword = SPACE_CHARACTER
         self._password = SPACE_CHARACTER
         self._mobilePhone = SPACE_CHARACTER
+        self._provider = SPACE_CHARACTER
+        self._providerId = SPACE_CHARACTER
         
         self._userProfilePicture = UIImage()
         
@@ -53,22 +55,9 @@ class User {
         print(CONSTANT_GENDER + " :" + _gender)
         print(CONSTANT_BIRTHDAY + " :" + _birthday)
         print(CONSTANT_MOBILEPHONE + " :" + _mobilePhone)
-    }
-    
-    init(inputUserID : String, inputUserName : String, inputUserNameSurname : String, inputUserEmail : String, inputUserGender : String, inputUserBirthday : String, inputUserProfilePicture : UIImage, inputUserProfilePictureUrl : String, inputUserProfilePictureUniqueID : String) {
-        
-        self._userID = inputUserID
-        self._userName = inputUserName
-        self._userNameSurname = inputUserNameSurname
-        self._email = inputUserEmail
-        self._gender = inputUserGender
-        self._birthday = inputUserBirthday
-        self._userProfilePicture = inputUserProfilePicture
-        self._userProfilePictureUrl = inputUserProfilePictureUrl
-        self._userProfilePictureUniqueID = inputUserProfilePictureUniqueID
-        self._userPassword = SPACE_CHARACTER
-        self._mobilePhone = SPACE_CHARACTER
-        self._password = SPACE_CHARACTER
+        print(CONSTANT_PROVIDER + " :" + _provider)
+        print(CONSTANT_PROVIDER_ID + " :" + _providerId)
+        print(CONSTANT_URL + ":" + _userProfilePictureUrl)
     }
     
     var userID : String {
@@ -111,16 +100,20 @@ class User {
         return _userProfilePictureUniqueID
     }
     
-    var userPassword : String {
-        return _userPassword
-    }
-    
     var password : String {
         return _password
     }
     
     var mobilePhone : String {
         return _mobilePhone
+    }
+    
+    var provider: String {
+        return _provider
+    }
+    
+    var providerId: String {
+        return _providerId
     }
     
     func setUserID(inputUserID : String) {
@@ -177,12 +170,6 @@ class User {
         
     }
     
-    func setUserPassword(inputUserPassword : String) {
-        
-        self._userPassword = inputUserPassword
-        
-    }
-    
     func setUserPassword(inputPassword : String) {
         
         self._password = inputPassword
@@ -192,12 +179,20 @@ class User {
     func setEmailAndPassword(inputUserEmail : String, inputUserPassword : String) {
         
         self._email = inputUserEmail
-        self._userPassword = inputUserPassword
+        self._password = inputUserPassword
         
     }
     
     func setUserMobilePhone(inputUserMobilePhone : String) {
         self._mobilePhone = inputUserMobilePhone
+    }
+    
+    func setUserProvider(inputUserProvider: String) {
+        self._provider = inputUserProvider
+    }
+    
+    func setUserProviderId(inputUserProviderId: String) {
+        self._providerId = inputUserProviderId
     }
     
     func displayAttributeValues() {
@@ -212,6 +207,46 @@ class User {
         
         self._userProfilePictureUniqueID = inputUserProfilePictureUniqueID
         
+    }
+    
+    func getUserJSONObject() -> Dictionary<String, String> {
+        if self._userName != SPACE_CHARACTER {
+            self.appendAttributeToDictionary(inputKey: CONSTANT_USERNAME, inputValue: self._userName)
+        }
+        
+        if self._userNameSurname != SPACE_CHARACTER {
+            self.appendAttributeToDictionary(inputKey: CONSTANT_NAME_SURNAME, inputValue: self._userNameSurname)
+        }
+        
+        if self._gender != SPACE_CHARACTER {
+            self.appendAttributeToDictionary(inputKey: CONSTANT_GENDER, inputValue: self._gender)
+        }
+        
+        if self._birthday != SPACE_CHARACTER {
+            self.appendAttributeToDictionary(inputKey: CONSTANT_BIRTHDAY, inputValue: self._birthday)
+        }
+        
+        if self._userProfilePictureUrl != SPACE_CHARACTER {
+            self.appendAttributeToDictionary(inputKey: CONSTANT_URL, inputValue: self._userProfilePictureUrl)
+        }
+        
+        if self._userProfilePictureUniqueID != SPACE_CHARACTER {
+            self.appendAttributeToDictionary(inputKey: CONSTANT_PROFILE_PICTURE_ID, inputValue: self._userProfilePictureUniqueID)
+        }
+        
+        if self._mobilePhone != SPACE_CHARACTER {
+            self.appendAttributeToDictionary(inputKey: CONSTANT_MOBILEPHONE, inputValue: self._mobilePhone)
+        }
+        
+        if self._provider != SPACE_CHARACTER {
+            self.appendAttributeToDictionary(inputKey: CONSTANT_PROVIDER, inputValue: self._provider)
+        }
+        
+        if self._providerId != SPACE_CHARACTER {
+            self.appendAttributeToDictionary(inputKey: CONSTANT_PROVIDER_ID, inputValue: self._providerId)
+        }
+        
+        return userDictionary
     }
     
 }

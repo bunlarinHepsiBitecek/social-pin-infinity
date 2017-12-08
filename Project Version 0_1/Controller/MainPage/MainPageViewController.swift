@@ -10,13 +10,19 @@ import UIKit
 import FirebaseAuth
 
 class MainPageViewController: UIViewController {
-
+    
+    var user: User = User()
+    
+    @IBOutlet var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         self.navigationController?.disableNavigationBar()
+        
+        imageView.image = user.userProfilePicture
         
     }
 
