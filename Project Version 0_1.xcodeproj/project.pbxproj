@@ -48,7 +48,6 @@
 		A72CAA611FD5AE0900308DED /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA541FD5AE0900308DED /* image2.jpg */; };
 		A72CAA621FD5AE0900308DED /* wonder_woman_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA551FD5AE0900308DED /* wonder_woman_icon.png */; };
 		A72CAA631FD5AE0900308DED /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA561FD5AE0900308DED /* camera-icon.png */; };
-		A72CAA641FD5AE0900308DED /* Register in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA571FD5AE0900308DED /* Register */; };
 		A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA6B1FD5AF8200308DED /* DatabaseAccessConstant.swift */; };
 		A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA6D1FD5B18D00308DED /* DesignableUITextField.swift */; };
 		A72CAA7D1FD6855200308DED /* ic_eye_open@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA721FD6854F00308DED /* ic_eye_open@3x.png */; };
@@ -69,6 +68,7 @@
 		A72D2C671FD85AA4008BE2D2 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C651FD85AA4008BE2D2 /* OFL.txt */; };
 		A72D2C6A1FD86C24008BE2D2 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C691FD86C24008BE2D2 /* back.png */; };
 		A72D2C6D1FD98594008BE2D2 /* KeyChainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D2C6C1FD98594008BE2D2 /* KeyChainConstants.swift */; };
+		A72D2C751FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D2C741FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift */; };
 		A73828301FC35DCB003C1827 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738282F1FC35DCB003C1827 /* Validation.swift */; };
 		A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828311FC36379003C1827 /* ConstantCharacters.swift */; };
 		A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828371FC3E196003C1827 /* VerificationViewController.swift */; };
@@ -152,7 +152,6 @@
 		A72CAA541FD5AE0900308DED /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		A72CAA551FD5AE0900308DED /* wonder_woman_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wonder_woman_icon.png; sourceTree = "<group>"; };
 		A72CAA561FD5AE0900308DED /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-icon.png"; path = "../../../../../Downloads/social-pin-infinity-remzi-register-v1/Project Version 0_1/Images/camera-icon.png"; sourceTree = "<group>"; };
-		A72CAA571FD5AE0900308DED /* Register */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Register; sourceTree = "<group>"; };
 		A72CAA6B1FD5AF8200308DED /* DatabaseAccessConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAccessConstant.swift; sourceTree = "<group>"; };
 		A72CAA6D1FD5B18D00308DED /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		A72CAA721FD6854F00308DED /* ic_eye_open@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_open@3x.png"; sourceTree = "<group>"; };
@@ -173,6 +172,13 @@
 		A72D2C651FD85AA4008BE2D2 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		A72D2C691FD86C24008BE2D2 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		A72D2C6C1FD98594008BE2D2 /* KeyChainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainConstants.swift; sourceTree = "<group>"; };
+		A72D2C6E1FDAC2AE008BE2D2 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		A72D2C6F1FDAC2AE008BE2D2 /* gender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender.png; sourceTree = "<group>"; };
+		A72D2C701FDAC2AF008BE2D2 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
+		A72D2C711FDAC2AF008BE2D2 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
+		A72D2C721FDAC2AF008BE2D2 /* birthday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = birthday.png; sourceTree = "<group>"; };
+		A72D2C731FDAC2AF008BE2D2 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
+		A72D2C741FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtensionFunctions.swift; sourceTree = "<group>"; };
 		A738282F1FC35DCB003C1827 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A73828311FC36379003C1827 /* ConstantCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantCharacters.swift; sourceTree = "<group>"; };
 		A73828371FC3E196003C1827 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -627,6 +633,12 @@
 		A778D9E71FC9CA5300F38438 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A72D2C721FDAC2AF008BE2D2 /* birthday.png */,
+				A72D2C701FDAC2AF008BE2D2 /* email.png */,
+				A72D2C6F1FDAC2AE008BE2D2 /* gender.png */,
+				A72D2C6E1FDAC2AE008BE2D2 /* password.png */,
+				A72D2C711FDAC2AF008BE2D2 /* person.png */,
+				A72D2C731FDAC2AF008BE2D2 /* phone.png */,
 				A72CAA4F1FD5AE0800308DED /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */,
 				A72CAA4D1FD5AE0700308DED /* batman_icon.png */,
 				A72CAA561FD5AE0900308DED /* camera-icon.png */,
@@ -638,7 +650,6 @@
 				A72CAA511FD5AE0800308DED /* image4.jpg */,
 				A72CAA4B1FD5AE0700308DED /* male_default.png */,
 				A72CAA501FD5AE0800308DED /* male_selected.png */,
-				A72CAA571FD5AE0900308DED /* Register */,
 				A72CAA551FD5AE0900308DED /* wonder_woman_icon.png */,
 				A71B49FD1FD3112400B69E71 /* camera_icon_new.png */,
 				A72705CA1FC8AD32006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */,
@@ -697,6 +708,7 @@
 				A7DD2E141FD1B1EE0009322E /* SwiftKeyChainExtensionFunctions.swift */,
 				A7DD2E161FD1BEEE0009322E /* ValidationExtensionFunctions.swift */,
 				A767CEE81FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift */,
+				A72D2C741FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift */,
 			);
 			path = LoginViewExtensionFunction;
 			sourceTree = "<group>";
@@ -802,7 +814,6 @@
 				A71B49FE1FD3112400B69E71 /* camera_icon_new.png in Resources */,
 				A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */,
 				A72CAA581FD5AE0900308DED /* male_default.png in Resources */,
-				A72CAA641FD5AE0900308DED /* Register in Resources */,
 				A72CAA831FD6855200308DED /* ic_password_checkmark@2x.png in Resources */,
 				A75F40131FC0B7C600495228 /* LaunchScreen.storyboard in Resources */,
 				A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */,
@@ -884,7 +895,6 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
-				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -899,7 +909,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -957,6 +966,7 @@
 				A71B49EF1FD2F33C00B69E71 /* UIViewXRadialGradient.swift in Sources */,
 				A71B49F31FD2F33C00B69E71 /* UIVisualEffectViewX.swift in Sources */,
 				A72705CE1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift in Sources */,
+				A72D2C751FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift in Sources */,
 				A7DD2E111FD1A8440009322E /* PerformSegueExtensionFunctions.swift in Sources */,
 				A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */,
 				A72AFBD81FCDD2640018254E /* StorageConstantNames.swift in Sources */,

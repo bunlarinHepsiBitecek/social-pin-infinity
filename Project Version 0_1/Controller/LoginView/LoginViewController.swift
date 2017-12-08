@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import SwiftKeychainWrapper
-import TextFieldEffects
 import CheckBox
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -43,43 +42,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.Login.disableButton()
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        self.title = "PinBook"
-        
         self.setRememberMeEnabledOrDisabled()
-    }
-    
-    /*
-    override func viewDidAppear(_ animated: Bool) {
-     
-        super.viewDidAppear(true)
         
-        self.navigationItem.setNavigationBarItemTitleWithBrand()
+        //self.navigationItem.setNavigationItemTitles()
         
-    }
-    */
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        //self.navigationItem.setNavigationBarItemTitleWithBrand()
-    }
-    
-    func manageForegroundActions() {
-        
-        print("BABABABABABABB")
+        print("setNavigationItemTitles starts")
         
         let action = #selector(takasi)
         
-        NotificationCenter.default.addObserver(self, selector: action, name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: action)
+        title = PROJECT_PINBOOK
     }
     
     @objc func takasi() {
         
-        self.navigationItem.setNavigationBarItemTitleWithBrand()
+        print("mina korum haaa")
         
     }
-    
     
     // to close keyboard when touches somewhere else but kwyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

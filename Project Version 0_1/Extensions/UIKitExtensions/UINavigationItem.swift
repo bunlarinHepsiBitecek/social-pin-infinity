@@ -22,5 +22,24 @@ extension UINavigationItem {
         
     }
     
+    func setNavigationItemTitles() {
+        
+        print("setNavigationItemTitles starts")
+        
+        let action = #selector(takasi)
+        
+        backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: action)
+        title = PROJECT_PINBOOK
+        
+    }
+    
+    @objc func takasi() {
+        
+        print("mina korum haaa")
+        
+    }
+    
+    
+    
     
 }
