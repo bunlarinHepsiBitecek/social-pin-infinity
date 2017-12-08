@@ -43,7 +43,7 @@ class RegisterViewController: UIViewController {
         setupPasswordTextField()
         createDatePicker()
         
-        self.navigationItem.setNavigationBarItemTitleWithBrand()
+        self.navigationItem.setNavigationItemTitles()
         
     }
     
@@ -52,8 +52,6 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func gotoAddImage(_ sender: Any) {
-        
-        self.navigationItem.eraseNavigationBarItemTitle()
         
         setUserInfo()
         

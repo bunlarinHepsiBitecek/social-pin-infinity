@@ -45,24 +45,25 @@ class Information {
     func setAlertController(inputTitle : String, inputMessage : String) {
         
         self._alertControllerObject = UIAlertController(title: inputTitle, message: inputMessage, preferredStyle: .alert)
-        
-        //self._alertControllerObject.view.backgroundColor = UIColor(red: 255, green: 10, blue: 0, alpha: 0.5)
-        //self._alertControllerObject.view.tintColor = UIColor.blue
-        //self._alertControllerObject.view.backgroundColor = UIColor(red: 255, green: 224, blue: 71, alpha: 1)
-        //self._alertControllerObject.view.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        //self._alertControllerObject.setGradientBackground()
         self._alertControllerObject.boko()
-        
-        print(self._alertControllerObject.view.backgroundColor?.cgColor)
-        
-        self._alertControllerObject.view.layer.cornerRadius = 30
-        
         self._alertActionObject = UIAlertAction(title: "OK", style: .destructive, handler: nil)
-        
         self._alertControllerObject.addAction(self._alertActionObject)
         
-        //self._alertControllerObject.runTimer()
         
+    }
+    
+    func setAlertControllerForgetPassword(inputTitle : String, inputMessage : String, inputEmailAddressText : String) {
+        
+        self._alertControllerObject = UIAlertController(title: inputTitle, message: inputMessage, preferredStyle: .alert)
+        self._alertControllerObject.boko()
+        
+        self._alertControllerObject.addTextField { (emailTextField) in
+            
+            emailTextField.text = inputEmailAddressText
+        }
+        
+        self._alertActionObject = UIAlertAction(title: "Şifre Sıfırlama Uyarısı", style: .destructive, handler: nil)
+        self._alertControllerObject.addAction(self._alertActionObject)
     }
     
 }

@@ -104,6 +104,11 @@ extension LoginViewController {
                     case .userNotFound:
                         print("user is not found, let's create one")
                         self.createUserWithCredentials()
+                
+                    case .wrongPassword:
+                        print("user password is not correct")
+                        self.createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_STRING_WARNING_INVALID_FIELDS)
+                        self.stopSpinner()
                         
                     default:
                         print("nothing to do at this point")

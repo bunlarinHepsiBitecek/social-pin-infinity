@@ -16,34 +16,24 @@ class AddImageViewController: UIViewController {
     
     var userObject = User.init()
     
+    var gotoBack : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("AddImageViewController starts")
         
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(getProfilePhoto)))
         imageView.isUserInteractionEnabled = true
         
         self.imageView.setRoundedDesignToProfilePictureImageViews()
-        //self.imageView.setImageViewLike3dEffect()
         userObject.displayAttributeValues()
         
-        self.title = "PinBook"
-        //self.navigationItem.setNavigationBarItemTitleWithBrand()
-        //self.navigationItem.backBarButtonItem?.title = SPACE_CHARACTER
-        
+        self.navigationItem.setNavigationItemTitles()
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        print("ttttt")
-        
-        self.imageView.setRoundedDesignToProfilePictureImageViews()
-        //self.imageView.setImageViewLike3dEffect()
-        
-    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,8 +49,6 @@ class AddImageViewController: UIViewController {
     }
     
     @IBAction func gotoVerificationPage(_ sender: UIButton) {
-        
-        self.navigationItem.eraseNavigationBarItemTitle()
         
         print("gotoVerificationPage starts")
         let verificationViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "VerificationViewController_storyBoardID") as! VerificationViewController

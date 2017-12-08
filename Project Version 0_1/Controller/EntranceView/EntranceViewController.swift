@@ -27,15 +27,23 @@ class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
         
         // embeded navigation controller and scrollview slide down
         self.automaticallyAdjustsScrollViewInsets = false
+        
     }
     
+    // when entrance view appears, navigation bar will be hidden immediately
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+    
+    /*
     override func viewDidAppear(_ animated: Bool) {
         
         self.navigationController?.disableNavigationBar()
         
         // facebook delegation
         facebookLoginButton.delegate = self
-    }
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

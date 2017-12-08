@@ -16,4 +16,31 @@ extension LoginViewController {
         self.userDatabaseObjectToPass.setEmailAndPassword(inputUserEmail: self.email.text!, inputUserPassword: self.password.text!)
         
     }
+    
+    func setUserEmailData() {
+        
+        self.userDatabaseObjectToPass.setUserEmail(inputEmail: self.email.text!)
+        
+    }
+    
+    func clearTextFieldsOnLoginView() {
+        
+        print("clearTextFieldsOnLoginView starts")
+        
+        let action = #selector(clearProcessFunction)
+        
+        NotificationCenter.default.addObserver(self, selector: action, name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        
+    }
+    
+    @objc private func clearProcessFunction() {
+        
+        print("clearProcessFunction starts")
+        
+        self.email.text = self.userDatabaseObjectToPass.email
+        self.password.text = SPACE_CHARACTER
+        
+        self.clearAllKeychainData()
+        
+    }
 }

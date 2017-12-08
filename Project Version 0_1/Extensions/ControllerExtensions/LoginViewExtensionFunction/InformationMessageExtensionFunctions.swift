@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioUnit
+import Firebase
 
 extension LoginViewController {
     
@@ -24,6 +25,43 @@ extension LoginViewController {
         DispatchQueue.main.asyncAfter(deadline: whenToCloseAlert){
            
             informationObject.alertControllerObject.dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    
+    func createForgetPasswordAlertController(inputEmailTextString : String) {
+        
+        let informationObjectForgetPassword = Information()
+        informationObjectForgetPassword.setAlertControllerForgetPassword(inputTitle: CONSTANT_FORGET_PASSWORD, inputMessage: CONSTANT_FORGET_PASSWORD_INFO, inputEmailAddressText: inputEmailTextString)
+        
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
+        self.present(informationObjectForgetPassword.alertControllerObject, animated: true) {
+        
+            var actionCodeSettingsObject = ActionCodeSettings.init()
+            actionCodeSettingsObject.url = URL(string: String(format: "gotoVerify://social-media-infinity.firebaseapp.com?email=%@", self.email.text!))
+            
+            actionCodeSettingsObject.setIOSBundleID("com.erkutbas.Project-Version-0-1")
+            
+            Auth.auth().sendPasswordReset(withEmail: self.email.text!, actionCodeSettings: actionCodeSettingsObject) { (error) in
+                
+                if error != nil {
+                    
+                    if let errorMessage = error as NSError? {
+                        
+                        print("errorMessage : \(errorMessage.localizedDescription)")
+                        print("errorMessage : \(errorMessage.userInfo)")
+                        
+                    }
+                    
+                } else {
+                    
+                    print("password reset email sent")
+                }
+                
+            }
+            
+            
         }
         
     }

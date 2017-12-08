@@ -29,6 +29,7 @@ extension UIAlertController {
     func boko() {
     
         view.applyGradient(colours: [UIColor.red, UIColor.green])
+        view.layer.cornerRadius = 30
         
     }
     

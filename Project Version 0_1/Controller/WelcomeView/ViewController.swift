@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         print("PinBook page starts")
         
         self.navigationController?.disableNavigationBar()
-        //self.navigationItem.eraseNavigationBarItemTitle()
         
         runTimer()
         
