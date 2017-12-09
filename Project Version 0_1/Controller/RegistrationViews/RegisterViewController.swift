@@ -57,6 +57,8 @@ class RegisterViewController: UIViewController {
         
         //performSegue(withIdentifier: "gotoAddImageAndVerificationSend", sender: self)
         
+        self.createUserWithCredentials()
+        
         let addImageVCObject = storyboard?.instantiateViewController(withIdentifier: "AddImageViewController_storyBorad_ID") as! AddImageViewController
         
         addImageVCObject.userObject = self.user

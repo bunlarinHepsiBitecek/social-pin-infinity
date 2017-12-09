@@ -19,6 +19,8 @@ extension RegisterViewController {
      */
     func createUserWithCredentials() {
         
+        startSpinner()
+        
         Auth.auth().createUser(withEmail: self.user.email, password: self.user.password) { (user, error) in
             
             if error != nil {
@@ -51,6 +53,7 @@ extension RegisterViewController {
                         print("createUserWithCredentials : userID : \(userID)")
                         
                         self.registerCurrentUserToKeyChain(inputUserID: userID, inputUserIDKey: USER_ID)
+                        self.user.setUserID(inputUserID: userID)
                         
                     }
                     
