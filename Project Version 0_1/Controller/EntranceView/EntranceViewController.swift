@@ -33,6 +33,7 @@ class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
         twitterLogin()
         
         print("remzi")
+        print("erkut")
     }
     
     override func viewDidAppear(_ animated: Bool) {
