@@ -28,6 +28,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet var genderWomenButton: UIButton!
     var gender: Gender = Gender.unkown
     
+    var activityIndicator = UIActivityIndicatorView()
+    
     @IBAction func genderButtonTapped(_ sender: UIButton) {
         genderSwitchControl(sender: sender)
     }

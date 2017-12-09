@@ -72,6 +72,8 @@
 		A7407F091FC7951100DAAF44 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F081FC7951100DAAF44 /* ForgotPasswordViewController.swift */; };
 		A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F0A1FC799FA00DAAF44 /* UIButtonExtensions.swift */; };
 		A7407F0D1FC79B1D00DAAF44 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F0C1FC79B1D00DAAF44 /* UITextFieldExtensions.swift */; };
+		A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FD5F01FDB7A8800062483 /* ServerAccessExtensionFunctions.swift */; };
+		A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FD5F21FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions.swift */; };
 		A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40081FC0B7C600495228 /* AppDelegate.swift */; };
 		A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F400A1FC0B7C600495228 /* ViewController.swift */; };
 		A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F400C1FC0B7C600495228 /* Main.storyboard */; };
@@ -182,6 +184,8 @@
 		A7407F081FC7951100DAAF44 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		A7407F0A1FC799FA00DAAF44 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		A7407F0C1FC79B1D00DAAF44 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		A74FD5F01FDB7A8800062483 /* ServerAccessExtensionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAccessExtensionFunctions.swift; sourceTree = "<group>"; };
+		A74FD5F21FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKeyChainExtensionFunctions.swift; sourceTree = "<group>"; };
 		A75F40051FC0B7C600495228 /* Project Version 0_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Version 0_1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F40081FC0B7C600495228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F400A1FC0B7C600495228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 		A72705CC1FC91DF3006C2504 /* ControllerExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				A74FD5EF1FDB7A6E00062483 /* RegistrationViewControllerExtensions */,
 				A72CAA901FD689BE00308DED /* EntranceView */,
 				A7DD2E0B1FD1A4860009322E /* LoginViewExtensionFunction */,
 				A72AFBD11FCCC1F80018254E /* VerificationViewControllerExtensions */,
@@ -488,6 +493,15 @@
 				A75F40341FC238B600495228 /* StartPageViewController.swift */,
 			);
 			path = NavigationControllerView;
+			sourceTree = "<group>";
+		};
+		A74FD5EF1FDB7A6E00062483 /* RegistrationViewControllerExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A74FD5F01FDB7A8800062483 /* ServerAccessExtensionFunctions.swift */,
+				A74FD5F21FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions.swift */,
+			);
+			path = RegistrationViewControllerExtensions;
 			sourceTree = "<group>";
 		};
 		A75F3FFC1FC0B7C600495228 = {
@@ -940,6 +954,7 @@
 				A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */,
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
 				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
+				A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions.swift in Sources */,
 				A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */,
 				A767CEE71FD4AA4200E70B16 /* AlertControllerConstants.swift in Sources */,
 				A7DD2E131FD1B1600009322E /* ServerAccessExtensionFunctions.swift in Sources */,
@@ -975,6 +990,7 @@
 				A7D1CBA51FD44AEA0082BC02 /* UINavigationBarCustomDesign.swift in Sources */,
 				A72705C31FC8973F006C2504 /* NavigationBarController.swift in Sources */,
 				A7D1CBA21FD449780082BC02 /* UIButtonCustomDesign.swift in Sources */,
+				A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions.swift in Sources */,
 				A71B49F71FD2F33C00B69E71 /* UIViewControllerX.swift in Sources */,
 				A71B49EF1FD2F33C00B69E71 /* UIViewXRadialGradient.swift in Sources */,
 				A71B49F31FD2F33C00B69E71 /* UIVisualEffectViewX.swift in Sources */,
