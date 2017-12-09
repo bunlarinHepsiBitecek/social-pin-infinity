@@ -31,6 +31,8 @@ class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
         self.automaticallyAdjustsScrollViewInsets = false
         
         twitterLogin()
+        
+        print("erkut")
     }
     
     override func viewDidAppear(_ animated: Bool) {
