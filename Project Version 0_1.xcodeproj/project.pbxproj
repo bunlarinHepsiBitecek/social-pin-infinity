@@ -62,13 +62,11 @@
 		A72CAA921FD689D100308DED /* EntranceViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA911FD689D100308DED /* EntranceViewControllerExtention.swift */; };
 		A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C641FD85AA4008BE2D2 /* Pacifico.ttf */; };
 		A72D2C671FD85AA4008BE2D2 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C651FD85AA4008BE2D2 /* OFL.txt */; };
-		A72D2C6A1FD86C24008BE2D2 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C691FD86C24008BE2D2 /* back.png */; };
 		A72D2C6D1FD98594008BE2D2 /* KeyChainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D2C6C1FD98594008BE2D2 /* KeyChainConstants.swift */; };
 		A72D2C751FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D2C741FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift */; };
 		A73828301FC35DCB003C1827 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738282F1FC35DCB003C1827 /* Validation.swift */; };
 		A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828311FC36379003C1827 /* ConstantCharacters.swift */; };
 		A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828371FC3E196003C1827 /* VerificationViewController.swift */; };
-		A7407F011FC4A83800DAAF44 /* AddImageVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F001FC4A83800DAAF44 /* AddImageVerificationViewController.swift */; };
 		A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7407F031FC4B7C600DAAF44 /* GoogleService-Info.plist */; };
 		A7407F071FC705D000DAAF44 /* ConstanctUserKeyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F061FC705D000DAAF44 /* ConstanctUserKeyValues.swift */; };
 		A7407F091FC7951100DAAF44 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F081FC7951100DAAF44 /* ForgotPasswordViewController.swift */; };
@@ -172,14 +170,12 @@
 		A72CAA911FD689D100308DED /* EntranceViewControllerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntranceViewControllerExtention.swift; sourceTree = "<group>"; };
 		A72D2C641FD85AA4008BE2D2 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 		A72D2C651FD85AA4008BE2D2 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
-		A72D2C691FD86C24008BE2D2 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		A72D2C6C1FD98594008BE2D2 /* KeyChainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainConstants.swift; sourceTree = "<group>"; };
 		A72D2C6F1FDAC2AE008BE2D2 /* gender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender.png; sourceTree = "<group>"; };
 		A72D2C741FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtensionFunctions.swift; sourceTree = "<group>"; };
 		A738282F1FC35DCB003C1827 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A73828311FC36379003C1827 /* ConstantCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantCharacters.swift; sourceTree = "<group>"; };
 		A73828371FC3E196003C1827 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
-		A7407F001FC4A83800DAAF44 /* AddImageVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageVerificationViewController.swift; sourceTree = "<group>"; };
 		A7407F031FC4B7C600DAAF44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7407F051FC4B8D100DAAF44 /* Project Version 0_1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Project Version 0_1.entitlements"; sourceTree = "<group>"; };
 		A7407F061FC705D000DAAF44 /* ConstanctUserKeyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstanctUserKeyValues.swift; sourceTree = "<group>"; };
@@ -463,7 +459,6 @@
 			children = (
 				A75F40231FC0D9A600495228 /* RegisterViewController.swift */,
 				A73828371FC3E196003C1827 /* VerificationViewController.swift */,
-				A7407F001FC4A83800DAAF44 /* AddImageVerificationViewController.swift */,
 				A72705C61FC8A7E2006C2504 /* AddImageViewController.swift */,
 			);
 			path = RegistrationViews;
@@ -516,7 +511,6 @@
 		A75F40071FC0B7C600495228 /* Project Version 0_1 */ = {
 			isa = PBXGroup;
 			children = (
-				A72D2C691FD86C24008BE2D2 /* back.png */,
 				A71B49E41FD2F32500B69E71 /* takasi */,
 				A778D9E71FC9CA5300F38438 /* Images */,
 				A73828351FC3BE86003C1827 /* Firebase */,
@@ -852,7 +846,6 @@
 				ADB505AF1FDB333B00F81046 /* image1.png in Resources */,
 				A72CAA5F1FD5AE0900308DED /* female_default.png in Resources */,
 				A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */,
-				A72D2C6A1FD86C24008BE2D2 /* back.png in Resources */,
 				A72CAA621FD5AE0900308DED /* wonder_woman_icon.png in Resources */,
 				ADB505B11FDB333B00F81046 /* image3.png in Resources */,
 				A72CAA5D1FD5AE0900308DED /* male_selected.png in Resources */,
@@ -961,7 +954,6 @@
 				A7DD2E171FD1BEEE0009322E /* ValidationExtensionFunctions.swift in Sources */,
 				A7407F071FC705D000DAAF44 /* ConstanctUserKeyValues.swift in Sources */,
 				A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */,
-				A7407F011FC4A83800DAAF44 /* AddImageVerificationViewController.swift in Sources */,
 				A778D9E31FC9AE6200F38438 /* DatabaseUser.swift in Sources */,
 				A71B49FA1FD2F7F900B69E71 /* boko.swift in Sources */,
 				A7DD2E0F1FD1A7140009322E /* ProcessingUserData.swift in Sources */,

@@ -13,14 +13,12 @@ import SwiftKeychainWrapper
 import CheckBox
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var Login: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
     @IBOutlet var checkBoxButton: CheckBox!
-    
-    var x = UIAlertController()
     
     var activityIndicator = UIActivityIndicatorView()
     
@@ -33,32 +31,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         print("LoginView viewDidLoad activated")
-
+        
         self.navigationController?.enableNavigationBar()
         
         /*
-        email.text = "erkutbas007@gmail.com"
-        password.text = "123456"*/
-        
-        self.Login.disableButton()
+         email.text = "erkutbas007@gmail.com"
+         password.text = "123456"*/
         
         self.setRememberMeEnabledOrDisabled()
-        
-        //self.navigationItem.setNavigationItemTitles()
-        
-        print("setNavigationItemTitles starts")
-        
-        let action = #selector(takasi)
-        
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: action)
-        title = PROJECT_PINBOOK
+        self.navigationItem.setNavigationItemTitles()
+        self.clearTextFieldsOnLoginView()
     }
     
-    @objc func takasi() {
-        
-        print("mina korum haaa")
-        
-    }
     
     // to close keyboard when touches somewhere else but kwyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -82,70 +66,40 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func loginButtonClick(_ sender: UIButton) {
         
         // set user email and password to send verification page
-        setUserData()
         
-        print("erkut")
-        loginUserWithCredentials()
-        
-    }
-    
-    /**
-        if the user forgets his/her password, we make him/her a chance to reset it
-     */
-    @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
-        
-        self.navigationItem.eraseNavigationBarItemTitle()
-        performSegue(withIdentifier: "gotoForgotPasswordView", sender: self)
-        
-    }
-    
-    /**
-        email & password field must be check before login,
-        if email or password is not validated login button must be disabled
-        ..........
-     */
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        print("textFieldDidEndEditing")
-        
-        if !evaluateEmailField() {
+        if checkAllFieldsValid() {
             
-            createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_WARNING_INVALID_EMAIL_FORMAT)
-            
-            email.clearTextFiedl()
-        }
-        
-        if !evaluatePasswordField() {
-            
-            createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_WARNING_INVALID_PASSWORD_FORMAT)
-            
-            password.clearTextFiedl()
-            
-        }
-        
-        if evaluateEmailField() && evaluatePasswordField() {
-            
-            Login.enableButton()
+            setUserData()
+            loginUserWithCredentials()
             
         } else {
             
-            Login.disableButton()
+            createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_STRING_WARNING_INVALID_FIELDS)
+            
         }
         
     }
     
+    /**
+     if the user forgets his/her password, we make him/her a chance to reset it
+     */
+    @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
+        
+        setUserEmailData()
+        createForgetPasswordAlertController(inputEmailTextString: email.text!)
+        
+        //performSegue(withIdentifier: "gotoForgotPasswordView", sender: self)
+        
+    }
     
     /*
-        SwiftKeyChainWrapper functions
+     SwiftKeyChainWrapper functions
      */
-    
     @IBAction func deneme(_ sender: UIButton) {
-        
-        //self.navigationItem.eraseNavigationBarItemTitle()
         
         let temp = storyboard?.instantiateViewController(withIdentifier: "AddImageViewController_storyBorad_ID") as! AddImageViewController
         
@@ -157,13 +111,37 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func checkBoxTapped(_ sender: Any) {
         
-        print("CheckBox tapped")
-        
         registerdRememberMeUserData(inputEmail: email.text!, inputPassword: password.text!)
-        
         
     }
     
+    /**
+     email & password field must be check before login,
+     if email or password is not validated login button must be disabled
+     ..........
+     */
+    @IBAction func emailTextFieldValidationCheck(_ sender: Any) {
+        
+        if !evaluateEmailField() {
+            
+            createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_WARNING_INVALID_EMAIL_FORMAT)
+            
+            email.clearTextFiedl()
+        }
+        
+    }
+    
+    @IBAction func passwordTextFieldValidationCheck(_ sender: Any) {
+        
+        if !evaluatePasswordField() {
+            
+            createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_WARNING_INVALID_PASSWORD_FORMAT)
+            
+            password.clearTextFiedl()
+            
+        }
+        
+    }
 }
 
 

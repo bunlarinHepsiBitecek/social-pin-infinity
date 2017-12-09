@@ -41,6 +41,12 @@ class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
         facebookLoginButton.delegate = self
     }
     
+    // when entrance view appears, navigation bar will be hidden immediately
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -23,10 +23,12 @@ extension LoginViewController {
         
         if let resultRememberMe = KeychainWrapper.standard.bool(forKey: STRING_KEY_REMEMBER_ME) {
             
+            print("var data")
             return resultRememberMe
             
         } else {
             
+            print("yok data")
             return false
         }
         
@@ -50,9 +52,8 @@ extension LoginViewController {
             
             KeychainWrapper.standard.removeObject(forKey: STRING_KEY_EMAIL)
             KeychainWrapper.standard.removeObject(forKey: STRING_KEY_PASSWORD)
-            KeychainWrapper.standard.removeObject(forKey: STRING_KEY_EMAIL)
+            KeychainWrapper.standard.removeObject(forKey: STRING_KEY_REMEMBER_ME)
         }
-        
         
         
     }
@@ -63,11 +64,14 @@ extension LoginViewController {
         
         if readKeyChainDataForRememberMeProcess() {
             
+            print("remember datası bulduk")
+            
             self.checkBoxButton.isChecked = true
             getUserEmailAndPassword()
             
         } else {
             
+            print("remember datası bulamadık")
             self.checkBoxButton.isChecked = false
         }
         
@@ -80,4 +84,17 @@ extension LoginViewController {
         
     }
     
+    func clearAllKeychainData() {
+        
+        print("clearAllKeychainData starts")
+        
+        KeychainWrapper.standard.removeObject(forKey: STRING_KEY_EMAIL)
+        KeychainWrapper.standard.removeObject(forKey: STRING_KEY_PASSWORD)
+        KeychainWrapper.standard.removeObject(forKey: STRING_KEY_REMEMBER_ME)
+        
+        self.checkBoxButton.isChecked = false
+        
+    }
+    
 }
+

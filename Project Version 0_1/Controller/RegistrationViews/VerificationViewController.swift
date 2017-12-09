@@ -12,7 +12,7 @@ import FirebaseAuth
 import AudioUnit
 
 class VerificationViewController: UIViewController {
-
+    
     @IBOutlet var emailVerificationTextField: UITextField!
     
     var callerViewControllerID : String = SPACE_CHARACTER
@@ -24,13 +24,12 @@ class VerificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         self.navigationController?.enableNavigationBar()
         self.manageForegroundActions()
-        self.navigationItem.setNavigationBarItemTitleWithBrand()
-        //navigationItem.disableLeftBarItem_BackString()
+        self.navigationItem.setNavigationItemTitles()
         
         print("VerificationViewController starts")
         print("viewDidLoad : callerViewControllerID : \(callerViewControllerID)")
@@ -42,7 +41,7 @@ class VerificationViewController: UIViewController {
         verificationInfoLabel.text = verificationMessage.verificationNotifMessage
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -109,3 +108,4 @@ class VerificationViewController: UIViewController {
     }
     
 }
+

@@ -39,4 +39,18 @@ extension LoginViewController {
         }
     }
     
+    func checkAllFieldsValid() -> Bool {
+        
+        if self.email.checkTextFieldHasStringValue() && self.password.checkTextFieldHasStringValue() {
+            
+            return true
+            
+        } else {
+            
+            return false
+            
+        }
+    }
+    
 }
+
