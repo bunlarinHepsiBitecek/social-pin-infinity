@@ -45,6 +45,14 @@ class RegisterViewController: UIViewController {
         setupPasswordTextField()
         createDatePicker()
         
+        self.navigationItem.setNavigationItemTitles()
+    }
+    
+    // when entrance view appears, navigation bar will be hidden immediately
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.navigationItem.setNavigationItemTitles()
     }
     
     override func didReceiveMemoryWarning() {

@@ -43,6 +43,8 @@ extension VerificationViewController {
                 
                 print("email verification sent")
                 
+                self.PopUpFromSCLAlertViews(inputAlertType: .Info, inputAlertField: .EmptyType)
+                
             }
         })
         

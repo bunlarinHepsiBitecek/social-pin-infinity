@@ -34,15 +34,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.navigationController?.enableNavigationBar()
         
-        /*
-         email.text = "erkutbas007@gmail.com"
-         password.text = "123456"*/
-        
         self.setRememberMeEnabledOrDisabled()
-        self.navigationItem.setNavigationItemTitles()
+        //self.navigationItem.setNavigationItemTitles()
         self.clearTextFieldsOnLoginView()
+        
     }
     
+    // when entrance view appears, navigation bar will be hidden immediately
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.navigationItem.setNavigationItemTitles()
+    }
     
     // to close keyboard when touches somewhere else but kwyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -90,7 +93,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
         
         setUserEmailData()
-        createForgetPasswordAlertController(inputEmailTextString: email.text!)
+        //createForgetPasswordAlertController(inputEmailTextString: email.text!)
+        createForgetPasswordAlertController_v2(inputEmailTextString: email.text!)
         
         //performSegue(withIdentifier: "gotoForgotPasswordView", sender: self)
         
@@ -122,11 +126,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
      */
     @IBAction func emailTextFieldValidationCheck(_ sender: Any) {
         
+        /*
         if !evaluateEmailField() {
             
             createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_WARNING_INVALID_EMAIL_FORMAT)
             
             email.clearTextFiedl()
+        }*/
+        
+        //createWarningMessage(inputTitle: "1", inputMessage: "1")
+        
+        
+        if !evaluateEmailField() {
+            
+            
+            PopUpFromSCLAlertViews(inputAlertType: .Warning, inputAlertField: .Email, inputFirebaseErrorCode: AuthErrorCode(rawValue: 0)!)
+            
+            email.clearTextFiedl()
+            
         }
         
     }
@@ -135,7 +152,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if !evaluatePasswordField() {
             
-            createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_WARNING_INVALID_PASSWORD_FORMAT)
+            //createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_WARNING_INVALID_PASSWORD_FORMAT)
+            PopUpFromSCLAlertViews(inputAlertType: .Warning, inputAlertField: .Password, inputFirebaseErrorCode: AuthErrorCode(rawValue: 0)!)
             
             password.clearTextFiedl()
             

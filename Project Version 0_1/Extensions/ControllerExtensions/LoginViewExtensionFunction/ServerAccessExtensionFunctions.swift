@@ -95,10 +95,15 @@ extension LoginViewController {
                     
                 }
                 
-                Firebase.AuthErrorCode(rawValue: (error?._code)!)
-                
                 if let errorCode = Firebase.AuthErrorCode(rawValue: (error?._code)!) {
                     
+                    print("----->>>>> : \(alertType.Error)")
+                    
+                    self.PopUpFromSCLAlertViews(inputAlertType: alertType.Error, inputAlertField: .EmptyType, inputFirebaseErrorCode: errorCode)
+                    
+                    self.stopSpinner()
+                    
+                    /*
                     switch errorCode {
                         
                     case .userNotFound:
@@ -107,7 +112,7 @@ extension LoginViewController {
                         
                     default:
                         print("nothing to do at this point")
-                    }
+                    }*/
                 }
                 
                 /*

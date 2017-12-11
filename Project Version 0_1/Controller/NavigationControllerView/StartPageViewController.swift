@@ -20,6 +20,8 @@ class StartPageViewController: UINavigationController {
         
         navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Pacifico", size: 25)!, NSAttributedStringKey.foregroundColor: UIColor.white]
         
+        self.navigationItem.setNavigationItemTitles()
+        
     }
     
     override func didReceiveMemoryWarning() {

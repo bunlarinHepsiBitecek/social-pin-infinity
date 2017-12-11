@@ -64,6 +64,7 @@
 		A72D2C671FD85AA4008BE2D2 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = A72D2C651FD85AA4008BE2D2 /* OFL.txt */; };
 		A72D2C6D1FD98594008BE2D2 /* KeyChainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D2C6C1FD98594008BE2D2 /* KeyChainConstants.swift */; };
 		A72D2C751FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D2C741FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift */; };
+		A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A733776D1FDE164200E40EAC /* InformationMessageForVerificationController.swift */; };
 		A73828301FC35DCB003C1827 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738282F1FC35DCB003C1827 /* Validation.swift */; };
 		A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828311FC36379003C1827 /* ConstantCharacters.swift */; };
 		A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828371FC3E196003C1827 /* VerificationViewController.swift */; };
@@ -74,6 +75,7 @@
 		A7407F0D1FC79B1D00DAAF44 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F0C1FC79B1D00DAAF44 /* UITextFieldExtensions.swift */; };
 		A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FD5F01FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift */; };
 		A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FD5F21FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift */; };
+		A74FD5F71FDDC80700062483 /* EnumForValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FD5F61FDDC80700062483 /* EnumForValidations.swift */; };
 		A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40081FC0B7C600495228 /* AppDelegate.swift */; };
 		A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F400A1FC0B7C600495228 /* ViewController.swift */; };
 		A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F400C1FC0B7C600495228 /* Main.storyboard */; };
@@ -175,6 +177,7 @@
 		A72D2C6C1FD98594008BE2D2 /* KeyChainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainConstants.swift; sourceTree = "<group>"; };
 		A72D2C6F1FDAC2AE008BE2D2 /* gender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender.png; sourceTree = "<group>"; };
 		A72D2C741FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtensionFunctions.swift; sourceTree = "<group>"; };
+		A733776D1FDE164200E40EAC /* InformationMessageForVerificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageForVerificationController.swift; sourceTree = "<group>"; };
 		A738282F1FC35DCB003C1827 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A73828311FC36379003C1827 /* ConstantCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantCharacters.swift; sourceTree = "<group>"; };
 		A73828371FC3E196003C1827 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 		A7407F0C1FC79B1D00DAAF44 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
 		A74FD5F01FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAccessExtensionFunctions_forRegistration.swift; sourceTree = "<group>"; };
 		A74FD5F21FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKeyChainExtensionFunctions_forRegistration.swift; sourceTree = "<group>"; };
+		A74FD5F61FDDC80700062483 /* EnumForValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForValidations.swift; sourceTree = "<group>"; };
 		A75F40051FC0B7C600495228 /* Project Version 0_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Version 0_1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F40081FC0B7C600495228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F400A1FC0B7C600495228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 			children = (
 				A72AFBDB1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift */,
 				A72AFBE21FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift */,
+				A733776D1FDE164200E40EAC /* InformationMessageForVerificationController.swift */,
 			);
 			path = VerificationViewControllerExtensions;
 			sourceTree = "<group>";
@@ -504,6 +509,22 @@
 			path = RegistrationViewControllerExtensions;
 			sourceTree = "<group>";
 		};
+		A74FD5F41FDDC7E100062483 /* EnumGroups */ = {
+			isa = PBXGroup;
+			children = (
+				A74FD5F51FDDC7F700062483 /* EnumWarning */,
+			);
+			path = EnumGroups;
+			sourceTree = "<group>";
+		};
+		A74FD5F51FDDC7F700062483 /* EnumWarning */ = {
+			isa = PBXGroup;
+			children = (
+				A74FD5F61FDDC80700062483 /* EnumForValidations.swift */,
+			);
+			path = EnumWarning;
+			sourceTree = "<group>";
+		};
 		A75F3FFC1FC0B7C600495228 = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +600,7 @@
 		A75F401E1FC0D5F300495228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A74FD5F41FDDC7E100062483 /* EnumGroups */,
 				A72D2C6B1FD9857B008BE2D2 /* KeyChainConstants */,
 				A72D2C621FD85738008BE2D2 /* Fonts */,
 				A72CAA8C1FD685E900308DED /* Gender */,
@@ -952,9 +974,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */,
+				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
 				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
 				A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift in Sources */,
+				A74FD5F71FDDC80700062483 /* EnumForValidations.swift in Sources */,
 				A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */,
 				A767CEE71FD4AA4200E70B16 /* AlertControllerConstants.swift in Sources */,
 				A7DD2E131FD1B1600009322E /* ServerAccessExtensionFunctions.swift in Sources */,

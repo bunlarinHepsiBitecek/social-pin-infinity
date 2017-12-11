@@ -20,8 +20,6 @@ class VerificationViewController: UIViewController {
     var userObjectInVerificationView = User()
     var verificationMessage = Information()
     
-    @IBOutlet var verificationInfoLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,8 +35,6 @@ class VerificationViewController: UIViewController {
         emailVerificationTextField.text = userObjectInVerificationView.email
         
         userObjectInVerificationView.displayAttributeValues()
-        
-        verificationInfoLabel.text = verificationMessage.verificationNotifMessage
         
     }
     
@@ -84,6 +80,7 @@ class VerificationViewController: UIViewController {
                         
                         print("sıcıs spor")
                         
+                        /*
                         let informationObject = Information()
                         informationObject.setAlertController(inputTitle: "Uyarı", inputMessage: "Boku yedin emailine bak!")
                         
@@ -95,7 +92,9 @@ class VerificationViewController: UIViewController {
                         DispatchQueue.main.asyncAfter(deadline: whenToCloseAlert){
                             
                             informationObject.alertControllerObject.dismiss(animated: true, completion: nil)
-                        }
+                        }*/
+                        
+                        self.PopUpFromSCLAlertViews(inputAlertType: .Warning, inputAlertField: .ButtonActivateAccount)
                         
                     }
                     

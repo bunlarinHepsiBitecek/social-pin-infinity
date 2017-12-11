@@ -63,6 +63,8 @@ extension AddImageViewController {
     
     func createUser() {
         
+        print("createUser is activated")
+        
         DatabaseUser.ds.createFirbaseDatabaseUser(userID: self.userObject.userID, userData: self.userObject.getUserJSONObject())
         
     }
