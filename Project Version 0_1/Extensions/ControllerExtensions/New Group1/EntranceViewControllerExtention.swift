@@ -86,9 +86,9 @@ extension EntranceViewController {
     
     func getPictureFromUrl(imageURLString: String) -> UIImage? {
         if let imageURLString = imageURLString as? String {
-            var imgURL = NSURL(string: imageURLString)
-            var imageData = NSData(contentsOf: imgURL! as URL)
-            var image = UIImage(data: imageData! as Data)
+            let imgURL = NSURL(string: imageURLString)
+            let imageData = NSData(contentsOf: imgURL! as URL)
+            let image = UIImage(data: imageData! as Data)
             return image
         }
         return nil
@@ -205,7 +205,7 @@ extension EntranceViewController {
             }
         })
         
-        twitterOwnLoginButton.frame = CGRect(x: 1, y: 1, width: facebookLoginButton.frame.width, height: facebookLoginButton.frame.height)
+        twitterOwnLoginButton.frame = CGRect(x: 0, y: 0, width: facebookLoginButton.frame.width, height: facebookLoginButton.frame.height)
         self.twitterLoginButton.addSubview(twitterOwnLoginButton)
     }
 }

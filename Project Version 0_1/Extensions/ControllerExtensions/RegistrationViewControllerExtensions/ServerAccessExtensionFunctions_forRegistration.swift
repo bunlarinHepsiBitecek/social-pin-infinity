@@ -17,25 +17,36 @@ extension RegisterViewController {
     /*
      if user is not register, function below creates a new user in firebase Users database
      */
-    func createUserWithCredentials() {
+    func createUserWithCredentials() -> Bool {
+        
+        var isFirebaseUserCreated = false
         
         startSpinner()
         
         Auth.auth().createUser(withEmail: self.user.email, password: self.user.password) { (user, error) in
-            
             if error != nil {
                 print("createUserWithCredentials : Unable to authenticate with Firebase using email")
-                
-                if let errorMessage = error as NSError? {
-                    
-                    print("createUserWithCredentials : errorMessage : \(errorMessage.userInfo)")
-                    print("createUserWithCredentials : errorMessage : \(errorMessage)")
-                    
-                }
                 
                 if let errorCode = Firebase.AuthErrorCode(rawValue: (error?._code)!) {
                     
                     print("createUserWithCredentials : ErrorCode : \(errorCode.rawValue)")
+                    
+                    let alertView : InformationAlertView = InformationAlertView()
+                    
+                    switch errorCode {
+                    case .invalidEmail:
+                        print("invalid email")
+                        alertView.showError(subTitle: CONSTANT_WARNING_INVALID_EMAIL_FORMAT)
+                    case .emailAlreadyInUse:
+                        print("in use")
+                        alertView.showError(subTitle: CONSTANT_WARNING_EMAIL_ALREADY_IN_USE)
+                    case .wrongPassword:
+                        print("wrong password")
+                        alertView.showError(subTitle: CONSTANT_WARNING_INVALID_PASSWORD_FORMAT)
+                    default:
+                        print("Create User Error: \(error!)")
+                        alertView.showError(subTitle: CONSTANT_WARNING_PLEASE_TRY_AGAIN_LATER)
+                    }
                     
                 }
                 
@@ -54,6 +65,7 @@ extension RegisterViewController {
                         
                         self.registerCurrentUserToKeyChain(inputUserID: userID, inputUserIDKey: USER_ID)
                         self.user.setUserID(inputUserID: userID)
+                        isFirebaseUserCreated = true
                         
                     }
                     
@@ -65,7 +77,10 @@ extension RegisterViewController {
                 self.stopSpinner()
                 
             }
-        }
+        
+        } // end of Auth.auth().createUser
+        
+        return isFirebaseUserCreated
     }
     
     func startSpinner() {

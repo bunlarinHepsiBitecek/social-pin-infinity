@@ -11,6 +11,7 @@ import UIKit
 let CONSTANT_ALERT_SECOND_2 : DispatchTime = DispatchTime(uptimeNanoseconds: 2)
 
 let CONSTANT_STRING_WARNING : String = "Uyarı"
+let CONSTANT_STRING_ERROR : String = "Hata"
 let CONSTANT_STRING_OK : String = "OK"
 let CONSTANT_WARNING_INVALID_EMAIL_FORMAT : String = "Lütfen geçerli bir e-mail formatı giriniz!"
 let CONSTANT_WARNING_INVALID_PASSWORD_FORMAT : String = "Lütfen 6 - 15 karakter arasında bir şifre giriniz!"
@@ -18,4 +19,6 @@ let CONSTANT_FORGET_PASSWORD : String = "Şifre Resetleme İşlemi"
 let CONSTANT_FORGET_PASSWORD_INFO : String = "Aşağıdaki mail adresine gönderilen link ile şifrenizi sıfırlayabilirsiniz!"
 let CONSTANT_STRING_WARNING_INVALID_FIELDS : String = "Lütfen girdiğiniz datalarınızı kontrol ediniz!"
 
+let CONSTANT_WARNING_EMAIL_ALREADY_IN_USE : String = "Girdiğiniz mail adresi daha önce kullanılmış!"
+let CONSTANT_WARNING_PLEASE_TRY_AGAIN_LATER : String = "Lütfen daha sonra tekrar deneyiniz!"
 

@@ -36,42 +36,24 @@ extension RegisterViewController {
 
 // Gender
 extension RegisterViewController {
-    func setGenderButtonTag() {
-        genderManButton.tag = GenderButtonTag.male.rawValue
-        genderWomenButton.tag = GenderButtonTag.female.rawValue
+    func genderManSwitchControl() {
+        genderManButton.isHighlighted = true
+        genderWomenButton.isHighlighted = false
+        gender = Gender.male
     }
     
-    func genderSwitchControl(sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-        switch sender.tag {
-        case GenderButtonTag.male.rawValue:
-            if(genderManButton.isSelected) {
-                genderWomenButton.isEnabled = false
-                gender = Gender.male
-            }  else {
-                genderWomenButton.isEnabled = true
-                gender = Gender.unkown
-            }
-            break;
-        case GenderButtonTag.female.rawValue:
-            if(genderWomenButton.isSelected) {
-                genderManButton.isEnabled = false
-                gender = Gender.female
-            } else {
-                genderManButton.isEnabled = true
-                gender = Gender.unkown
-            }
-            break;
-        default: ()
-        break;
-        }
+    func genderWomenSwitchControl() {
+        genderWomenButton.isHighlighted = true
+        genderManButton.isHighlighted = false
+        gender = Gender.female
     }
 }
 
 // Birthdate
 extension RegisterViewController {
     func createDatePicker() {
-        //
+        let date18YearsAgo: Date = Calendar.current.date(byAdding: .year, value: -18, to: Date())!
+        
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
@@ -82,6 +64,7 @@ extension RegisterViewController {
         birthdate.inputView = picker
         
         picker.datePickerMode = UIDatePickerMode.date
+        picker.setDate(date18YearsAgo, animated: false)
         
     }
     
@@ -96,6 +79,7 @@ extension RegisterViewController {
         birthdate.text = dateFormatText(datePicker: picker)
         self.view.endEditing(true)
     }
+    
     
 }
 
@@ -116,36 +100,46 @@ extension RegisterViewController {
 }
 
 extension RegisterViewController {
-    func validationCheck() {
-        let responsePasswordFieldValidation = Validation.shared.validate(values: (type: ValidationFields.passwordField, inputValue: password.text!))
+    func checkValidateRequiredField() -> Bool {
+        let isEmailValid = checkValidateEmail()
+        let isPasswordValid = checkValidatePassword()
+        let isUserNameValid = checkValidateUsername()
+        let isFirstNameValid = checkValidateFirstName()
+        let isLastNameValid = checkValidateLastName()
+        let isBirthdateValid = checkValidateBirthdate()
         
-        switch responsePasswordFieldValidation {
-        case .success:
-            print("password validation is ok")
-        default:
-            print("password validation is failed")
+        guard isEmailValid, isPasswordValid, isUserNameValid,  isFirstNameValid, isLastNameValid, isBirthdateValid else {
+            return false
         }
+        return true
     }
 }
 
+// Email validation
 extension RegisterViewController {
-    func checkValidateEmail() {
+    func checkValidateEmail() -> Bool {
+        guard let _ = emailAddress.text,  emailAddress.text != SPACE_CHARACTER else {
+            emailAddress.addRightViewButton(popOverStyle: FTPopOverStyle.required)
+            return false
+        }
+        
         let responseEmailFieldValidation = Validation.shared.validate(values: (type: ValidationFields.emailField, inputValue: emailAddress.text!))
         
         switch responseEmailFieldValidation {
         case .success:
-            print("email validation is ok")
-            user.setUserEmail(inputEmail: emailAddress.text!)
+            return true
         default:
-            print("email validation is failed")
-            showError()
+            //showError()
+            emailAddress.addRightViewButton(popOverStyle: FTPopOverStyle.invalidEmail)
+            return false
         }
     }
     
+    /*
     func showError() {
         let appearance = SCLAlertView.SCLAppearance(
             // action here
-           // showCloseButton: false
+            // showCloseButton: false
         )
         
         let timeoutAction: SCLAlertView.SCLTimeoutConfiguration.ActionType = {
@@ -155,14 +149,87 @@ extension RegisterViewController {
         
         alertView.showError("", subTitle: "Email address is invalid", closeButtonTitle: "Dismiss", timeout:SCLAlertView.SCLTimeoutConfiguration(timeoutValue: 2.0, timeoutAction:timeoutAction))
     }
+    */
     
+}
+
+// Password validation
+extension RegisterViewController {
+    func checkValidatePassword() -> Bool {
+        guard let _ = password.text,  password.text != SPACE_CHARACTER  else {
+            //password.addRightViewButton(popOverStyle: FTPopOverStyle.required)
+            password.showPopOver(popOverStyle: FTPopOverStyle.required)
+            return false
+        }
+        
+        let responsePasswordFieldValidation = Validation.shared.validate(values: (type: ValidationFields.passwordField, inputValue: password.text!))
+        
+        switch responsePasswordFieldValidation {
+        case .success:
+            return true
+        default:
+            //password.addRightViewButton(popOverStyle: FTPopOverStyle.invalidPassword)
+            password.showPopOver(popOverStyle: FTPopOverStyle.invalidPassword)
+            return false
+        }
+    }
+}
+
+// Username validation
+extension RegisterViewController {
+    func checkValidateUsername() -> Bool {
+        guard let _ = userName.text,  userName.text != SPACE_CHARACTER else {
+            userName.addRightViewButton(popOverStyle: FTPopOverStyle.required)
+            return false
+        }
+        
+       return true
+    }
+}
+
+// Firstname validation
+extension RegisterViewController {
+    func checkValidateFirstName() -> Bool {
+        guard let _ = firstName.text,  firstName.text != SPACE_CHARACTER else {
+            firstName.addRightViewButton(popOverStyle: FTPopOverStyle.required)
+            return false
+        }
+        
+        return true
+    }
+}
+
+// Lastname validation
+extension RegisterViewController {
+    func checkValidateLastName() -> Bool {
+        guard let _ = lastName.text,  lastName.text != SPACE_CHARACTER else {
+            lastName.addRightViewButton(popOverStyle: FTPopOverStyle.required)
+            return false
+        }
+        
+        return true
+        
+    }
+}
+
+// Birtday validation
+extension RegisterViewController {
+    func checkValidateBirthdate() -> Bool {
+        guard let _ = birthdate.text,  birthdate.text != SPACE_CHARACTER else {
+            birthdate.addRightViewButton(popOverStyle: FTPopOverStyle.required)
+            return false
+        }
+        
+        return true
+        
+    }
 }
 
 extension RegisterViewController {
     func  setUserInfo() {
         
         user.setUserGender(inputUserGender: gender.rawValue)
-        user.setUserName(inputName: firstName.text!)
+        user.setUserName(inputName: userName.text!)
         user.setUserNameSurname(inputNameSurname: firstName.text! + " " + lastName.text!)
         user.setUserEmail(inputEmail: emailAddress.text!)
         user.setUserPassword(inputPassword: password.text!)

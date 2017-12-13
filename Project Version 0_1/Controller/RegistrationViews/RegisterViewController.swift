@@ -30,18 +30,23 @@ class RegisterViewController: UIViewController {
     
     var activityIndicator = UIActivityIndicatorView()
     
-    @IBAction func genderButtonTapped(_ sender: UIButton) {
-        genderSwitchControl(sender: sender)
+    @IBAction func genderManButtonTouch(_ sender: UIButton) {
+        genderManSwitchControl()
+    }
+    
+    @IBAction func genderWomenButtonTouch(_ sender: UIButton) {
+        genderWomenSwitchControl()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.enableNavigationBar()
+        self.navigationItem.setNavigationItemTitles()
+        
         // embeded navigation controller and scrollview slide down
         self.automaticallyAdjustsScrollViewInsets = false
         
-        setGenderButtonTag()
         setupPasswordTextField()
         createDatePicker()
         
@@ -53,11 +58,16 @@ class RegisterViewController: UIViewController {
     
     @IBAction func gotoAddImage(_ sender: Any) {
         
+        // if all field validate then continue
+        guard checkValidateRequiredField() else {
+            return
+        }
+        
         setUserInfo()
         
-        //performSegue(withIdentifier: "gotoAddImageAndVerificationSend", sender: self)
-        
-        self.createUserWithCredentials()
+        guard self.createUserWithCredentials() else {
+            return
+        }
         
         let addImageVCObject = storyboard?.instantiateViewController(withIdentifier: "AddImageViewController_storyBorad_ID") as! AddImageViewController
         
@@ -77,36 +87,13 @@ class RegisterViewController: UIViewController {
         return true
     }
     
-    
-    
-    @IBAction func emailTextFieldEndEditing(_ sender: Any) {
-        checkValidateEmail()
+    @IBAction func textFieldEditingChanged(_ textField: UITextField) {
+        textField.hideRightViewButton()
     }
     
-    @IBAction func passwordTextFieldEndEditing(_ sender: Any) {
-        
+    @IBAction func birthdayEditingEnd(_ textField: UITextField) {
+         textField.hideRightViewButton()
     }
-    
-    @IBAction func userNameTextFieldEndEditing(_ sender: Any) {
-        
-    }
-    
-    @IBAction func firstNameTextFieldEndEditing(_ sender: Any) {
-        
-    }
-    
-    @IBAction func lastNameTextFieldEndEditing(_ sender: Any) {
-        
-    }
-    
-    @IBAction func phoneTextFieldEndEditing(_ sender: Any) {
-        
-    }
-    
-    @IBAction func birthdateTextFieldEndEditing(_ sender: Any) {
-        
-    }
-    
     
 }
 
