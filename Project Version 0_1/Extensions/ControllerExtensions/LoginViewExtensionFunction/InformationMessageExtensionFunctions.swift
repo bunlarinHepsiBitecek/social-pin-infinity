@@ -10,8 +10,6 @@ import UIKit
 import AudioUnit
 import Firebase
 
-import FTPopOverMenu_Swift
-
 extension LoginViewController {
     
     func createWarningMessage(inputTitle : String, inputMessage : String) {

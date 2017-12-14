@@ -77,6 +77,12 @@
 		A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FD5F01FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift */; };
 		A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FD5F21FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift */; };
 		A74FD5F71FDDC80700062483 /* EnumForValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FD5F61FDDC80700062483 /* EnumForValidations.swift */; };
+		A75E3F441FE29FE4007165DE /* UIControl+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F3E1FE29FE3007165DE /* UIControl+Point.swift */; };
+		A75E3F451FE29FE4007165DE /* UIScreen+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F3F1FE29FE3007165DE /* UIScreen+Frame.swift */; };
+		A75E3F461FE29FE4007165DE /* FTConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F401FE29FE4007165DE /* FTConfiguration.swift */; };
+		A75E3F471FE29FE4007165DE /* FTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F411FE29FE4007165DE /* FTConstants.swift */; };
+		A75E3F481FE29FE4007165DE /* FTPopOverMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F421FE29FE4007165DE /* FTPopOverMenu.swift */; };
+		A75E3F491FE29FE4007165DE /* FTPopOverMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F431FE29FE4007165DE /* FTPopOverMenuCell.swift */; };
 		A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40081FC0B7C600495228 /* AppDelegate.swift */; };
 		A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F400A1FC0B7C600495228 /* ViewController.swift */; };
 		A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F400C1FC0B7C600495228 /* Main.storyboard */; };
@@ -108,7 +114,6 @@
 		A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E361FD207CA0009322E /* UIViewExtensions.swift */; };
 		A7DD2E391FD2DC110009322E /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E381FD2DC110009322E /* Information.swift */; };
 		AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A34401FE1C41B0054801D /* InformationAlertView.swift */; };
-		AD641ECD1FDDD254002E483B /* gender_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = AD641ECB1FDDD254002E483B /* gender_woman.png */; };
 		AD641ECE1FDDD254002E483B /* gender_man.png in Resources */ = {isa = PBXBuildFile; fileRef = AD641ECC1FDDD254002E483B /* gender_man.png */; };
 		ADB505AA1FDB1C6500F81046 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */; };
 		ADB505AB1FDB1C6500F81046 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */; };
@@ -121,13 +126,6 @@
 		ADB505BC1FDB38C900F81046 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB505B71FDB38C800F81046 /* password.png */; };
 		ADB505BD1FDB38C900F81046 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB505B81FDB38C800F81046 /* person.png */; };
 		ADB505BE1FDB38C900F81046 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB505B91FDB38C800F81046 /* phone.png */; };
-		ADDB82701FDF1ED90096C496 /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDB826F1FDF1ED90096C496 /* error@2x.png */; };
-		ADDB82781FDF22C70096C496 /* FTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDB82721FDF22C50096C496 /* FTConstants.swift */; };
-		ADDB82791FDF22C70096C496 /* FTPopOverMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDB82731FDF22C50096C496 /* FTPopOverMenu.swift */; };
-		ADDB827A1FDF22C70096C496 /* FTPopOverMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDB82741FDF22C50096C496 /* FTPopOverMenuCell.swift */; };
-		ADDB827B1FDF22C70096C496 /* UIControl+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDB82751FDF22C60096C496 /* UIControl+Point.swift */; };
-		ADDB827C1FDF22C70096C496 /* FTConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDB82761FDF22C60096C496 /* FTConfiguration.swift */; };
-		ADDB827D1FDF22C70096C496 /* UIScreen+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDB82771FDF22C60096C496 /* UIScreen+Frame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,6 +202,12 @@
 		A74FD5F01FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAccessExtensionFunctions_forRegistration.swift; sourceTree = "<group>"; };
 		A74FD5F21FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKeyChainExtensionFunctions_forRegistration.swift; sourceTree = "<group>"; };
 		A74FD5F61FDDC80700062483 /* EnumForValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForValidations.swift; sourceTree = "<group>"; };
+		A75E3F3E1FE29FE3007165DE /* UIControl+Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Point.swift"; sourceTree = "<group>"; };
+		A75E3F3F1FE29FE3007165DE /* UIScreen+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Frame.swift"; sourceTree = "<group>"; };
+		A75E3F401FE29FE4007165DE /* FTConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTConfiguration.swift; sourceTree = "<group>"; };
+		A75E3F411FE29FE4007165DE /* FTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTConstants.swift; sourceTree = "<group>"; };
+		A75E3F421FE29FE4007165DE /* FTPopOverMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPopOverMenu.swift; sourceTree = "<group>"; };
+		A75E3F431FE29FE4007165DE /* FTPopOverMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPopOverMenuCell.swift; sourceTree = "<group>"; };
 		A75F40051FC0B7C600495228 /* Project Version 0_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Version 0_1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F40081FC0B7C600495228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F400A1FC0B7C600495228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -250,13 +254,6 @@
 		ADB505B71FDB38C800F81046 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
 		ADB505B81FDB38C800F81046 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
 		ADB505B91FDB38C800F81046 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
-		ADDB826F1FDF1ED90096C496 /* error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@2x.png"; sourceTree = "<group>"; };
-		ADDB82721FDF22C50096C496 /* FTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTConstants.swift; sourceTree = "<group>"; };
-		ADDB82731FDF22C50096C496 /* FTPopOverMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPopOverMenu.swift; sourceTree = "<group>"; };
-		ADDB82741FDF22C50096C496 /* FTPopOverMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPopOverMenuCell.swift; sourceTree = "<group>"; };
-		ADDB82751FDF22C60096C496 /* UIControl+Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Point.swift"; sourceTree = "<group>"; };
-		ADDB82761FDF22C60096C496 /* FTConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTConfiguration.swift; sourceTree = "<group>"; };
-		ADDB82771FDF22C60096C496 /* UIScreen+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Frame.swift"; sourceTree = "<group>"; };
 		BF2EAC58EB2B78FDCBF4F5D0 /* Pods_Project_Version_0_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_Version_0_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -561,6 +558,26 @@
 			path = EnumWarning;
 			sourceTree = "<group>";
 		};
+		A75E3F2E1FE29ABD007165DE /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		A75E3F3D1FE29D75007165DE /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				A75E3F401FE29FE4007165DE /* FTConfiguration.swift */,
+				A75E3F411FE29FE4007165DE /* FTConstants.swift */,
+				A75E3F421FE29FE4007165DE /* FTPopOverMenu.swift */,
+				A75E3F431FE29FE4007165DE /* FTPopOverMenuCell.swift */,
+				A75E3F3E1FE29FE3007165DE /* UIControl+Point.swift */,
+				A75E3F3F1FE29FE3007165DE /* UIScreen+Frame.swift */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
 		A75F3FFC1FC0B7C600495228 = {
 			isa = PBXGroup;
 			children = (
@@ -568,6 +585,7 @@
 				A75F40061FC0B7C600495228 /* Products */,
 				B936969B24BCE5B06DBD9517 /* Pods */,
 				C502180E30BA6FDA6C25691D /* Frameworks */,
+				A75E3F2E1FE29ABD007165DE /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -637,6 +655,7 @@
 		A75F401E1FC0D5F300495228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A75E3F3D1FE29D75007165DE /* Popover */,
 				A74FD5F41FDDC7E100062483 /* EnumGroups */,
 				A72D2C6B1FD9857B008BE2D2 /* KeyChainConstants */,
 				A72D2C621FD85738008BE2D2 /* Fonts */,
@@ -808,19 +827,6 @@
 			path = RegisterView;
 			sourceTree = "<group>";
 		};
-		ADDB82711FDF22A60096C496 /* Popover */ = {
-			isa = PBXGroup;
-			children = (
-				ADDB82761FDF22C60096C496 /* FTConfiguration.swift */,
-				ADDB82721FDF22C50096C496 /* FTConstants.swift */,
-				ADDB82731FDF22C50096C496 /* FTPopOverMenu.swift */,
-				ADDB82741FDF22C50096C496 /* FTPopOverMenuCell.swift */,
-				ADDB82751FDF22C60096C496 /* UIControl+Point.swift */,
-				ADDB82771FDF22C60096C496 /* UIScreen+Frame.swift */,
-			);
-			path = Popover;
-			sourceTree = "<group>";
-		};
 		B936969B24BCE5B06DBD9517 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -908,7 +914,6 @@
 				A72D2C671FD85AA4008BE2D2 /* OFL.txt in Resources */,
 				A72CAA591FD5AE0900308DED /* female_selected.png in Resources */,
 				A72CAA5C1FD5AE0900308DED /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
-				ADDB82701FDF1ED90096C496 /* error@2x.png in Resources */,
 				A72CAA7E1FD6855200308DED /* ic_eye_open@2x.png in Resources */,
 				A71B49FE1FD3112400B69E71 /* camera_icon_new.png in Resources */,
 				A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */,
@@ -997,7 +1002,6 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FTPopOverMenu_Swift/FTPopOverMenu_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -1013,7 +1017,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTPopOverMenu_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -1039,7 +1042,6 @@
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
 				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
-				ADDB827C1FDF22C70096C496 /* FTConfiguration.swift in Sources */,
 				A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift in Sources */,
 				A74FD5F71FDDC80700062483 /* EnumForValidations.swift in Sources */,
 				A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */,
@@ -1050,6 +1052,8 @@
 				A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */,
 				A72705C71FC8A7E2006C2504 /* AddImageViewController.swift in Sources */,
 				A72CAA861FD6855200308DED /* PasswordToggleVisibilityView.swift in Sources */,
+				A75E3F441FE29FE4007165DE /* UIControl+Point.swift in Sources */,
+				A75E3F481FE29FE4007165DE /* FTPopOverMenu.swift in Sources */,
 				A71B49F11FD2F33C00B69E71 /* UIImageViewX.swift in Sources */,
 				A72AFBE61FCDEDA70018254E /* SendVerificationExtensions.swift in Sources */,
 				A7B17CCE1FE1709C00A8B7DA /* InformationPopupExtensions.swift in Sources */,
@@ -1058,8 +1062,10 @@
 				A7407F071FC705D000DAAF44 /* ConstanctUserKeyValues.swift in Sources */,
 				A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */,
 				A778D9E31FC9AE6200F38438 /* DatabaseUser.swift in Sources */,
+				A75E3F461FE29FE4007165DE /* FTConfiguration.swift in Sources */,
 				A71B49FA1FD2F7F900B69E71 /* boko.swift in Sources */,
 				A7DD2E0F1FD1A7140009322E /* ProcessingUserData.swift in Sources */,
+				A75E3F491FE29FE4007165DE /* FTPopOverMenuCell.swift in Sources */,
 				A71B49F01FD2F33C00B69E71 /* UIViewX.swift in Sources */,
 				ADB505AB1FDB1C6500F81046 /* SCLExtensions.swift in Sources */,
 				A75F40221FC0D99D00495228 /* LoginViewController.swift in Sources */,
@@ -1067,14 +1073,11 @@
 				A71B49F51FD2F33C00B69E71 /* UILabelX.swift in Sources */,
 				A778D9E61FC9BC4900F38438 /* UserAttributeNames.swift in Sources */,
 				A72CAA921FD689D100308DED /* EntranceViewControllerExtention.swift in Sources */,
-				ADDB827B1FDF22C70096C496 /* UIControl+Point.swift in Sources */,
-				ADDB82781FDF22C70096C496 /* FTConstants.swift in Sources */,
 				A767CEF01FD5392400E70B16 /* UIAlertControllerCustomDesign.swift in Sources */,
 				A72AFBE31FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift in Sources */,
 				A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */,
 				A71B49F61FD2F33C00B69E71 /* UIViewAnchorPoint.swift in Sources */,
 				A72705C51FC8A2A6006C2504 /* User.swift in Sources */,
-				ADDB827A1FDF22C70096C496 /* FTPopOverMenuCell.swift in Sources */,
 				A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */,
 				A71B49F21FD2F33C00B69E71 /* UISliderX.swift in Sources */,
 				A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */,
@@ -1084,9 +1087,10 @@
 				A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift in Sources */,
 				A71B49F71FD2F33C00B69E71 /* UIViewControllerX.swift in Sources */,
 				A71B49EF1FD2F33C00B69E71 /* UIViewXRadialGradient.swift in Sources */,
+				A75E3F451FE29FE4007165DE /* UIScreen+Frame.swift in Sources */,
 				A71B49F31FD2F33C00B69E71 /* UIVisualEffectViewX.swift in Sources */,
-				ADDB827D1FDF22C70096C496 /* UIScreen+Frame.swift in Sources */,
 				A72705CE1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift in Sources */,
+				A75E3F471FE29FE4007165DE /* FTConstants.swift in Sources */,
 				A72D2C751FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift in Sources */,
 				A7DD2E111FD1A8440009322E /* PerformSegueExtensionFunctions.swift in Sources */,
 				A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */,
@@ -1098,7 +1102,6 @@
 				A72AFBDC1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift in Sources */,
 				A73828301FC35DCB003C1827 /* Validation.swift in Sources */,
 				A72AFBDE1FCDE8800018254E /* FirebaseDomainConstants.swift in Sources */,
-				ADDB82791FDF22C70096C496 /* FTPopOverMenu.swift in Sources */,
 				A72AFBEE1FCE796D0018254E /* UIImageViewExtensions.swift in Sources */,
 				A7407F0D1FC79B1D00DAAF44 /* UITextFieldExtensions.swift in Sources */,
 				A7DD2E151FD1B1EE0009322E /* SwiftKeyChainExtensionFunctions.swift in Sources */,

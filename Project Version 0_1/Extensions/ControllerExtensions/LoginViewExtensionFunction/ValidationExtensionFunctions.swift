@@ -52,5 +52,34 @@ extension LoginViewController {
         }
     }
     
+    func checkValidateRequiredField() -> Bool {
+        let isEmailValid = checkValidateEmail()
+        //let isPasswordValid = checkValidatePassword()
+        
+        guard isEmailValid else {
+            return false
+        }
+        return true
+        
+    }
+    
+    func checkValidateEmail() -> Bool {
+        guard let _ = email.text,  email.text != SPACE_CHARACTER else {
+            email.addRightViewButton(popOverStyle: FTPopOverStyle.required)
+            return false
+        }
+        
+        let responseEmailFieldValidation = Validation.shared.validate(values: (type: ValidationFields.emailField, inputValue: email.text!))
+        
+        switch responseEmailFieldValidation {
+        case .success:
+            return true
+        default:
+            //showError()
+            email.addRightViewButton(popOverStyle: FTPopOverStyle.invalidEmail)
+            return false
+        }
+    }
+    
 }
 

@@ -24,4 +24,6 @@ let CONSTANT_STRING_USER_NOT_FOUND : String = "Kullanıcı bulunamamıştır. L�
 let CONSTANT_STRING_EMAIL_SEND_AGAIN : String = "Verifikasyon maili yeniden gönderilmiştir."
 let CONSTANT_STRING_EMAIL_VERIFICATION_REQUIRED : String = "Lütfen e-mail adresinize gönderilen verifikasyon linkini tıklayınız."
 let CONSTANT_STRING_EMAIL_VERIFICATION_SEND_FAILED : String = "Verifikasyon e-maili gönderilemedi. Lütfen yeniden deneyiniz!"
+let CONSTANT_WARNING_EMAIL_ALREADY_IN_USE : String = "E-mail is already in use"
+let CONSTANT_WARNING_PLEASE_TRY_AGAIN_LATER : String = "Lütfen daha sonra yeniden deneyiniz"
 

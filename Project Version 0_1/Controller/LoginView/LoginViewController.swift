@@ -11,7 +11,6 @@ import Firebase
 import FirebaseAuth
 import SwiftKeychainWrapper
 import CheckBox
-import FTPopOverMenu_Swift
 
 class LoginViewController: UIViewController, UITextFieldDelegate{
     
@@ -78,6 +77,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBAction func loginButtonClick(_ sender: UIButton) {
         
         // set user email and password to send verification page
+        
+        guard checkValidateRequiredField() else {
+            return
+        }
         
         if checkAllFieldsValid() {
             

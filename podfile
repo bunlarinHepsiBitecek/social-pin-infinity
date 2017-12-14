@@ -19,7 +19,6 @@ target 'Project Version 0_1' do
  pod 'FBSDKShareKit'
  pod 'TwitterKit'
  pod 'CheckBox'
- pod 'FTPopOverMenu_Swift'
  pod 'TextFieldEffects'
 
 end
