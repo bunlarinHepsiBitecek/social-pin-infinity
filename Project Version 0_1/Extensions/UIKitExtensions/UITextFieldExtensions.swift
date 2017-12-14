@@ -80,4 +80,33 @@ extension UITextField {
         config.cornerRadius = 10
     }*/
         
+        self.changePopupStyle()
+        FTPopOverMenu.showForSender(sender: self, with: menuOptionNameArray, menuImageArray: menuOptionImageNameArray, done: { (selectedIndex) -> () in         }) {
+        }
+    }
+    
+    
+    func changePopupStyle() {
+        
+        let config = FTConfiguration.shared
+        config.textColor = UIColor.red
+        config.backgoundTintColor = UIColor.white
+        config.borderColor = UIColor.red
+        config.menuWidth = self.frame.width
+        config.menuSeparatorColor = UIColor.white
+        config.textAlignment = .left
+        config.textFont = UIFont.systemFont(ofSize: 14)
+        config.menuRowHeight = self.frame.height
+        config.cornerRadius = 10
+    }
+    
+    func showPopOver(popOverStyle: FTPopOverStyle) {
+        let menuOptionNameArray : [String] =  [popOverStyle.popOverMessage]
+        let menuOptionImageNameArray : [String] = []
+        
+        self.changePopupStyle()
+        FTPopOverMenu.showForSender(sender: self, with: menuOptionNameArray, menuImageArray: menuOptionImageNameArray, done: { (selectedIndex) -> () in         }) {
+        }
+    }
+    
 }

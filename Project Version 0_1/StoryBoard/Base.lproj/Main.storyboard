@@ -328,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ng4-pG-LeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1175.2" y="958.4707646176912"/>
+            <point key="canvasLocation" x="-894" y="904"/>
         </scene>
         <!--Page Item Controller-->
         <scene sceneID="Nyq-9w-Sg1">
@@ -375,30 +375,24 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmK-tv-MOj" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5t-Yl-N5n">
-                                                <rect key="frame" x="8" y="69" width="149" height="128"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nr-XM-AcZ">
+                                                <rect key="frame" x="62" y="84" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="batman_icon.png"/>
-                                                <state key="selected" image="batman_icon.png"/>
+                                                <state key="normal" image="gender_man.png"/>
+                                                <state key="selected" image="gender_man.png"/>
                                                 <connections>
-                                                    <action selector="genderButtonTapped:" destination="2Sh-Ob-Khj" eventType="touchUpInside" id="T3n-CR-ZUe"/>
+                                                    <action selector="genderManButtonTouch:" destination="2Sh-Ob-Khj" eventType="touchUpInside" id="Ghk-U7-zRn"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxI-NO-Spp" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
-                                                <rect key="frame" x="192" y="364" width="175" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcT-VB-ynB">
+                                                <rect key="frame" x="212" y="84" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                                <state key="normal" image="gender_woman.png"/>
+                                                <state key="selected" image="gender_woman.png"/>
                                                 <connections>
-                                                    <action selector="lastNameTextFieldEndEditing:" destination="2Sh-Ob-Khj" eventType="editingDidEnd" id="5L2-Mt-C1D"/>
+                                                    <action selector="genderWomenButtonTouch:" destination="2Sh-Ob-Khj" eventType="touchUpInside" id="ejL-fD-PO8"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGN-aY-5vC" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="228" width="359" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -412,7 +406,7 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email.png"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="emailTextFieldEndEditing:" destination="2Sh-Ob-Khj" eventType="editingDidEnd" id="5kW-jY-qMf"/>
+                                                    <action selector="textFieldEditingChanged:" destination="2Sh-Ob-Khj" eventType="editingChanged" id="BbF-XH-B75"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-uo-TEp" customClass="HideShowPasswordTextField" customModule="Project_Version_0_1" customModuleProvider="target">
@@ -427,28 +421,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password.png"/>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="passwordTextFieldEndEditing:" destination="2Sh-Ob-Khj" eventType="editingDidEnd" id="hYQ-v6-Okk"/>
-                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vr4-d9-HoF" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="452" width="359" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="birthday.png"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="birthdateTextFieldEndEditing:" destination="2Sh-Ob-Khj" eventType="editingDidEnd" id="2uT-cT-sEF"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rfv-gd-Feb" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="408" width="359" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIO-Wb-FE3" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="318" width="359" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -457,10 +432,10 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                         <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="phone.png"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="male_default.png"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="phoneTextFieldEndEditing:" destination="2Sh-Ob-Khj" eventType="editingDidEnd" id="SJY-tJ-c0q"/>
+                                                    <action selector="textFieldEditingChanged:" destination="2Sh-Ob-Khj" eventType="editingChanged" id="Hay-2e-iQB"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0de-ec-f2P" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
@@ -476,20 +451,26 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="person.png"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="firstNameTextFieldEndEditing:" destination="2Sh-Ob-Khj" eventType="editingDidEnd" id="Mge-JO-AKq"/>
+                                                    <action selector="textFieldEditingChanged:" destination="2Sh-Ob-Khj" eventType="editingChanged" id="U7Q-da-qdd"/>
                                                 </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDV-Xn-DaV">
-                                                <rect key="frame" x="220" y="69" width="147" height="128"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxI-NO-Spp" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
+                                                <rect key="frame" x="192" y="364" width="175" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="wonder_woman_icon.png"/>
-                                                <state key="selected" image="wonder_woman_icon.png"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="genderButtonTapped:" destination="2Sh-Ob-Khj" eventType="touchUpInside" id="O1J-zc-3Ck"/>
+                                                    <action selector="textFieldEditingChanged:" destination="2Sh-Ob-Khj" eventType="editingChanged" id="m15-c9-5YB"/>
                                                 </connections>
-                                            </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIO-Wb-FE3" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="318" width="359" height="30"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rfv-gd-Feb" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="408" width="359" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -498,10 +479,24 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                         <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="male_default.png"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="phone.png"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vr4-d9-HoF" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="452" width="359" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="birthday.png"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="userNameTextFieldEndEditing:" destination="2Sh-Ob-Khj" eventType="editingDidEnd" id="GPV-0u-Rs1"/>
+                                                    <action selector="birthdayEditingEnd:" destination="2Sh-Ob-Khj" eventType="editingDidEnd" id="KJD-RW-lea"/>
+                                                    <action selector="textFieldEditingChanged:" destination="2Sh-Ob-Khj" eventType="editingChanged" id="T3g-yP-cPG"/>
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iA-zy-Rnu" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
@@ -550,7 +545,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="667" id="9QH-Cv-DBh"/>
                                         </constraints>
@@ -564,6 +558,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GH5-bI-kvN" firstAttribute="trailing" secondItem="16Y-jb-EYZ" secondAttribute="trailing" id="cS7-4b-ZRA"/>
                             <constraint firstItem="kmK-tv-MOj" firstAttribute="width" secondItem="WNh-x6-OXq" secondAttribute="width" id="eIg-1I-YOW"/>
@@ -577,8 +572,8 @@
                         <outlet property="birthdate" destination="Vr4-d9-HoF" id="Oo8-2f-SAZ"/>
                         <outlet property="emailAddress" destination="NGN-aY-5vC" id="NPj-Pk-0KN"/>
                         <outlet property="firstName" destination="0de-ec-f2P" id="9wY-G7-a18"/>
-                        <outlet property="genderManButton" destination="B5t-Yl-N5n" id="cyQ-wD-13M"/>
-                        <outlet property="genderWomenButton" destination="CDV-Xn-DaV" id="JbM-Rv-Fpj"/>
+                        <outlet property="genderManButton" destination="7nr-XM-AcZ" id="Ttg-hl-Sls"/>
+                        <outlet property="genderWomenButton" destination="tcT-VB-ynB" id="A1U-Gg-fD3"/>
                         <outlet property="lastName" destination="vxI-NO-Spp" id="WbD-l4-tri"/>
                         <outlet property="mobilePhone" destination="Rfv-gd-Feb" id="ZFr-Ev-pCg"/>
                         <outlet property="password" destination="i1Q-uo-TEp" id="pZC-Zm-10s"/>
@@ -713,7 +708,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90588235289999997" green="0.058823529409999999" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.74901960784313726" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Rp7-5f-lhZ" firstAttribute="trailing" secondItem="ege-2m-D4k" secondAttribute="trailing" id="KK6-Dr-9gs"/>
                             <constraint firstItem="Rp7-5f-lhZ" firstAttribute="leading" secondItem="ege-2m-D4k" secondAttribute="leading" id="PsK-ch-kdg"/>
@@ -911,16 +906,16 @@
     </scenes>
     <resources>
         <image name="556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg" width="310" height="550"/>
-        <image name="batman_icon.png" width="128" height="128"/>
         <image name="birthday.png" width="512" height="512"/>
         <image name="camera_icon_new.png" width="128" height="128"/>
         <image name="email.png" width="512" height="512"/>
+        <image name="gender_man.png" width="128" height="128"/>
+        <image name="gender_woman.png" width="128" height="128"/>
         <image name="ic_mail" width="24" height="24"/>
         <image name="male_default.png" width="128" height="128"/>
         <image name="password.png" width="512" height="512"/>
         <image name="person.png" width="512" height="512"/>
         <image name="phone.png" width="512" height="512"/>
-        <image name="wonder_woman_icon.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6p0-Uw-ysD"/>
