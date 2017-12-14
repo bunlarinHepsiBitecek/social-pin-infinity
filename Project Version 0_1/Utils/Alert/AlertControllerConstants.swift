@@ -23,5 +23,5 @@ let CONSTANT_STRING_INVALID_CREDENTIALS : String = "Yanlış e-mail veya şifre 
 let CONSTANT_STRING_USER_NOT_FOUND : String = "Kullanıcı bulunamamıştır. Lütfen giriş ekranından bir kullanıcı oluşturunuz."
 let CONSTANT_STRING_EMAIL_SEND_AGAIN : String = "Verifikasyon maili yeniden gönderilmiştir."
 let CONSTANT_STRING_EMAIL_VERIFICATION_REQUIRED : String = "Lütfen e-mail adresinize gönderilen verifikasyon linkini tıklayınız."
-
+let CONSTANT_STRING_EMAIL_VERIFICATION_SEND_FAILED : String = "Verifikasyon e-maili gönderilemedi. Lütfen yeniden deneyiniz!"
 

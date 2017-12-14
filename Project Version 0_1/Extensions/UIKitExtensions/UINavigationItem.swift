@@ -19,5 +19,17 @@ extension UINavigationItem {
         
     }
     
+    func hideBackBarItem() {
+        
+        hidesBackButton = true
+        
+    }
+    
+    func showBackBarItem() {
+        
+        hidesBackButton = false
+        
+    }
+    
 }
 

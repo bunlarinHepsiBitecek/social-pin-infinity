@@ -14,6 +14,7 @@ class Information {
     private var _verificationNotifMessage : String
     private var _alertControllerObject : UIAlertController
     private var _alertActionObject : UIAlertAction
+    private var _emailSendResult : Bool
     
     
     init() {
@@ -21,6 +22,7 @@ class Information {
         self._verificationNotifMessage = SPACE_CHARACTER
         self._alertControllerObject = UIAlertController()
         self._alertActionObject = UIAlertAction()
+        self._emailSendResult = false
         
     }
     
@@ -36,9 +38,19 @@ class Information {
         return _alertActionObject
     }
     
+    var emailSendResult : Bool {
+        return _emailSendResult
+    }
+    
     func setVerificationNotifMessage(inputMessage : String) {
         
         self._verificationNotifMessage = inputMessage
+        
+    }
+    
+    func setEmailSendResult(inputResult : Bool) {
+        
+        self._emailSendResult = inputResult
         
     }
     

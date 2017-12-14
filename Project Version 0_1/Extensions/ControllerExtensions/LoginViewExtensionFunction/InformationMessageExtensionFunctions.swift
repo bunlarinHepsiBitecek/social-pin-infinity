@@ -10,6 +10,8 @@ import UIKit
 import AudioUnit
 import Firebase
 
+import FTPopOverMenu_Swift
+
 extension LoginViewController {
     
     func createWarningMessage(inputTitle : String, inputMessage : String) {
@@ -77,11 +79,12 @@ extension LoginViewController {
         alertView.addTextField().text = inputEmailTextString
         alertView.addButton("Şifre Sıfırla") {
             
+            
             self.initiatePasswordResetProcess()
             
         }
         
-        alertView.showEdit("Sifre Sıfırlama", subTitle: "Aşağıdaki e-mail adresine gönderilen link ile şifrenizi sıfırlayabilirsiniz", closeButtonTitle: "Vazgeç")
+        alertView.showInfo("Sifre Sıfırlama", subTitle: "Aşağıdaki e-mail adresine gönderilen link ile şifrenizi sıfırlayabilirsiniz", closeButtonTitle: "Vazgeç")
         
     }
     

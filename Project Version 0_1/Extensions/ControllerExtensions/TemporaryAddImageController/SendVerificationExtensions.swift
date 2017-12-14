@@ -12,9 +12,9 @@ import FirebaseAuth
 
 extension AddImageViewController {
     
-    func sendVerificationMail() -> Bool {
+    func sendVerificationMail(inputUserObject : User) {
         
-        var result : Bool = false
+        var informationObject = Information()
         
         let currentUser = Auth.auth().currentUser
         
@@ -40,17 +40,40 @@ extension AddImageViewController {
                     
                 }
                 
-                result = false
+                informationObject.setEmailSendResult(inputResult: false)
+                informationObject.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_FAILED)
+                self.createVerificationEmailSendSuccessInfo(informationObject: informationObject, userObject: self.userObject)
+                
                 
             } else {
                 
                 print("email verification sent")
-                result = true
+                
+                informationObject.setEmailSendResult(inputResult: false)
+                informationObject.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_FAILED)
+                self.createVerificationEmailSendSuccessInfo(informationObject: informationObject, userObject: self.userObject)
+                
+                /*
+                informationObject.setEmailSendResult(inputResult: true)
+                informationObject.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_SUCCESS)
+                self.directToNextPage(inputInformationMessage: informationObject, inputUserObject: self.userObject)
+
+                */
+                
             }
         })
         
-        return result
     }
     
-    
+    // manage perform segue
+    func directToNextPage(inputInformationMessage : Information, inputUserObject : User) {
+        
+        let verificationViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "VerificationViewController_storyBoardID") as! VerificationViewController
+        
+        verificationViewControllerObject.verificationMessage = inputInformationMessage
+        verificationViewControllerObject.userObjectInVerificationView = inputUserObject
+        
+        navigationController?.pushViewController(verificationViewControllerObject, animated: true)
+            
+    }
 }

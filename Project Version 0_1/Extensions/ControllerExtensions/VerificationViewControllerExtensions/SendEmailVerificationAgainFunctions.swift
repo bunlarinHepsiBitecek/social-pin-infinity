@@ -38,6 +38,7 @@ extension VerificationViewController {
                     
                 }
                 
+                self.PopUpFromSCLAlertViews(inputAlertType: .Error, inputAlertField: .EmptyType)
                 
             } else {
                 

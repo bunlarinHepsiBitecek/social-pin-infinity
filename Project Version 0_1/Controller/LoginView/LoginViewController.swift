@@ -11,8 +11,9 @@ import Firebase
 import FirebaseAuth
 import SwiftKeychainWrapper
 import CheckBox
+import FTPopOverMenu_Swift
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
@@ -23,6 +24,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var activityIndicator = UIActivityIndicatorView()
     
     var emailStringValue : String = SPACE_CHARACTER
+    
+    var menuOptionNameArray : [String] = ["Email Field is required"]
+    
+    var menuOptionImageNameArray : [String] = ["Pokemon_Go_01","Pokemon_Go_02","Pokemon_Go_03","Pokemon_Go_04"]
     
     // User object to pass data between views
     var userDatabaseObjectToPass = User()
@@ -100,19 +105,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    /*
-     SwiftKeyChainWrapper functions
-     */
-    @IBAction func deneme(_ sender: UIButton) {
-        
-        let temp = storyboard?.instantiateViewController(withIdentifier: "AddImageViewController_storyBorad_ID") as! AddImageViewController
-        
-        temp.userObject = userDatabaseObjectToPass
-        
-        navigationController?.pushViewController(temp, animated: true)
-        
-    }
-    
     @IBAction func checkBoxTapped(_ sender: Any) {
         
         registerdRememberMeUserData(inputEmail: email.text!, inputPassword: password.text!)
@@ -140,26 +132,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if !evaluateEmailField() {
             
             
-            PopUpFromSCLAlertViews(inputAlertType: .Warning, inputAlertField: .Email, inputFirebaseErrorCode: AuthErrorCode(rawValue: 0)!)
+            //PopUpFromSCLAlertViews(inputAlertType: .Warning, inputAlertField: .Email, inputFirebaseErrorCode: AuthErrorCode(rawValue: 0)!)
             
-            email.clearTextFiedl()
+            //email.clearTextFiedl()
+            
+            //changeToQQStyle()
+            
+            /*
+            changeToMoreStyle()
+            
+            FTPopOverMenu.showForSender(sender: email, with: menuOptionNameArray, menuImageArray: menuOptionImageNameArray, done: { (selectedIndex) -> () in
+                print(selectedIndex)
+            }) {
+                
+            }*/
+            
+            
             
         }
         
     }
     
-    @IBAction func passwordTextFieldValidationCheck(_ sender: Any) {
-        
-        if !evaluatePasswordField() {
-            
-            //createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_WARNING_INVALID_PASSWORD_FORMAT)
-            PopUpFromSCLAlertViews(inputAlertType: .Warning, inputAlertField: .Password, inputFirebaseErrorCode: AuthErrorCode(rawValue: 0)!)
-            
-            password.clearTextFiedl()
-            
-        }
-        
-    }
+    
 }
 
 

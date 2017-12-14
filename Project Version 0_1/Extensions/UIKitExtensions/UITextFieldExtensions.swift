@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FTPopOverMenu_Swift
 
 extension UITextField {
     
@@ -37,5 +38,46 @@ extension UITextField {
         text = SPACE_CHARACTER
         
     }
+    
+    /*
+    func rightButtonText() {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "error@2x.png"), for: .normal)
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, -16, 0, 0)
+        button.frame = CGRect(x: CGFloat(frame.size.width - 25), y: CGFloat(5), width: CGFloat(25), height: CGFloat(25))
+        button.addTarget(self, action: #selector(self.showErrorPopup), for: .touchUpInside)
+        
+        rightView = button
+        rightViewMode = .always
+    }
+    
+    @objc func showErrorPopup(_ sender: Any) {
+        
+        changeToMoreStyle()
+        
+        FTPopOverMenu.showForSender(sender: self, with: menuOptionNameArray, menuImageArray: menuOptionImageNameArray, done: { (selectedIndex) -> () in
+            print("Remzi index: \(selectedIndex)")
+        }) {
+            
+        }
+        
+    }*/
+    
+    /*
+    
+    func changeToMoreStyle() {
+        
+        
+        let config = FTConfiguration.shared
+        config.textColor = UIColor.red
+        config.backgoundTintColor = UIColor.white
+        config.borderColor = UIColor.red
+        config.menuWidth = email.frame.width
+        config.menuSeparatorColor = UIColor.white
+        config.textAlignment = .left
+        config.textFont = UIFont.systemFont(ofSize: 14)
+        config.menuRowHeight = 40
+        config.cornerRadius = 10
+    }*/
         
 }

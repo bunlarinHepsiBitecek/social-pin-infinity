@@ -27,6 +27,10 @@ extension VerificationViewController {
             
             prepareInfoFieldBased()
             
+        case .Error:
+            
+            prepareErrorMessage()
+            
         default:
             print("Nothing to do at this point")
             
@@ -84,6 +88,20 @@ extension VerificationViewController {
         let alertView = SCLAlertView(appearance: alertAppearance)
         
         alertView.showWarning(CONSTANT_STRING_WARNING, subTitle: CONSTANT_STRING_EMAIL_VERIFICATION_REQUIRED, closeButtonTitle: CONSTANT_STRING_OK, timeout: SCLAlertView.SCLTimeoutConfiguration.init(timeoutValue: 2, timeoutAction: timeoutAction))
+        
+    }
+    
+    func prepareErrorMessage() {
+        
+        let alertAppearance = SCLAlertView.SCLAppearance()
+        
+        let timeoutAction: SCLAlertView.SCLTimeoutConfiguration.ActionType = {
+            // action here
+        }
+        
+        let alertView = SCLAlertView(appearance: alertAppearance)
+        
+        alertView.showError(CONSTANT_STRING_ERROR, subTitle: CONSTANT_STRING_EMAIL_VERIFICATION_SEND_FAILED, closeButtonTitle: CONSTANT_STRING_OK, timeout: SCLAlertView.SCLTimeoutConfiguration.init(timeoutValue: 2, timeoutAction: timeoutAction))
         
     }
     

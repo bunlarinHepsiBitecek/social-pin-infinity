@@ -14,9 +14,11 @@ import AudioUnit
 class VerificationViewController: UIViewController {
     
     @IBOutlet var emailVerificationTextField: UITextField!
+    @IBOutlet var informationMessageLabel: UILabel!
     
     var callerViewControllerID : String = SPACE_CHARACTER
     
+   
     var userObjectInVerificationView = User()
     var verificationMessage = Information()
     
@@ -26,6 +28,10 @@ class VerificationViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.navigationController?.enableNavigationBar()
+        /*
+         to disable back bar button item title
+         */
+        self.navigationItem.hideBackBarItem()
         self.manageForegroundActions()
         self.navigationItem.setNavigationItemTitles()
         
@@ -33,6 +39,7 @@ class VerificationViewController: UIViewController {
         print("viewDidLoad : callerViewControllerID : \(callerViewControllerID)")
         
         emailVerificationTextField.text = userObjectInVerificationView.email
+        informationMessageLabel.text = verificationMessage.verificationNotifMessage
         
         userObjectInVerificationView.displayAttributeValues()
         

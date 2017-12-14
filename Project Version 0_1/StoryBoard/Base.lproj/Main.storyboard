@@ -257,11 +257,12 @@
                     </view>
                     <connections>
                         <outlet property="emailVerificationTextField" destination="DHk-pl-L59" id="o8Y-IX-Qau"/>
+                        <outlet property="informationMessageLabel" destination="3Q7-gE-lnM" id="Li1-PO-vkl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zE6-3V-aMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2616.8000000000002" y="959.37031484257875"/>
+            <point key="canvasLocation" x="2526" y="958"/>
         </scene>
         <!--Start Page View Controller-->
         <scene sceneID="O7x-UK-IKP">
@@ -741,8 +742,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-KJ-I6y" customClass="DesignableUITextField" customModule="Project_Version_0_1" customModuleProvider="target">
-                                <rect key="frame" x="32" y="79" width="310" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-KJ-I6y" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="36" y="138" width="310" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -752,7 +753,7 @@
                                         <color key="value" cocoaTouchSystemColor="darkTextColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -766,7 +767,7 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agl-Pq-16F" customClass="CheckBox" customModule="CheckBox">
-                                <rect key="frame" x="26" y="166" width="112" height="35"/>
+                                <rect key="frame" x="28" y="276" width="112" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -801,25 +802,8 @@
                                     <action selector="checkBoxTapped:" destination="MZr-Fw-GWC" eventType="valueChanged" id="h0N-nU-4SA"/>
                                 </connections>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZv-7H-33e" customClass="HideShowPasswordTextField" customModule="Project_Version_0_1" customModuleProvider="target">
-                                <rect key="frame" x="30" y="118" width="312" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password.png"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="passwordTextFieldValidationCheck:" destination="MZr-Fw-GWC" eventType="editingDidEnd" id="hyD-DX-xer"/>
-                                    <outlet property="delegate" destination="MZr-Fw-GWC" id="KX5-rr-rVd"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEi-f3-vla">
-                                <rect key="frame" x="124" y="268" width="127" height="80"/>
+                                <rect key="frame" x="128" y="400" width="127" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
@@ -838,7 +822,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-mc-hqh" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
-                                <rect key="frame" x="87" y="235" width="200" height="36"/>
+                                <rect key="frame" x="91" y="367" width="200" height="36"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.50588235290000005" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
@@ -875,6 +859,30 @@
                                     <action selector="loginButtonClick:" destination="MZr-Fw-GWC" eventType="touchUpInside" id="ycF-aa-er4"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xpm-4A-SaW" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="36" y="209" width="310" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftViewImage" value="ic_mail"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email.png"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="emailTextFieldValidationCheck:" destination="MZr-Fw-GWC" eventType="editingDidEnd" id="f4E-d5-wva"/>
+                                    <outlet property="delegate" destination="MZr-Fw-GWC" id="4We-Vv-zmg"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="OJ7-Ce-Ghl"/>
@@ -892,7 +900,7 @@
                         <outlet property="checkBoxButton" destination="agl-Pq-16F" id="SaH-2w-hGI"/>
                         <outlet property="email" destination="9pi-KJ-I6y" id="s7v-za-bJD"/>
                         <outlet property="forgotPasswordButton" destination="KEi-f3-vla" id="EjD-aQ-2G6"/>
-                        <outlet property="password" destination="yZv-7H-33e" id="Ho8-15-lZi"/>
+                        <outlet property="password" destination="Xpm-4A-SaW" id="Sbm-cX-pqb"/>
                         <segue destination="aYB-fJ-mPw" kind="show" identifier="gotoVerificationPanel" id="6p0-Uw-ysD"/>
                     </connections>
                 </viewController>

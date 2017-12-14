@@ -55,27 +55,7 @@ class AddImageViewController: UIViewController {
         
         createUserAndLoadDataToStorage()
         
-        let informationMessage = Information()
-        
-        let emailSendResult : Bool = sendVerificationMail()
-        
-        if emailSendResult {
-            print("1_")
-            informationMessage.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_SUCCESS)
-            verificationViewControllerObject.verificationMessage = informationMessage
-            
-        } else {
-            
-            print("2_")
-            informationMessage.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_FAILED)
-            verificationViewControllerObject.verificationMessage = informationMessage
-            
-        }
-        
-        verificationViewControllerObject.userObjectInVerificationView = userObject
-        
-        navigationController?.pushViewController(verificationViewControllerObject, animated: true)
-        
+        sendVerificationMail(inputUserObject: userObject)
         
     }
 }
