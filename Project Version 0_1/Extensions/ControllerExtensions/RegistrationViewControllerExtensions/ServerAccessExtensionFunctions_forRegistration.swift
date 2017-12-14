@@ -75,10 +75,13 @@ extension RegisterViewController {
                 print("createUserWithCredentials : keyChainData : \(String(describing: KeychainWrapper.standard.string(forKey: USER_ID)))")
                 
                 self.stopSpinner()
+                self.directToAddImageView()
                 
             }
         
         } // end of Auth.auth().createUser
+        
+        print("isFirebaseUserCreated : \(isFirebaseUserCreated)")
         
         return isFirebaseUserCreated
     }
@@ -105,6 +108,16 @@ extension RegisterViewController {
         
         activityIndicator.stopAnimating()
         view.resetViewBackgroundColor()
+    }
+    
+    func directToAddImageView() {
+        
+        let addImageVCObject = storyboard?.instantiateViewController(withIdentifier: "AddImageViewController_storyBorad_ID") as! AddImageViewController
+        
+        addImageVCObject.userObject = self.user
+        
+        navigationController?.pushViewController(addImageVCObject, animated: true)
+        
     }
     
 }

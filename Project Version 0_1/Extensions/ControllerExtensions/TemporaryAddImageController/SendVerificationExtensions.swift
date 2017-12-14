@@ -12,9 +12,9 @@ import FirebaseAuth
 
 extension AddImageViewController {
     
-    func sendVerificationMail(inputUserObject : User) {
+    func sendVerificationMail() {
         
-        var informationObject = Information()
+        let informationObject = Information()
         
         let currentUser = Auth.auth().currentUser
         
@@ -42,7 +42,7 @@ extension AddImageViewController {
                 
                 informationObject.setEmailSendResult(inputResult: false)
                 informationObject.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_FAILED)
-                self.createVerificationEmailSendSuccessInfo(informationObject: informationObject, userObject: self.userObject)
+                self.createVerificationEmailSendFailedError(informationObject: informationObject, userObject: self.userObject)
                 
                 
             } else {
@@ -51,14 +51,8 @@ extension AddImageViewController {
                 
                 informationObject.setEmailSendResult(inputResult: false)
                 informationObject.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_FAILED)
-                self.createVerificationEmailSendSuccessInfo(informationObject: informationObject, userObject: self.userObject)
-                
-                /*
-                informationObject.setEmailSendResult(inputResult: true)
-                informationObject.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_SUCCESS)
+                //self.createVerificationEmailSendSuccessInfo(informationObject: informationObject, userObject: self.userObject)
                 self.directToNextPage(inputInformationMessage: informationObject, inputUserObject: self.userObject)
-
-                */
                 
             }
         })

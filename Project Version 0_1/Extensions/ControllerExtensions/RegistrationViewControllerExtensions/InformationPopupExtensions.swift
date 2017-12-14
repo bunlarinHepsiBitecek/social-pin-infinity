@@ -11,9 +11,7 @@ import AudioUnit
 
 extension AddImageViewController {
     
-    func createVerificationEmailSendSuccessInfo(informationObject : Information, userObject : User) {
-        
-        print("yarroooooooooooooooooooooo")
+    func createVerificationEmailSendFailedError(informationObject : Information, userObject : User) {
         
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
@@ -22,8 +20,6 @@ extension AddImageViewController {
         let alertView = SCLAlertView(appearance: alertAppearance)
         
         alertView.showError(CONSTANT_STRING_ERROR, subTitle: CONSTANT_STRING_EMAIL_VERIFICATION_SEND_FAILED, closeButtonTitle: CONSTANT_STRING_OK).setDismissBlock {
-            
-            print("yarroooooooooooooooooooooo3333333")
             
             self.directToNextPage(inputInformationMessage: informationObject, inputUserObject: userObject)
         }

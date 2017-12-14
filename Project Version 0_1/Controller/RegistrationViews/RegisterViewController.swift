@@ -77,12 +77,13 @@ class RegisterViewController: UIViewController {
             return
         }
         
+        /*
         let addImageVCObject = storyboard?.instantiateViewController(withIdentifier: "AddImageViewController_storyBorad_ID") as! AddImageViewController
         
         addImageVCObject.userObject = self.user
         
         navigationController?.pushViewController(addImageVCObject, animated: true)
-        
+ */
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

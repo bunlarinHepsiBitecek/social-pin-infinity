@@ -71,7 +71,6 @@
 		A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828371FC3E196003C1827 /* VerificationViewController.swift */; };
 		A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7407F031FC4B7C600DAAF44 /* GoogleService-Info.plist */; };
 		A7407F071FC705D000DAAF44 /* ConstanctUserKeyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F061FC705D000DAAF44 /* ConstanctUserKeyValues.swift */; };
-		A7407F091FC7951100DAAF44 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F081FC7951100DAAF44 /* ForgotPasswordViewController.swift */; };
 		A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F0A1FC799FA00DAAF44 /* UIButtonExtensions.swift */; };
 		A7407F0D1FC79B1D00DAAF44 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F0C1FC79B1D00DAAF44 /* UITextFieldExtensions.swift */; };
 		A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FD5F01FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift */; };
@@ -196,7 +195,6 @@
 		A7407F031FC4B7C600DAAF44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7407F051FC4B8D100DAAF44 /* Project Version 0_1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Project Version 0_1.entitlements"; sourceTree = "<group>"; };
 		A7407F061FC705D000DAAF44 /* ConstanctUserKeyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstanctUserKeyValues.swift; sourceTree = "<group>"; };
-		A7407F081FC7951100DAAF44 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		A7407F0A1FC799FA00DAAF44 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		A7407F0C1FC79B1D00DAAF44 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
 		A74FD5F01FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAccessExtensionFunctions_forRegistration.swift; sourceTree = "<group>"; };
@@ -475,7 +473,6 @@
 			isa = PBXGroup;
 			children = (
 				A75F40211FC0D99D00495228 /* LoginViewController.swift */,
-				A7407F081FC7951100DAAF44 /* ForgotPasswordViewController.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -1095,7 +1092,6 @@
 				A7DD2E111FD1A8440009322E /* PerformSegueExtensionFunctions.swift in Sources */,
 				A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */,
 				A72AFBD81FCDD2640018254E /* StorageConstantNames.swift in Sources */,
-				A7407F091FC7951100DAAF44 /* ForgotPasswordViewController.swift in Sources */,
 				A72AFBCF1FCCBCF30018254E /* PrepareUserProfileData.swift in Sources */,
 				A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */,
 				A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */,

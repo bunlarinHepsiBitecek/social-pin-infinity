@@ -11,6 +11,12 @@ import FirebaseStorage
 
 extension AddImageViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
+    @objc func goToDecideHowProfilePictureLoads() {
+        
+        self.decideHowProfilePictureLoads()
+        
+    }
+    
     @objc func getProfilePhoto() {
         
         print("cameraya dokunduk")

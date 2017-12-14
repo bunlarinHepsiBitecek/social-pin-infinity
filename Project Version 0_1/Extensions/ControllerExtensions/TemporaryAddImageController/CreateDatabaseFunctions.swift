@@ -22,7 +22,7 @@ extension AddImageViewController {
         
         print("imageName : \(imageName)")
         
-        let storageReference = Storage.storage().reference().child(CONSTANT_STRING_PROFILE_IMAGES).child("\(imageName).png")
+        let storageReference = Storage.storage().reference().child(CONSTANT_STRING_CHILD_USERS).child(CONSTANT_STRING_PROFILE_IMAGES).child("\(imageName).png")
         
         if let uploadData = UIImagePNGRepresentation(self.imageView.image!) {
            

@@ -17,7 +17,6 @@ class VerificationViewController: UIViewController {
     @IBOutlet var informationMessageLabel: UILabel!
     
     var callerViewControllerID : String = SPACE_CHARACTER
-    
    
     var userObjectInVerificationView = User()
     var verificationMessage = Information()
@@ -38,10 +37,7 @@ class VerificationViewController: UIViewController {
         print("VerificationViewController starts")
         print("viewDidLoad : callerViewControllerID : \(callerViewControllerID)")
         
-        emailVerificationTextField.text = userObjectInVerificationView.email
-        informationMessageLabel.text = verificationMessage.verificationNotifMessage
-        
-        userObjectInVerificationView.displayAttributeValues()
+        self.setFieldOnTheView()
         
     }
     
@@ -87,20 +83,6 @@ class VerificationViewController: UIViewController {
                         
                         print("sıcıs spor")
                         
-                        /*
-                        let informationObject = Information()
-                        informationObject.setAlertController(inputTitle: "Uyarı", inputMessage: "Boku yedin emailine bak!")
-                        
-                        self.present(informationObject.alertControllerObject, animated: true, completion: nil)
-                        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                        
-                        let whenToCloseAlert = DispatchTime.now() + 2
-                        
-                        DispatchQueue.main.asyncAfter(deadline: whenToCloseAlert){
-                            
-                            informationObject.alertControllerObject.dismiss(animated: true, completion: nil)
-                        }*/
-                        
                         self.PopUpFromSCLAlertViews(inputAlertType: .Warning, inputAlertField: .ButtonActivateAccount)
                         
                     }
@@ -110,6 +92,13 @@ class VerificationViewController: UIViewController {
             }
             
         })
+        
+    }
+    
+    func setFieldOnTheView() {
+        
+        emailVerificationTextField.text = userObjectInVerificationView.email
+        informationMessageLabel.text = verificationMessage.verificationNotifMessage
         
     }
     

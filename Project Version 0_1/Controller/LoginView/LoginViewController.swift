@@ -20,26 +20,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var forgotPasswordButton: UIButton!
     @IBOutlet var checkBoxButton: CheckBox!
     
+    /*
+        variables to manage data transfer
+     */
     var activityIndicator = UIActivityIndicatorView()
-    
-    var emailStringValue : String = SPACE_CHARACTER
-    
-    var menuOptionNameArray : [String] = ["Email Field is required"]
-    
-    var menuOptionImageNameArray : [String] = ["Pokemon_Go_01","Pokemon_Go_02","Pokemon_Go_03","Pokemon_Go_04"]
-    
-    // User object to pass data between views
+    /*
+        User object to pass data between views
+    */
     var userDatabaseObjectToPass = User()
     
+    /*
+        viewDidLoad
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("LoginView viewDidLoad activated")
-        
-        self.navigationController?.enableNavigationBar()
-        
+        self.enableNavigationBar()
         self.setRememberMeEnabledOrDisabled()
-        //self.navigationItem.setNavigationItemTitles()
         self.clearTextFieldsOnLoginView()
         
     }
@@ -54,14 +51,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     // to close keyboard when touches somewhere else but kwyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        print("TouchesBegan is activated")
-        
         self.view.endEditing(true)
     }
     
     // to close keyboard when press return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("textFieldShouldReturn is activated")
         
         textField.resignFirstResponder()
         
@@ -74,24 +68,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    /*
+        Login Button Clicked
+     */
     @IBAction func loginButtonClick(_ sender: UIButton) {
-        
-        // set user email and password to send verification page
         
         guard checkValidateRequiredField() else {
             return
         }
         
-        if checkAllFieldsValid() {
-            
-            setUserData()
-            loginUserWithCredentials()
-            
-        } else {
-            
-            createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_STRING_WARNING_INVALID_FIELDS)
-            
-        }
+        setUserData()
+        loginUserWithCredentials()
         
     }
     
@@ -100,11 +87,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
      */
     @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
         
-        setUserEmailData()
-        //createForgetPasswordAlertController(inputEmailTextString: email.text!)
-        createForgetPasswordAlertController_v2(inputEmailTextString: email.text!)
+        guard checkValidateRequiredFieldForForgetPassword() else {
+            return
+        }
         
-        //performSegue(withIdentifier: "gotoForgotPasswordView", sender: self)
+        setUserEmailData()
+        createForgetPasswordAlertController(inputEmailTextString: email.text!)
         
     }
     
@@ -114,48 +102,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         
     }
     
-    /**
-     email & password field must be check before login,
-     if email or password is not validated login button must be disabled
-     ..........
-     */
-    @IBAction func emailTextFieldValidationCheck(_ sender: Any) {
+    @IBAction func emailEditingChanged(_ sender: Any) {
         
-        /*
-        if !evaluateEmailField() {
+        email.hideRightViewButton()
             
-            createWarningMessage(inputTitle: CONSTANT_STRING_WARNING, inputMessage: CONSTANT_WARNING_INVALID_EMAIL_FORMAT)
-            
-            email.clearTextFiedl()
-        }*/
+    }
+    
+    @IBAction func passwordEditingChanged(_ sender: Any) {
         
-        //createWarningMessage(inputTitle: "1", inputMessage: "1")
-        
-        
-        if !evaluateEmailField() {
-            
-            
-            //PopUpFromSCLAlertViews(inputAlertType: .Warning, inputAlertField: .Email, inputFirebaseErrorCode: AuthErrorCode(rawValue: 0)!)
-            
-            //email.clearTextFiedl()
-            
-            //changeToQQStyle()
-            
-            /*
-            changeToMoreStyle()
-            
-            FTPopOverMenu.showForSender(sender: email, with: menuOptionNameArray, menuImageArray: menuOptionImageNameArray, done: { (selectedIndex) -> () in
-                print(selectedIndex)
-            }) {
-                
-            }*/
-            
-            
-            
-        }
+        password.hideRightViewButton()
         
     }
     
+    
+    private func enableNavigationBar() {
+        
+        self.navigationController?.enableNavigationBar()
+        
+    }
     
 }
 

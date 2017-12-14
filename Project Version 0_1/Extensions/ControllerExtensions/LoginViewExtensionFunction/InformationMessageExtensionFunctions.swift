@@ -12,61 +12,7 @@ import Firebase
 
 extension LoginViewController {
     
-    func createWarningMessage(inputTitle : String, inputMessage : String) {
-        
-        let informationObject = Information()
-        informationObject.setAlertController(inputTitle: inputTitle, inputMessage: inputMessage)
-        
-        self.present(informationObject.alertControllerObject, animated: true, completion: nil)
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        
-        let whenToCloseAlert = DispatchTime.now() + 2
-        
-        DispatchQueue.main.asyncAfter(deadline: whenToCloseAlert){
-            
-            informationObject.alertControllerObject.dismiss(animated: true, completion: nil)
-        }
-        
-    }
-    
     func createForgetPasswordAlertController(inputEmailTextString : String) {
-        
-        let informationObjectForgetPassword = Information()
-        informationObjectForgetPassword.setAlertControllerForgetPassword(inputTitle: CONSTANT_FORGET_PASSWORD, inputMessage: CONSTANT_FORGET_PASSWORD_INFO, inputEmailAddressText: inputEmailTextString)
-        
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        
-        self.present(informationObjectForgetPassword.alertControllerObject, animated: true) {
-            
-            var actionCodeSettingsObject = ActionCodeSettings.init()
-            actionCodeSettingsObject.url = URL(string: String(format: "gotoVerify://social-media-infinity.firebaseapp.com?email=%@", self.email.text!))
-            
-            actionCodeSettingsObject.setIOSBundleID("com.erkutbas.Project-Version-0-1")
-            
-            Auth.auth().sendPasswordReset(withEmail: self.email.text!, actionCodeSettings: actionCodeSettingsObject) { (error) in
-                
-                if error != nil {
-                    
-                    if let errorMessage = error as NSError? {
-                        
-                        print("errorMessage : \(errorMessage.localizedDescription)")
-                        print("errorMessage : \(errorMessage.userInfo)")
-                        
-                    }
-                    
-                } else {
-                    
-                    print("password reset email sent")
-                }
-                
-            }
-            
-            
-        }
-        
-    }
-    
-    func createForgetPasswordAlertController_v2(inputEmailTextString : String) {
         
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
@@ -115,17 +61,10 @@ extension LoginViewController {
     }
     
     
-    
     /*
         create animated alerts from SCLAlertView
      */
-    
     func PopUpFromSCLAlertViews(inputAlertType : alertType, inputAlertField : alertFields, inputFirebaseErrorCode : AuthErrorCode) {
-        
-        print("PopUpFromSCLAlertViews starts ")
-        
-        print("Alert type : \(inputAlertType)")
-        print("Auth Error Code : \(inputFirebaseErrorCode)")
         
         switch inputAlertType {
         case .Warning:
@@ -145,20 +84,11 @@ extension LoginViewController {
     }
 
     /*
-     
         Error pop up process
-     
      */
     
     func prepareErrorCaseBased(inputFirebaseErrorCode : AuthErrorCode)  {
         
-        print("prepareErrorCaseBased starts")
-        
-        print("inputFirebaseErrorCode : \(inputFirebaseErrorCode)")
-        print("inputFirebaseErrorCode : \(inputFirebaseErrorCode.rawValue)")
-        print("inputFirebaseErrorCode : \(inputFirebaseErrorCode.hashValue)")
-        
-
         switch inputFirebaseErrorCode {
         case .accountExistsWithDifferentCredential:
             print("Aynı account farklı credential ile mevcut")
@@ -166,12 +96,6 @@ extension LoginViewController {
         case .appNotAuthorized:
             
             print("App not authorized")
-            
-        case .emailAlreadyInUse:
-            
-            print("Email is already in use")
-            
-            createErrorForEmailIsAlreadyInUse()
             
         case .wrongPassword:
             
@@ -187,14 +111,8 @@ extension LoginViewController {
             
         }
         
-        
     }
     
-    
-    func createErrorForEmailIsAlreadyInUse() {
-        
-        print("------")
-    }
     
     func createErrorForWrongPassword() {
         
@@ -226,22 +144,17 @@ extension LoginViewController {
     
     
     /*
-     
         Warning pop up process
-     
      */
     func prepareWarningFieldBased(inputAlertField : alertFields ) {
         
         switch inputAlertField {
         case .Email:
             
-            print("Alert for email validations")
-        
             createWarningMessageForEmail()
             
         case .Password:
             
-            print("Alert for password validations")
             createWarningMessageForPassword()
             
         case .EmptyType:
@@ -285,47 +198,3 @@ extension LoginViewController {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

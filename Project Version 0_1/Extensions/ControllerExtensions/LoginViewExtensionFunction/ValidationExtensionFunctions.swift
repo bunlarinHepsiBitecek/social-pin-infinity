@@ -11,50 +11,26 @@ import UIKit
 
 extension LoginViewController {
     
-    func evaluateEmailField() -> Bool {
-        
-        let responseEmailFieldValidation = Validation.shared.validate(values: (type: ValidationFields.emailField, inputValue: email.text!))
-        
-        switch responseEmailFieldValidation {
-        case .success:
-            print("email validation is ok")
-            return true
-        default:
-            print("email validation is failed")
-            return false
-        }
-    }
-    
-    func evaluatePasswordField() -> Bool {
-        
-        let responsePasswordFieldValidation = Validation.shared.validate(values: (type: ValidationFields.passwordField, inputValue: password.text!))
-        
-        switch responsePasswordFieldValidation {
-        case .success:
-            print("password validation is ok")
-            return true
-        default:
-            print("password validation is failed")
-            return false
-        }
-    }
-    
-    func checkAllFieldsValid() -> Bool {
-        
-        if self.email.checkTextFieldHasStringValue() && self.password.checkTextFieldHasStringValue() {
-            
-            return true
-            
-        } else {
-            
-            return false
-            
-        }
-    }
-    
+    /*
+        check validation is ok for text fields on login view
+     */
     func checkValidateRequiredField() -> Bool {
         let isEmailValid = checkValidateEmail()
-        //let isPasswordValid = checkValidatePassword()
+        let isPasswordValid = checkValidatePassword()
+        
+        guard isEmailValid, isPasswordValid else {
+            return false
+        }
+        return true
+        
+    }
+    
+    /*
+     check validation is ok for forget password alert view controller
+     */
+    func checkValidateRequiredFieldForForgetPassword() -> Bool {
+        
+        let isEmailValid = checkValidateEmail()
         
         guard isEmailValid else {
             return false
@@ -63,9 +39,13 @@ extension LoginViewController {
         
     }
     
+    /*
+        email validation control block
+     */
     func checkValidateEmail() -> Bool {
         guard let _ = email.text,  email.text != SPACE_CHARACTER else {
             email.addRightViewButton(popOverStyle: FTPopOverStyle.required)
+            email.showPopOver(popOverStyle: .required)
             return false
         }
         
@@ -76,7 +56,31 @@ extension LoginViewController {
             return true
         default:
             //showError()
+            email.showPopOver(popOverStyle: .invalidEmail)
             email.addRightViewButton(popOverStyle: FTPopOverStyle.invalidEmail)
+            return false
+        }
+    }
+    
+    
+    /*
+        password validation control block
+     */
+    func checkValidatePassword() -> Bool {
+        guard let _ = password.text,  password.text != SPACE_CHARACTER  else {
+            password.addRightViewButton(popOverStyle: FTPopOverStyle.required)
+            //password.showPopOver(popOverStyle: FTPopOverStyle.required)
+            return false
+        }
+        
+        let responsePasswordFieldValidation = Validation.shared.validate(values: (type: ValidationFields.passwordField, inputValue: password.text!))
+        
+        switch responsePasswordFieldValidation {
+        case .success:
+            return true
+        default:
+            //password.addRightViewButton(popOverStyle: FTPopOverStyle.invalidPassword)
+            password.showPopOver(popOverStyle: FTPopOverStyle.invalidPassword)
             return false
         }
     }
