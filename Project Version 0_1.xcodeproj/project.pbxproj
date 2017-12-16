@@ -99,6 +99,7 @@
 		A7DD2E391FD2DC110009322E /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E381FD2DC110009322E /* Information.swift */; };
 		AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A34401FE1C41B0054801D /* InformationAlertView.swift */; };
 		AD5A44461FE509BA00266548 /* gender_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5A44451FE509B900266548 /* gender_woman.png */; };
+		AD5A44491FE5665A00266548 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A44481FE5665A00266548 /* Location.swift */; };
 		AD641ECE1FDDD254002E483B /* gender_man.png in Resources */ = {isa = PBXBuildFile; fileRef = AD641ECC1FDDD254002E483B /* gender_man.png */; };
 		ADB505AA1FDB1C6500F81046 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */; };
 		ADB505AB1FDB1C6500F81046 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */; };
@@ -205,6 +206,7 @@
 		A7DD2E381FD2DC110009322E /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		AD1A34401FE1C41B0054801D /* InformationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAlertView.swift; sourceTree = "<group>"; };
 		AD5A44451FE509B900266548 /* gender_woman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_woman.png; sourceTree = "<group>"; };
+		AD5A44481FE5665A00266548 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AD641ECC1FDDD254002E483B /* gender_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_man.png; sourceTree = "<group>"; };
 		ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
@@ -611,6 +613,7 @@
 				A72705C41FC8A2A6006C2504 /* User.swift */,
 				A7DD2E381FD2DC110009322E /* Information.swift */,
 				AD1A34401FE1C41B0054801D /* InformationAlertView.swift */,
+				AD5A44481FE5665A00266548 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1038,6 +1041,7 @@
 				A72AFBDE1FCDE8800018254E /* FirebaseDomainConstants.swift in Sources */,
 				A72AFBEE1FCE796D0018254E /* UIImageViewExtensions.swift in Sources */,
 				A7407F0D1FC79B1D00DAAF44 /* UITextFieldExtensions.swift in Sources */,
+				AD5A44491FE5665A00266548 /* Location.swift in Sources */,
 				A7DD2E151FD1B1EE0009322E /* SwiftKeyChainExtensionFunctions.swift in Sources */,
 				A7DD2E391FD2DC110009322E /* Information.swift in Sources */,
 				A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */,

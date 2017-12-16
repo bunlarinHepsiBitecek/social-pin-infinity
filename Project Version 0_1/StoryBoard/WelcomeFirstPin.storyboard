@@ -57,6 +57,9 @@
                                                 <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dropPinButtonTapped:" destination="Ep7-7e-VvO" eventType="touchUpInside" id="nF2-UX-wjf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42w-jR-cxv" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="69" width="60" height="60"/>

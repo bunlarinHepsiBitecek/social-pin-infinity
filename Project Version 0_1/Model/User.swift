@@ -24,6 +24,7 @@ class User {
     private var _userProfilePicture : UIImage
     private var _userProfilePictureUrl : String
     private var _userProfilePictureUniqueID : String
+    private var _userLocationObject: Location
     
     private var _userDictionary : Dictionary<String, String> = [:]
     
@@ -43,7 +44,7 @@ class User {
         self._providerId = SPACE_CHARACTER
         
         self._userProfilePicture = UIImage()
-        
+        self._userLocationObject = Location()
     }
     
     func printUserInfo() {
@@ -114,6 +115,10 @@ class User {
     
     var providerId: String {
         return _providerId
+    }
+    
+    var userLocationObject: Location {
+        return _userLocationObject
     }
     
     func setUserID(inputUserID : String) {

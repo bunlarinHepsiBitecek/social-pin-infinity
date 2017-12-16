@@ -13,7 +13,9 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
 
     @IBOutlet var mapView: MKMapView!
     
+    var user: User = User()
     var locationManager = CLLocationManager()
+    let geocoder = CLGeocoder()
     
     let latitudeDeltaDegree: CLLocationDegrees = 0.002
     let longitudeDeltaDegree: CLLocationDegrees = 0.002
@@ -50,6 +52,10 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         self.mapView.setRegion(region, animated: true)
         
+        // current location bilgisi saklanir
+        user.userLocationObject.setCurrentLocation(locationCoordinate: location)
+        
+        print("current location getted and setted")
     }
     
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
@@ -64,11 +70,9 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     }
     
     @IBAction func dropPinButtonTapped(_ sender: UIButton) {
-        addPinAnnotation(for: mapView.centerCoordinate)
+        //addPinAnnotation(for: mapView.centerCoordinate)
+        addPinAnnotation(for: user.userLocationObject.currenLocation)
     }
-    
-    let geocoder = CLGeocoder()
-    
     
     func addPinAnnotation(for coordinate: CLLocationCoordinate2D) {
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
@@ -79,6 +83,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                 annotation.title = placemark.name
                 annotation.subtitle = placemark.locality
                 self.mapView.addAnnotation(annotation)
+                // current location alındığı bilgisi set edilir
+                self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
             }
         }
     }
@@ -102,6 +108,13 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         region.span.latitudeDelta  = min(region.span.latitudeDelta  * 2.0, 180.0)
         region.span.longitudeDelta = min(region.span.longitudeDelta * 2.0, 180.0)
         self.mapView.setRegion(region, animated: true)
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEventSubtype.motionShake {
+            print("Device was shaken")
+            self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
+        }
     }
     
 
