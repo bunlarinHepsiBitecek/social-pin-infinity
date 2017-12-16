@@ -46,6 +46,13 @@ class RegisterViewController: UIViewController {
         
         // embeded navigation controller and scrollview slide down
         self.automaticallyAdjustsScrollViewInsets = false
+        /*
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
+        */
         
         setupPasswordTextField()
         createDatePicker()
