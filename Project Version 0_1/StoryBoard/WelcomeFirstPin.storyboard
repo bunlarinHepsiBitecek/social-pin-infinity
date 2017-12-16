@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Welcome First Pin2 View Controller-->
+        <!--Welcome First Pin View Controller-->
         <scene sceneID="xWv-HX-oY1">
             <objects>
-                <viewController storyboardIdentifier="welcomeFirstPin_storyBoard_ID" id="Ep7-7e-VvO" customClass="WelcomeFirstPin_2_ViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomeFirstPin_storyBoard_ID" id="Ep7-7e-VvO" customClass="WelcomeFirstPinViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Se-Xj-1m8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
