@@ -15,6 +15,9 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     
     var locationManager = CLLocationManager()
     
+    let latitudeDeltaDegree: CLLocationDegrees = 0.002
+    let longitudeDeltaDegree: CLLocationDegrees = 0.002
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +61,47 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             return polylineRenderer
         }
         return nil
+    }
+    
+    @IBAction func dropPinButtonTapped(_ sender: UIButton) {
+        addPinAnnotation(for: mapView.centerCoordinate)
+    }
+    
+    let geocoder = CLGeocoder()
+    
+    
+    func addPinAnnotation(for coordinate: CLLocationCoordinate2D) {
+        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        geocoder.reverseGeocodeLocation(location) { placemarks, error in
+            if let placemark = placemarks?.first {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = coordinate
+                annotation.title = placemark.name
+                annotation.subtitle = placemark.locality
+                self.mapView.addAnnotation(annotation)
+            }
+        }
+    }
+    
+    @IBAction func zoomInTapped(_ sender: UIButton) {
+        zoomInMap()
+    }
+    @IBAction func zoomOutTapped(_ sender: UIButton) {
+        zoomOutMap()
+    }
+    
+    func zoomInMap() {
+        var region: MKCoordinateRegion = self.mapView.region
+        region.span.latitudeDelta /= 2.0
+        region.span.longitudeDelta /= 2.0
+        self.mapView.setRegion(region, animated: true)
+    }
+    
+    func zoomOutMap() {
+        var region: MKCoordinateRegion = self.mapView.region
+        region.span.latitudeDelta  = min(region.span.latitudeDelta  * 2.0, 180.0)
+        region.span.longitudeDelta = min(region.span.longitudeDelta * 2.0, 180.0)
+        self.mapView.setRegion(region, animated: true)
     }
     
 
