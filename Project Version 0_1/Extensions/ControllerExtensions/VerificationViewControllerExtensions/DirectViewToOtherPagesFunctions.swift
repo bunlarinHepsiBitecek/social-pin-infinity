@@ -56,6 +56,9 @@ extension VerificationViewController {
         
         let mainPageViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "mainPageVC_storyBoardID") as! MainPageViewController
         
+        self.verificationMessage.setCallerView(inputCallerViewInfo: "callerVerification")
+        mainPageViewControllerObject.information = self.verificationMessage
+        
         navigationController?.pushViewController(mainPageViewControllerObject, animated: true)
         
     }

@@ -12,6 +12,7 @@ import FirebaseAuth
 class MainPageViewController: UIViewController {
     
     var user: User = User()
+    var information : Information = Information()
     
     @IBOutlet var imageView: UIImageView!
     
@@ -23,6 +24,8 @@ class MainPageViewController: UIViewController {
         self.navigationController?.disableNavigationBar()
         
         imageView.image = user.userProfilePicture
+        
+        checkUserRegisterFirstTime()
         
     }
 
@@ -55,9 +58,13 @@ class MainPageViewController: UIViewController {
         
     }
     
-    @IBAction func AddImageClicked(_ sender: UIButton) {
+    func checkUserRegisterFirstTime() {
         
-        performSegue(withIdentifier: "gotoTemporaryAddImage", sender: self)
+        if information.callerView == "callerVerification" {
+            
+            performSegue(withIdentifier: "goToWelcomeFirstPin", sender: self)
+            
+        }
         
     }
 }

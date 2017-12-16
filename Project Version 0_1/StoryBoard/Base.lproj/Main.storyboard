@@ -294,7 +294,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbk-KO-lFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1175" y="118"/>
+            <point key="canvasLocation" x="-1428" y="117"/>
         </scene>
         <!--Main Page View Controller-->
         <scene sceneID="GAE-Md-hph">
@@ -324,11 +324,20 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="fGP-aV-JYq" id="PRD-x4-shd"/>
+                        <segue destination="Jhg-Io-BcF" kind="show" identifier="goToWelcomeFirstPin" id="VbW-A4-wPg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ng4-pG-LeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1175" y="958"/>
+            <point key="canvasLocation" x="-1428" y="958"/>
+        </scene>
+        <!--welcomeFirstPin_storyBoard_ID-->
+        <scene sceneID="P2k-c9-qYs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WelcomeFirstPin" referencedIdentifier="welcomeFirstPin_storyBoard_ID" id="Jhg-Io-BcF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Key-CU-xV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="636"/>
         </scene>
         <!--Page Item Controller-->
         <scene sceneID="Nyq-9w-Sg1">
@@ -359,7 +368,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="B6u-cj-1xo" customClass="PageViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HlC-wq-VM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152" y="-842"/>
+            <point key="canvasLocation" x="1559" y="-821"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="gnh-WY-tZ6">
@@ -753,8 +762,6 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftViewImage" value="ic_mail"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email.png"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="emailEditingChanged:" destination="MZr-Fw-GWC" eventType="editingChanged" id="fX0-Ou-e1j"/>
@@ -851,8 +858,6 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftViewImage" value="ic_mail"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email.png"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="passwordEditingChanged:" destination="MZr-Fw-GWC" eventType="editingChanged" id="ssU-Sk-Mq1"/>
@@ -878,6 +883,25 @@
                                     <action selector="forgotPasswordButtonClicked:" destination="MZr-Fw-GWC" eventType="touchUpInside" id="ytm-r6-PFI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="osl-4w-vrC">
+                                <rect key="frame" x="135" y="499" width="105" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Map">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="Avenir-Book"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="map:" destination="MZr-Fw-GWC" eventType="touchUpInside" id="LE7-H5-5Ot"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="OJ7-Ce-Ghl"/>
@@ -897,11 +921,12 @@
                         <outlet property="forgotPasswordButton" destination="KEi-f3-vla" id="EjD-aQ-2G6"/>
                         <outlet property="password" destination="Xpm-4A-SaW" id="Sbm-cX-pqb"/>
                         <segue destination="aYB-fJ-mPw" kind="show" identifier="gotoVerificationPanel" id="6p0-Uw-ysD"/>
+                        <segue destination="Jhg-Io-BcF" kind="show" identifier="goToWelcomeFirstPin_2" id="rF3-Pn-lKI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDN-bk-6hM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585" y="118"/>
+            <point key="canvasLocation" x="1584.8" y="117.39130434782609"/>
         </scene>
     </scenes>
     <resources>
@@ -911,13 +936,13 @@
         <image name="email.png" width="512" height="512"/>
         <image name="gender_man.png" width="128" height="128"/>
         <image name="gender_woman.png" width="128" height="128"/>
-        <image name="ic_mail" width="24" height="24"/>
         <image name="male_default.png" width="128" height="128"/>
         <image name="password.png" width="512" height="512"/>
         <image name="person.png" width="512" height="512"/>
         <image name="phone.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="rF3-Pn-lKI"/>
         <segue reference="6p0-Uw-ysD"/>
     </inferredMetricsTieBreakers>
 </document>
