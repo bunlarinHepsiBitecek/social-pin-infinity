@@ -37,12 +37,14 @@ extension RegisterViewController {
 // Gender
 extension RegisterViewController {
     func genderManSwitchControl() {
+        print("Man is highlighted")
         genderManButton.isHighlighted = true
         genderWomenButton.isHighlighted = false
         gender = Gender.male
     }
     
     func genderWomenSwitchControl() {
+        print("Woman is highlighted")
         genderWomenButton.isHighlighted = true
         genderManButton.isHighlighted = false
         gender = Gender.female
