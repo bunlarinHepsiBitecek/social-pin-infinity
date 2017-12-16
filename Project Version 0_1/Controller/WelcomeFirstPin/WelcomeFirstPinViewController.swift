@@ -71,7 +71,11 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     
     @IBAction func dropPinButtonTapped(_ sender: UIButton) {
         //addPinAnnotation(for: mapView.centerCoordinate)
-        addPinAnnotation(for: user.userLocationObject.currenLocation)
+        if !user.userLocationObject.isPinDropped {
+            addPinAnnotation(for: user.userLocationObject.currenLocation)
+            // current location alındığı bilgisi set edilir
+            self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
+        }
     }
     
     func addPinAnnotation(for coordinate: CLLocationCoordinate2D) {
@@ -83,8 +87,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                 annotation.title = placemark.name
                 annotation.subtitle = placemark.locality
                 self.mapView.addAnnotation(annotation)
-                // current location alındığı bilgisi set edilir
-                self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
             }
         }
     }
@@ -113,7 +115,11 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if event?.subtype == UIEventSubtype.motionShake {
             print("Device was shaken")
-            self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
+            if !user.userLocationObject.isPinDropped {
+                addPinAnnotation(for: user.userLocationObject.currenLocation)
+                // current location alındığı bilgisi set edilir
+                self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
+            }
         }
     }
     
