@@ -16,9 +16,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet var scrollView: UIScrollView!
     
     @IBOutlet var emailAddress: UITextField!
-    @IBOutlet var password: HideShowPasswordTextField!
+    @IBOutlet var password: UITextField!
     
-    @IBOutlet var userName: DesignableUITextField!
+    @IBOutlet var userName: UITextField!
     @IBOutlet var firstName: UITextField!
     @IBOutlet var lastName: UITextField!
     @IBOutlet var birthdate: UITextField!
