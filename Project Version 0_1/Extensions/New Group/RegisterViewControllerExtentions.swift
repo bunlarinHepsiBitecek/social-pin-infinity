@@ -30,7 +30,7 @@ extension RegisterViewController: HideShowPasswordTextFieldDelegate {
 // Password
 extension RegisterViewController {
      func setupPasswordTextField() {
-        password.passwordDelegate = self
+        //password.passwordDelegate = self
     }
 }
 
@@ -157,8 +157,8 @@ extension RegisterViewController {
 extension RegisterViewController {
     func checkValidatePassword() -> Bool {
         guard let _ = password.text,  password.text != SPACE_CHARACTER  else {
-            //password.addRightViewButton(popOverStyle: FTPopOverStyle.required)
-            password.showPopOver(popOverStyle: FTPopOverStyle.required)
+            password.addRightViewButton(popOverStyle: FTPopOverStyle.required)
+            //password.showPopOver(popOverStyle: FTPopOverStyle.required)
             return false
         }
         
@@ -168,8 +168,8 @@ extension RegisterViewController {
         case .success:
             return true
         default:
-            //password.addRightViewButton(popOverStyle: FTPopOverStyle.invalidPassword)
-            password.showPopOver(popOverStyle: FTPopOverStyle.invalidPassword)
+            password.addRightViewButton(popOverStyle: FTPopOverStyle.invalidPassword)
+            //password.showPopOver(popOverStyle: FTPopOverStyle.invalidPassword)
             return false
         }
     }

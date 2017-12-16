@@ -10,6 +10,7 @@ import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     var itemIndex = 0
+    var timer = Timer()
     
     // lazy variable : initial value is not calculated until the first time it is used
     lazy var contentImages: [String] = {
@@ -25,12 +26,18 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         
         createPageViewController()
         setupPageControl()
-        
-         //_ = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(moveToNextPage), userInfo: nil, repeats: true)
+        //startPageViewAnimation()
+    }
+    
+    func startPageViewAnimation() {
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(moveToNextPage), userInfo: nil, repeats: true)
+    }
+    
+    func stopPageViewAnimation() {
+        timer.invalidate()
     }
     
     @objc func moveToNextPage (){
-        print("Remzi 6 sn geçti index : \(itemIndex)")
         itemIndex = itemIndex + 1
         
         if itemIndex >= contentImages.count {
@@ -39,6 +46,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let firstController = getItemController(itemIndex: itemIndex)!
         let startingViewControllers = [firstController]
         self.setViewControllers(startingViewControllers, direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
+        
     }
     
     override func didReceiveMemoryWarning() {
