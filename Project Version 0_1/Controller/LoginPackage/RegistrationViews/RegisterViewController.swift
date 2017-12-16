@@ -45,15 +45,16 @@ class RegisterViewController: UIViewController {
         self.navigationItem.setNavigationItemTitles()
         
         // embeded navigation controller and scrollview slide down
-        self.automaticallyAdjustsScrollViewInsets = false
+        //self.automaticallyAdjustsScrollViewInsets = false
         /*
         if #available(iOS 11.0, *) {
-            scrollView.contentInsetAdjustmentBehavior = .never
+            scrollView.contentInsetAdjustmentBehavior = .scrollableAxes
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
-        */
+       */
         
+        genderButtonInit()
         setupPasswordTextField()
         createDatePicker()
         
