@@ -96,11 +96,27 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="3SP-DI-2z5" id="N9M-gm-mqG"/>
+                        <segue destination="HOL-hH-bht" kind="show" identifier="gotoNext" id="H93-wD-l1o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edT-YX-8sd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-644" y="-345.87706146926541"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JJW-dw-Ja6">
+            <objects>
+                <viewController id="HOL-hH-bht" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IsA-t8-iUO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xzh-IQ-AoF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXG-og-fZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="-346"/>
         </scene>
     </scenes>
     <resources>
