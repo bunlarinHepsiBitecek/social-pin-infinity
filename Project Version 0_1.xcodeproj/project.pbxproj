@@ -67,6 +67,15 @@
 		A75E3F511FE54341007165DE /* WelcomeFirstPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F501FE54341007165DE /* WelcomeFirstPinViewController.swift */; };
 		A75E3F541FE55296007165DE /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = A75E3F531FE55296007165DE /* location.png */; };
 		A75E3F561FE55551007165DE /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = A75E3F551FE55551007165DE /* next.png */; };
+		A75E3F5A1FE56D9F007165DE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F591FE56D9E007165DE /* Location.swift */; };
+		A75E3F5F1FE5AD16007165DE /* ParseLocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F5E1FE5AD16007165DE /* ParseLocationData.swift */; };
+		A75E3F611FE5B7A0007165DE /* DatabaseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F601FE5B7A0007165DE /* DatabaseLocation.swift */; };
+		A75E3F631FE5E6A5007165DE /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F621FE5E6A5007165DE /* UserLocation.swift */; };
+		A75E3F651FE5E831007165DE /* DatabaseUserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F641FE5E831007165DE /* DatabaseUserLocation.swift */; };
+		A75E3F671FE78DDC007165DE /* deneme.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75E3F661FE78DDC007165DE /* deneme.xib */; };
+		A75E3F6C1FE79B69007165DE /* photo-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = A75E3F691FE79B69007165DE /* photo-camera.png */; };
+		A75E3F6D1FE79B69007165DE /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = A75E3F6A1FE79B69007165DE /* play-button.png */; };
+		A75E3F6E1FE79B69007165DE /* school-material.png in Resources */ = {isa = PBXBuildFile; fileRef = A75E3F6B1FE79B69007165DE /* school-material.png */; };
 		A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40081FC0B7C600495228 /* AppDelegate.swift */; };
 		A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F400A1FC0B7C600495228 /* ViewController.swift */; };
 		A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F400C1FC0B7C600495228 /* Main.storyboard */; };
@@ -85,6 +94,7 @@
 		A778D9E61FC9BC4900F38438 /* UserAttributeNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */; };
 		A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9F81FC9D5DF00F38438 /* PageItemController.swift */; };
 		A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9F91FC9D5DF00F38438 /* PageViewController.swift */; };
+		A79FFB131FE7B6D1006D4D1E /* denemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79FFB121FE7B6D1006D4D1E /* denemeView.swift */; };
 		A7B17CCE1FE1709C00A8B7DA /* InformationPopupExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B17CCD1FE1709C00A8B7DA /* InformationPopupExtensions.swift */; };
 		A7B17CD01FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7B17CCF1FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard */; };
 		A7D1CBA21FD449780082BC02 /* UIButtonCustomDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D1CBA11FD449780082BC02 /* UIButtonCustomDesign.swift */; };
@@ -171,6 +181,15 @@
 		A75E3F501FE54341007165DE /* WelcomeFirstPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFirstPinViewController.swift; sourceTree = "<group>"; };
 		A75E3F531FE55296007165DE /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		A75E3F551FE55551007165DE /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		A75E3F591FE56D9E007165DE /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A75E3F5E1FE5AD16007165DE /* ParseLocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseLocationData.swift; sourceTree = "<group>"; };
+		A75E3F601FE5B7A0007165DE /* DatabaseLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseLocation.swift; sourceTree = "<group>"; };
+		A75E3F621FE5E6A5007165DE /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		A75E3F641FE5E831007165DE /* DatabaseUserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUserLocation.swift; sourceTree = "<group>"; };
+		A75E3F661FE78DDC007165DE /* deneme.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = deneme.xib; sourceTree = "<group>"; };
+		A75E3F691FE79B69007165DE /* photo-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-camera.png"; sourceTree = "<group>"; };
+		A75E3F6A1FE79B69007165DE /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button.png"; sourceTree = "<group>"; };
+		A75E3F6B1FE79B69007165DE /* school-material.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "school-material.png"; sourceTree = "<group>"; };
 		A75F40051FC0B7C600495228 /* Project Version 0_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Version 0_1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F40081FC0B7C600495228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F400A1FC0B7C600495228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +210,7 @@
 		A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAttributeNames.swift; sourceTree = "<group>"; };
 		A778D9F81FC9D5DF00F38438 /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		A778D9F91FC9D5DF00F38438 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		A79FFB121FE7B6D1006D4D1E /* denemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = denemeView.swift; sourceTree = "<group>"; };
 		A7B17CCD1FE1709C00A8B7DA /* InformationPopupExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPopupExtensions.swift; sourceTree = "<group>"; };
 		A7B17CCF1FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeFirstPin.storyboard; sourceTree = "<group>"; };
 		A7D1CBA11FD449780082BC02 /* UIButtonCustomDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonCustomDesign.swift; sourceTree = "<group>"; };
@@ -246,12 +266,8 @@
 		A72705CC1FC91DF3006C2504 /* ControllerExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				A74FD5EF1FDB7A6E00062483 /* RegistrationViewControllerExtensions */,
-				A72CAA901FD689BE00308DED /* EntranceView */,
-				A7DD2E0B1FD1A4860009322E /* LoginViewExtensionFunction */,
-				A72AFBD11FCCC1F80018254E /* VerificationViewControllerExtensions */,
-				A72AFBD01FCCC1A40018254E /* TemporaryAddImageController */,
-				A778D9FC1FCB271D00F38438 /* ExtensionLoginViewController */,
+				A75E3F5C1FE5ACDD007165DE /* WelcomeFirstPinPackage */,
+				A75E3F5B1FE5ACCA007165DE /* LoginPackage */,
 			);
 			path = ControllerExtensions;
 			sourceTree = "<group>";
@@ -521,6 +537,8 @@
 			isa = PBXGroup;
 			children = (
 				A75E3F501FE54341007165DE /* WelcomeFirstPinViewController.swift */,
+				A75E3F661FE78DDC007165DE /* deneme.xib */,
+				A79FFB121FE7B6D1006D4D1E /* denemeView.swift */,
 			);
 			path = WelcomeFirstPin;
 			sourceTree = "<group>";
@@ -545,6 +563,45 @@
 				A75E3F531FE55296007165DE /* location.png */,
 			);
 			path = LocationImages;
+			sourceTree = "<group>";
+		};
+		A75E3F5B1FE5ACCA007165DE /* LoginPackage */ = {
+			isa = PBXGroup;
+			children = (
+				A74FD5EF1FDB7A6E00062483 /* RegistrationViewControllerExtensions */,
+				A72CAA901FD689BE00308DED /* EntranceView */,
+				A7DD2E0B1FD1A4860009322E /* LoginViewExtensionFunction */,
+				A72AFBD11FCCC1F80018254E /* VerificationViewControllerExtensions */,
+				A72AFBD01FCCC1A40018254E /* TemporaryAddImageController */,
+				A778D9FC1FCB271D00F38438 /* ExtensionLoginViewController */,
+			);
+			path = LoginPackage;
+			sourceTree = "<group>";
+		};
+		A75E3F5C1FE5ACDD007165DE /* WelcomeFirstPinPackage */ = {
+			isa = PBXGroup;
+			children = (
+				A75E3F5D1FE5ACF9007165DE /* WelcomeFirstPinExtensions */,
+			);
+			path = WelcomeFirstPinPackage;
+			sourceTree = "<group>";
+		};
+		A75E3F5D1FE5ACF9007165DE /* WelcomeFirstPinExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A75E3F5E1FE5AD16007165DE /* ParseLocationData.swift */,
+			);
+			path = WelcomeFirstPinExtensions;
+			sourceTree = "<group>";
+		};
+		A75E3F681FE79B53007165DE /* PopUpImages */ = {
+			isa = PBXGroup;
+			children = (
+				A75E3F691FE79B69007165DE /* photo-camera.png */,
+				A75E3F6A1FE79B69007165DE /* play-button.png */,
+				A75E3F6B1FE79B69007165DE /* school-material.png */,
+			);
+			path = PopUpImages;
 			sourceTree = "<group>";
 		};
 		A75F3FFC1FC0B7C600495228 = {
@@ -609,6 +666,8 @@
 			isa = PBXGroup;
 			children = (
 				A72705C41FC8A2A6006C2504 /* User.swift */,
+				A75E3F621FE5E6A5007165DE /* UserLocation.swift */,
+				A75E3F591FE56D9E007165DE /* Location.swift */,
 				A7DD2E381FD2DC110009322E /* Information.swift */,
 				AD1A34401FE1C41B0054801D /* InformationAlertView.swift */,
 			);
@@ -673,6 +732,8 @@
 			isa = PBXGroup;
 			children = (
 				A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */,
+				A75E3F601FE5B7A0007165DE /* DatabaseLocation.swift */,
+				A75E3F641FE5E831007165DE /* DatabaseUserLocation.swift */,
 			);
 			path = DatabaseServices;
 			sourceTree = "<group>";
@@ -691,6 +752,7 @@
 		A778D9E71FC9CA5300F38438 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A75E3F681FE79B53007165DE /* PopUpImages */,
 				A75E3F521FE55288007165DE /* LocationImages */,
 				A71BDC4B1FDF1E930059EE43 /* ErrorImages */,
 				ADB505B41FDB38C800F81046 /* RegisterView */,
@@ -864,9 +926,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72D2C671FD85AA4008BE2D2 /* OFL.txt in Resources */,
+				A75E3F6C1FE79B69007165DE /* photo-camera.png in Resources */,
 				A72CAA5C1FD5AE0900308DED /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
 				A75E3F561FE55551007165DE /* next.png in Resources */,
 				A72CAA7E1FD6855200308DED /* ic_eye_open@2x.png in Resources */,
+				A75E3F6E1FE79B69007165DE /* school-material.png in Resources */,
 				A71B49FE1FD3112400B69E71 /* camera_icon_new.png in Resources */,
 				A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */,
 				A7B17CD01FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard in Resources */,
@@ -877,6 +941,7 @@
 				A71BDC4D1FDF1EA80059EE43 /* error@2x.png in Resources */,
 				AD641ECE1FDDD254002E483B /* gender_man.png in Resources */,
 				A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */,
+				A75E3F6D1FE79B69007165DE /* play-button.png in Resources */,
 				A72CAA811FD6855200308DED /* ic_eye_closed.png in Resources */,
 				A72705CB1FC8AD33006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
 				A72CAA851FD6855200308DED /* ic_password_checkmark.png in Resources */,
@@ -888,6 +953,7 @@
 				A72CAA871FD6855200308DED /* ic_eye_closed@3x.png in Resources */,
 				ADB505AF1FDB333B00F81046 /* image1.png in Resources */,
 				A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */,
+				A75E3F671FE78DDC007165DE /* deneme.xib in Resources */,
 				A75E3F541FE55296007165DE /* location.png in Resources */,
 				ADB505B11FDB333B00F81046 /* image3.png in Resources */,
 			);
@@ -980,6 +1046,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75E3F5F1FE5AD16007165DE /* ParseLocationData.swift in Sources */,
 				AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */,
 				A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */,
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
@@ -1016,8 +1083,11 @@
 				A72AFBE31FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift in Sources */,
 				A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */,
 				A72705C51FC8A2A6006C2504 /* User.swift in Sources */,
+				A79FFB131FE7B6D1006D4D1E /* denemeView.swift in Sources */,
 				A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */,
+				A75E3F651FE5E831007165DE /* DatabaseUserLocation.swift in Sources */,
 				A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */,
+				A75E3F631FE5E6A5007165DE /* UserLocation.swift in Sources */,
 				A7D1CBA51FD44AEA0082BC02 /* UINavigationBarCustomDesign.swift in Sources */,
 				A72705C31FC8973F006C2504 /* NavigationBarController.swift in Sources */,
 				A7D1CBA21FD449780082BC02 /* UIButtonCustomDesign.swift in Sources */,
@@ -1038,6 +1108,8 @@
 				A72AFBDE1FCDE8800018254E /* FirebaseDomainConstants.swift in Sources */,
 				A72AFBEE1FCE796D0018254E /* UIImageViewExtensions.swift in Sources */,
 				A7407F0D1FC79B1D00DAAF44 /* UITextFieldExtensions.swift in Sources */,
+				A75E3F611FE5B7A0007165DE /* DatabaseLocation.swift in Sources */,
+				A75E3F5A1FE56D9F007165DE /* Location.swift in Sources */,
 				A7DD2E151FD1B1EE0009322E /* SwiftKeyChainExtensionFunctions.swift in Sources */,
 				A7DD2E391FD2DC110009322E /* Information.swift in Sources */,
 				A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */,

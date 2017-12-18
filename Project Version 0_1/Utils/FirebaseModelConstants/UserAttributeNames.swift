@@ -21,3 +21,17 @@ let CONSTANT_MOBILEPHONE : String = "mobilephone"
 let CONSTANT_PROVIDER : String = "provider"
 let CONSTANT_PROVIDER_ID : String = "providerId"
 let CONSTANT_PROFILE_PICTURE_ID : String = "profilePictureId"
+
+
+let CONSTANT_STRING_COUNTRY_CODE : String = "countryCode"
+let CONSTANT_STRING_COUNTRY_NAME : String = "countryName"
+let CONSTANT_STRING_TIMESTAMP : String = "timestamp"
+let CONSTANT_STRING_POSTAL_CODE : String = "postalCode"
+let CONSTANT_STRING_THOROUGH : String = "thorough"
+let CONSTANT_STRING_SUB_THOROUGH : String = "subThorough"
+let CONSTANT_STRING_GEOLOCATION : String = "geolocation"
+let CONSTANT_STRING_LATITUDE : String = "latitude"
+let CONSTANT_STRING_LONGITUDE : String = "longitude"
+
+let CONSTANT_STRING_LOCATION : String = "Location"
+

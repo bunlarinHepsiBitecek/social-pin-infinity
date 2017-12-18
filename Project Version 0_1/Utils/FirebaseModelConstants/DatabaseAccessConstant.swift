@@ -16,5 +16,9 @@ struct DAO {
     struct Posts {
        static let CHILD_POSTS = "posts"
     }
+    
+    struct Locations {
+        static let CHILD_LOCATIONS = "Locations"
+    }
 }
 

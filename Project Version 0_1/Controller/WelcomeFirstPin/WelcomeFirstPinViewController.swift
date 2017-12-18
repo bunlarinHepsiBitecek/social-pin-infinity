@@ -10,10 +10,12 @@ import UIKit
 import MapKit
 
 class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
+    
     @IBOutlet var mapView: MKMapView!
     
+    var user: User = User()
     var locationManager = CLLocationManager()
+    let geocoder = CLGeocoder()
     
     let latitudeDeltaDegree: CLLocationDegrees = 0.002
     let longitudeDeltaDegree: CLLocationDegrees = 0.002
@@ -22,16 +24,19 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         super.viewDidLoad()
         
         self.navigationController?.disableNavigationBar()
-
+        
+        print("welcomeFirstPin starts")
+        print("userID : \(user.userID)")
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-
+        
         mapView.delegate = self
         mapView.showsUserLocation = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,8 +55,14 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         self.mapView.setRegion(region, animated: true)
         
+        // current location bilgisi saklanir
+        user.userLocationObject.setCurrentLocation(locationCoordinate: location)
+        //user.userLocationObject.toPrint()
+        
+        print("current location getted and setted")
     }
     
+    /*
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         
         if overlay is MKPolyline {
@@ -61,27 +72,67 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             return polylineRenderer
         }
         return nil
-    }
+    }*/
     
     @IBAction func dropPinButtonTapped(_ sender: UIButton) {
-        addPinAnnotation(for: mapView.centerCoordinate)
+        //addPinAnnotation(for: mapView.centerCoordinate)
+        if !user.userLocationObject.isPinDropped {
+            addPinAnnotation(for: user.userLocationObject.currenLocation)
+            // current location alındığı bilgisi set edilir
+            self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
+            //user.userLocationObject.toPrint()
+        }
     }
     
-    let geocoder = CLGeocoder()
-    
-    
     func addPinAnnotation(for coordinate: CLLocationCoordinate2D) {
+        
+        print("yarro yarro .......")
+        
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         geocoder.reverseGeocodeLocation(location) { placemarks, error in
             if let placemark = placemarks?.first {
+                
+                print("yarro 2 .....")
+
+                self.setParsedLocationData(inputPlaceMark: placemark)
+                
+                /*
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = coordinate
                 annotation.title = placemark.name
                 annotation.subtitle = placemark.locality
+
+                
+                self.mapView.addAnnotation(annotation)*/
+                
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = coordinate
+                annotation.title = "yarro kral"
+                annotation.subtitle = "yarro kral 2"
+                    
                 self.mapView.addAnnotation(annotation)
+                
             }
         }
     }
+    
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        print("BOKOBOKO")
+        
+        //view.showPopOver(popOverStyle: .invalidEmail)
+        
+        
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    
+        
+        
+    }
+    
     
     @IBAction func zoomInTapped(_ sender: UIButton) {
         zoomInMap()
@@ -104,5 +155,72 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         self.mapView.setRegion(region, animated: true)
     }
     
-
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEventSubtype.motionShake {
+            print("Device was shaken")
+            if !user.userLocationObject.isPinDropped {
+                addPinAnnotation(for: user.userLocationObject.currenLocation)
+                // current location alındığı bilgisi set edilir
+                self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
+                //user.userLocationObject.toPrint()
+            }
+        }
+    }
+    
+    
 }
+
+/*
+extension MKPointAnnotation {
+    
+    func showPopOver(popOverStyle: FTPopOverStyle) {
+        let menuOptionNameArray : [String] =  [popOverStyle.popOverMessage]
+        let menuOptionImageNameArray : [String] = []
+        
+        self.changePopupStyle()
+        FTPopOverMenu.showForSender(sender: self, with: menuOptionNameArray, menuImageArray: menuOptionImageNameArray, done: { (selectedIndex) -> () in         }) {
+        }
+    }
+    
+    func changePopupStyle() {
+        
+        let config = FTConfiguration.shared
+        config.textColor = UIColor.red
+        config.backgoundTintColor = UIColor.white
+        config.borderColor = UIColor.red
+        config.menuWidth = self.frame.width
+        config.menuSeparatorColor = UIColor.white
+        config.textAlignment = .left
+        config.textFont = UIFont.systemFont(ofSize: 14)
+        config.menuRowHeight = self.frame.height
+        config.cornerRadius = 10
+    }
+    
+}*/
+
+extension MKAnnotationView {
+    
+    func showPopOver(popOverStyle: FTPopOverStyle) {
+        let menuOptionNameArray : [String] =  [popOverStyle.popOverMessage]
+        let menuOptionImageNameArray : [String] = []
+        
+        self.changePopupStyle()
+        FTPopOverMenu.showForSender(sender: self, with: menuOptionNameArray, menuImageArray: menuOptionImageNameArray, done: { (selectedIndex) -> () in         }) {
+        }
+    }
+    
+    func changePopupStyle() {
+        
+        let config = FTConfiguration.shared
+        config.textColor = UIColor.red
+        config.backgoundTintColor = UIColor.white
+        config.borderColor = UIColor.red
+        config.menuWidth = 300
+        config.menuSeparatorColor = UIColor.white
+        config.textAlignment = .left
+        config.textFont = UIFont.systemFont(ofSize: 14)
+        config.menuRowHeight = self.frame.height
+        config.cornerRadius = 10
+    }
+}
+

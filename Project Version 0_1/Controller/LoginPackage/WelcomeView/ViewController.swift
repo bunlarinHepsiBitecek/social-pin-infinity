@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var second_three : Int = 2
     var timer = Timer()
     var isTimerRunning : Bool = false
+    var user = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +67,10 @@ class ViewController: UIViewController {
                 
                 print("KeyChain datası dolu")
                 
+                user.setUserID(inputUserID: resultKeyChainWrapper)
+                
+                print("resultKeyChainWrapper : \(resultKeyChainWrapper)")
+                
                 if loggedInUser.uid == resultKeyChainWrapper {
                     
                     if loggedInUser.isEmailVerified {
@@ -106,6 +111,8 @@ class ViewController: UIViewController {
     private func directCurrentPageToMainPage() {
         
         let mainPageViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "mainPageVC_storyBoardID") as! MainPageViewController
+        
+        mainPageViewControllerObject.user = user
         
         navigationController?.pushViewController(mainPageViewControllerObject, animated: true)
         

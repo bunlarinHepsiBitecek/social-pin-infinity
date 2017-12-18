@@ -334,7 +334,7 @@
         <!--welcomeFirstPin_storyBoard_ID-->
         <scene sceneID="P2k-c9-qYs">
             <objects>
-                <viewControllerPlaceholder storyboardName="WelcomeFirstPin" referencedIdentifier="welcomeFirstPin_storyBoard_ID" id="Jhg-Io-BcF" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="yarro" storyboardName="WelcomeFirstPin" referencedIdentifier="welcomeFirstPin_storyBoard_ID" id="Jhg-Io-BcF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Key-CU-xV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-714" y="636"/>
@@ -999,7 +999,7 @@
         <image name="phone.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rF3-Pn-lKI"/>
+        <segue reference="VbW-A4-wPg"/>
         <segue reference="6p0-Uw-ysD"/>
     </inferredMetricsTieBreakers>
 </document>

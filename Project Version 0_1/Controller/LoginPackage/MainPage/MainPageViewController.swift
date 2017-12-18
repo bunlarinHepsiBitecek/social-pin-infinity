@@ -25,13 +25,30 @@ class MainPageViewController: UIViewController {
         
         imageView.image = user.userProfilePicture
         
-        checkUserRegisterFirstTime()
+        print("MainPageViewController starts")
+        print("userID : \(user.userID)")
+        
+        directToWelcomeFirstPin()
+        
+        //performSegue(withIdentifier: "goToWelcomeFirstPin", sender: self)
+        
+        //checkUserRegisterFirstTime()
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func directToWelcomeFirstPin() {
+        
+        let newView = storyboard?.instantiateViewController(withIdentifier: "yarro") as! WelcomeFirstPinViewController
+        
+        newView.user = user
+        
+        navigationController?.pushViewController(newView, animated: true)
+        
     }
     
     @IBAction func LogoutButtonClicked(_ sender: UIButton) {

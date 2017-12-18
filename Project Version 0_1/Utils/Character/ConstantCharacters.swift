@@ -9,6 +9,7 @@
 import Foundation
 
 let SPACE_CHARACTER = ""
+let DEFAULT_DOUBLE_VALUE = 0.0
 
 let TWITTER_CUSTOMER_KEY = "VeQxZvXMp0rdAdAbhqwpQ7a9T"
 let TWITTER_CUSTOMER_SECRETKEY = "nPRTbxaonteKlAZg7ltOPpZ2MQ8giEGJCOujehp7ywJlA4CzRK"

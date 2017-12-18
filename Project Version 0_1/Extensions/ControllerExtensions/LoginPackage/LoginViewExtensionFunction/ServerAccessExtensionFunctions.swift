@@ -103,16 +103,6 @@ extension LoginViewController {
                     
                     self.stopSpinner()
                     
-                    /*
-                    switch errorCode {
-                        
-                    case .userNotFound:
-                        print("user is not found, let's create one")
-                        self.createUserWithCredentials()
-                        
-                    default:
-                        print("nothing to do at this point")
-                    }*/
                 }
                 
                 /*
@@ -126,6 +116,8 @@ extension LoginViewController {
                 print("loginButtonClick : user.isEmailVerified : \(user?.isEmailVerified)")
                 // let's check user object is not null
                 if let user = user {
+                    
+                    self.userDatabaseObjectToPass.setUserID(inputUserID: user.uid)
                     
                     if user.isEmailVerified == false {
                         

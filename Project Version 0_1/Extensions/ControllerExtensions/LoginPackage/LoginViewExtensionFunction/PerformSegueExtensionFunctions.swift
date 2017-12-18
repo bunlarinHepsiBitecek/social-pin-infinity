@@ -35,6 +35,8 @@ extension LoginViewController {
         
         let mainPageViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "mainPageVC_storyBoardID") as! MainPageViewController
         
+        mainPageViewControllerObject.user = userDatabaseObjectToPass
+        
         navigationController?.pushViewController(mainPageViewControllerObject, animated: true)
         
     }
