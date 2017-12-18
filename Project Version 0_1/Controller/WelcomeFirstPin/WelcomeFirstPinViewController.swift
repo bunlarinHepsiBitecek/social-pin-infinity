@@ -9,10 +9,14 @@
 import UIKit
 import MapKit
 
-class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+private let kPersonAnnotationName = "kPersonAnnotationName"
 
+class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, PersonPinDetailMapViewDelegate {
+    
+    // outlets
     @IBOutlet var mapView: MKMapView!
     
+    // data
     var user: User = User()
     var locationManager = CLLocationManager()
     let geocoder = CLGeocoder()
@@ -32,11 +36,24 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
 
         mapView.delegate = self
         mapView.showsUserLocation = true
+        
+        configureFakePerson()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Remzi:  WelcomeFirstPinViewController viewWillAppear girdi")
+        super.viewWillAppear(animated)
+    }
+    
+    func configureFakePerson() {
+        user.setUserName(inputName: "palaPanti")
+        user.setUserNameSurname(inputNameSurname: "Remzi Yıldırım")
+        user.setUserProfilePicture(inputUserProfileImage: UIImage(named: "avatar1")!)
     }
     
     
@@ -54,6 +71,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         // current location bilgisi saklanir
         user.userLocationObject.setCurrentLocation(locationCoordinate: location)
+        user.userLocationObject.toPrint()
         
         print("current location getted and setted")
     }
@@ -69,12 +87,31 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         return nil
     }
     
+    // MARK: - MKMapViewDelegate methods
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        print("Remzi: mapView girdi")
+        
+        if annotation is MKUserLocation { return nil }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: kPersonAnnotationName)
+        
+        if annotationView == nil {
+            annotationView = PersonAnnotationView(annotation: annotation, reuseIdentifier: kPersonAnnotationName)
+            (annotationView as! PersonAnnotationView).personDetailDelegate = self
+        } else {
+            annotationView!.annotation = annotation
+        }
+        
+        return annotationView
+    }
+    
     @IBAction func dropPinButtonTapped(_ sender: UIButton) {
         //addPinAnnotation(for: mapView.centerCoordinate)
         if !user.userLocationObject.isPinDropped {
             addPinAnnotation(for: user.userLocationObject.currenLocation)
             // current location alındığı bilgisi set edilir
             self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
+            user.userLocationObject.toPrint()
         }
     }
     
@@ -82,10 +119,12 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         geocoder.reverseGeocodeLocation(location) { placemarks, error in
             if let placemark = placemarks?.first {
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = coordinate
-                annotation.title = placemark.name
-                annotation.subtitle = placemark.locality
+                //let annotation = MKPointAnnotation()
+                //annotation.coordinate = coordinate
+                //annotation.title = placemark.name
+                //annotation.subtitle = placemark.locality
+                let annotation = PersonAnnotation(person: self.user)
+                
                 self.mapView.addAnnotation(annotation)
             }
         }
@@ -119,8 +158,18 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                 addPinAnnotation(for: user.userLocationObject.currenLocation)
                 // current location alındığı bilgisi set edilir
                 self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
+                user.userLocationObject.toPrint()
             }
         }
+    }
+    
+    // delegation Methot
+    func detailsRequestedForPerson(person: User) {
+        print("Remzi: detailsRequestedForPerson")
+    }
+    
+    func addImageRequestForPerson(person: User) {
+        print("Remzi: addImageRequestForPerson")
     }
     
 

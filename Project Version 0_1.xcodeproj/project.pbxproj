@@ -101,6 +101,14 @@
 		AD5A44461FE509BA00266548 /* gender_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5A44451FE509B900266548 /* gender_woman.png */; };
 		AD5A44491FE5665A00266548 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A44481FE5665A00266548 /* Location.swift */; };
 		AD641ECE1FDDD254002E483B /* gender_man.png in Resources */ = {isa = PBXBuildFile; fileRef = AD641ECC1FDDD254002E483B /* gender_man.png */; };
+		AD81219B1FE6F871004B3EF3 /* UIView+BezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD81219A1FE6F870004B3EF3 /* UIView+BezierPaths.swift */; };
+		AD81219D1FE6F932004B3EF3 /* PersonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD81219C1FE6F932004B3EF3 /* PersonAnnotation.swift */; };
+		AD81219F1FE6FB4D004B3EF3 /* PersonAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD81219E1FE6FB4D004B3EF3 /* PersonAnnotationView.swift */; };
+		AD8121AF1FE7000C004B3EF3 /* PersonPinDetailMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8121AE1FE7000C004B3EF3 /* PersonPinDetailMapView.xib */; };
+		AD8121B11FE704A3004B3EF3 /* PersonPinDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8121B01FE704A3004B3EF3 /* PersonPinDetailMapView.swift */; };
+		AD8121B31FE73857004B3EF3 /* maps.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8121B21FE73857004B3EF3 /* maps.png */; };
+		AD8121B91FE73909004B3EF3 /* maps32.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8121B81FE73909004B3EF3 /* maps32.png */; };
+		AD8121BD1FE73984004B3EF3 /* maps64.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8121BC1FE73984004B3EF3 /* maps64.png */; };
 		ADB505AA1FDB1C6500F81046 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */; };
 		ADB505AB1FDB1C6500F81046 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */; };
 		ADB505AF1FDB333B00F81046 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB505AC1FDB333B00F81046 /* image1.png */; };
@@ -208,6 +216,14 @@
 		AD5A44451FE509B900266548 /* gender_woman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_woman.png; sourceTree = "<group>"; };
 		AD5A44481FE5665A00266548 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AD641ECC1FDDD254002E483B /* gender_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_man.png; sourceTree = "<group>"; };
+		AD81219A1FE6F870004B3EF3 /* UIView+BezierPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+BezierPaths.swift"; sourceTree = "<group>"; };
+		AD81219C1FE6F932004B3EF3 /* PersonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAnnotation.swift; sourceTree = "<group>"; };
+		AD81219E1FE6FB4D004B3EF3 /* PersonAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAnnotationView.swift; sourceTree = "<group>"; };
+		AD8121AE1FE7000C004B3EF3 /* PersonPinDetailMapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonPinDetailMapView.xib; sourceTree = "<group>"; };
+		AD8121B01FE704A3004B3EF3 /* PersonPinDetailMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonPinDetailMapView.swift; sourceTree = "<group>"; };
+		AD8121B21FE73857004B3EF3 /* maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps.png; sourceTree = "<group>"; };
+		AD8121B81FE73909004B3EF3 /* maps32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps32.png; sourceTree = "<group>"; };
+		AD8121BC1FE73984004B3EF3 /* maps64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps64.png; sourceTree = "<group>"; };
 		ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		ADB505AC1FDB333B00F81046 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
@@ -307,6 +323,7 @@
 		A72AFBEC1FCE794C0018254E /* UIKitExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				AD81219A1FE6F870004B3EF3 /* UIView+BezierPaths.swift */,
 				A72705C21FC8973F006C2504 /* NavigationBarController.swift */,
 				A7407F0A1FC799FA00DAAF44 /* UIButtonExtensions.swift */,
 				A7407F0C1FC79B1D00DAAF44 /* UITextFieldExtensions.swift */,
@@ -523,6 +540,8 @@
 			isa = PBXGroup;
 			children = (
 				A75E3F501FE54341007165DE /* WelcomeFirstPinViewController.swift */,
+				AD8121B01FE704A3004B3EF3 /* PersonPinDetailMapView.swift */,
+				AD8121AE1FE7000C004B3EF3 /* PersonPinDetailMapView.xib */,
 			);
 			path = WelcomeFirstPin;
 			sourceTree = "<group>";
@@ -543,6 +562,9 @@
 		A75E3F521FE55288007165DE /* LocationImages */ = {
 			isa = PBXGroup;
 			children = (
+				AD8121B81FE73909004B3EF3 /* maps32.png */,
+				AD8121BC1FE73984004B3EF3 /* maps64.png */,
+				AD8121B21FE73857004B3EF3 /* maps.png */,
 				A75E3F551FE55551007165DE /* next.png */,
 				A75E3F531FE55296007165DE /* location.png */,
 			);
@@ -614,6 +636,8 @@
 				A7DD2E381FD2DC110009322E /* Information.swift */,
 				AD1A34401FE1C41B0054801D /* InformationAlertView.swift */,
 				AD5A44481FE5665A00266548 /* Location.swift */,
+				AD81219C1FE6F932004B3EF3 /* PersonAnnotation.swift */,
+				AD81219E1FE6FB4D004B3EF3 /* PersonAnnotationView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -874,16 +898,20 @@
 				A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */,
 				A7B17CD01FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard in Resources */,
 				ADB505B01FDB333B00F81046 /* image2.png in Resources */,
+				AD8121BD1FE73984004B3EF3 /* maps64.png in Resources */,
 				AD5A44461FE509BA00266548 /* gender_woman.png in Resources */,
 				A72CAA831FD6855200308DED /* ic_password_checkmark@2x.png in Resources */,
 				A75F40131FC0B7C600495228 /* LaunchScreen.storyboard in Resources */,
 				A71BDC4D1FDF1EA80059EE43 /* error@2x.png in Resources */,
 				AD641ECE1FDDD254002E483B /* gender_man.png in Resources */,
+				AD8121AF1FE7000C004B3EF3 /* PersonPinDetailMapView.xib in Resources */,
 				A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */,
 				A72CAA811FD6855200308DED /* ic_eye_closed.png in Resources */,
 				A72705CB1FC8AD33006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
+				AD8121B91FE73909004B3EF3 /* maps32.png in Resources */,
 				A72CAA851FD6855200308DED /* ic_password_checkmark.png in Resources */,
 				A75F40101FC0B7C600495228 /* Assets.xcassets in Resources */,
+				AD8121B31FE73857004B3EF3 /* maps.png in Resources */,
 				A72CAA801FD6855200308DED /* ic_eye_closed@2x.png in Resources */,
 				A72CAA7D1FD6855200308DED /* ic_eye_open@3x.png in Resources */,
 				A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */,
@@ -983,6 +1011,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD81219B1FE6F871004B3EF3 /* UIView+BezierPaths.swift in Sources */,
 				AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */,
 				A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */,
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
@@ -1007,6 +1036,7 @@
 				A7407F071FC705D000DAAF44 /* ConstanctUserKeyValues.swift in Sources */,
 				A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */,
 				A778D9E31FC9AE6200F38438 /* DatabaseUser.swift in Sources */,
+				AD81219D1FE6F932004B3EF3 /* PersonAnnotation.swift in Sources */,
 				A75E3F461FE29FE4007165DE /* FTConfiguration.swift in Sources */,
 				A7DD2E0F1FD1A7140009322E /* ProcessingUserData.swift in Sources */,
 				A75E3F491FE29FE4007165DE /* FTPopOverMenuCell.swift in Sources */,
@@ -1038,6 +1068,7 @@
 				A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */,
 				A72AFBDC1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift in Sources */,
 				A73828301FC35DCB003C1827 /* Validation.swift in Sources */,
+				AD8121B11FE704A3004B3EF3 /* PersonPinDetailMapView.swift in Sources */,
 				A72AFBDE1FCDE8800018254E /* FirebaseDomainConstants.swift in Sources */,
 				A72AFBEE1FCE796D0018254E /* UIImageViewExtensions.swift in Sources */,
 				A7407F0D1FC79B1D00DAAF44 /* UITextFieldExtensions.swift in Sources */,
@@ -1047,6 +1078,7 @@
 				A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */,
 				A72CAA8B1FD685E000308DED /* Genders.swift in Sources */,
 				A72CAA7F1FD6855200308DED /* HideShowPasswordTextField.swift in Sources */,
+				AD81219F1FE6FB4D004B3EF3 /* PersonAnnotationView.swift in Sources */,
 				ADB505B31FDB348500F81046 /* EntranceViewPerformSegueExtention.swift in Sources */,
 				A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */,
 				A72AFBE91FCDF77C0018254E /* InformationMessages.swift in Sources */,

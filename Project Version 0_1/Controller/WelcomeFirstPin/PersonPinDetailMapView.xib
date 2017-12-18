@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view tag="1000" contentMode="scaleToFill" id="iN0-l3-epB" customClass="PersonPinDetailMapView" customModule="Project_Version_0_1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="280"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uff-xO-yv0">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="280"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar1" translatesAutoresizingMaskIntoConstraints="NO" id="pC1-TH-AEr">
+                    <rect key="frame" x="16" y="20" width="58" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera_icon_new.png" translatesAutoresizingMaskIntoConstraints="NO" id="ckt-OF-r6C">
+                    <rect key="frame" x="16" y="102" width="58" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username UserNameSurname" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UJG-IE-axe">
+                    <rect key="frame" x="82" y="20" width="142" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-86-iAJ">
+                    <rect key="frame" x="83" y="112" width="141" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                    <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Add Image"/>
+                    <connections>
+                        <action selector="addImage:" destination="iN0-l3-epB" eventType="touchUpInside" id="mUi-XM-Kqe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5W-PB-aSn">
+                    <rect key="frame" x="16" y="206" width="208" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                    <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="See Details"/>
+                    <connections>
+                        <action selector="seeDetails:" destination="iN0-l3-epB" eventType="touchUpInside" id="Dax-dO-l5V"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058819999999" green="0.74901960779999999" blue="0.2274509804" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="uff-xO-yv0" secondAttribute="bottom" id="Q3y-kj-WFG"/>
+                <constraint firstItem="uff-xO-yv0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rgf-uf-1er"/>
+                <constraint firstItem="uff-xO-yv0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Snq-gY-Lbr"/>
+                <constraint firstAttribute="trailing" secondItem="uff-xO-yv0" secondAttribute="trailing" id="bkj-WM-ZEK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addImageButton" destination="z9T-86-iAJ" id="Vua-9c-DR2"/>
+                <outlet property="backgroundContentButton" destination="uff-xO-yv0" id="Nlb-3l-45c"/>
+                <outlet property="personName" destination="UJG-IE-axe" id="bP1-g1-4aa"/>
+                <outlet property="personPinImageView" destination="ckt-OF-r6C" id="xzm-kn-7mm"/>
+                <outlet property="personProfileImageView" destination="pC1-TH-AEr" id="G3q-RM-kDI"/>
+                <outlet property="seeDetailsButton" destination="b5W-PB-aSn" id="vCn-bH-XWU"/>
+            </connections>
+            <point key="canvasLocation" x="-3" y="57"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="avatar1" width="42" height="42"/>
+        <image name="camera_icon_new.png" width="128" height="128"/>
+    </resources>
+</document>

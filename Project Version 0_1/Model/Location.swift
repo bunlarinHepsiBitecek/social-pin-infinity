@@ -15,11 +15,10 @@ class Location {
         return NSUUID().uuidString
     }
     
-    private var _currentLocation: CLLocationCoordinate2D
+    private var _currentLocation: CLLocationCoordinate2D = kCLLocationCoordinate2DInvalid
     private var _isPinDropped: Bool
     
     init() {
-        self._currentLocation = CLLocationCoordinate2D()
         self._isPinDropped = false
     }
     
