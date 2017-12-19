@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 
+private let pinDataAnnotationName = "pinDataAnnotationName"
+
 class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var mapView: MKMapView!
@@ -35,6 +37,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         mapView.delegate = self
         mapView.showsUserLocation = true
+        mapView.showsCompass = true
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -105,33 +109,40 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                 
                 self.mapView.addAnnotation(annotation)*/
                 
+                /*
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = coordinate
                 annotation.title = "yarro kral"
                 annotation.subtitle = "yarro kral 2"
                     
-                self.mapView.addAnnotation(annotation)
+                self.mapView.addAnnotation(annotation)*/
+                
+                let k = PinDataChoiseAnnotationModel(person: self.user)
+                self.mapView.addAnnotation(k)
+                
                 
             }
         }
     }
     
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        
-        print("BOKOBOKO")
-        
-        //view.showPopOver(popOverStyle: .invalidEmail)
-        
-        
-        
-    }
-    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    
+        print("Erkut: mapView girdi")
         
+        if annotation is MKUserLocation { return nil }
         
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: pinDataAnnotationName)
+        
+        if annotationView == nil {
+            annotationView = PinDataChoiseAnnotationView(annotation: annotation, reuseIdentifier: pinDataAnnotationName)
+            //(annotationView as! PinDataChoiseAnnotationView).pinDataChoiseDelegate = self
+        } else {
+            annotationView!.annotation = annotation
+        }
+        
+        return annotationView
     }
+    
+    
     
     
     @IBAction func zoomInTapped(_ sender: UIButton) {

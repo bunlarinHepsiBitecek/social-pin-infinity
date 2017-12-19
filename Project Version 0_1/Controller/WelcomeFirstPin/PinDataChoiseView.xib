@@ -16,21 +16,20 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="E4M-IZ-35N" customClass="denemeView" customModule="Project_Version_0_1" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="166"/>
+        <view contentMode="scaleToFill" id="E4M-IZ-35N" customClass="PinDataChoiseView" customModule="Project_Version_0_1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="136"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfx-ta-Mmg">
-                    <rect key="frame" x="0.0" y="0.0" width="200" height="166"/>
-                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkv-52-Udi">
+                    <rect key="frame" x="0.0" y="0.0" width="184" height="136"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sNm-p1-sa5">
-                    <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                    <rect key="frame" x="0.0" y="0.0" width="184" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqL-gl-lNY" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
-                            <rect key="frame" x="8" y="5" width="40" height="40"/>
+                            <rect key="frame" x="0.0" y="2" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button" image="photo-camera.png"/>
                             <userDefinedRuntimeAttributes>
@@ -53,9 +52,12 @@
                                     <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cameraClicked:" destination="E4M-IZ-35N" eventType="touchUpInside" id="qVp-fB-blG"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2t-py-hV1" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
-                            <rect key="frame" x="61" y="10" width="131" height="30"/>
+                            <rect key="frame" x="48" y="5" width="131" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.97647058819999999" green="0.74901960779999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
@@ -74,7 +76,7 @@
                                     <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                    <real key="value" value="10"/>
+                                    <real key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                     <color key="value" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,16 +85,18 @@
                                     <real key="value" value="6"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cameraLongClicked:" destination="E4M-IZ-35N" eventType="touchUpInside" id="ADJ-ga-TAP"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyq-Ct-PHc">
-                    <rect key="frame" x="0.0" y="58" width="200" height="50"/>
+                    <rect key="frame" x="0.0" y="48" width="184" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnu-ML-bu2" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
-                            <rect key="frame" x="8" y="5" width="40" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button" image="play-button.png"/>
                             <userDefinedRuntimeAttributes>
@@ -115,9 +119,12 @@
                                     <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="videoClicked:" destination="E4M-IZ-35N" eventType="touchUpInside" id="b9K-uU-KgA"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDX-jq-nls" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
-                            <rect key="frame" x="61" y="10" width="131" height="30"/>
+                            <rect key="frame" x="48" y="5" width="131" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.97647058819999999" green="0.74901960779999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -135,7 +142,7 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                    <real key="value" value="10"/>
+                                    <real key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                     <color key="value" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -144,16 +151,18 @@
                                     <real key="value" value="6"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="videoLongClicked:" destination="E4M-IZ-35N" eventType="touchUpInside" id="2OU-St-6D5"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="skY-IG-65W">
-                    <rect key="frame" x="0.0" y="116" width="200" height="50"/>
+                    <rect key="frame" x="0.0" y="96" width="184" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3x-f7-5ap" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
-                            <rect key="frame" x="8" y="5" width="40" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button" image="school-material.png"/>
                             <userDefinedRuntimeAttributes>
@@ -176,9 +185,12 @@
                                     <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="textClicked:" destination="E4M-IZ-35N" eventType="touchUpInside" id="LT4-e3-taf"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9r-wX-bMG" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
-                            <rect key="frame" x="61" y="10" width="131" height="30"/>
+                            <rect key="frame" x="48" y="5" width="131" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.97647058819999999" green="0.74901960779999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -196,7 +208,7 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                    <real key="value" value="10"/>
+                                    <real key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                     <real key="value" value="6"/>
@@ -205,20 +217,31 @@
                                     <color key="value" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="textLongClicked:" destination="E4M-IZ-35N" eventType="touchUpInside" id="e2v-1s-MdR"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Dfx-ta-Mmg" firstAttribute="top" secondItem="E4M-IZ-35N" secondAttribute="top" id="QYf-x8-cdW"/>
-                <constraint firstItem="Dfx-ta-Mmg" firstAttribute="leading" secondItem="E4M-IZ-35N" secondAttribute="leading" id="Xl4-Rw-yx8"/>
-                <constraint firstAttribute="bottom" secondItem="Dfx-ta-Mmg" secondAttribute="bottom" id="chx-Ur-df3"/>
-                <constraint firstAttribute="trailing" secondItem="Dfx-ta-Mmg" secondAttribute="trailing" id="oNJ-At-Xvx"/>
+                <constraint firstAttribute="trailing" secondItem="Rkv-52-Udi" secondAttribute="trailing" id="4E4-gV-opS"/>
+                <constraint firstAttribute="bottom" secondItem="Rkv-52-Udi" secondAttribute="bottom" id="Pr3-rF-mOw"/>
+                <constraint firstItem="Rkv-52-Udi" firstAttribute="top" secondItem="E4M-IZ-35N" secondAttribute="top" id="rbC-HF-Yrv"/>
+                <constraint firstItem="Rkv-52-Udi" firstAttribute="leading" secondItem="E4M-IZ-35N" secondAttribute="leading" id="uHf-mX-bh6"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-160" y="134"/>
+            <connections>
+                <outlet property="baba" destination="Rkv-52-Udi" id="hAt-Ly-h4W"/>
+                <outlet property="cameraButton" destination="pqL-gl-lNY" id="rec-le-uM6"/>
+                <outlet property="cameraLongButton" destination="T2t-py-hV1" id="fy4-6d-k3P"/>
+                <outlet property="textButton" destination="C3x-f7-5ap" id="KX5-Zj-N5s"/>
+                <outlet property="textLongButton" destination="y9r-wX-bMG" id="xOX-kz-Ejt"/>
+                <outlet property="videoButton" destination="cnu-ML-bu2" id="5GP-zp-kcb"/>
+                <outlet property="videoLongButton" destination="MDX-jq-nls" id="dj5-BH-Ycu"/>
+            </connections>
+            <point key="canvasLocation" x="-168" y="119"/>
         </view>
     </objects>
     <resources>
