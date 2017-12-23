@@ -96,6 +96,11 @@ extension UITextField {
         }
     }
     
+    func changeCornerRadius() {
+        
+        layer.cornerRadius = 10.00
+        
+    }
     
     func changePopupStyle() {
         

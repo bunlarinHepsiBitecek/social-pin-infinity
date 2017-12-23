@@ -20,5 +20,11 @@ extension UIButton {
         self.isEnabled = true
     }
     
+    func changeCornerRadius() {
+    
+        layer.cornerRadius = 10.00
+        
+    }
+    
     
 }

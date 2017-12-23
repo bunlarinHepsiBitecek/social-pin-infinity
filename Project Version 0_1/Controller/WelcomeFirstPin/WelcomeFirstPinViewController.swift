@@ -8,12 +8,23 @@
 
 import UIKit
 import MapKit
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
+
+import AVKit
 
 private let pinDataAnnotationName = "pinDataAnnotationName"
 
 class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var mapView: MKMapView!
+    @IBOutlet var denemeTextButton: UIButtonCustomDesign!
+    
+    var controlFlag : Bool = false
+    var returnFlag : Bool = true
+    
+    var boko = UIImage()
     
     var user: User = User()
     var locationManager = CLLocationManager()
@@ -38,12 +49,36 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.showsCompass = true
+        
+        setProfileImage()
     
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        print("WelcomeFirstPinViewController - viewDidAppear starts")
+        print("returnFlag : \(returnFlag)")
+        
+        if controlFlag == false {
+            
+            controlFlag = true
+            
+            performSegue(withIdentifier: "gotoGuidance", sender: self)
+            
+        }
+        
+        if returnFlag == true {
+            
+            cameraButton.setImage(boko, for: UIControlState.normal)
+            
+        }
+        
+        
     }
     
     
@@ -178,60 +213,149 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         }
     }
     
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        
+        performSegue(withIdentifier: "goToMainPage", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "gotoGuidance" {
+            if let guidance_1 = segue.destination as? guidance_step1_ViewController {
+                guidance_1.user = user
+            }
+        }
+        
+        
+    }
+    
+    @IBAction func denemeTextButtonClicked(_ sender: Any) {
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    @IBOutlet var cameraButton: UIButtonCustomDesign!
+    
+    @IBAction func cameraButtonClicked(_ sender: Any) {
+        
+        print("ccccccc")
+        
+        let takasi = storyboard?.instantiateViewController(withIdentifier: "PinDataPictureViewController_storyBoardID") as? PinDataPictureViewController
+     
+        takasi?.image = boko
+        
+        present(takasi!, animated: true, completion: nil)
+        
+    }
+    
+    func setProfileImage() {
+        
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        let userRef = ref.child("Users").child(uid!)
+        
+        userRef.observeSingleEvent(of: .value) { (dataSnapShot) in
+            
+            if !dataSnapShot.exists() {
+                
+                print("cıkıyoruz")
+                return
+                
+            }
+            
+            
+            let userInfo = dataSnapShot.value as! NSDictionary
+                
+            print("userinfo : \(userInfo)")
+            
+            let profileUrl = userInfo["profilePictureUrl"] as! String
+                
+            print("profileUrl : \(profileUrl)")
+            
+            let storageRef = Storage.storage().reference(forURL: profileUrl)
+            
+            storageRef.downloadURL(completion: { (url, error) in
+                
+                if error != nil {
+                    
+                    if let errorMessage = error as NSError? {
+                        
+                        print("errorMesssage : \(errorMessage.userInfo)")
+                        print("errorMesssage : \(errorMessage.localizedDescription)")
+                        
+                    }
+                    
+                } else {
+                    
+                    print("x")
+                    
+                    do {
+                        
+                        let data = try Data(contentsOf: url!)
+                        let image = UIImage(data: data as Data)
+                        self.cameraButton.setImage(image, for: .normal)
+                        self.boko = image!
+                        
+                    } catch {
+                        
+                        print("boku yedik")
+                        
+                    }
+                    
+                    
+                    
+                }
+                
+            })
+            
+            
+            
+            
+        }
+        
+        
+    }
+    
+    
+    @IBAction func videoPlayClicked(_ sender: Any) {
+        
+        print("videoPlayClicked is activated")
+        
+        playVideo()
+        
+    }
+    
+    func playVideo() {
+        
+        print("playVideo starts")
+        
+        if let path = Bundle.main.path(forResource: "IMG_0950", ofType: "m4v") {
+            
+            print("içerideyiz")
+            
+            let video = AVPlayer(url: URL(fileURLWithPath: path))
+            let videoPlayer = AVPlayerViewController()
+            
+            videoPlayer.player = video
+            
+            present(videoPlayer, animated: true, completion: {
+                
+                video.play()
+                
+            })
+            
+        }
+        
+    }
+    
     
 }
 
-/*
-extension MKPointAnnotation {
-    
-    func showPopOver(popOverStyle: FTPopOverStyle) {
-        let menuOptionNameArray : [String] =  [popOverStyle.popOverMessage]
-        let menuOptionImageNameArray : [String] = []
-        
-        self.changePopupStyle()
-        FTPopOverMenu.showForSender(sender: self, with: menuOptionNameArray, menuImageArray: menuOptionImageNameArray, done: { (selectedIndex) -> () in         }) {
-        }
-    }
-    
-    func changePopupStyle() {
-        
-        let config = FTConfiguration.shared
-        config.textColor = UIColor.red
-        config.backgoundTintColor = UIColor.white
-        config.borderColor = UIColor.red
-        config.menuWidth = self.frame.width
-        config.menuSeparatorColor = UIColor.white
-        config.textAlignment = .left
-        config.textFont = UIFont.systemFont(ofSize: 14)
-        config.menuRowHeight = self.frame.height
-        config.cornerRadius = 10
-    }
-    
-}*/
-
-extension MKAnnotationView {
-    
-    func showPopOver(popOverStyle: FTPopOverStyle) {
-        let menuOptionNameArray : [String] =  [popOverStyle.popOverMessage]
-        let menuOptionImageNameArray : [String] = []
-        
-        self.changePopupStyle()
-        FTPopOverMenu.showForSender(sender: self, with: menuOptionNameArray, menuImageArray: menuOptionImageNameArray, done: { (selectedIndex) -> () in         }) {
-        }
-    }
-    
-    func changePopupStyle() {
-        
-        let config = FTConfiguration.shared
-        config.textColor = UIColor.red
-        config.backgoundTintColor = UIColor.white
-        config.borderColor = UIColor.red
-        config.menuWidth = 300
-        config.menuSeparatorColor = UIColor.white
-        config.textAlignment = .left
-        config.textFont = UIFont.systemFont(ofSize: 14)
-        config.menuRowHeight = self.frame.height
-        config.cornerRadius = 10
-    }
-}
 
