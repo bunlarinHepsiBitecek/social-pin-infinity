@@ -74,6 +74,7 @@
 		A75CE06A1FED6E67004703F5 /* edit_profile_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A75CE0691FED6E67004703F5 /* edit_profile_icon.png */; };
 		A75CE06C1FED8DDA004703F5 /* DecideToLoadPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE06B1FED8DDA004703F5 /* DecideToLoadPicture.swift */; };
 		A75CE06E1FEDB2AA004703F5 /* PinDataVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE06D1FEDB2AA004703F5 /* PinDataVideoViewController.swift */; };
+		A75CE0771FEE6982004703F5 /* PinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0761FEE6982004703F5 /* PinData.swift */; };
 		A75E3F441FE29FE4007165DE /* UIControl+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F3E1FE29FE3007165DE /* UIControl+Point.swift */; };
 		A75E3F451FE29FE4007165DE /* UIScreen+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F3F1FE29FE3007165DE /* UIScreen+Frame.swift */; };
 		A75E3F461FE29FE4007165DE /* FTConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F401FE29FE4007165DE /* FTConfiguration.swift */; };
@@ -209,6 +210,7 @@
 		A75CE06B1FED8DDA004703F5 /* DecideToLoadPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecideToLoadPicture.swift; sourceTree = "<group>"; };
 		A75CE06D1FEDB2AA004703F5 /* PinDataVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataVideoViewController.swift; sourceTree = "<group>"; };
 		A75CE0731FEE63CD004703F5 /* IMG_0950.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_0950.m4v; sourceTree = "<group>"; };
+		A75CE0761FEE6982004703F5 /* PinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinData.swift; sourceTree = "<group>"; };
 		A75E3F3E1FE29FE3007165DE /* UIControl+Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Point.swift"; sourceTree = "<group>"; };
 		A75E3F3F1FE29FE3007165DE /* UIScreen+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Frame.swift"; sourceTree = "<group>"; };
 		A75E3F401FE29FE4007165DE /* FTConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTConfiguration.swift; sourceTree = "<group>"; };
@@ -750,6 +752,7 @@
 				AD1A34401FE1C41B0054801D /* InformationAlertView.swift */,
 				A79FFB1A1FE8547B006D4D1E /* PinDataChoiseAnnotationModel.swift */,
 				A79FFB1E1FE8560C006D4D1E /* PinDataChoiseAnnotationView.swift */,
+				A75CE0761FEE6982004703F5 /* PinData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1195,6 +1198,7 @@
 				A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */,
 				A7194DBD1FED036E00586038 /* PinTextDataViewController.swift in Sources */,
 				A75E3F651FE5E831007165DE /* DatabaseUserLocation.swift in Sources */,
+				A75CE0771FEE6982004703F5 /* PinData.swift in Sources */,
 				A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */,
 				A75E3F631FE5E6A5007165DE /* UserLocation.swift in Sources */,
 				A7D1CBA51FD44AEA0082BC02 /* UINavigationBarCustomDesign.swift in Sources */,
