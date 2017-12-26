@@ -415,7 +415,6 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password.png"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                                         <color key="value" red="0.0" green="0.97647058819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -424,6 +423,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="passwordTextFieldDidBegin:" destination="2Sh-Ob-Khj" eventType="editingDidBegin" id="GI8-o1-o79"/>
                                                     <action selector="textFieldEditingChanged:" destination="2Sh-Ob-Khj" eventType="editingDidEnd" id="yZW-4Y-0oY"/>
                                                 </connections>
                                             </textField>
@@ -437,7 +437,6 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="male_default.png"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                                         <color key="value" red="0.0" green="0.97647058819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -459,7 +458,6 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="person.png"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                                         <color key="value" red="0.0" green="0.97647058819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -502,7 +500,6 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="birthday.png"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                                         <color key="value" red="0.0" green="0.97647058819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -570,7 +567,6 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="phone.png"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                                         <color key="value" red="0.0" green="0.97647058819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -637,6 +633,7 @@
                         <outlet property="lastName" destination="vxI-NO-Spp" id="ytP-AN-S3N"/>
                         <outlet property="mobilePhone" destination="Rfv-gd-Feb" id="e4F-pr-ZrV"/>
                         <outlet property="password" destination="i1Q-uo-TEp" id="dgv-zm-Fo0"/>
+                        <outlet property="scrollView" destination="GH5-bI-kvN" id="m8w-or-Ypu"/>
                         <outlet property="userName" destination="mIO-Wb-FE3" id="Tbd-nK-Giz"/>
                         <segue destination="gr8-Ww-qBW" kind="show" id="aFP-3e-EmO"/>
                     </connections>
@@ -917,7 +914,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="passwordEditingChanged:" destination="MZr-Fw-GWC" eventType="editingChanged" id="ssU-Sk-Mq1"/>
+                                    <action selector="passwordEditingDidBegin:" destination="MZr-Fw-GWC" eventType="editingDidBegin" id="RB8-qi-UyF"/>
                                     <outlet property="delegate" destination="MZr-Fw-GWC" id="4We-Vv-zmg"/>
                                 </connections>
                             </textField>
@@ -988,15 +985,10 @@
     </scenes>
     <resources>
         <image name="556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg" width="310" height="550"/>
-        <image name="birthday.png" width="512" height="512"/>
         <image name="camera_icon_new.png" width="128" height="128"/>
         <image name="email.png" width="512" height="512"/>
         <image name="gender_man.png" width="128" height="128"/>
         <image name="gender_woman.png" width="128" height="128"/>
-        <image name="male_default.png" width="128" height="128"/>
-        <image name="password.png" width="512" height="512"/>
-        <image name="person.png" width="512" height="512"/>
-        <image name="phone.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rF3-Pn-lKI"/>

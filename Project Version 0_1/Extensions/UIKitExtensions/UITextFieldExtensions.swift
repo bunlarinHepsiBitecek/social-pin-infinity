@@ -122,3 +122,41 @@ extension UITextField {
     
 }
 
+
+// for showPassword
+extension UITextField {
+    func addHideShowButton() {
+        
+        print("Remzi: addHideShowButton framesize: \(frame.width)")
+        let eyeOpenedImage: UIImage = UIImage(named: "ic_eye_open")!.withRenderingMode(.alwaysTemplate)
+        let eyeClosedImage: UIImage = UIImage(named: "ic_eye_closed")!
+        let eyeButton: UIButton = UIButton(type: .custom)
+        
+        let padding: CGFloat = 5
+        
+        //let buttonWidth = (frame.width / 2) - padding
+        let buttonWidth = frame.height
+        let buttonFrame = CGRect(x: buttonWidth + padding, y: 0, width: buttonWidth, height: frame.height)
+        eyeButton.frame = buttonFrame
+        eyeButton.backgroundColor = UIColor.clear
+        eyeButton.adjustsImageWhenHighlighted = false
+        eyeButton.setImage(eyeClosedImage, for: .normal)
+        eyeButton.setImage(eyeOpenedImage.withRenderingMode(.alwaysTemplate), for: .selected)
+        eyeButton.addTarget(self, action: #selector(eyeButtonPressed), for: .touchUpInside)
+        eyeButton.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        eyeButton.tintColor = self.tintColor
+        self.addSubview(eyeButton)
+        self.rightView = eyeButton
+        self.rightViewMode = .whileEditing
+        
+    }
+    
+    @objc func eyeButtonPressed(sender: UIButton) {
+        print("eyeButtonPressed : \(sender.isSelected)")
+        sender.isSelected = !sender.isSelected
+        self.isSecureTextEntry = !sender.isSelected
+    }
+    
+    
+}
+

@@ -18,4 +18,8 @@ struct Constants {
         static let DATE_PICKER_FORMAT = "dd.MM.yyyy"
     }
     
+    struct WelcomeFirstPin {
+        static let PIN_IMAGE_NAME = "maps64.png"
+    }
+    
 }

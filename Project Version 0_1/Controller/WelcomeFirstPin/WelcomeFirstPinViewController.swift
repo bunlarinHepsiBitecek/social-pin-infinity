@@ -15,6 +15,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     
     // outlets
     @IBOutlet var mapView: MKMapView!
+    @IBOutlet var focusCurrentLocation: UIButton!
     
     // data
     var user: User = User()
@@ -23,6 +24,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     
     let latitudeDeltaDegree: CLLocationDegrees = 0.002
     let longitudeDeltaDegree: CLLocationDegrees = 0.002
+    
+    var imageView: UIImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +36,20 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        locationManager.startUpdatingHeading()
 
         mapView.delegate = self
         mapView.showsUserLocation = true
         
-        configureFakePerson()
+        //mapView.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
+        mapView.setUserTrackingMode(.followWithHeading, animated: true)
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        print("Remzi locationManager UpdateHeading girdi")
+        mapView.camera.heading = newHeading.magneticHeading
+        mapView.setCamera(mapView.camera, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,13 +61,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         print("Remzi:  WelcomeFirstPinViewController viewWillAppear girdi")
         super.viewWillAppear(animated)
     }
-    
-    func configureFakePerson() {
-        user.setUserName(inputName: "palaPanti")
-        user.setUserNameSurname(inputNameSurname: "Remzi Yıldırım")
-        user.setUserProfilePicture(inputUserProfileImage: UIImage(named: "avatar1")!)
-    }
-    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -89,20 +94,33 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     
     // MARK: - MKMapViewDelegate methods
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        print("Remzi: mapView girdi")
+        print("Remzi: WelcomeFirstPinViewController mapView girdi")
         
         if annotation is MKUserLocation { return nil }
         
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: kPersonAnnotationName)
         
         if annotationView == nil {
+            print("annotation nil")
             annotationView = PersonAnnotationView(annotation: annotation, reuseIdentifier: kPersonAnnotationName)
+            print("------1")
             (annotationView as! PersonAnnotationView).personDetailDelegate = self
+            print("------2")
+            
+            // user burada set edilerek update edilmeli güncel location bilgileri için
+            (annotationView as! PersonAnnotationView).customCalloutView?.person = user
+            print("------3")
         } else {
+            print("annotation dolu")
             annotationView!.annotation = annotation
         }
         
         return annotationView
+    }
+    
+    @IBAction func currentLocationButton(_ sender: UIButton) {
+        locationManager.stopUpdatingLocation()
+        locationManager.startUpdatingLocation()
     }
     
     @IBAction func dropPinButtonTapped(_ sender: UIButton) {
@@ -163,14 +181,31 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         }
     }
     
-    // delegation Methot
-    func detailsRequestedForPerson(person: User) {
-        print("Remzi: detailsRequestedForPerson")
-    }
     
+    // delegation Methot
     func addImageRequestForPerson(person: User) {
         print("Remzi: addImageRequestForPerson")
+        self.askGetPicture()
+        print("Remzi: addImageRequestForPerson bitti")
     }
     
-
+    // delegation Methot
+    func addVideoRequestForPerson(person: User) {
+        print("Remzi: addVideoRequestForPerson")
+    }
+    
+    // delegation Methot
+    func addTextRequestForPerson(person: User) {
+        print("Remzi: addTextRequestForPerson")
+        
+    }
+    
+    func okRequestForPerson(person: User) {
+        print("Remzi: ok click")
+    }
+    
+    func cancelRequestForPerson(person: User) {
+        print("Remzi: cancel click")
+    }
+    
 }

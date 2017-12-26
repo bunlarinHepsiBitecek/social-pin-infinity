@@ -46,19 +46,15 @@ class RegisterViewController: UIViewController {
         
         // embeded navigation controller and scrollview slide down
         //self.automaticallyAdjustsScrollViewInsets = false
-        /*
         if #available(iOS 11.0, *) {
-            scrollView.contentInsetAdjustmentBehavior = .scrollableAxes
+            self.scrollView.contentInsetAdjustmentBehavior = .never
         } else {
-            automaticallyAdjustsScrollViewInsets = false
+            self.automaticallyAdjustsScrollViewInsets = false
         }
-       */
         
         genderButtonInit()
         setupPasswordTextField()
         createDatePicker()
-        
-        self.navigationItem.setNavigationItemTitles()
     }
     
     // when entrance view appears, navigation bar will be hidden immediately
@@ -102,6 +98,12 @@ class RegisterViewController: UIViewController {
         textField.resignFirstResponder()
         
         return true
+    }
+    
+    
+    
+    @IBAction func passwordTextFieldDidBegin(_ textField: UITextField) {
+        textField.addHideShowButton()
     }
     
     @IBAction func textFieldEditingChanged(_ textField: UITextField) {

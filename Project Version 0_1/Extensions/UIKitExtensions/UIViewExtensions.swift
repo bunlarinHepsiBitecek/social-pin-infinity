@@ -23,4 +23,39 @@ extension UIView {
         
     }
     
+    func createImage(nibName: String) -> UIImage {
+        var image: UIImage = UIImage()
+        
+        if let views = Bundle.main.loadNibNamed(nibName, owner: self, options: nil) as? [PersonPinDetailMapView], views.count > 0 {
+            
+            let personDetailMapView = views.first!
+            
+            image = personDetailMapView.createImage()
+            
+        }
+        return image
+    }
+    
+    func createImage() -> UIImage {
+        
+        if #available(iOS 10.0, *) {
+            let renderer = UIGraphicsImageRenderer(bounds: bounds)
+            return renderer.image { rendererContext in
+                layer.render(in: rendererContext.cgContext)
+            }
+        } else {
+            let rect: CGRect = self.frame
+            
+            UIGraphicsBeginImageContext(rect.size)
+            let context: CGContext = UIGraphicsGetCurrentContext()!
+            self.layer.render(in: context)
+            let img = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            
+            return img
+        }
+        
+    }
+    
+    
 }

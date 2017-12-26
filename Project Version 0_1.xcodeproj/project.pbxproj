@@ -98,9 +98,21 @@
 		A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E361FD207CA0009322E /* UIViewExtensions.swift */; };
 		A7DD2E391FD2DC110009322E /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E381FD2DC110009322E /* Information.swift */; };
 		AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A34401FE1C41B0054801D /* InformationAlertView.swift */; };
+		AD1F01071FEE36D700E81B1C /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = AD1F01051FEE36D700E81B1C /* cancel.png */; };
+		AD1F01081FEE36D700E81B1C /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = AD1F01061FEE36D700E81B1C /* ok.png */; };
+		AD1F010B1FEE3E0F00E81B1C /* WelcomeFirstPinViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F010A1FEE3E0F00E81B1C /* WelcomeFirstPinViewControllerExtensions.swift */; };
+		AD1F010F1FEEDFB500E81B1C /* pin-profile-2.png in Resources */ = {isa = PBXBuildFile; fileRef = AD1F010D1FEEDFB300E81B1C /* pin-profile-2.png */; };
+		AD1F01111FEEE0C100E81B1C /* PinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1F01101FEEE0C100E81B1C /* PinView.xib */; };
+		AD1F01151FEEE2C000E81B1C /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F01141FEEE2C000E81B1C /* PinView.swift */; };
 		AD5A44461FE509BA00266548 /* gender_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5A44451FE509B900266548 /* gender_woman.png */; };
 		AD5A44491FE5665A00266548 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A44481FE5665A00266548 /* Location.swift */; };
 		AD641ECE1FDDD254002E483B /* gender_man.png in Resources */ = {isa = PBXBuildFile; fileRef = AD641ECC1FDDD254002E483B /* gender_man.png */; };
+		AD7C34801FE9B52D00619234 /* DatabaseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C347E1FE9B52D00619234 /* DatabaseLocation.swift */; };
+		AD7C34811FE9B52D00619234 /* DatabaseUserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C347F1FE9B52D00619234 /* DatabaseUserLocation.swift */; };
+		AD7C34861FE9B61200619234 /* photo-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7C34831FE9B61200619234 /* photo-camera.png */; };
+		AD7C34871FE9B61200619234 /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7C34841FE9B61200619234 /* play-button.png */; };
+		AD7C34881FE9B61200619234 /* school-material.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7C34851FE9B61200619234 /* school-material.png */; };
+		AD7C34DF1FEB049C00619234 /* current-location.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7C34DE1FEB049B00619234 /* current-location.png */; };
 		AD81219B1FE6F871004B3EF3 /* UIView+BezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD81219A1FE6F870004B3EF3 /* UIView+BezierPaths.swift */; };
 		AD81219D1FE6F932004B3EF3 /* PersonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD81219C1FE6F932004B3EF3 /* PersonAnnotation.swift */; };
 		AD81219F1FE6FB4D004B3EF3 /* PersonAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD81219E1FE6FB4D004B3EF3 /* PersonAnnotationView.swift */; };
@@ -213,9 +225,21 @@
 		A7DD2E361FD207CA0009322E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		A7DD2E381FD2DC110009322E /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		AD1A34401FE1C41B0054801D /* InformationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAlertView.swift; sourceTree = "<group>"; };
+		AD1F01051FEE36D700E81B1C /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		AD1F01061FEE36D700E81B1C /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
+		AD1F010A1FEE3E0F00E81B1C /* WelcomeFirstPinViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFirstPinViewControllerExtensions.swift; sourceTree = "<group>"; };
+		AD1F010D1FEEDFB300E81B1C /* pin-profile-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin-profile-2.png"; sourceTree = "<group>"; };
+		AD1F01101FEEE0C100E81B1C /* PinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinView.xib; sourceTree = "<group>"; };
+		AD1F01141FEEE2C000E81B1C /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		AD5A44451FE509B900266548 /* gender_woman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_woman.png; sourceTree = "<group>"; };
 		AD5A44481FE5665A00266548 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AD641ECC1FDDD254002E483B /* gender_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_man.png; sourceTree = "<group>"; };
+		AD7C347E1FE9B52D00619234 /* DatabaseLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseLocation.swift; sourceTree = "<group>"; };
+		AD7C347F1FE9B52D00619234 /* DatabaseUserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUserLocation.swift; sourceTree = "<group>"; };
+		AD7C34831FE9B61200619234 /* photo-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-camera.png"; sourceTree = "<group>"; };
+		AD7C34841FE9B61200619234 /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button.png"; sourceTree = "<group>"; };
+		AD7C34851FE9B61200619234 /* school-material.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "school-material.png"; sourceTree = "<group>"; };
+		AD7C34DE1FEB049B00619234 /* current-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "current-location.png"; sourceTree = "<group>"; };
 		AD81219A1FE6F870004B3EF3 /* UIView+BezierPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+BezierPaths.swift"; sourceTree = "<group>"; };
 		AD81219C1FE6F932004B3EF3 /* PersonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAnnotation.swift; sourceTree = "<group>"; };
 		AD81219E1FE6FB4D004B3EF3 /* PersonAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAnnotationView.swift; sourceTree = "<group>"; };
@@ -264,6 +288,7 @@
 		A72705CC1FC91DF3006C2504 /* ControllerExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				AD1F01091FEE3DE100E81B1C /* WelcomeFirstPinViewControllerExtensions */,
 				A74FD5EF1FDB7A6E00062483 /* RegistrationViewControllerExtensions */,
 				A72CAA901FD689BE00308DED /* EntranceView */,
 				A7DD2E0B1FD1A4860009322E /* LoginViewExtensionFunction */,
@@ -542,6 +567,8 @@
 				A75E3F501FE54341007165DE /* WelcomeFirstPinViewController.swift */,
 				AD8121B01FE704A3004B3EF3 /* PersonPinDetailMapView.swift */,
 				AD8121AE1FE7000C004B3EF3 /* PersonPinDetailMapView.xib */,
+				AD1F01101FEEE0C100E81B1C /* PinView.xib */,
+				AD1F01141FEEE2C000E81B1C /* PinView.swift */,
 			);
 			path = WelcomeFirstPin;
 			sourceTree = "<group>";
@@ -562,6 +589,10 @@
 		A75E3F521FE55288007165DE /* LocationImages */ = {
 			isa = PBXGroup;
 			children = (
+				AD1F010D1FEEDFB300E81B1C /* pin-profile-2.png */,
+				AD1F01051FEE36D700E81B1C /* cancel.png */,
+				AD1F01061FEE36D700E81B1C /* ok.png */,
+				AD7C34DE1FEB049B00619234 /* current-location.png */,
 				AD8121B81FE73909004B3EF3 /* maps32.png */,
 				AD8121BC1FE73984004B3EF3 /* maps64.png */,
 				AD8121B21FE73857004B3EF3 /* maps.png */,
@@ -700,6 +731,8 @@
 			isa = PBXGroup;
 			children = (
 				A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */,
+				AD7C347E1FE9B52D00619234 /* DatabaseLocation.swift */,
+				AD7C347F1FE9B52D00619234 /* DatabaseUserLocation.swift */,
 			);
 			path = DatabaseServices;
 			sourceTree = "<group>";
@@ -718,6 +751,7 @@
 		A778D9E71FC9CA5300F38438 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AD7C34821FE9B61200619234 /* PopUpImages */,
 				A75E3F521FE55288007165DE /* LocationImages */,
 				A71BDC4B1FDF1E930059EE43 /* ErrorImages */,
 				ADB505B41FDB38C800F81046 /* RegisterView */,
@@ -795,6 +829,24 @@
 				A7407F061FC705D000DAAF44 /* ConstanctUserKeyValues.swift */,
 			);
 			path = Character;
+			sourceTree = "<group>";
+		};
+		AD1F01091FEE3DE100E81B1C /* WelcomeFirstPinViewControllerExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD1F010A1FEE3E0F00E81B1C /* WelcomeFirstPinViewControllerExtensions.swift */,
+			);
+			path = WelcomeFirstPinViewControllerExtensions;
+			sourceTree = "<group>";
+		};
+		AD7C34821FE9B61200619234 /* PopUpImages */ = {
+			isa = PBXGroup;
+			children = (
+				AD7C34831FE9B61200619234 /* photo-camera.png */,
+				AD7C34841FE9B61200619234 /* play-button.png */,
+				AD7C34851FE9B61200619234 /* school-material.png */,
+			);
+			path = PopUpImages;
 			sourceTree = "<group>";
 		};
 		ADB505B41FDB38C800F81046 /* RegisterView */ = {
@@ -891,8 +943,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72D2C671FD85AA4008BE2D2 /* OFL.txt in Resources */,
+				AD1F01081FEE36D700E81B1C /* ok.png in Resources */,
 				A72CAA5C1FD5AE0900308DED /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
 				A75E3F561FE55551007165DE /* next.png in Resources */,
+				AD7C34861FE9B61200619234 /* photo-camera.png in Resources */,
 				A72CAA7E1FD6855200308DED /* ic_eye_open@2x.png in Resources */,
 				A71B49FE1FD3112400B69E71 /* camera_icon_new.png in Resources */,
 				A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */,
@@ -902,7 +956,9 @@
 				AD5A44461FE509BA00266548 /* gender_woman.png in Resources */,
 				A72CAA831FD6855200308DED /* ic_password_checkmark@2x.png in Resources */,
 				A75F40131FC0B7C600495228 /* LaunchScreen.storyboard in Resources */,
+				AD7C34DF1FEB049C00619234 /* current-location.png in Resources */,
 				A71BDC4D1FDF1EA80059EE43 /* error@2x.png in Resources */,
+				AD1F01071FEE36D700E81B1C /* cancel.png in Resources */,
 				AD641ECE1FDDD254002E483B /* gender_man.png in Resources */,
 				AD8121AF1FE7000C004B3EF3 /* PersonPinDetailMapView.xib in Resources */,
 				A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */,
@@ -916,6 +972,10 @@
 				A72CAA7D1FD6855200308DED /* ic_eye_open@3x.png in Resources */,
 				A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */,
 				A72CAA821FD6855200308DED /* ic_password_checkmark@3x.png in Resources */,
+				AD1F01111FEEE0C100E81B1C /* PinView.xib in Resources */,
+				AD7C34871FE9B61200619234 /* play-button.png in Resources */,
+				AD1F010F1FEEDFB500E81B1C /* pin-profile-2.png in Resources */,
+				AD7C34881FE9B61200619234 /* school-material.png in Resources */,
 				A72CAA871FD6855200308DED /* ic_eye_closed@3x.png in Resources */,
 				ADB505AF1FDB333B00F81046 /* image1.png in Resources */,
 				A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */,
@@ -1012,13 +1072,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD81219B1FE6F871004B3EF3 /* UIView+BezierPaths.swift in Sources */,
+				AD7C34801FE9B52D00619234 /* DatabaseLocation.swift in Sources */,
 				AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */,
 				A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */,
+				AD7C34811FE9B52D00619234 /* DatabaseUserLocation.swift in Sources */,
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
 				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
 				A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift in Sources */,
 				A74FD5F71FDDC80700062483 /* EnumForValidations.swift in Sources */,
+				AD1F01151FEEE2C000E81B1C /* PinView.swift in Sources */,
 				A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */,
 				A767CEE71FD4AA4200E70B16 /* AlertControllerConstants.swift in Sources */,
 				A7DD2E131FD1B1600009322E /* ServerAccessExtensionFunctions.swift in Sources */,
@@ -1052,6 +1115,7 @@
 				A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */,
 				A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */,
 				A7D1CBA51FD44AEA0082BC02 /* UINavigationBarCustomDesign.swift in Sources */,
+				AD1F010B1FEE3E0F00E81B1C /* WelcomeFirstPinViewControllerExtensions.swift in Sources */,
 				A72705C31FC8973F006C2504 /* NavigationBarController.swift in Sources */,
 				A7D1CBA21FD449780082BC02 /* UIButtonCustomDesign.swift in Sources */,
 				A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift in Sources */,
