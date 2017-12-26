@@ -13,6 +13,8 @@ import FirebaseStorage
 import FirebaseDatabase
 
 import AVKit
+import MobileCoreServices
+import AVFoundation
 
 private let pinDataAnnotationName = "pinDataAnnotationName"
 
@@ -20,6 +22,12 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var denemeTextButton: UIButtonCustomDesign!
+    
+    /*
+        pin data
+     */
+    
+    var pinDataObject = PinData()
     
     var controlFlag : Bool = false
     var returnFlag : Bool = true
@@ -72,13 +80,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             
         }
         
-        if returnFlag == true {
-            
-            cameraButton.setImage(boko, for: UIControlState.normal)
-            
-        }
-        
-        
     }
     
     
@@ -99,6 +100,10 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         //user.userLocationObject.toPrint()
         
         print("current location getted and setted")
+        
+
+        manager.stopUpdatingLocation()
+        
     }
     
     /*
@@ -121,6 +126,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
             //user.userLocationObject.toPrint()
         }
+        
     }
     
     func addPinAnnotation(for coordinate: CLLocationCoordinate2D) {
@@ -303,6 +309,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                         self.cameraButton.setImage(image, for: .normal)
                         self.boko = image!
                         
+                        self.pinDataObject.setPictureOnPin(inputPictureOnPin: image!)
+                    
                     } catch {
                         
                         print("boku yedik")
@@ -323,12 +331,15 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
     }
     
+    @IBOutlet var videoButton: UIButtonCustomDesign!
     
     @IBAction func videoPlayClicked(_ sender: Any) {
         
         print("videoPlayClicked is activated")
         
-        playVideo()
+        self.startGettingVideoProcess()
+        
+        //playVideo()
         
     }
     
@@ -352,6 +363,12 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             })
             
         }
+        
+    }
+    
+    @IBAction func saveToDatabasePinData(_ sender: Any) {
+        
+        
         
     }
     

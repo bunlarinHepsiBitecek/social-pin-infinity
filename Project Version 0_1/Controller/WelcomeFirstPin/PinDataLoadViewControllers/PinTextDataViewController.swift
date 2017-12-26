@@ -17,11 +17,8 @@ class PinTextDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setViewCornersOnModalViewcontroller()
         
-        pinTextView.changeCornerRadiues()
-        textField.changeCornerRadiues()
-        pinTextButton.changeCornerRadiues()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,12 +28,13 @@ class PinTextDataViewController: UIViewController {
     
     @IBAction func pinDataSaveClicked(_ sender: Any) {
         
-        self.dismiss(animated: true) {
-        
-            print("hadi güle güle :)")
-            
-        }
-        
+        /*
+         
+            the function below, saves textdata on pin, gets screen shot of textfield to
+            demonstrate for previous view, and dismiss the current modal controller view
+         
+         */
+        getScreenShotOfTextFieldAndSetPinData()
         
     }
     
