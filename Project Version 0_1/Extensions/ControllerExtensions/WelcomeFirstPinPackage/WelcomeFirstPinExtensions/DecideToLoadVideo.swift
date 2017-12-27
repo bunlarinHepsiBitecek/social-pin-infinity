@@ -12,8 +12,15 @@ import AVFoundation
 import AVKit
 
 import Firebase
+import MapKit
 
-extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @objc func goToDecideHowProfilePictureLoads() {
+        
+        self.decideHowProfilePictureLoads()
+        
+    }
     
     /*
         the function below gets video from current library
@@ -52,12 +59,32 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         
     }
     
+    @objc func getProfilePhoto() {
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        picker.allowsEditing = true
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+    @objc func takeProfilePhoto() {
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = UIImagePickerControllerSourceType.camera
+        picker.allowsEditing = true
+        self.present(picker, animated: true, completion: nil)
+    }
+    
     /*
         the function below handles where to get video data and where to set
      */
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         print(info)
+        
+        print("imagePickerController starts")
         
         if let videoUrl = info[UIImagePickerControllerMediaURL] as? NSURL {
             
@@ -68,6 +95,32 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
             handleVideoSelectedProcess(url: videoUrl)
             
             dismissActionSheet()
+        }
+        
+        var selectedImageFromPicker : UIImage?
+        
+        // downcast any to UIImage
+        if let editedPickedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+            
+            print("check1")
+            
+            selectedImageFromPicker = editedPickedImage
+            
+        } else if let originalPickedImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            
+            print("check2")
+            selectedImageFromPicker = originalPickedImage
+        }
+        
+        if let selectedImage = selectedImageFromPicker {
+            print("check3")
+            //self.pinDataImage.image = selectedImage
+            self.pinDataObject.setPictureOnPin(inputPictureOnPin: selectedImage)
+            self.pinDataObject.isPictureExist(inputBooleanValue: true)
+            setSelectedImageToButton()
+            
+            self.dismiss(animated: true, completion: nil)
+            
         }
         
     }
@@ -142,14 +195,22 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         
         let timestamp = CMTime(seconds: 1, preferredTimescale: 60)
         
+        print("check1")
+        
         self.pinDataObject.setVideoExistFlag(inputVideoExistFlag: true)
         self.pinDataObject.setVideoDataUrl(inputVideoDataUrl: vidUrl)
         
+        print("check2")
+        
         do {
             
+            print("check3")
             let imageRef = try generator.copyCGImage(at: timestamp, actualTime: nil)
             
-            self.videoButton.setImage(UIImage(cgImage: imageRef), for: .normal)
+            self.pinDataObject.setVideoCapture(inputCapturedImage: UIImage(cgImage: imageRef))
+            
+            setSelectedVideoImageToButton()
+            
             
         } catch {
             print("image generation is failed")
@@ -222,6 +283,89 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
             video.play()
             
         })
+        
+    }
+    
+    //
+    func decideHowProfilePictureLoads() {
+        
+        print("decideHowProfilPictureLoads starts")
+        
+        let profilePictureAlertController = UIAlertController(title: "Choose Profile Picture", message: nil, preferredStyle: .actionSheet)
+        
+        let cameraAlertAction = UIAlertAction(title: "Take a photo", style: .default) { (alertAction) in
+            print(alertAction)
+            // function to take a photo
+            self.takeProfilePhoto()
+        }
+        
+        let photoLibraryAlertAction = UIAlertAction(title: "Choose from library", style: .default) { (alertAction) in
+            print(alertAction)
+            self.getProfilePhoto()
+        }
+        
+        let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { (alertAction) in
+            print(alertAction)
+        }
+        
+        profilePictureAlertController.addAction(cameraAlertAction)
+        profilePictureAlertController.addAction(photoLibraryAlertAction)
+        profilePictureAlertController.addAction(cancelAlertAction)
+        
+        self.present(profilePictureAlertController, animated: true, completion: nil)
+        
+    }
+    
+    func tata() {
+        print("aha yakaladık")
+        
+        let image = UIImage(named: "image1.png")
+        
+        self.yarroAnno.customCalloutView?.addImageButton.setImage(image, for: .normal)
+        
+        for annotation in self.mapView.annotations as [MKAnnotation] {
+            print("loop1")
+        }
+        
+    }
+    
+    func setSelectedImageToButton() {
+        
+        print("setSelectedImageToButton starts")
+        
+        //let image = UIImage(named: "image1.png")
+        
+        for annotation in self.mapView.annotations as [MKAnnotation] {
+            print("setSelectedImageToButton tüm annotationlar alınır: \(self.mapView.annotations.count)")
+            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
+                print("Current displayed annotation bulduk")
+                if let newImage = self.pinDataObject.pictureOnPin as UIImage? {
+                    currentAnnotation.customCalloutView?.addImageButton.setImage(newImage, for: .normal)
+                }
+                
+            }
+        }
+        
+    }
+    
+    func setSelectedVideoImageToButton() {
+        
+        for annotation in self.mapView.annotations as [MKAnnotation] {
+           
+            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
+
+                if self.pinDataObject.videoExistFlag {
+                    
+                    if let newImage = self.pinDataObject.videoCapture as UIImage? {
+                        
+                        currentAnnotation.customCalloutView?.addVideoButton.setImage(newImage, for: .normal)
+                        
+                    }
+                    
+                }
+                
+            }
+        }
         
     }
     

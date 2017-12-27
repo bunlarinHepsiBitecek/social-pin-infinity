@@ -126,8 +126,10 @@ class PersonAnnotationView: MKAnnotationView {
             let personDetailMapView = views.first!
             personDetailMapView.delegate = self.personDetailDelegate
             if let personAnnotation = annotation as? PersonAnnotation {
-                let person = personAnnotation.person
-                personDetailMapView.configureWithPerson(person: person)
+                
+                let pinDataOnAnnotation = personAnnotation.pinDataObject
+                
+                personDetailMapView.configureWithPerson(inputPinData: pinDataOnAnnotation)
             }
             return personDetailMapView
         }

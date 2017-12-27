@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MapKit
 
 class PinData {
     
@@ -20,8 +20,11 @@ class PinData {
     private var _videoExistFlag : Bool
     private var _videoIDOnPin : String
     private var _videoDataUrlOnPin : NSURL
-    private var _pinDataUploadedDatabase : Bool
+    private var _videoCapture : UIImage
+    private var _isPinDataUploadedDatabase : Bool
     private var _isPinDropped : Bool
+    private var _isPictureExist : Bool
+    private var _currentLocation: CLLocationCoordinate2D
     
     private var _pinItemsDictionary : Dictionary<String, String> = [:]
     
@@ -36,8 +39,11 @@ class PinData {
         self._videoDataUrlOnPin = NSURL()
         self._videoIDOnPin = SPACE_CHARACTER
         self._pictureIDOnPin = SPACE_CHARACTER
-        self._pinDataUploadedDatabase = false
+        self._isPinDataUploadedDatabase = false
         self._isPinDropped = false
+        self._isPictureExist = false
+        self._currentLocation = CLLocationCoordinate2D()
+        self._videoCapture = UIImage()
         
     }
 
@@ -77,12 +83,24 @@ class PinData {
         return _videoIDOnPin
     }
     
-    var pinDataUploadedDatabase : Bool {
-        return _pinDataUploadedDatabase
+    var isPinDataUploadedDatabase : Bool {
+        return _isPinDataUploadedDatabase
     }
     
     var isPinDropped : Bool {
         return _isPinDropped
+    }
+    
+    var isPictureExist : Bool {
+        return _isPictureExist
+    }
+    
+    var currentLocation : CLLocationCoordinate2D {
+        return _currentLocation
+    }
+    
+    var videoCapture : UIImage {
+        return _videoCapture
     }
     
     func setUser(inputUserObj : User) {
@@ -126,11 +144,23 @@ class PinData {
     }
     
     func setPinDataUploadedDatabase(inputBooleanValue : Bool) {
-        self._pinDataUploadedDatabase = inputBooleanValue
+        self._isPinDataUploadedDatabase = inputBooleanValue
     }
     
     func isPinDropped(inputBooleanValue : Bool) {
         self._isPinDropped = inputBooleanValue
+    }
+    
+    func setCurrentLocation(inputCurrentlocation : CLLocationCoordinate2D) {
+        self._currentLocation = inputCurrentlocation
+    }
+    
+    func isPictureExist(inputBooleanValue : Bool) {
+        self._isPictureExist = inputBooleanValue
+    }
+    
+    func setVideoCapture(inputCapturedImage : UIImage) {
+        self._videoCapture = inputCapturedImage
     }
         
     func getUserJSONObject() -> Dictionary<String, String> {
@@ -148,6 +178,13 @@ class PinData {
         }
         
         return _pinItemsDictionary
+    }
+    
+    func resetPinDataFlags() {
+        
+        self._isPinDropped = false
+        self._isPinDataUploadedDatabase = false
+        
     }
     
 }

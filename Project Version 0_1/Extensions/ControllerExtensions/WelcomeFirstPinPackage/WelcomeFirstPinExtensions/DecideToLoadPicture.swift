@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MapKit
 
-extension PinDataPictureViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+extension PinDataPictureViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @objc func goToDecideHowProfilePictureLoads() {
         
@@ -56,6 +57,7 @@ extension PinDataPictureViewController : UIImagePickerControllerDelegate, UINavi
         if let selectedImage = selectedImageFromPicker {
             print("check3")
             self.pinDataImage.image = selectedImage
+            self.pinDataObject.setPictureOnPin(inputPictureOnPin: selectedImage)
             self.dismiss(animated: true, completion: nil)
             
         }
@@ -98,5 +100,24 @@ extension PinDataPictureViewController : UIImagePickerControllerDelegate, UINavi
         self.present(profilePictureAlertController, animated: true, completion: nil)
         
     }
+    
+    /*
+    func setSelectedImageToButton() {
+        
+        print("setSelectedImageToButton starts")
+        
+        for annotation in self.mapView.annotations as [MKAnnotation] {
+            print("setSelectedImageToButton tüm annotationlar alınır: \(self.mapView.annotations.count)")
+            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
+                print("Current displayed annotation bulduk")
+                if let newImage = self.pinDataObject.pictureOnPin as UIImage? {
+                    currentAnnotation.customCalloutView?.addImageButton.setImage(newImage, for: .normal)
+                    //currentAnnotation.customCalloutView?.person.userLocationObject.setPinImage(pinImage: newImage)
+                }
+            }
+        }
+        
+    }
+ */
     
 }

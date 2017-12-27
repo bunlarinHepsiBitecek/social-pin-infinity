@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class PinDataPictureViewController: UIViewController {
 
@@ -15,12 +16,16 @@ class PinDataPictureViewController: UIViewController {
     @IBOutlet var checkButton: UIButton!
     @IBOutlet var exitButton: UIButtonCustomDesign!
     
+    var pinDataObject = PinData()
+    
     var image = UIImage()
+    
+    var tempMapView = MKMapView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        pinDataImage.image = pinDataObject.pictureOnPin
         self.getPictureChoiseByTappingProfileImage()
     }
 
@@ -31,6 +36,8 @@ class PinDataPictureViewController: UIViewController {
     
 
     @IBAction func checkPictureButtonClicked(_ sender: Any) {
+        
+        print("checkPictureButtonClicked starts")
         
         setPictureDataOnPin()
         

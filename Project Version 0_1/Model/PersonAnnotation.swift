@@ -10,20 +10,21 @@ import UIKit
 import MapKit
 
 class PersonAnnotation: NSObject, MKAnnotation {
-    var person: User
-    var coordinate: CLLocationCoordinate2D { return person.userLocationObject.currenLocation }
     
-    init(person: User) {
-        self.person = person
+    var pinDataObject : PinData
+    
+    var coordinate: CLLocationCoordinate2D { return pinDataObject.location.currenLocation }
+    
+    init(inputPinData : PinData) {
+        
+        self.pinDataObject = inputPinData
         super.init()
     }
     
-    var title: String? {
-        return person.username
-    }
-    
-    var subtitle: String? {
-        return person.userNameSurname
+    override init() {
+        
+        self.pinDataObject = PinData()
+        
     }
     
 }

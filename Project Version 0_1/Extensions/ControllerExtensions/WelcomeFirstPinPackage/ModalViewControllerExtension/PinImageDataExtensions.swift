@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import MapKit
 
 extension PinDataPictureViewController {
     
     func getPictureChoiseByTappingProfileImage() {
+        
+        print("getPictureChoiseByTappingProfileImage starts")
         
         /*
             the function below allows user to get an action sheet related to choises for getting a picture from photo library
@@ -23,13 +26,35 @@ extension PinDataPictureViewController {
     
     func setPictureDataOnPin() {
         
+        print("setPictureDataOnPin starts")
+        
+        /*
         if let presenter = presentingViewController as? WelcomeFirstPinViewController {
 
+            print("check_1")
+            
             presenter.cameraButton.setImage(pinDataImage.image!, for: .normal)
             
             presenter.pinDataObject.setPictureOnPin(inputPictureOnPin: pinDataImage.image!)
             presenter.pinDataObject.setPictureIDOnPin(inputPictureIDOnPin: NSUUID().uuidString)
+            //presenter.setSelectedImageToButton()
+            presenter.tata()
             
+        }*/
+        
+        if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "welcomeFirstPin_storyBoard_ID") as? WelcomeFirstPinViewController {
+            
+            print("erkut2")
+            
+            //destinationViewController.setSelectedImageToButton()
+            destinationViewController.pinDataObject = self.pinDataObject
+            destinationViewController.mapView = tempMapView
+            //destinationViewController.tata()
+            destinationViewController.setSelectedImageToButton()
+            
+        } else {
+            
+            print("yarro oldun")
         }
         
         dismissCurrentView()

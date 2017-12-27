@@ -86,9 +86,13 @@
 		A75CE0941FF2AEB8004703F5 /* maps.png in Resources */ = {isa = PBXBuildFile; fileRef = A75CE08D1FF2AEB8004703F5 /* maps.png */; };
 		A75CE0951FF2AEB8004703F5 /* current-location.png in Resources */ = {isa = PBXBuildFile; fileRef = A75CE08E1FF2AEB8004703F5 /* current-location.png */; };
 		A75CE0961FF2AEB8004703F5 /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = A75CE08F1FF2AEB8004703F5 /* ok.png */; };
-		A75CE0981FF2AF08004703F5 /* WelcomeFirstPinViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0971FF2AF08004703F5 /* WelcomeFirstPinViewControllerExtensions.swift */; };
 		A75CE09B1FF2B023004703F5 /* PersonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0991FF2B023004703F5 /* PersonAnnotation.swift */; };
 		A75CE09C1FF2B023004703F5 /* PersonAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE09A1FF2B023004703F5 /* PersonAnnotationView.swift */; };
+		A75CE0A11FF2B36B004703F5 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE09D1FF2B36B004703F5 /* PinView.swift */; };
+		A75CE0A21FF2B36B004703F5 /* PersonPinDetailMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75CE09E1FF2B36B004703F5 /* PersonPinDetailMapView.xib */; };
+		A75CE0A31FF2B36B004703F5 /* PinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75CE09F1FF2B36B004703F5 /* PinView.xib */; };
+		A75CE0A41FF2B36B004703F5 /* PersonPinDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0A01FF2B36B004703F5 /* PersonPinDetailMapView.swift */; };
+		A75CE0A71FF37A24004703F5 /* LocationCoordinateConstantValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0A61FF37A23004703F5 /* LocationCoordinateConstantValues.swift */; };
 		A75E3F441FE29FE4007165DE /* UIControl+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F3E1FE29FE3007165DE /* UIControl+Point.swift */; };
 		A75E3F451FE29FE4007165DE /* UIScreen+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F3F1FE29FE3007165DE /* UIScreen+Frame.swift */; };
 		A75E3F461FE29FE4007165DE /* FTConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F401FE29FE4007165DE /* FTConfiguration.swift */; };
@@ -103,7 +107,6 @@
 		A75E3F611FE5B7A0007165DE /* DatabaseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F601FE5B7A0007165DE /* DatabaseLocation.swift */; };
 		A75E3F631FE5E6A5007165DE /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F621FE5E6A5007165DE /* UserLocation.swift */; };
 		A75E3F651FE5E831007165DE /* DatabaseUserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E3F641FE5E831007165DE /* DatabaseUserLocation.swift */; };
-		A75E3F671FE78DDC007165DE /* PinDataChoiseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75E3F661FE78DDC007165DE /* PinDataChoiseView.xib */; };
 		A75E3F6C1FE79B69007165DE /* photo-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = A75E3F691FE79B69007165DE /* photo-camera.png */; };
 		A75E3F6D1FE79B69007165DE /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = A75E3F6A1FE79B69007165DE /* play-button.png */; };
 		A75E3F6E1FE79B69007165DE /* school-material.png in Resources */ = {isa = PBXBuildFile; fileRef = A75E3F6B1FE79B69007165DE /* school-material.png */; };
@@ -125,10 +128,7 @@
 		A778D9E61FC9BC4900F38438 /* UserAttributeNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */; };
 		A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9F81FC9D5DF00F38438 /* PageItemController.swift */; };
 		A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9F91FC9D5DF00F38438 /* PageViewController.swift */; };
-		A79FFB171FE8521F006D4D1E /* PinDataChoiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79FFB161FE8521F006D4D1E /* PinDataChoiseView.swift */; };
 		A79FFB191FE8534A006D4D1E /* UIView+BezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79FFB181FE8534A006D4D1E /* UIView+BezierPaths.swift */; };
-		A79FFB1B1FE8547B006D4D1E /* PinDataChoiseAnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79FFB1A1FE8547B006D4D1E /* PinDataChoiseAnnotationModel.swift */; };
-		A79FFB1F1FE8560C006D4D1E /* PinDataChoiseAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79FFB1E1FE8560C006D4D1E /* PinDataChoiseAnnotationView.swift */; };
 		A79FFB221FE85E91006D4D1E /* maps64.png in Resources */ = {isa = PBXBuildFile; fileRef = A79FFB211FE85E91006D4D1E /* maps64.png */; };
 		A7B17CCE1FE1709C00A8B7DA /* InformationPopupExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B17CCD1FE1709C00A8B7DA /* InformationPopupExtensions.swift */; };
 		A7B17CD01FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7B17CCF1FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard */; };
@@ -236,9 +236,13 @@
 		A75CE08D1FF2AEB8004703F5 /* maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps.png; sourceTree = "<group>"; };
 		A75CE08E1FF2AEB8004703F5 /* current-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "current-location.png"; sourceTree = "<group>"; };
 		A75CE08F1FF2AEB8004703F5 /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
-		A75CE0971FF2AF08004703F5 /* WelcomeFirstPinViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeFirstPinViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A75CE0991FF2B023004703F5 /* PersonAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonAnnotation.swift; sourceTree = "<group>"; };
 		A75CE09A1FF2B023004703F5 /* PersonAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonAnnotationView.swift; sourceTree = "<group>"; };
+		A75CE09D1FF2B36B004703F5 /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
+		A75CE09E1FF2B36B004703F5 /* PersonPinDetailMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonPinDetailMapView.xib; sourceTree = "<group>"; };
+		A75CE09F1FF2B36B004703F5 /* PinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinView.xib; sourceTree = "<group>"; };
+		A75CE0A01FF2B36B004703F5 /* PersonPinDetailMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPinDetailMapView.swift; sourceTree = "<group>"; };
+		A75CE0A61FF37A23004703F5 /* LocationCoordinateConstantValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinateConstantValues.swift; sourceTree = "<group>"; };
 		A75E3F3E1FE29FE3007165DE /* UIControl+Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Point.swift"; sourceTree = "<group>"; };
 		A75E3F3F1FE29FE3007165DE /* UIScreen+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Frame.swift"; sourceTree = "<group>"; };
 		A75E3F401FE29FE4007165DE /* FTConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTConfiguration.swift; sourceTree = "<group>"; };
@@ -253,7 +257,6 @@
 		A75E3F601FE5B7A0007165DE /* DatabaseLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseLocation.swift; sourceTree = "<group>"; };
 		A75E3F621FE5E6A5007165DE /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		A75E3F641FE5E831007165DE /* DatabaseUserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUserLocation.swift; sourceTree = "<group>"; };
-		A75E3F661FE78DDC007165DE /* PinDataChoiseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinDataChoiseView.xib; sourceTree = "<group>"; };
 		A75E3F691FE79B69007165DE /* photo-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-camera.png"; sourceTree = "<group>"; };
 		A75E3F6A1FE79B69007165DE /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button.png"; sourceTree = "<group>"; };
 		A75E3F6B1FE79B69007165DE /* school-material.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "school-material.png"; sourceTree = "<group>"; };
@@ -277,10 +280,7 @@
 		A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAttributeNames.swift; sourceTree = "<group>"; };
 		A778D9F81FC9D5DF00F38438 /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		A778D9F91FC9D5DF00F38438 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		A79FFB161FE8521F006D4D1E /* PinDataChoiseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataChoiseView.swift; sourceTree = "<group>"; };
 		A79FFB181FE8534A006D4D1E /* UIView+BezierPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+BezierPaths.swift"; sourceTree = "<group>"; };
-		A79FFB1A1FE8547B006D4D1E /* PinDataChoiseAnnotationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataChoiseAnnotationModel.swift; sourceTree = "<group>"; };
-		A79FFB1E1FE8560C006D4D1E /* PinDataChoiseAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataChoiseAnnotationView.swift; sourceTree = "<group>"; };
 		A79FFB211FE85E91006D4D1E /* maps64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps64.png; sourceTree = "<group>"; };
 		A7B17CCD1FE1709C00A8B7DA /* InformationPopupExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPopupExtensions.swift; sourceTree = "<group>"; };
 		A7B17CCF1FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeFirstPin.storyboard; sourceTree = "<group>"; };
@@ -622,19 +622,14 @@
 			path = PinDataLoadViewControllers;
 			sourceTree = "<group>";
 		};
-		A75CE07B1FEEE953004703F5 /* TemporaryXIB */ = {
-			isa = PBXGroup;
-			children = (
-				A75E3F661FE78DDC007165DE /* PinDataChoiseView.xib */,
-				A79FFB161FE8521F006D4D1E /* PinDataChoiseView.swift */,
-			);
-			path = TemporaryXIB;
-			sourceTree = "<group>";
-		};
 		A75CE07C1FEEE969004703F5 /* WelcomeFirstPinViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				A75E3F501FE54341007165DE /* WelcomeFirstPinViewController.swift */,
+				A75CE0A01FF2B36B004703F5 /* PersonPinDetailMapView.swift */,
+				A75CE09E1FF2B36B004703F5 /* PersonPinDetailMapView.xib */,
+				A75CE09D1FF2B36B004703F5 /* PinView.swift */,
+				A75CE09F1FF2B36B004703F5 /* PinView.xib */,
 			);
 			path = WelcomeFirstPinViewControllers;
 			sourceTree = "<group>";
@@ -655,6 +650,14 @@
 				A75CE0851FF04A7D004703F5 /* PinImageDataExtensions.swift */,
 			);
 			path = ModalViewControllerExtension;
+			sourceTree = "<group>";
+		};
+		A75CE0A51FF37A00004703F5 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				A75CE0A61FF37A23004703F5 /* LocationCoordinateConstantValues.swift */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		A75E3F2E1FE29ABD007165DE /* Recovered References */ = {
@@ -680,9 +683,8 @@
 		A75E3F4A1FE3310E007165DE /* WelcomeFirstPin */ = {
 			isa = PBXGroup;
 			children = (
-				A75CE07D1FEEE9C2004703F5 /* GuidanceModalViewControllers */,
 				A75CE07C1FEEE969004703F5 /* WelcomeFirstPinViewControllers */,
-				A75CE07B1FEEE953004703F5 /* TemporaryXIB */,
+				A75CE07D1FEEE9C2004703F5 /* GuidanceModalViewControllers */,
 				A75CE07A1FEEE925004703F5 /* PinDataLoadViewControllers */,
 			);
 			path = WelcomeFirstPin;
@@ -742,7 +744,6 @@
 		A75E3F5D1FE5ACF9007165DE /* WelcomeFirstPinExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				A75CE0971FF2AF08004703F5 /* WelcomeFirstPinViewControllerExtensions.swift */,
 				A75E3F5E1FE5AD16007165DE /* ParseLocationData.swift */,
 				A75CE06B1FED8DDA004703F5 /* DecideToLoadPicture.swift */,
 				A75CE0781FEE81AF004703F5 /* DecideToLoadVideo.swift */,
@@ -831,8 +832,6 @@
 				A75CE0761FEE6982004703F5 /* PinData.swift */,
 				A7DD2E381FD2DC110009322E /* Information.swift */,
 				AD1A34401FE1C41B0054801D /* InformationAlertView.swift */,
-				A79FFB1A1FE8547B006D4D1E /* PinDataChoiseAnnotationModel.swift */,
-				A79FFB1E1FE8560C006D4D1E /* PinDataChoiseAnnotationView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -840,6 +839,7 @@
 		A75F401E1FC0D5F300495228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A75CE0A51FF37A00004703F5 /* LocationManager */,
 				A738282E1FC35DBB003C1827 /* Validations */,
 				A75E3F3D1FE29D75007165DE /* Popover */,
 				A74FD5F41FDDC7E100062483 /* EnumGroups */,
@@ -1125,6 +1125,7 @@
 				AD641ECE1FDDD254002E483B /* gender_man.png in Resources */,
 				A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */,
 				A75CE0951FF2AEB8004703F5 /* current-location.png in Resources */,
+				A75CE0A21FF2B36B004703F5 /* PersonPinDetailMapView.xib in Resources */,
 				A75E3F6D1FE79B69007165DE /* play-button.png in Resources */,
 				A72CAA811FD6855200308DED /* ic_eye_closed.png in Resources */,
 				A7194DB71FEA224D00586038 /* right-drawn-arrow_white.png in Resources */,
@@ -1141,13 +1142,13 @@
 				A75CE0961FF2AEB8004703F5 /* ok.png in Resources */,
 				A79FFB221FE85E91006D4D1E /* maps64.png in Resources */,
 				A75CE06A1FED6E67004703F5 /* edit_profile_icon.png in Resources */,
+				A75CE0A31FF2B36B004703F5 /* PinView.xib in Resources */,
 				A7194DB31FEA214D00586038 /* shake_phone.png in Resources */,
 				A7194DB51FEA21ED00586038 /* shake.png in Resources */,
 				A72CAA821FD6855200308DED /* ic_password_checkmark@3x.png in Resources */,
 				A72CAA871FD6855200308DED /* ic_eye_closed@3x.png in Resources */,
 				ADB505AF1FDB333B00F81046 /* image1.png in Resources */,
 				A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */,
-				A75E3F671FE78DDC007165DE /* PinDataChoiseView.xib in Resources */,
 				A75E3F541FE55296007165DE /* location.png in Resources */,
 				A75CE0901FF2AEB8004703F5 /* cancel.png in Resources */,
 				ADB505B11FDB333B00F81046 /* image3.png in Resources */,
@@ -1250,7 +1251,6 @@
 				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
 				A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift in Sources */,
 				A74FD5F71FDDC80700062483 /* EnumForValidations.swift in Sources */,
-				A79FFB171FE8521F006D4D1E /* PinDataChoiseView.swift in Sources */,
 				A75CE0681FED6B2E004703F5 /* UIImageViewCustomDesign.swift in Sources */,
 				A75CE0841FF0419C004703F5 /* PinTextDataExtensions.swift in Sources */,
 				A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */,
@@ -1263,7 +1263,6 @@
 				A72CAA861FD6855200308DED /* PasswordToggleVisibilityView.swift in Sources */,
 				A75E3F441FE29FE4007165DE /* UIControl+Point.swift in Sources */,
 				A75CE07F1FEF0202004703F5 /* DatabasePinItems.swift in Sources */,
-				A75CE0981FF2AF08004703F5 /* WelcomeFirstPinViewControllerExtensions.swift in Sources */,
 				A75E3F481FE29FE4007165DE /* FTPopOverMenu.swift in Sources */,
 				A7194DB01FEA1FF700586038 /* guidance_step1_ViewController.swift in Sources */,
 				A72AFBE61FCDEDA70018254E /* SendVerificationExtensions.swift in Sources */,
@@ -1276,9 +1275,9 @@
 				A79FFB191FE8534A006D4D1E /* UIView+BezierPaths.swift in Sources */,
 				A75E3F461FE29FE4007165DE /* FTConfiguration.swift in Sources */,
 				A75CE09C1FF2B023004703F5 /* PersonAnnotationView.swift in Sources */,
+				A75CE0A71FF37A24004703F5 /* LocationCoordinateConstantValues.swift in Sources */,
 				A7DD2E0F1FD1A7140009322E /* ProcessingUserData.swift in Sources */,
 				A75E3F491FE29FE4007165DE /* FTPopOverMenuCell.swift in Sources */,
-				A79FFB1B1FE8547B006D4D1E /* PinDataChoiseAnnotationModel.swift in Sources */,
 				ADB505AB1FDB1C6500F81046 /* SCLExtensions.swift in Sources */,
 				A75F40221FC0D99D00495228 /* LoginViewController.swift in Sources */,
 				A75F40351FC238B600495228 /* StartPageViewController.swift in Sources */,
@@ -1311,6 +1310,7 @@
 				A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */,
 				A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */,
 				A72AFBDC1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift in Sources */,
+				A75CE0A11FF2B36B004703F5 /* PinView.swift in Sources */,
 				A73828301FC35DCB003C1827 /* Validation.swift in Sources */,
 				A75CE0861FF04A7D004703F5 /* PinImageDataExtensions.swift in Sources */,
 				A75CE06C1FED8DDA004703F5 /* DecideToLoadPicture.swift in Sources */,
@@ -1330,13 +1330,13 @@
 				A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */,
 				A72AFBE91FCDF77C0018254E /* InformationMessages.swift in Sources */,
 				A75CE0611FED4280004703F5 /* PinDataPictureViewController.swift in Sources */,
-				A79FFB1F1FE8560C006D4D1E /* PinDataChoiseAnnotationView.swift in Sources */,
 				A75CE0791FEE81AF004703F5 /* DecideToLoadVideo.swift in Sources */,
 				A7D1CBAE1FD460660082BC02 /* UITextFieldCustomDesign.swift in Sources */,
 				A72CAA8F1FD689B200308DED /* RegisterViewControllerExtentions.swift in Sources */,
 				A72705C11FC885B8006C2504 /* MainPageViewController.swift in Sources */,
 				A72AFBE01FCDE8D70018254E /* ProjectSettingsConstants.swift in Sources */,
 				A75F40261FC0DBCC00495228 /* EntranceViewController.swift in Sources */,
+				A75CE0A41FF2B36B004703F5 /* PersonPinDetailMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
