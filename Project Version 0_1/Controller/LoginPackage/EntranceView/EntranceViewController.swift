@@ -14,6 +14,7 @@ import SwiftKeychainWrapper
 
 class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
     
+    @IBOutlet var scrollView: UIScrollView!
     var user: User = User()
     
     @IBOutlet var facebookLoginButton: FBSDKLoginButton!
@@ -31,10 +32,15 @@ class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
         self.automaticallyAdjustsScrollViewInsets = false
         self.navigationItem.setNavigationItemTitles()
         
-        twitterLogin()
+        // embeded navigation controller and scrollview space issue solved
+        self.extendedLayoutIncludesOpaqueBars = true
+        if #available(iOS 11.0, *) {
+            self.scrollView.contentInsetAdjustmentBehavior = .never
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
         
-        print("remzi")
-        print("erkut")
+        twitterLogin()
     }
     
     override func viewDidAppear(_ animated: Bool) {

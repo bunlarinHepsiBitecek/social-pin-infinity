@@ -175,7 +175,7 @@
                 <outlet property="cancelButon" destination="9TE-rq-hhw" id="F8j-g8-6TF"/>
                 <outlet property="okButton" destination="F4y-88-XPW" id="aBu-Fh-HR2"/>
             </connections>
-            <point key="canvasLocation" x="-23" y="-5"/>
+            <point key="canvasLocation" x="38" y="-212"/>
         </view>
     </objects>
     <resources>

@@ -108,12 +108,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             
     }
     
-    @IBAction func passwordEditingChanged(_ sender: Any) {
-        
-        password.hideRightViewButton()
-        
-    }
     
+    @IBAction func passwordEditingDidBegin(_ sender: Any) {
+        password.addHideShowButton()
+    }
     
     private func enableNavigationBar() {
         

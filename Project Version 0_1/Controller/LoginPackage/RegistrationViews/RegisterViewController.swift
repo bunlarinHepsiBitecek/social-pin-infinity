@@ -44,16 +44,14 @@ class RegisterViewController: UIViewController {
         self.navigationController?.enableNavigationBar()
         self.navigationItem.setNavigationItemTitles()
         
-        // embeded navigation controller and scrollview slide down
-        //self.automaticallyAdjustsScrollViewInsets = false
-        /*
+        // embeded navigation controller and scrollview space issue solved
+        self.extendedLayoutIncludesOpaqueBars = true
         if #available(iOS 11.0, *) {
-            scrollView.contentInsetAdjustmentBehavior = .scrollableAxes
+            self.scrollView.contentInsetAdjustmentBehavior = .never
         } else {
-            automaticallyAdjustsScrollViewInsets = false
+            self.automaticallyAdjustsScrollViewInsets = false
         }
-       */
-        
+ 
         genderButtonInit()
         setupPasswordTextField()
         createDatePicker()
@@ -108,6 +106,9 @@ class RegisterViewController: UIViewController {
         textField.hideRightViewButton()
     }
     
+    @IBAction func passwordEditingDidBegin(_ sender: UITextField) {
+        password.addHideShowButton()
+    }
     @IBAction func birthdayEditingEnd(_ textField: UITextField) {
          textField.hideRightViewButton()
     }
