@@ -33,7 +33,8 @@ extension PinTextDataViewController {
         
         pinTextView.changeCornerRadiues()
         textField.changeCornerRadiues()
-        pinTextButton.changeCornerRadiues()
+        pinNoteLabel.setCornerRadius(inputRadiusValue: 10.0)
+        textField.setBorderColor()
         
     }
     

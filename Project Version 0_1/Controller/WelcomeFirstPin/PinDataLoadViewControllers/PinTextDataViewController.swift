@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import MapKit
 
 class PinTextDataViewController: UIViewController {
 
     @IBOutlet var pinTextView: UIView!
     @IBOutlet var textField: UITextView!
-    @IBOutlet var pinTextButton: UIButton!
+    @IBOutlet var checkButton: UIButtonCustomDesign!
+    @IBOutlet var garbageButton: UIButtonCustomDesign!
+    @IBOutlet var pinNoteLabel: UILabel!
+    
+    var pinDataObject = PinData()
+    var tempMapView = MKMapView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

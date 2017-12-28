@@ -418,6 +418,20 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     func addTextRequestForPerson(pinData : PinData) {
         print("Remzi: addTextRequestForPerson")
         
+        if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "PinTextDataViewController_storyBoardID") as? PinTextDataViewController {
+            
+            print("erkut2")
+            
+            //destinationViewController.pinDataImage.image = pinDataObject.pictureOnPin
+            
+            destinationViewController.pinDataObject = self.pinDataObject
+            destinationViewController.tempMapView = self.tempMapView
+            
+            present(destinationViewController, animated: true, completion: {
+                print("gidiyoruz :)")
+            })
+        }
+        
     }
     
     func okRequestForPerson(pinData : PinData) {

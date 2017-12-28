@@ -339,9 +339,20 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
             print("setSelectedImageToButton tüm annotationlar alınır: \(self.mapView.annotations.count)")
             if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
                 print("Current displayed annotation bulduk")
-                if let newImage = self.pinDataObject.pictureOnPin as UIImage? {
-                    currentAnnotation.customCalloutView?.addImageButton.setImage(newImage, for: .normal)
+                
+                if pinDataObject.isPictureExist {
+                    
+                    if let newImage = self.pinDataObject.pictureOnPin as UIImage? {
+                        currentAnnotation.customCalloutView?.addImageButton.setImage(newImage, for: .normal)
+                    }
+                    
+                } else {
+                    
+                    currentAnnotation.customCalloutView?.addImageButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.PHOTO_CAMERA_IMAGE)
+                    
                 }
+                
+                
                 
             }
         }

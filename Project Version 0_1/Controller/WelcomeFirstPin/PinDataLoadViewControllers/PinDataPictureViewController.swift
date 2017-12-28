@@ -45,7 +45,7 @@ class PinDataPictureViewController: UIViewController {
     
     @IBAction func exitButtonClicked(_ sender: Any) {
         
-        dismissCurrentView()
+        erasePictureDataOnPin()
         
     }
 

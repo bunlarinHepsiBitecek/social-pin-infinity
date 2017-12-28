@@ -1,4 +1,4 @@
-//
+   //
 //  PinImageDataExtensions.swift
 //  Project Version 0_1
 //
@@ -74,6 +74,26 @@ extension PinDataPictureViewController {
     func setImage() {
         
         pinDataImage.image = image
+        
+    }
+    
+    func erasePictureDataOnPin() {
+        
+        if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "welcomeFirstPin_storyBoard_ID") as? WelcomeFirstPinViewController {
+            
+            print("erkut2")
+            
+            destinationViewController.pinDataObject.setPictureOnPin(inputPictureOnPin: UIImage())
+            destinationViewController.pinDataObject.isPictureExist(inputBooleanValue: false)
+            destinationViewController.mapView = tempMapView
+            destinationViewController.setSelectedImageToButton()
+            
+        } else {
+            
+            print("yarro oldun")
+        }
+        
+        dismissCurrentView()
         
     }
     

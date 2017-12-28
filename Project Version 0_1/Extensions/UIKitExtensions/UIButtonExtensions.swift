@@ -26,5 +26,13 @@ extension UIButton {
         
     }
     
+    func setImagesToButton(inputImageNameString : String) {
+        
+        let image = UIImage(named: inputImageNameString)
+        
+        setImage(image, for: .normal)
+        
+    }
+    
     
 }
