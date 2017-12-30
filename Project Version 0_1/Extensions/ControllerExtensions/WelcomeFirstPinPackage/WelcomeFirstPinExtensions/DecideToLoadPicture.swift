@@ -101,23 +101,4 @@ extension PinDataPictureViewController : UIImagePickerControllerDelegate, UINavi
         
     }
     
-    /*
-    func setSelectedImageToButton() {
-        
-        print("setSelectedImageToButton starts")
-        
-        for annotation in self.mapView.annotations as [MKAnnotation] {
-            print("setSelectedImageToButton tüm annotationlar alınır: \(self.mapView.annotations.count)")
-            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
-                print("Current displayed annotation bulduk")
-                if let newImage = self.pinDataObject.pictureOnPin as UIImage? {
-                    currentAnnotation.customCalloutView?.addImageButton.setImage(newImage, for: .normal)
-                    //currentAnnotation.customCalloutView?.person.userLocationObject.setPinImage(pinImage: newImage)
-                }
-            }
-        }
-        
-    }
- */
-    
 }

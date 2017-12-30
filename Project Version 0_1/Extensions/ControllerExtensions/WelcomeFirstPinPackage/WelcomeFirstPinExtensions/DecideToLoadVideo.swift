@@ -22,8 +22,6 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         
     }
     
-
-    
     /*
         the function below gets video from current library
      */
@@ -150,8 +148,6 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         }
         
     }
-    
-    
     
     func dismissActionSheet() {
         
@@ -343,76 +339,6 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         profilePictureAlertController.addAction(cancelAlertAction)
         
         self.present(profilePictureAlertController, animated: true, completion: nil)
-        
-    }
-    
-    func setSelectedImageToButton() {
-        
-        for annotation in self.mapView.annotations as [MKAnnotation] {
-            
-            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
-                
-                if pinDataObject.isPictureExist {
-                    
-                    if let newImage = self.pinDataObject.pictureOnPin as UIImage? {
-                        currentAnnotation.customCalloutView?.addImageButton.setImage(newImage, for: .normal)
-                    }
-                    
-                } else {
-                    
-                    currentAnnotation.customCalloutView?.addImageButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.PHOTO_CAMERA_IMAGE)
-                    
-                }
-            }
-        }
-    }
-    
-    func setSelectedVideoImageToButton() {
-        
-        for annotation in self.mapView.annotations as [MKAnnotation] {
-           
-            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
-
-                if self.pinDataObject.videoExistFlag {
-                    
-                    if let newImage = self.pinDataObject.videoCapture as UIImage? {
-                        
-                        currentAnnotation.customCalloutView?.addVideoButton.setImage(newImage, for: .normal)
-                        
-                    }
-                    
-                } else {
-                    
-                    currentAnnotation.customCalloutView?.addVideoButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.PLAY_VIDEO_IMAGE)
-                    
-                }
-                
-            }
-        }
-        
-    }
-    
-    func setCaptureImageOfTextFieldOnButton() {
-        
-        for annotation in self.mapView.annotations as [MKAnnotation] {
-            
-            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
-                
-                if self.pinDataObject.isCapturedTextExist {
-                    
-                    if let newImage = self.pinDataObject.textCaptureImage as UIImage? {
-                        
-                        currentAnnotation.customCalloutView?.addTextButton.setImage(newImage, for: .normal)
-                        
-                    }
-                    
-                } else {
-                    
-                    currentAnnotation.customCalloutView?.addTextButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.TEXT_MATERIAL_IMAGE)
-                    
-                }
-            }
-        }
         
     }
     
