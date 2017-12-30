@@ -22,6 +22,8 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         
     }
     
+
+    
     /*
         the function below gets video from current library
      */
@@ -35,6 +37,9 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         picker.mediaTypes = [kUTTypeMovie as String
                             ,kUTTypeVideo as String
                             ,kUTTypeGIF   as String]
+        
+        print("picker.videoMaximumDuration : \(picker.videoMaximumDuration)")
+        
         self.present(picker, animated: true, completion: nil)
         
     }
@@ -54,6 +59,7 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
                             ,kUTTypeGIF   as String]
         picker.allowsEditing = false
         picker.delegate = self
+        picker.videoMaximumDuration = 20
         
         self.present(picker, animated: true, completion: nil)
         
@@ -90,11 +96,29 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
             
             print("videoUrl : \(videoUrl)")
             
-            getVideoSnapShotAsAnImage(url: videoUrl)
+            print("picker.videoMaximumDuration : \(picker.videoMaximumDuration)")
             
-            handleVideoSelectedProcess(url: videoUrl)
+            if checkDurationTimeOfSelectedVideoFromLibrary(inputUrl: videoUrl as URL) {
+                
+                if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum((videoUrl.path)!))
+                {
+                    
+                    UISaveVideoAtPathToSavedPhotosAlbum(videoUrl.path!, nil, nil, nil)
+                    
+                }
+                
+                getVideoSnapShotAsAnImage(url: videoUrl)
+                handleVideoSelectedProcess(url: videoUrl)
+                dismissActionSheet()
+                
+            } else {
+                
+                picker.dismiss(animated: true, completion: {
+                    print("picker is closed")
+                })
+                
+            }
             
-            dismissActionSheet()
         }
         
         var selectedImageFromPicker : UIImage?
@@ -114,7 +138,9 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         
         if let selectedImage = selectedImageFromPicker {
             print("check3")
-            //self.pinDataImage.image = selectedImage
+            
+            UIImageWriteToSavedPhotosAlbum(selectedImage, nil, nil, nil)
+            
             self.pinDataObject.setPictureOnPin(inputPictureOnPin: selectedImage)
             self.pinDataObject.isPictureExist(inputBooleanValue: true)
             setSelectedImageToButton()
@@ -124,6 +150,8 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         }
         
     }
+    
+    
     
     func dismissActionSheet() {
         
@@ -332,6 +360,7 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
     func setSelectedImageToButton() {
         
         print("setSelectedImageToButton starts")
+        print("pinDataObject.isPictureExist : \(pinDataObject.isPictureExist)")
         
         //let image = UIImage(named: "image1.png")
         
@@ -339,13 +368,24 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
             print("setSelectedImageToButton tüm annotationlar alınır: \(self.mapView.annotations.count)")
             if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
                 print("Current displayed annotation bulduk")
-                if let newImage = self.pinDataObject.pictureOnPin as UIImage? {
-                    currentAnnotation.customCalloutView?.addImageButton.setImage(newImage, for: .normal)
-                }
                 
+                if pinDataObject.isPictureExist {
+                    
+                    print("point1")
+                    
+                    if let newImage = self.pinDataObject.pictureOnPin as UIImage? {
+                        currentAnnotation.customCalloutView?.addImageButton.setImage(newImage, for: .normal)
+                    }
+                    
+                } else {
+                    
+                    print("point2")
+                    
+                    currentAnnotation.customCalloutView?.addImageButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.PHOTO_CAMERA_IMAGE)
+                    
+                }
             }
         }
-        
     }
     
     func setSelectedVideoImageToButton() {
@@ -365,6 +405,94 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
                 }
                 
             }
+        }
+        
+    }
+    
+    func setCaptureImageOfTextFieldOnButton() {
+        
+        print("setCaptureImageOfTextFieldOnButton starts")
+        print("text : \(self.pinDataObject.textOnPin)")
+        
+        for annotation in self.mapView.annotations as [MKAnnotation] {
+            
+            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
+                
+                if self.pinDataObject.isCapturedTextExist {
+                    
+                    if let newImage = self.pinDataObject.textCaptureImage as UIImage? {
+                        
+                        currentAnnotation.customCalloutView?.addTextButton.setImage(newImage, for: .normal)
+                        
+                    }
+                    
+                } else {
+                    
+                    print("point2")
+                    
+                    currentAnnotation.customCalloutView?.addTextButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.TEXT_MATERIAL_IMAGE)
+                    
+                }
+            }
+        }
+        
+    }
+    
+    func checkDurationTimeOfSelectedVideoFromLibrary(inputUrl : URL) -> Bool {
+        
+        let avlUrlAsset = AVURLAsset(url: inputUrl as URL)
+        
+        let durationTime : CMTime = avlUrlAsset.duration
+        
+        let durationSecondValue = CMTimeGetSeconds(durationTime)
+        
+        if durationSecondValue > ConstantsMediaProperties.VideoProperties.selectedVideoDurationLimit {
+            
+            print("büyük data")
+            createAlertForGreaterSizeVideos()
+            return false
+            
+        } else {
+            
+            print("tamam sıkıntı yok")
+            return true
+            
+        }
+        
+        
+    }
+    
+    func createAlertForGreaterSizeVideos() {
+        
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
+        let alertAppearance = SCLAlertView.SCLAppearance()
+        
+        let alertView = SCLAlertView(appearance: alertAppearance)
+        
+        alertView.showWarning(ConstantStrings.AlertInfoHeaders.STRING_WARNING, subTitle: ConstantStrings.WarningSentences.STRING_WARNING_SELECTED_VIDEO_SIZE_TOO_BIG, closeButtonTitle: ConstantStrings.ButtonTitles.STRING_CANCEL).setDismissBlock {
+            
+            print("ok anladık değiştiricez")
+            //self.dismissActionSheet()
+            
+        }
+        
+    }
+    
+    func informationForVideoData() {
+        
+        print("informationForVideoData starts")
+        
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
+        let alertAppearance = SCLAlertView.SCLAppearance()
+        
+        let alertView = SCLAlertView(appearance: alertAppearance)
+        
+        alertView.showInfo(ConstantStrings.AlertInfoHeaders.STRING_INFO, subTitle: ConstantStrings.InfoSentences.STRING_INFO_VIDEO_LIMIT, closeButtonTitle: ConstantStrings.ButtonTitles.STRING_OK).setDismissBlock {
+            
+            self.startGettingVideoProcess()
+            
         }
         
     }

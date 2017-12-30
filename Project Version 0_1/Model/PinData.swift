@@ -17,6 +17,7 @@ class PinData {
     private var _pictureUrlOnPin : NSURL
     private var _pictureIDOnPin : String
     private var _textOnPin : String
+    private var _textCaptureImage : UIImage
     private var _videoExistFlag : Bool
     private var _videoIDOnPin : String
     private var _videoDataUrlOnPin : NSURL
@@ -24,6 +25,7 @@ class PinData {
     private var _isPinDataUploadedDatabase : Bool
     private var _isPinDropped : Bool
     private var _isPictureExist : Bool
+    private var _isCapturedTextExist : Bool
     private var _currentLocation: CLLocationCoordinate2D
     
     private var _pinItemsDictionary : Dictionary<String, String> = [:]
@@ -44,6 +46,8 @@ class PinData {
         self._isPictureExist = false
         self._currentLocation = CLLocationCoordinate2D()
         self._videoCapture = UIImage()
+        self._textCaptureImage = UIImage()
+        self._isCapturedTextExist = false
         
     }
 
@@ -103,6 +107,14 @@ class PinData {
         return _videoCapture
     }
     
+    var textCaptureImage : UIImage {
+        return _textCaptureImage
+    }
+    
+    var isCapturedTextExist : Bool {
+        return _isCapturedTextExist
+    }
+    
     func setUser(inputUserObj : User) {
         self._user = inputUserObj
     }
@@ -156,11 +168,20 @@ class PinData {
     }
     
     func isPictureExist(inputBooleanValue : Bool) {
+        print("isPictureExist starts")
         self._isPictureExist = inputBooleanValue
     }
     
     func setVideoCapture(inputCapturedImage : UIImage) {
         self._videoCapture = inputCapturedImage
+    }
+    
+    func setTextCaptureImage(inputCapturedImage : UIImage) {
+        self._textCaptureImage = inputCapturedImage
+    }
+    
+    func isCapturedTextExist(inputBooleanValue : Bool) {
+        self._isCapturedTextExist = inputBooleanValue
     }
         
     func getJSONObject() -> Dictionary<String, String> {

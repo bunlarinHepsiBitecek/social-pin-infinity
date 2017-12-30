@@ -1,4 +1,4 @@
-//
+   //
 //  PinImageDataExtensions.swift
 //  Project Version 0_1
 //
@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import AudioUnit
 
 extension PinDataPictureViewController {
     
@@ -28,19 +29,6 @@ extension PinDataPictureViewController {
         
         print("setPictureDataOnPin starts")
         
-        /*
-        if let presenter = presentingViewController as? WelcomeFirstPinViewController {
-
-            print("check_1")
-            
-            presenter.cameraButton.setImage(pinDataImage.image!, for: .normal)
-            
-            presenter.pinDataObject.setPictureOnPin(inputPictureOnPin: pinDataImage.image!)
-            presenter.pinDataObject.setPictureIDOnPin(inputPictureIDOnPin: NSUUID().uuidString)
-            //presenter.setSelectedImageToButton()
-            presenter.tata()
-            
-        }*/
         
         if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "welcomeFirstPin_storyBoard_ID") as? WelcomeFirstPinViewController {
             
@@ -74,6 +62,41 @@ extension PinDataPictureViewController {
     func setImage() {
         
         pinDataImage.image = image
+        
+    }
+    
+    func erasePictureDataOnPin() {
+        
+        print("erasePictureDataOnPin starts")
+        
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
+        let alertAppearance = SCLAlertView.SCLAppearance()
+        
+        let alertView = SCLAlertView(appearance: alertAppearance)
+        
+        alertView.addButton("OK") {
+            
+            if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "welcomeFirstPin_storyBoard_ID") as? WelcomeFirstPinViewController {
+                
+                print("erkut2")
+                self.pinDataObject.setPictureOnPin(inputPictureOnPin: UIImage())
+                self.pinDataObject.isPictureExist(inputBooleanValue: false)
+                
+                destinationViewController.pinDataObject = self.pinDataObject
+                destinationViewController.mapView = self.tempMapView
+                destinationViewController.setSelectedImageToButton()
+                
+            } else {
+                
+                print("yarro oldun")
+            }
+            
+            self.dismissCurrentView()
+            
+        }
+        
+        alertView.showWarning(ConstantStrings.AlertInfoHeaders.STRING_WARNING, subTitle: ConstantStrings.WarningSentences.STRING_WARNING_PICTURE_WILL_ERASED, closeButtonTitle: ConstantStrings.ButtonTitles.STRING_CANCEL)
         
     }
     

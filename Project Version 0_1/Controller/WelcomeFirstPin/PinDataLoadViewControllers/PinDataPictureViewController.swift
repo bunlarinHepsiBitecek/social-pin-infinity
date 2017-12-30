@@ -45,8 +45,12 @@ class PinDataPictureViewController: UIViewController {
     
     @IBAction func exitButtonClicked(_ sender: Any) {
         
-        dismissCurrentView()
+        erasePictureDataOnPin()
         
+    }
+    
+    func setImageOnView() {
+        pinDataImage.image = pinDataObject.pictureOnPin
     }
 
 }

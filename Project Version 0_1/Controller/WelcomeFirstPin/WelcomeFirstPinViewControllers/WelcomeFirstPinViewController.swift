@@ -21,8 +21,6 @@ private let kPersonAnnotationName = "kPersonAnnotationName"
 class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, PersonPinDetailMapViewDelegate {
     
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet var denemeTextButton: UIButtonCustomDesign!
-    @IBOutlet var focusCurrentLocation: UIButton!
     
     var tempMapView = MKMapView()
     
@@ -164,6 +162,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                 self.annotation = PersonAnnotation(inputPinData: self.pinDataObject)
                 
                 self.mapView.addAnnotation(self.annotation)
+                
+                self.mapView.selectedAnnotations.append(self.annotation)
             }
         }
     }
@@ -205,29 +205,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         }
     }
 
-    
-    
-    @IBAction func zoomInTapped(_ sender: UIButton) {
-        zoomInMap()
-    }
-    @IBAction func zoomOutTapped(_ sender: UIButton) {
-        zoomOutMap()
-    }
-    
-    func zoomInMap() {
-        var region: MKCoordinateRegion = self.mapView.region
-        region.span.latitudeDelta /= 2.0
-        region.span.longitudeDelta /= 2.0
-        self.mapView.setRegion(region, animated: true)
-    }
-    
-    func zoomOutMap() {
-        var region: MKCoordinateRegion = self.mapView.region
-        region.span.latitudeDelta  = min(region.span.latitudeDelta  * 2.0, 180.0)
-        region.span.longitudeDelta = min(region.span.longitudeDelta * 2.0, 180.0)
-        self.mapView.setRegion(region, animated: true)
-    }
-    
     @IBAction func nextButtonClicked(_ sender: Any) {
         
         performSegue(withIdentifier: "goToMainPage", sender: self)
@@ -241,32 +218,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                 guidance_1.user = user
             }
         }
-        
-        
     }
     
-    @IBAction func denemeTextButtonClicked(_ sender: Any) {
-        
-        
-        
-        
-        
-        
-    }
-    
-    
-    
-    @IBOutlet var cameraButton: UIButtonCustomDesign!
-    
-    @IBAction func cameraButtonClicked(_ sender: Any) {
-        
-        print("ccccccc")
-        
-        let takasi = storyboard?.instantiateViewController(withIdentifier: "PinDataPictureViewController_storyBoardID") as? PinDataPictureViewController
-     
-        present(takasi!, animated: true, completion: nil)
-        
-    }
     
     func setProfileImage() {
         
@@ -313,7 +266,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                         
                         let data = try Data(contentsOf: url!)
                         let image = UIImage(data: data as Data)
-                        self.cameraButton.setImage(image, for: .normal)
+                        //self.cameraButton.setImage(image, for: .normal)
                         
                         self.pinDataObject.setPictureOnPin(inputPictureOnPin: image!)
                     
@@ -334,18 +287,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             
         }
         
-        
-    }
-    
-    @IBOutlet var videoButton: UIButtonCustomDesign!
-    
-    @IBAction func videoPlayClicked(_ sender: Any) {
-        
-        print("videoPlayClicked is activated")
-        
-        self.startGettingVideoProcess()
-        
-        //playVideo()
         
     }
     
@@ -372,18 +313,77 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
     }
     
-    @IBAction func saveToDatabasePinData(_ sender: Any) {
+    func okRequestForPerson(pinData : PinData) {
+        print("Remzi: ok click")
+    }
+    
+    
+    /*
+        red button on pin to delete everthing related to pin data, and marker itself dropped on map
+     */
+    func cancelRequestForPerson(pinData : PinData) {
+        print("Remzi: cancel click")
         
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
+        let alertAppearance = SCLAlertView.SCLAppearance()
+        
+        let alertView = SCLAlertView(appearance: alertAppearance)
+        
+        alertView.addButton(ConstantStrings.ButtonTitles.STRING_OK) {
+            self.mapView.removeAnnotation(self.annotation)
+            self.pinDataObject.resetPinDataFlags()
+            
+        }
+        
+        alertView.showWarning(ConstantStrings.AlertInfoHeaders.STRING_WARNING, subTitle: ConstantStrings.WarningSentences.STRING_WARNING_DATA_ON_PIN_GET_ERASED, closeButtonTitle: ConstantStrings.ButtonTitles.STRING_CANCEL)
         
     }
+    
+    /*
+        to add text, note whatever a person writes on dropped pin on
+     */
+    func addTextRequestForPerson(pinData : PinData) {
+        print("Remzi: addTextRequestForPerson")
+        
+        if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "PinTextDataViewController_storyBoardID") as? PinTextDataViewController {
+            
+            print("erkut2")
+            
+            //destinationViewController.pinDataImage.image = pinDataObject.pictureOnPin
+            
+            destinationViewController.pinDataObject = self.pinDataObject
+            destinationViewController.tempMapView = self.tempMapView
+            
+            present(destinationViewController, animated: true, completion: {
+                print("gidiyoruz :)")
+            })
+        }
+        
+    }
+    
+    /*
+        to add a special video on dropped pin on map
+     */
+    func addVideoRequestForPerson(pinData : PinData) {
+        print("Remzi: addVideoRequestForPerson")
+        
+        self.informationForVideoData()
+        
+    }
+    
+    /*
+     
+     
+     */
     
     // delegation Methot
     func addImageRequestForPerson(pinData : PinData) {
         print("Remzi: addImageRequestForPerson")
-        //self.askGetPicture()
-    
-        if pinData.isPictureExist {
+        print("pinData.isPictureExist :\(pinData.isPictureExist)")
+        print("pinDataObject.isPictureExist :\(pinDataObject.isPictureExist)")
+        
+        if pinDataObject.isPictureExist {
             
             print("erkut1")
             
@@ -410,43 +410,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         
         print("Remzi: addImageRequestForPerson bitti")
-    }
-    
-    // delegation Methot
-    func addVideoRequestForPerson(pinData : PinData) {
-        print("Remzi: addVideoRequestForPerson")
-        
-        self.startGettingVideoProcess()
-        
-    }
-    
-    // delegation Methot
-    func addTextRequestForPerson(pinData : PinData) {
-        print("Remzi: addTextRequestForPerson")
-        
-    }
-    
-    func okRequestForPerson(pinData : PinData) {
-        print("Remzi: ok click")
-    }
-    
-    func cancelRequestForPerson(pinData : PinData) {
-        print("Remzi: cancel click")
-        
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        
-        let alertAppearance = SCLAlertView.SCLAppearance()
-        
-        let alertView = SCLAlertView(appearance: alertAppearance)
-        
-        alertView.addButton("OK") {
-            self.mapView.removeAnnotation(self.annotation)
-            self.pinDataObject.resetPinDataFlags()
-        }
-        
-        alertView.showWarning("Uyarı", subTitle: "Pin üzerine girilen datalarınız silinecektir", closeButtonTitle: "Vazgeç")
-        
-        
     }
     
     
