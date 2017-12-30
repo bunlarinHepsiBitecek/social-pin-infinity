@@ -75,14 +75,13 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         print("WelcomeFirstPinViewController - viewDidAppear starts")
         print("returnFlag : \(returnFlag)")
         
-        /*
         if controlFlag == false {
             
             controlFlag = true
             
             performSegue(withIdentifier: "gotoGuidance", sender: self)
             
-        }*/
+        }
         
     }
     
