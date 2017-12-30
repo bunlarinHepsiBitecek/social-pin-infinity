@@ -48,5 +48,9 @@ class PinDataPictureViewController: UIViewController {
         erasePictureDataOnPin()
         
     }
+    
+    func setImageOnView() {
+        pinDataImage.image = pinDataObject.pictureOnPin
+    }
 
 }

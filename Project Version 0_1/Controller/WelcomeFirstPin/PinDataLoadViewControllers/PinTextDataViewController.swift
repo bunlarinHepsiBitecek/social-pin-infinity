@@ -22,7 +22,8 @@ class PinTextDataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.textField.text = pinDataObject.textOnPin
         setViewCornersOnModalViewcontroller()
         
     }
@@ -44,4 +45,9 @@ class PinTextDataViewController: UIViewController {
         
     }
     
+    @IBAction func garbageButtonClicked(_ sender: Any) {
+        
+        eraseTextFieldFromPinData()
+        
+    }
 }
