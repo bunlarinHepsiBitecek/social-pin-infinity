@@ -35,7 +35,7 @@ let CONSTANT_STRING_LONGITUDE : String = "longitude"
 
 let CONSTANT_STRING_LOCATION : String = "Location"
 
-let CONSTANT_STRING_PICTURE : String = "Picture"
-let CONSTANT_STRING_VIDEO : String = "Video"
-let CONSTANT_STRING_TEXT : String = "Text"
+let CONSTANT_STRING_PICTURE : String = "picture"
+let CONSTANT_STRING_VIDEO : String = "video"
+let CONSTANT_STRING_TEXT : String = "text"
 

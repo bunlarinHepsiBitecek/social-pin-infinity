@@ -207,8 +207,9 @@ extension EntranceViewController {
         
         twitterOwnLoginButton.frame = CGRect(x: 0, y: 0, width: facebookLoginButton.frame.width, height: facebookLoginButton.frame.height)
         self.twitterLoginButton.addSubview(twitterOwnLoginButton)
-        self.twitterLoginButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin]
-        self.twitterLoginButton.autoresizesSubviews = true
+        
+        //self.twitterLoginButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin]
+        //self.twitterLoginButton.autoresizesSubviews = true
     }
 }
 
