@@ -22,6 +22,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var denemeTextButton: UIButtonCustomDesign!
+    @IBOutlet var focusCurrentLocation: UIButton!
     
     var tempMapView = MKMapView()
     
@@ -111,6 +112,11 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         pinDataObject.location.setCurrentLocation(locationCoordinate: location)
         user.userLocationObject.setCurrentLocation(locationCoordinate: location)
         
+    }
+    
+    @IBAction func currentLocationButton(_ sender: UIButton) {
+        locationManager.stopUpdatingLocation()
+        locationManager.startUpdatingLocation()
     }
     
     @IBAction func dropPinButtonTapped(_ sender: UIButton) {
