@@ -16,11 +16,14 @@ class PinData {
     private var _pictureOnPin : UIImage
     private var _pictureUrlOnPin : NSURL
     private var _pictureIDOnPin : String
+    private var _textCaptureIDOnPin : String
+    private var _textCaptureUrlOnPin : NSURL
     private var _textOnPin : String
     private var _textCaptureImage : UIImage
     private var _videoExistFlag : Bool
     private var _videoIDOnPin : String
     private var _videoDataUrlOnPin : NSURL
+    private var _videoDataUrlFirebaseOnPin : NSURL
     private var _videoCapture : UIImage
     private var _isPinDataUploadedDatabase : Bool
     private var _isPinDropped : Bool
@@ -36,9 +39,12 @@ class PinData {
         self._location = Location()
         self._pictureOnPin = UIImage()
         self._pictureUrlOnPin = NSURL()
+        self._textCaptureIDOnPin = SPACE_CHARACTER
+        self._textCaptureUrlOnPin = NSURL()
         self._textOnPin = SPACE_CHARACTER
         self._videoExistFlag = false
         self._videoDataUrlOnPin = NSURL()
+        self._videoDataUrlFirebaseOnPin = NSURL()
         self._videoIDOnPin = SPACE_CHARACTER
         self._pictureIDOnPin = SPACE_CHARACTER
         self._isPinDataUploadedDatabase = false
@@ -71,6 +77,14 @@ class PinData {
         return _pictureIDOnPin
     }
     
+    var textCaptureIDOnPin : String {
+        return self._textCaptureIDOnPin
+    }
+    
+    var textCaptureURL : NSURL {
+        return self._textCaptureUrlOnPin
+    }
+    
     var textOnPin : String {
         return _textOnPin
     }
@@ -81,6 +95,10 @@ class PinData {
     
     var videoDataUrl : NSURL {
         return _videoDataUrlOnPin
+    }
+    
+    var videoDataUrlFirebase : NSURL {
+        return _videoDataUrlFirebaseOnPin
     }
     
     var videoIDOnPin : String {
@@ -135,6 +153,14 @@ class PinData {
         self._pictureIDOnPin = inputPictureIDOnPin
     }
     
+    func setTextCaptureIDOnPin(inputTextCaptureIDOnPin: String) {
+        self._textCaptureIDOnPin = inputTextCaptureIDOnPin
+    }
+    
+    func setTextCaptureURLOnPin(inputTextCaptureURL: NSURL) {
+        self._textCaptureUrlOnPin = inputTextCaptureURL
+    }
+    
     func setTextOnPin(inputTextOnPin : String) {
         self._textOnPin = inputTextOnPin
     }
@@ -145,6 +171,10 @@ class PinData {
     
     func setVideoDataUrl(inputVideoDataUrl : NSURL) {
         self._videoDataUrlOnPin = inputVideoDataUrl
+    }
+    
+    func setVideoDataUrlFirebase(inputVideoDataUrlFirebase : NSURL) {
+        self._videoDataUrlFirebaseOnPin = inputVideoDataUrlFirebase
     }
     
     func setVideoIDOnPin(inputVideoIDOnPin : String) {
@@ -187,15 +217,32 @@ class PinData {
     func getJSONObject() -> Dictionary<String, String> {
         
         if !self._pictureIDOnPin.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_PICTURE, inputValue: self._pictureIDOnPin)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.PinItem.pictureID, inputValue: self._pictureIDOnPin)
         }
         
+        if let pictureURL = self._pictureUrlOnPin.absoluteString, !pictureURL.isEmpty {
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.PinItem.pictureURL, inputValue: pictureURL)
+        }
+        
+        
         if !self._videoIDOnPin.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_VIDEO, inputValue: self._videoIDOnPin)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.PinItem.videoID, inputValue: self._videoIDOnPin)
+        }
+        
+        if let videoURL = self._videoDataUrlFirebaseOnPin.absoluteString, !videoURL.isEmpty {
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.PinItem.videoURL, inputValue: videoURL)
         }
         
         if !self._textOnPin.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_TEXT, inputValue: self._textOnPin)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.PinItem.text, inputValue: self._textOnPin)
+        }
+        
+        if !self._textCaptureIDOnPin.isEmpty {
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.PinItem.textID, inputValue: self._textCaptureIDOnPin)
+        }
+        
+        if let textImageURL = self._textCaptureUrlOnPin.absoluteString, !textImageURL.isEmpty {
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.PinItem.textURL, inputValue: textImageURL)
         }
         
         return _pinItemsDictionary

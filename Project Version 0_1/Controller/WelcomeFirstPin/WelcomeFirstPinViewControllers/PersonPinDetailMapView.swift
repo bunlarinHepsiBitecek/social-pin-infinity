@@ -9,13 +9,6 @@
 import UIKit
 
 protocol PersonPinDetailMapViewDelegate: class {
-    /*
-    func addImageRequestForPerson(person: User)
-    func addVideoRequestForPerson(person: User)
-    func addTextRequestForPerson(person: User)
-    func okRequestForPerson(person: User)
-    func cancelRequestForPerson(person: User)
-    */
     func addImageRequestForPerson(pinData : PinData)
     func addVideoRequestForPerson(pinData : PinData)
     func addTextRequestForPerson(pinData : PinData)

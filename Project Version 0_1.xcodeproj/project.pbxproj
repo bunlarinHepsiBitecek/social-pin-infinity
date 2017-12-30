@@ -27,13 +27,11 @@
 		A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBD51FCDCE110018254E /* CreateDatabaseFunctions.swift */; };
 		A72AFBD81FCDD2640018254E /* StorageConstantNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */; };
 		A72AFBDC1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBDB1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift */; };
-		A72AFBDE1FCDE8800018254E /* FirebaseDomainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBDD1FCDE8800018254E /* FirebaseDomainConstants.swift */; };
 		A72AFBE01FCDE8D70018254E /* ProjectSettingsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBDF1FCDE8D70018254E /* ProjectSettingsConstants.swift */; };
 		A72AFBE31FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBE21FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift */; };
 		A72AFBE61FCDEDA70018254E /* SendVerificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBE51FCDEDA70018254E /* SendVerificationExtensions.swift */; };
 		A72AFBE91FCDF77C0018254E /* InformationMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBE81FCDF77C0018254E /* InformationMessages.swift */; };
 		A72AFBEE1FCE796D0018254E /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBED1FCE796D0018254E /* UIImageViewExtensions.swift */; };
-		A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA6B1FD5AF8200308DED /* DatabaseAccessConstant.swift */; };
 		A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA6D1FD5B18D00308DED /* DesignableUITextField.swift */; };
 		A72CAA7D1FD6855200308DED /* ic_eye_open@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA721FD6854F00308DED /* ic_eye_open@3x.png */; };
 		A72CAA7E1FD6855200308DED /* ic_eye_open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A72CAA731FD6855000308DED /* ic_eye_open@2x.png */; };
@@ -150,6 +148,7 @@
 		AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A34401FE1C41B0054801D /* InformationAlertView.swift */; };
 		AD5A44461FE509BA00266548 /* gender_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5A44451FE509B900266548 /* gender_woman.png */; };
 		AD641ECE1FDDD254002E483B /* gender_man.png in Resources */ = {isa = PBXBuildFile; fileRef = AD641ECC1FDDD254002E483B /* gender_man.png */; };
+		AD7FB67E1FF80FE4001AD14B /* SelectedAnnotationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7FB67D1FF80FE4001AD14B /* SelectedAnnotationOperation.swift */; };
 		ADB505AA1FDB1C6500F81046 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */; };
 		ADB505AB1FDB1C6500F81046 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */; };
 		ADB505AF1FDB333B00F81046 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB505AC1FDB333B00F81046 /* image1.png */; };
@@ -180,13 +179,11 @@
 		A72AFBD51FCDCE110018254E /* CreateDatabaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDatabaseFunctions.swift; sourceTree = "<group>"; };
 		A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstantNames.swift; sourceTree = "<group>"; };
 		A72AFBDB1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailVerificationAgainFunctions.swift; sourceTree = "<group>"; };
-		A72AFBDD1FCDE8800018254E /* FirebaseDomainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDomainConstants.swift; sourceTree = "<group>"; };
 		A72AFBDF1FCDE8D70018254E /* ProjectSettingsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsConstants.swift; sourceTree = "<group>"; };
 		A72AFBE21FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectViewToOtherPagesFunctions.swift; sourceTree = "<group>"; };
 		A72AFBE51FCDEDA70018254E /* SendVerificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendVerificationExtensions.swift; sourceTree = "<group>"; };
 		A72AFBE81FCDF77C0018254E /* InformationMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessages.swift; sourceTree = "<group>"; };
 		A72AFBED1FCE796D0018254E /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
-		A72CAA6B1FD5AF8200308DED /* DatabaseAccessConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAccessConstant.swift; sourceTree = "<group>"; };
 		A72CAA6D1FD5B18D00308DED /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		A72CAA721FD6854F00308DED /* ic_eye_open@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_open@3x.png"; sourceTree = "<group>"; };
 		A72CAA731FD6855000308DED /* ic_eye_open@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_eye_open@2x.png"; sourceTree = "<group>"; };
@@ -307,6 +304,7 @@
 		AD1A34401FE1C41B0054801D /* InformationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAlertView.swift; sourceTree = "<group>"; };
 		AD5A44451FE509B900266548 /* gender_woman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_woman.png; sourceTree = "<group>"; };
 		AD641ECC1FDDD254002E483B /* gender_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_man.png; sourceTree = "<group>"; };
+		AD7FB67D1FF80FE4001AD14B /* SelectedAnnotationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAnnotationOperation.swift; sourceTree = "<group>"; };
 		ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		ADB505AC1FDB333B00F81046 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
@@ -788,6 +786,7 @@
 				A75CE06B1FED8DDA004703F5 /* DecideToLoadPicture.swift */,
 				A75CE0781FEE81AF004703F5 /* DecideToLoadVideo.swift */,
 				A75CE0801FF03F6F004703F5 /* SavePinData.swift */,
+				AD7FB67D1FF80FE4001AD14B /* SelectedAnnotationOperation.swift */,
 			);
 			path = WelcomeFirstPinExtensions;
 			sourceTree = "<group>";
@@ -948,8 +947,6 @@
 		A778D9E41FC9BC2700F38438 /* FirebaseModelConstants */ = {
 			isa = PBXGroup;
 			children = (
-				A72CAA6B1FD5AF8200308DED /* DatabaseAccessConstant.swift */,
-				A72AFBDD1FCDE8800018254E /* FirebaseDomainConstants.swift */,
 				A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */,
 				A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */,
 			);
@@ -1283,7 +1280,6 @@
 			files = (
 				A75E3F5F1FE5AD16007165DE /* ParseLocationData.swift in Sources */,
 				AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */,
-				A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */,
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
 				A75CE0881FF0548B004703F5 /* ActionSheetConstants.swift in Sources */,
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
@@ -1331,6 +1327,7 @@
 				A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */,
 				A72705C51FC8A2A6006C2504 /* User.swift in Sources */,
 				A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */,
+				AD7FB67E1FF80FE4001AD14B /* SelectedAnnotationOperation.swift in Sources */,
 				A7194DBD1FED036E00586038 /* PinTextDataViewController.swift in Sources */,
 				A75E3F651FE5E831007165DE /* DatabaseUserLocation.swift in Sources */,
 				A75CE0771FEE6982004703F5 /* PinData.swift in Sources */,
@@ -1357,7 +1354,6 @@
 				A73828301FC35DCB003C1827 /* Validation.swift in Sources */,
 				A75CE0861FF04A7D004703F5 /* PinImageDataExtensions.swift in Sources */,
 				A75CE06C1FED8DDA004703F5 /* DecideToLoadPicture.swift in Sources */,
-				A72AFBDE1FCDE8800018254E /* FirebaseDomainConstants.swift in Sources */,
 				A72AFBEE1FCE796D0018254E /* UIImageViewExtensions.swift in Sources */,
 				A7407F0D1FC79B1D00DAAF44 /* UITextFieldExtensions.swift in Sources */,
 				A75E3F611FE5B7A0007165DE /* DatabaseLocation.swift in Sources */,

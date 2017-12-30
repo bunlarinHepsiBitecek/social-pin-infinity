@@ -156,46 +156,45 @@ class Location {
         
     }
     
-    func getUserJSONObject() -> Dictionary<String, String> {
+    func getJSONObject() -> Dictionary<String, String> {
         
         if !self._userID.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_USERID, inputValue: self._userID)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.UserID, inputValue: self._userID)
         }
         
         if !self._countryCode.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_COUNTRY_CODE, inputValue: self._countryCode)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.CountryCode, inputValue: self._countryCode)
         }
         
         if !self._countryName.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_COUNTRY_NAME, inputValue: self._countryName)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.CountryName, inputValue: self._countryName)
         }
         
         if !self._timeStamp.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_TIMESTAMP, inputValue: self._timeStamp)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Timestamp, inputValue: self._timeStamp)
         }
         
         if !self._postalCode.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_POSTAL_CODE, inputValue: self._postalCode)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.PostalCode, inputValue: self._postalCode)
         }
         
         if !self._thorough.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_THOROUGH, inputValue: self._thorough)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Thorough, inputValue: self._thorough)
         }
         
         if !self._subThorough.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_SUB_THOROUGH, inputValue: self._subThorough)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.SubThorough, inputValue: self._subThorough)
         }
         
         if !self._latitude.isZero {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_LATITUDE, inputValue: String(self._latitude))
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Latitude, inputValue: String(self._latitude))
         }
         
         if !self._longitude.isZero {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_LONGITUDE, inputValue: String(self._longitude))
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Longitude, inputValue: String(self._longitude))
         }
         
         return locationDictionary
-        
     }
     
     

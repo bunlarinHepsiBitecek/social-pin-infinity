@@ -108,7 +108,7 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
                 }
                 
                 getVideoSnapShotAsAnImage(url: videoUrl)
-                handleVideoSelectedProcess(url: videoUrl)
+                //handleVideoSelectedProcess(url: videoUrl)
                 dismissActionSheet()
                 
             } else {
@@ -143,7 +143,7 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
             
             self.pinDataObject.setPictureOnPin(inputPictureOnPin: selectedImage)
             self.pinDataObject.isPictureExist(inputBooleanValue: true)
-            setSelectedImageToButton()
+            self.setSelectedImageToButton()
             
             self.dismiss(animated: true, completion: nil)
             
@@ -344,6 +344,7 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         
     }
     
+    /*
     func tata() {
         print("aha yakaladık")
         
@@ -356,87 +357,7 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         }
         
     }
-    
-    func setSelectedImageToButton() {
-        
-        print("setSelectedImageToButton starts")
-        print("pinDataObject.isPictureExist : \(pinDataObject.isPictureExist)")
-        
-        //let image = UIImage(named: "image1.png")
-        
-        for annotation in self.mapView.annotations as [MKAnnotation] {
-            print("setSelectedImageToButton tüm annotationlar alınır: \(self.mapView.annotations.count)")
-            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
-                print("Current displayed annotation bulduk")
-                
-                if pinDataObject.isPictureExist {
-                    
-                    print("point1")
-                    
-                    if let newImage = self.pinDataObject.pictureOnPin as UIImage? {
-                        currentAnnotation.customCalloutView?.addImageButton.setImage(newImage, for: .normal)
-                    }
-                    
-                } else {
-                    
-                    print("point2")
-                    
-                    currentAnnotation.customCalloutView?.addImageButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.PHOTO_CAMERA_IMAGE)
-                    
-                }
-            }
-        }
-    }
-    
-    func setSelectedVideoImageToButton() {
-        
-        for annotation in self.mapView.annotations as [MKAnnotation] {
-           
-            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
-
-                if self.pinDataObject.videoExistFlag {
-                    
-                    if let newImage = self.pinDataObject.videoCapture as UIImage? {
-                        
-                        currentAnnotation.customCalloutView?.addVideoButton.setImage(newImage, for: .normal)
-                        
-                    }
-                    
-                }
-                
-            }
-        }
-        
-    }
-    
-    func setCaptureImageOfTextFieldOnButton() {
-        
-        print("setCaptureImageOfTextFieldOnButton starts")
-        print("text : \(self.pinDataObject.textOnPin)")
-        
-        for annotation in self.mapView.annotations as [MKAnnotation] {
-            
-            if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
-                
-                if self.pinDataObject.isCapturedTextExist {
-                    
-                    if let newImage = self.pinDataObject.textCaptureImage as UIImage? {
-                        
-                        currentAnnotation.customCalloutView?.addTextButton.setImage(newImage, for: .normal)
-                        
-                    }
-                    
-                } else {
-                    
-                    print("point2")
-                    
-                    currentAnnotation.customCalloutView?.addTextButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.TEXT_MATERIAL_IMAGE)
-                    
-                }
-            }
-        }
-        
-    }
+    */
     
     func checkDurationTimeOfSelectedVideoFromLibrary(inputUrl : URL) -> Bool {
         

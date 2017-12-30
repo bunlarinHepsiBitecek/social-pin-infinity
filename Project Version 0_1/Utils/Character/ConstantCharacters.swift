@@ -21,5 +21,8 @@ struct Constants {
     
     struct WelcomeFirstPin {
         static let PIN_IMAGE_NAME = "maps64.png"
+        static let Success = "Success"
+        static let Dismiss = "Dismiss"
+        static let Message = "İlk pininiz başarıyla kaydedildi. Aramıza hoşgeldiniz 🤗"
     }
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/*
 let CONSTANT_STRING_USERID : String = "userID"
 let CONSTANT_USERNAME : String = "userName"
 let CONSTANT_NAME_SURNAME : String = "nameSurname"
@@ -21,8 +22,9 @@ let CONSTANT_MOBILEPHONE : String = "mobilephone"
 let CONSTANT_PROVIDER : String = "provider"
 let CONSTANT_PROVIDER_ID : String = "providerId"
 let CONSTANT_PROFILE_PICTURE_ID : String = "profilePictureId"
+ */
 
-
+/*
 let CONSTANT_STRING_COUNTRY_CODE : String = "countryCode"
 let CONSTANT_STRING_COUNTRY_NAME : String = "countryName"
 let CONSTANT_STRING_TIMESTAMP : String = "timestamp"
@@ -34,8 +36,70 @@ let CONSTANT_STRING_LATITUDE : String = "latitude"
 let CONSTANT_STRING_LONGITUDE : String = "longitude"
 
 let CONSTANT_STRING_LOCATION : String = "Location"
+*/
 
+/*
 let CONSTANT_STRING_PICTURE : String = "picture"
 let CONSTANT_STRING_VIDEO : String = "video"
 let CONSTANT_STRING_TEXT : String = "text"
+ */
+
+struct FirebaseConstants {
+    struct Email {
+        //let EMAIL_VERIFICATON_URL = "gotoVerify://social-media-infinity.firebaseapp.com?email=%@"
+        static let EmailVerifitactionURL = "gotoVerify://social-media-infinity.firebaseapp.com?email=%@"
+    }
+}
+
+struct FirebaseModels {
+    struct Users {
+        static let CHILD_USERS = "Users"
+    }
+    
+    struct Locations {
+        static let CHILD_LOCATIONS = "Locations"
+    }
+}
+
+struct FirebaseModelConstants {
+    
+    struct Users {
+        static let UserID : String = "userID"
+        static let UserName : String = "userName"
+        static let NameSurname : String = "nameSurname"
+        static let Surname : String = "surname"
+        static let Gender : String = "gender"
+        static let Birthday : String = "birthday"
+        static let Email : String = "email"
+        static let ProfilePictureUrl : String = "profilePictureUrl"
+        static let Password : String = "password"
+        static let MobilePhone : String = "mobilephone"
+        static let Provider : String = "provider"
+        static let ProviderID : String = "providerId"
+        static let ProfilePictureID : String = "profilePictureId"
+    }
+    
+    struct Locations {
+        static let Location : String = "Location"
+        static let CountryCode : String = "countryCode"
+        static let CountryName : String = "countryName"
+        static let Timestamp : String = "timestamp"
+        static let PostalCode : String = "postalCode"
+        static let Thorough : String = "thorough"
+        static let SubThorough : String = "subThorough"
+        static let Geolocation : String = "geolocation"
+        static let Latitude : String = "latitude"
+        static let Longitude : String = "longitude"
+    }
+    
+    struct PinItem {
+        static let pictureID = "pictureId"
+        static let pictureURL = "pictureURL"
+        static let videoID = "videoId"
+        static let videoURL = "videoURL"
+        static let textID = "textId"
+        static let textURL = "textURL"
+        static let text = "text"
+    }
+}
 

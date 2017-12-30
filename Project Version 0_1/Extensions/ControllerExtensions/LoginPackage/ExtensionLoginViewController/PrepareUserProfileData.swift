@@ -15,36 +15,36 @@ extension LoginViewController {
         
         if let userID = userObject.userID as String? {
             
-            userObject.appendAttributeToDictionary(inputKey: CONSTANT_STRING_USERID, inputValue: userID)
+            userObject.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.UserID, inputValue: userID)
             
         }
         
         if let userName = userObject.username as String? {
             
-            userObject.appendAttributeToDictionary(inputKey: CONSTANT_USERNAME, inputValue: userName)
+            userObject.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.UserName, inputValue: userName)
             
         }
         
         if let nameSurname = userObject.userNameSurname as String? {
             
-            userObject.appendAttributeToDictionary(inputKey: CONSTANT_NAME_SURNAME, inputValue: nameSurname)
+            userObject.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.NameSurname, inputValue: nameSurname)
         }
         
         if let email = userObject.email as String? {
             
-            userObject.appendAttributeToDictionary(inputKey: CONSTANT_EMAIL, inputValue: email)
+            userObject.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.Email, inputValue: email)
             
         }
         
         if let gender = userObject.gender as String? {
             
-            userObject.appendAttributeToDictionary(inputKey: CONSTANT_GENDER, inputValue: gender)
+            userObject.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.Gender, inputValue: gender)
             
         }
         
         if let birthday = userObject.birthday as String? {
             
-            userObject.appendAttributeToDictionary(inputKey: CONSTANT_BIRTHDAY, inputValue: birthday)
+            userObject.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.Birthday, inputValue: birthday)
             
         }
         
