@@ -112,6 +112,11 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
     }
     
+    @IBAction func currentLocationButton(_ sender: UIButton) {
+        locationManager.stopUpdatingLocation()
+        locationManager.startUpdatingLocation()
+    }
+    
     @IBAction func dropPinButtonTapped(_ sender: UIButton) {
        
         print("dropPinButton is clicked")
