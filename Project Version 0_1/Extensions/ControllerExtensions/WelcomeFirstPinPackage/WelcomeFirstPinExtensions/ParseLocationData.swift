@@ -15,36 +15,33 @@ extension WelcomeFirstPinViewController {
         
         print("getLocationDataParsed starts")
         
-        self.user.userLocationObject.setUserID(inputUserID: user.userID)
+        self.pinDataObject.location.setUserID(inputUserID: user.userID)
         
-        let tempString = NSUUID().uuidString
-        
-        self.user.userLocationObject.setLocationId(inputLocationId: tempString)
-        
-        print("LocationID : \(self.user.userLocationObject.locationId)")
+        //let tempString = NSUUID().uuidString
+        //self.pinDataObject.location.setLocationId(inputLocationId: tempString)
         
         if let postalCode = inputPlaceMark.postalCode {
-            self.user.userLocationObject.setPostalCode(inputPostalCode: postalCode)
+            self.pinDataObject.location.setPostalCode(inputPostalCode: postalCode)
         }
 
         if let countryCode = inputPlaceMark.isoCountryCode {
             print("countryCode : \(countryCode)")
-            self.user.userLocationObject.setCountryCode(inputCountryCode: countryCode)
+            self.pinDataObject.location.setCountryCode(inputCountryCode: countryCode)
         }
     
         if let countryName = inputPlaceMark.country {
             print("countryName : \(countryName)")
-            self.user.userLocationObject.setCountryName(inputCountryName: countryName)
+            self.pinDataObject.location.setCountryName(inputCountryName: countryName)
         }
         
         if let thorough = inputPlaceMark.thoroughfare {
             print("thorough : \(thorough)")
-            self.user.userLocationObject.setThorough(inputThorough: thorough)
+            self.pinDataObject.location.setThorough(inputThorough: thorough)
         }
         
         if let subThorough = inputPlaceMark.subThoroughfare {
             print("subThorough : \(subThorough)")
-            self.user.userLocationObject.setSubThorough(inputSubThorough: subThorough)
+            self.pinDataObject.location.setSubThorough(inputSubThorough: subThorough)
         }
         
         if let locationObj = inputPlaceMark.location as CLLocation? {
@@ -53,13 +50,13 @@ extension WelcomeFirstPinViewController {
                 
                 if let locationLatitude = locationData.latitude as CLLocationDegrees? {
                     
-                    self.user.userLocationObject.setLatitude(inputLatitude: Double(locationLatitude))
+                    self.pinDataObject.location.setLatitude(inputLatitude: Double(locationLatitude))
                     
                 }
                 
                 if let locationLongitude = locationData.longitude as CLLocationDegrees? {
                     
-                    self.user.userLocationObject.setLongitude(inputLongitude: locationLongitude)
+                    self.pinDataObject.location.setLongitude(inputLongitude: locationLongitude)
                     
                 }
                 
@@ -69,23 +66,23 @@ extension WelcomeFirstPinViewController {
         
         // timestamp set edilmedi henüz
         
-        self.user.userLocationObject.getUserJSONObject()
-        
-        print("LocationID : \(self.user.userLocationObject.locationId)")
+        /*
+        print("LocationID : \(self.pinDataObject.location.locationId)")
         
         let newUserLocation = UserLocation()
         
         newUserLocation.setUserID(inputUserID: user.userID)
-        newUserLocation.setUserLocationID(inputUserLocationID: self.user.userLocationObject.locationId)
+        newUserLocation.setUserLocationID(inputUserLocationID: self.pinDataObject.location.locationId)
         
         newUserLocation.getUserJSONObject()
         
         print("LocationID : \(newUserLocation.userLocationID)")
         
-        DatabaseLocation.ds.createFirbaseDatabaseLocation(locationID: self.user.userLocationObject.locationId, locationData: self.user.userLocationObject.locationDictionary)
-        //DatabaseUserLocation.ds.createFirbaseDatabaseUserLocation(userID: self.user.userID, userLocationData: newUserLocation.userLocationDictionary)
+        DatabaseLocation.ds.createFirbaseDatabaseLocation(locationID: self.pinDataObject.location.locationId, locationData: self.pinDataObject.location.locationDictionary)
     
         DatabaseUserLocation.ds.createFirbaseDatabaseUserLocation(userID: self.user.userID, userLocationData: newUserLocation.userLocationDictionary)
+ 
+         */
         
     }
     

@@ -18,7 +18,7 @@ extension VerificationViewController {
         
         let actionCodeSettingsObject = ActionCodeSettings.init()
         
-        actionCodeSettingsObject.url = URL(string: String(format: EMAIL_VERIFICATON_URL, userObjectInVerificationView.email))
+        actionCodeSettingsObject.url = URL(string: String(format: FirebaseConstants.Email.EmailVerifitactionURL, userObjectInVerificationView.email))
         
         actionCodeSettingsObject.setIOSBundleID(BUNDLE_IDENTIFIER)
         

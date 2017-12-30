@@ -20,7 +20,7 @@ extension AddImageViewController {
         
         let actionCodeSettingsObject = ActionCodeSettings.init()
         
-        actionCodeSettingsObject.url = URL(string: String(format: EMAIL_VERIFICATON_URL, self.userObject.email))
+        actionCodeSettingsObject.url = URL(string: String(format: FirebaseConstants.Email.EmailVerifitactionURL, self.userObject.email))
         
         actionCodeSettingsObject.setIOSBundleID(BUNDLE_IDENTIFIER)
         

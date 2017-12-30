@@ -17,7 +17,7 @@ class DatabaseLocation {
     
     // firebase database reference definitions
     private var _database_reference = databaseReferenceObject
-    private var _database_reference_location = databaseReferenceObject.child(CONSTANT_STRING_CHILD_LOCATIONS)
+    private var _database_reference_location = databaseReferenceObject.child(FirebaseModels.Locations.CHILD_LOCATIONS)
     
     var getDatabaseReference : DatabaseReference {
         

@@ -51,17 +51,17 @@ class User {
     }
     
     func printUserInfo() {
-        print(CONSTANT_STRING_USERID + " :" + _userID)
-        print(CONSTANT_USERNAME + " :" + _userName)
-        print(CONSTANT_NAME_SURNAME + " :" + _userNameSurname)
-        print(CONSTANT_EMAIL + " :" + _email)
-        print(CONSTANT_PASSWORD + " :" + _password)
-        print(CONSTANT_GENDER + " :" + _gender)
-        print(CONSTANT_BIRTHDAY + " :" + _birthday)
-        print(CONSTANT_MOBILEPHONE + " :" + _mobilePhone)
-        print(CONSTANT_PROVIDER + " :" + _provider)
-        print(CONSTANT_PROVIDER_ID + " :" + _providerId)
-        print(CONSTANT_URL + ":" + _userProfilePictureUrl)
+        print(FirebaseModelConstants.Users.UserID + " :" + _userID)
+        print(FirebaseModelConstants.Users.UserName + " :" + _userName)
+        print(FirebaseModelConstants.Users.NameSurname + " :" + _userNameSurname)
+        print(FirebaseModelConstants.Users.Email + " :" + _email)
+        print(FirebaseModelConstants.Users.Password + " :" + _password)
+        print(FirebaseModelConstants.Users.Gender + " :" + _gender)
+        print(FirebaseModelConstants.Users.Birthday + " :" + _birthday)
+        print(FirebaseModelConstants.Users.MobilePhone + " :" + _mobilePhone)
+        print(FirebaseModelConstants.Users.Provider + " :" + _provider)
+        print(FirebaseModelConstants.Users.ProviderID + " :" + _providerId)
+        print(FirebaseModelConstants.Users.ProfilePictureUrl + ":" + _userProfilePictureUrl)
     }
     
     var userID : String {
@@ -120,9 +120,11 @@ class User {
         return _providerId
     }
     
+    /*
     var userLocationObject: Location {
         return _userLocationObject
     }
+ */
     
     var isUserGetInformedFromGuidence : Bool {
         return _isUserGetInformedFromGuidence
@@ -227,39 +229,39 @@ class User {
     
     func getUserJSONObject() -> Dictionary<String, String> {
         if self._userName != SPACE_CHARACTER {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_USERNAME, inputValue: self._userName)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.UserName, inputValue: self._userName)
         }
         
         if self._userNameSurname != SPACE_CHARACTER {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_NAME_SURNAME, inputValue: self._userNameSurname)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.NameSurname, inputValue: self._userNameSurname)
         }
         
         if self._gender != SPACE_CHARACTER {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_GENDER, inputValue: self._gender)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.Gender, inputValue: self._gender)
         }
         
         if self._birthday != SPACE_CHARACTER {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_BIRTHDAY, inputValue: self._birthday)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.Birthday, inputValue: self._birthday)
         }
         
         if self._userProfilePictureUrl != SPACE_CHARACTER {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_URL, inputValue: self._userProfilePictureUrl)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.ProfilePictureUrl, inputValue: self._userProfilePictureUrl)
         }
         
         if self._userProfilePictureUniqueID != SPACE_CHARACTER {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_PROFILE_PICTURE_ID, inputValue: self._userProfilePictureUniqueID)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.ProfilePictureID, inputValue: self._userProfilePictureUniqueID)
         }
         
         if self._mobilePhone != SPACE_CHARACTER {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_MOBILEPHONE, inputValue: self._mobilePhone)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.MobilePhone, inputValue: self._mobilePhone)
         }
         
         if self._provider != SPACE_CHARACTER {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_PROVIDER, inputValue: self._provider)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.Provider, inputValue: self._provider)
         }
         
         if self._providerId != SPACE_CHARACTER {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_PROVIDER_ID, inputValue: self._providerId)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.ProviderID, inputValue: self._providerId)
         }
         
         return userDictionary

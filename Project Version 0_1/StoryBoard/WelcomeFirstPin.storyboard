@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="-706.39999999999998" y="-347.67616191904051"/>
         </scene>
-        <!--Deneme2 View Controller-->
+        <!--View Controller-->
         <scene sceneID="Aag-cv-lBC">
             <objects>
-                <viewController id="vV1-YS-SJV" customClass="deneme_2_ViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vV1-YS-SJV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ts-WZ-pC2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

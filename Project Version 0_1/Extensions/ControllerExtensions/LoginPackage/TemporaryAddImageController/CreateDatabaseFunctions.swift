@@ -16,13 +16,13 @@ extension AddImageViewController {
     func createUserAndLoadDataToStorage() {
         
         print("createUserAndLoadDataToStorage starts")
-        print("---> :\(CONSTANT_STRING_PROFILE_IMAGES)")
+        print("---> :\(FirebaseStorageConstants.ProfileImages)")
         
         let imageName = NSUUID().uuidString
         
         print("imageName : \(imageName)")
         
-        let storageReference = Storage.storage().reference().child(CONSTANT_STRING_CHILD_USERS).child(CONSTANT_STRING_PROFILE_IMAGES).child("\(imageName).png")
+        let storageReference = Storage.storage().reference().child(FirebaseStorageConstants.Users).child(FirebaseStorageConstants.ProfileImages).child("\(imageName).png")
         
         if let uploadData = UIImagePNGRepresentation(self.imageView.image!) {
            
@@ -53,8 +53,8 @@ extension AddImageViewController {
         self.userObject.setUserProfilePictureUrl(inputUrl: inputUrl)
         self.userObject.setUserProfilePictureUniqueID(inputUserProfilePictureUniqueID: inputImageUniqueID)
         
-        self.userObject.appendAttributeToDictionary(inputKey: CONSTANT_STRING_PROFILE_PICTURE_UNIQUE_ID, inputValue: self.userObject.userProfilePictureUniqueID)
-        self.userObject.appendAttributeToDictionary(inputKey: CONSTANT_URL, inputValue: self.userObject.userProfilePictureUrl)
+        self.userObject.appendAttributeToDictionary(inputKey: FirebaseStorageConstants.ProfilePictureUniqueID, inputValue: self.userObject.userProfilePictureUniqueID)
+        self.userObject.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.ProfilePictureUrl, inputValue: self.userObject.userProfilePictureUrl)
         
         print("userProfilePictureURL : \(self.userObject.userProfilePictureUrl)")
         print("userEmail :\(self.userObject.email)")

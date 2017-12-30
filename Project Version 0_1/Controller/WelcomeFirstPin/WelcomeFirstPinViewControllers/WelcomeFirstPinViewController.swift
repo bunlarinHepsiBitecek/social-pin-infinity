@@ -34,8 +34,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
      */
     var annotation = PersonAnnotation()
     
-    var yarroAnno = PersonAnnotationView()
-    
     
     var controlFlag : Bool = false
     var returnFlag : Bool = true
@@ -108,8 +106,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         // add current location information to both userLocation object and pindata
         pinDataObject.location.setCurrentLocation(locationCoordinate: location)
-        user.userLocationObject.setCurrentLocation(locationCoordinate: location)
-        
     }
     
     @IBAction func currentLocationButton(_ sender: UIButton) {
@@ -152,7 +148,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         //addPinAnnotation(for: mapView.centerCoordinate)
         if !pinDataObject.isPinDropped {
-            addPinAnnotation(for: user.userLocationObject.currenLocation)
+            addPinAnnotation(for: pinDataObject.location.currenLocation)
             
             pinDataObject.isPinDropped(inputBooleanValue: true)
             
@@ -180,12 +176,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         geocoder.reverseGeocodeLocation(location) { placemarks, error in
             if let placemark = placemarks?.first {
-                //let annotation = MKPointAnnotation()
-                //annotation.coordinate = coordinate
-                //annotation.title = placemark.name
-                //annotation.subtitle = placemark.locality
-                //let annotation = PersonAnnotation(inputPinData: self.pinDataObject)
                 self.annotation = PersonAnnotation(inputPinData: self.pinDataObject)
+                self.setParsedLocationData(inputPlaceMark: placemark)
                 
                 self.mapView.addAnnotation(self.annotation)
                 
@@ -207,13 +199,10 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         if annotationView == nil {
             print("annotation nil")
             annotationView = PersonAnnotationView(annotation: annotation, reuseIdentifier: kPersonAnnotationName)
-            print("------1")
             (annotationView as! PersonAnnotationView).personDetailDelegate = self
-            print("------2")
             
             // user burada set edilerek update edilmeli güncel location bilgileri için
             (annotationView as! PersonAnnotationView).customCalloutView?.person = user
-            print("------3")
         } else {
             print("annotation dolu")
             annotationView!.annotation = annotation
@@ -225,10 +214,10 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if event?.subtype == UIEventSubtype.motionShake {
             print("Device was shaken")
-            if !user.userLocationObject.isPinDropped {
-                addPinAnnotation(for: user.userLocationObject.currenLocation)
+            if !self.pinDataObject.location.isPinDropped {
+                addPinAnnotation(for: self.pinDataObject.location.currenLocation)
                 // current location alındığı bilgisi set edilir
-                self.user.userLocationObject.setIsPinDropped(isPinDropped: true)
+                self.pinDataObject.location.setIsPinDropped(isPinDropped: true)
             }
         }
     }
@@ -333,6 +322,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     
     func okRequestForPerson(pinData : PinData) {
         print("Remzi: ok click")
+        self.savePinDataToFirebase()
+        showAlert()
     }
     
     

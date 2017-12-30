@@ -108,7 +108,7 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
                 }
                 
                 getVideoSnapShotAsAnImage(url: videoUrl)
-                handleVideoSelectedProcess(url: videoUrl)
+                //handleVideoSelectedProcess(url: videoUrl)
                 dismissActionSheet()
                 
             } else {
@@ -143,7 +143,7 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
             
             self.pinDataObject.setPictureOnPin(inputPictureOnPin: selectedImage)
             self.pinDataObject.isPictureExist(inputBooleanValue: true)
-            setSelectedImageToButton()
+            self.setSelectedImageToButton()
             
             self.dismiss(animated: true, completion: nil)
             

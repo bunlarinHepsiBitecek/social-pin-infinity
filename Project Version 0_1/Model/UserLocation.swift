@@ -43,15 +43,13 @@ class UserLocation {
     }
     
     func appendAttributeToDictionary(inputKey : String, inputValue : String) {
-        
         self._userLocationDictionary[inputKey] = inputValue
-        
     }
     
-    func getUserJSONObject() -> Dictionary<String, String> {
+    func getJSONObject() -> Dictionary<String, String> {
         
         if !self._userLocationID.isEmpty {
-            self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_LOCATION + "-" + self.userLocationID, inputValue: self._userLocationID)
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Location + "-" + self.userLocationID, inputValue: self._userLocationID)
         }
         
         return userLocationDictionary

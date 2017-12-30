@@ -17,7 +17,7 @@ class DatabasePinItem {
     
     // firebase database reference definitions
     private var _database_reference = databaseReferenceObject
-    private var _database_reference_pinItem = databaseReferenceObject.child(CONSTANT_STRING_CHILD_PIN_ITEMS)
+    private var _database_reference_pinItem = databaseReferenceObject.child(FirebaseStorageConstants.PinItems)
     
     var getDatabaseReference : DatabaseReference {
         
@@ -36,6 +36,14 @@ class DatabasePinItem {
         print("userID : \(userID)")
         print("locationID : \(locationID)")
         getDatabaseReferencePinItem.child(userID).child(locationID).updateChildValues(pinItemData)
+    }
+    
+    /* insert or update value under chiled attribute*/
+    func updateFirbaseDatabasePinItem(userID: String, locationID : String, keyName: String, keyValue: String) {
+        print("createFirbaseDatabasePinItem starts")
+        print("userID : \(userID)")
+        print("locationID : \(locationID)")
+        getDatabaseReferencePinItem.child(userID).child(locationID).child(keyName).setValue(keyValue)
     }
         
 }
