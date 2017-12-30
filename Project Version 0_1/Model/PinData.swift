@@ -184,7 +184,7 @@ class PinData {
         self._isCapturedTextExist = inputBooleanValue
     }
         
-    func getUserJSONObject() -> Dictionary<String, String> {
+    func getJSONObject() -> Dictionary<String, String> {
         
         if !self._pictureIDOnPin.isEmpty {
             self.appendAttributeToDictionary(inputKey: CONSTANT_STRING_PICTURE, inputValue: self._pictureIDOnPin)
