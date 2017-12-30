@@ -37,8 +37,6 @@ class PinDataPictureViewController: UIViewController {
 
     @IBAction func checkPictureButtonClicked(_ sender: Any) {
         
-        print("checkPictureButtonClicked starts")
-        
         setPictureDataOnPin()
         
     }

@@ -25,6 +25,7 @@ class User {
     private var _userProfilePictureUrl : String
     private var _userProfilePictureUniqueID : String
     private var _userLocationObject: Location
+    private var _isUserGetInformedFromGuidence : Bool
     
     private var _userDictionary : Dictionary<String, String> = [:]
     
@@ -45,6 +46,8 @@ class User {
         
         self._userProfilePicture = UIImage()
         self._userLocationObject = Location()
+        
+        self._isUserGetInformedFromGuidence = false
     }
     
     func printUserInfo() {
@@ -119,6 +122,10 @@ class User {
     
     var userLocationObject: Location {
         return _userLocationObject
+    }
+    
+    var isUserGetInformedFromGuidence : Bool {
+        return _isUserGetInformedFromGuidence
     }
     
     func setUserID(inputUserID : String) {
@@ -198,6 +205,10 @@ class User {
     
     func setUserProviderId(inputUserProviderId: String) {
         self._providerId = inputUserProviderId
+    }
+    
+    func isUserGetInformedFromGuidence(inputBooleanValue : Bool) {
+        self._isUserGetInformedFromGuidence = inputBooleanValue
     }
     
     func displayAttributeValues() {

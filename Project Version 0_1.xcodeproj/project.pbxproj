@@ -79,7 +79,6 @@
 		A75CE0811FF03F6F004703F5 /* SavePinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0801FF03F6F004703F5 /* SavePinData.swift */; };
 		A75CE0841FF0419C004703F5 /* PinTextDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0831FF0419C004703F5 /* PinTextDataExtensions.swift */; };
 		A75CE0861FF04A7D004703F5 /* PinImageDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0851FF04A7D004703F5 /* PinImageDataExtensions.swift */; };
-		A75CE0881FF0548B004703F5 /* ActionSheetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0871FF0548B004703F5 /* ActionSheetConstants.swift */; };
 		A75CE0901FF2AEB8004703F5 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = A75CE0891FF2AEB7004703F5 /* cancel.png */; };
 		A75CE0911FF2AEB8004703F5 /* maps32.png in Resources */ = {isa = PBXBuildFile; fileRef = A75CE08A1FF2AEB7004703F5 /* maps32.png */; };
 		A75CE0921FF2AEB8004703F5 /* maps64.png in Resources */ = {isa = PBXBuildFile; fileRef = A75CE08B1FF2AEB7004703F5 /* maps64.png */; };
@@ -121,6 +120,9 @@
 		A75F40261FC0DBCC00495228 /* EntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40251FC0DBCC00495228 /* EntranceViewController.swift */; };
 		A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F402E1FC1D3E300495228 /* UIViewDesign.swift */; };
 		A75F40351FC238B600495228 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40341FC238B600495228 /* StartPageViewController.swift */; };
+		A76628DE1FF7C3750008FE63 /* guidance_step3_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76628DD1FF7C3750008FE63 /* guidance_step3_ViewController.swift */; };
+		A76628E01FF7C7260008FE63 /* speech-bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = A76628DF1FF7C7250008FE63 /* speech-bubble.png */; };
+		A76628E21FF7CC680008FE63 /* speech-bubble (2).png in Resources */ = {isa = PBXBuildFile; fileRef = A76628E11FF7CC670008FE63 /* speech-bubble (2).png */; };
 		A767CEE71FD4AA4200E70B16 /* AlertControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEE61FD4AA4200E70B16 /* AlertControllerConstants.swift */; };
 		A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEE81FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift */; };
 		A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEEA1FD4E61000E70B16 /* UINavigationItem.swift */; };
@@ -234,7 +236,6 @@
 		A75CE0801FF03F6F004703F5 /* SavePinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePinData.swift; sourceTree = "<group>"; };
 		A75CE0831FF0419C004703F5 /* PinTextDataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTextDataExtensions.swift; sourceTree = "<group>"; };
 		A75CE0851FF04A7D004703F5 /* PinImageDataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinImageDataExtensions.swift; sourceTree = "<group>"; };
-		A75CE0871FF0548B004703F5 /* ActionSheetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetConstants.swift; sourceTree = "<group>"; };
 		A75CE0891FF2AEB7004703F5 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		A75CE08A1FF2AEB7004703F5 /* maps32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps32.png; sourceTree = "<group>"; };
 		A75CE08B1FF2AEB7004703F5 /* maps64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps64.png; sourceTree = "<group>"; };
@@ -278,6 +279,9 @@
 		A75F40251FC0DBCC00495228 /* EntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceViewController.swift; sourceTree = "<group>"; };
 		A75F402E1FC1D3E300495228 /* UIViewDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewDesign.swift; sourceTree = "<group>"; };
 		A75F40341FC238B600495228 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
+		A76628DD1FF7C3750008FE63 /* guidance_step3_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guidance_step3_ViewController.swift; sourceTree = "<group>"; };
+		A76628DF1FF7C7250008FE63 /* speech-bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech-bubble.png"; sourceTree = "<group>"; };
+		A76628E11FF7CC670008FE63 /* speech-bubble (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech-bubble (2).png"; sourceTree = "<group>"; };
 		A767CEE61FD4AA4200E70B16 /* AlertControllerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerConstants.swift; sourceTree = "<group>"; };
 		A767CEE81FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageExtensionFunctions.swift; sourceTree = "<group>"; };
 		A767CEEA1FD4E61000E70B16 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
@@ -340,6 +344,8 @@
 		A7194DB11FEA213B00586038 /* Guidance */ = {
 			isa = PBXGroup;
 			children = (
+				A76628E11FF7CC670008FE63 /* speech-bubble (2).png */,
+				A76628DF1FF7C7250008FE63 /* speech-bubble.png */,
 				A7194DB61FEA224D00586038 /* right-drawn-arrow_white.png */,
 				A7194DB41FEA21EC00586038 /* shake.png */,
 			);
@@ -679,6 +685,7 @@
 			children = (
 				A7194DAF1FEA1FF700586038 /* guidance_step1_ViewController.swift */,
 				A7194DB81FEA231700586038 /* guidance_step2_ViewController.swift */,
+				A76628DD1FF7C3750008FE63 /* guidance_step3_ViewController.swift */,
 			);
 			path = GuidanceModalViewControllers;
 			sourceTree = "<group>";
@@ -928,7 +935,6 @@
 				A767CEE61FD4AA4200E70B16 /* AlertControllerConstants.swift */,
 				ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */,
 				ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */,
-				A75CE0871FF0548B004703F5 /* ActionSheetConstants.swift */,
 				A72D9EDF1FF5B1D3001C2098 /* AlertWarningConstants.swift */,
 			);
 			path = Alert;
@@ -1149,6 +1155,7 @@
 				A75E3F561FE55551007165DE /* next.png in Resources */,
 				A72CAA7E1FD6855200308DED /* ic_eye_open@2x.png in Resources */,
 				A75E3F6E1FE79B69007165DE /* school-material.png in Resources */,
+				A76628E01FF7C7260008FE63 /* speech-bubble.png in Resources */,
 				A71811DF1FEA16B900771EE5 /* KGFonts-TOU.txt in Resources */,
 				A71B49FE1FD3112400B69E71 /* camera_icon_new.png in Resources */,
 				A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */,
@@ -1174,6 +1181,7 @@
 				A72CAA851FD6855200308DED /* ic_password_checkmark.png in Resources */,
 				A75F40101FC0B7C600495228 /* Assets.xcassets in Resources */,
 				A7C4DF211FF4C320009656F3 /* recycle-bin (1).png in Resources */,
+				A76628E21FF7CC680008FE63 /* speech-bubble (2).png in Resources */,
 				A75CE0911FF2AEB8004703F5 /* maps32.png in Resources */,
 				A72CAA801FD6855200308DED /* ic_eye_closed@2x.png in Resources */,
 				A72CAA7D1FD6855200308DED /* ic_eye_open@3x.png in Resources */,
@@ -1285,7 +1293,6 @@
 				AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */,
 				A72CAA6C1FD5AF8200308DED /* DatabaseAccessConstant.swift in Sources */,
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
-				A75CE0881FF0548B004703F5 /* ActionSheetConstants.swift in Sources */,
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
 				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
 				A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift in Sources */,
@@ -1376,6 +1383,7 @@
 				A75CE0611FED4280004703F5 /* PinDataPictureViewController.swift in Sources */,
 				A75CE0791FEE81AF004703F5 /* DecideToLoadVideo.swift in Sources */,
 				A7D1CBAE1FD460660082BC02 /* UITextFieldCustomDesign.swift in Sources */,
+				A76628DE1FF7C3750008FE63 /* guidance_step3_ViewController.swift in Sources */,
 				A72CAA8F1FD689B200308DED /* RegisterViewControllerExtentions.swift in Sources */,
 				A72705C11FC885B8006C2504 /* MainPageViewController.swift in Sources */,
 				A72AFBE01FCDE8D70018254E /* ProjectSettingsConstants.swift in Sources */,

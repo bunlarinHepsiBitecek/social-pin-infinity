@@ -67,8 +67,6 @@ extension PinDataPictureViewController {
     
     func erasePictureDataOnPin() {
         
-        print("erasePictureDataOnPin starts")
-        
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
         let alertAppearance = SCLAlertView.SCLAppearance()

@@ -50,7 +50,7 @@ class PinData {
         self._isCapturedTextExist = false
         
     }
-
+    
     var user : User {
         return _user
     }
@@ -205,6 +205,11 @@ class PinData {
         
         self._isPinDropped = false
         self._isPinDataUploadedDatabase = false
+        self._isPictureExist = false
+        self._isCapturedTextExist = false
+        self._videoExistFlag = false
+        self.setTextOnPin(inputTextOnPin: SPACE_CHARACTER)
+        
         
     }
     

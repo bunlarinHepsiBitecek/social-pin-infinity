@@ -23,6 +23,7 @@ struct ConstantStrings {
         static let STRING_WARNING_DATA_ON_PIN_GET_ERASED = "Bıraktığınız pin silinecektir !"
         static let STRING_WARNING_SELECTED_VIDEO_SIZE_TOO_BIG = "Seçtiğiniz video süresi çok uzundur, lütfen başka bir video seçiniz"
         static let STRING_WARNING_TEXT_FIELD_GET_ERASED = "Pin üzerine bırakılacak nok silinecektir!"
+        //static let 
         
     }
     

@@ -64,7 +64,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         //setProfileImage()
         
         tempMapView = self.mapView
-    
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -122,6 +122,32 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         print("dropPinButton is clicked")
         print("isPinDropped : \(pinDataObject.isPinDropped)")
         
+        //dropPinOnMap()
+        
+        if user.isUserGetInformedFromGuidence {
+            
+            dropPinOnMap()
+            
+        } else {
+            
+            if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "guidance_step3_ViewController_storyBoardID") as? guidance_step3_ViewController {
+         
+                destinationViewController.tempMapView = self.mapView
+                destinationViewController.tempUser = self.user
+                destinationViewController.tempPinData = self.pinDataObject
+                destinationViewController.tempAnnotation = self.annotation
+                
+                present(destinationViewController, animated: true, completion: nil)
+                
+            }
+         
+        }
+        
+    }
+    
+    
+    func dropPinOnMap() {
+        
         checkPinDataUploadedToDatabase()
         
         //addPinAnnotation(for: mapView.centerCoordinate)
@@ -163,7 +189,9 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                 
                 self.mapView.addAnnotation(self.annotation)
                 
-                self.mapView.selectedAnnotations.append(self.annotation)
+                //self.mapView.selectedAnnotations.append(self.annotation)
+                
+                self.mapView.selectAnnotation(self.annotation, animated: true)
             }
         }
     }
@@ -275,19 +303,9 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                         print("boku yedik")
                         
                     }
-                    
-                    
-                    
                 }
-                
             })
-            
-            
-            
-            
         }
-        
-        
     }
     
     func playVideo() {
@@ -323,7 +341,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
      */
     func cancelRequestForPerson(pinData : PinData) {
         print("Remzi: cancel click")
-        
+        print("count : \(self.mapView.annotations.count)")
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
         let alertAppearance = SCLAlertView.SCLAppearance()
@@ -331,7 +349,9 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         let alertView = SCLAlertView(appearance: alertAppearance)
         
         alertView.addButton(ConstantStrings.ButtonTitles.STRING_OK) {
-            self.mapView.removeAnnotation(self.annotation)
+            
+            self.mapView.removeAnnotation(self.mapView.selectedAnnotations.last!)
+            
             self.pinDataObject.resetPinDataFlags()
             
         }
@@ -368,16 +388,21 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     func addVideoRequestForPerson(pinData : PinData) {
         print("Remzi: addVideoRequestForPerson")
         
-        self.informationForVideoData()
+        if self.pinDataObject.videoExistFlag {
+            
+            self.startGettingVideoProcess()
+            
+        } else {
+            
+            self.informationForVideoData()
+            
+        }
         
     }
     
     /*
-     
-     
+        to add image on dropped pin on map
      */
-    
-    // delegation Methot
     func addImageRequestForPerson(pinData : PinData) {
         print("Remzi: addImageRequestForPerson")
         print("pinData.isPictureExist :\(pinData.isPictureExist)")
@@ -409,7 +434,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         }
         
         
-        print("Remzi: addImageRequestForPerson bitti")
     }
     
     

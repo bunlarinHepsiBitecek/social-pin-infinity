@@ -41,6 +41,7 @@ class PinTextDataViewController: UIViewController {
             demonstrate for previous view, and dismiss the current modal controller view
          
          */
+        print("******* : \(textField.text)")
         getScreenShotOfTextFieldAndSetPinData()
         
     }

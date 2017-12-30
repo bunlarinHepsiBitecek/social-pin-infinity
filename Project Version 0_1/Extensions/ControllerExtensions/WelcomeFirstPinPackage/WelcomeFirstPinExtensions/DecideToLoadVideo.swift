@@ -256,28 +256,31 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
     
     func startGettingVideoProcess() {
         
-        let videoAlertController = UIAlertController(title: CONSTANT_STRING_VIDEO_CHOISE, message: nil, preferredStyle: .actionSheet)
+        let videoAlertController = UIAlertController(title: ConstantsMediaProperties.VideoActionSheetConstants.stringValueVideoChoise, message: nil, preferredStyle: .actionSheet)
         
-        let videoAlertActionChoiceExisting = UIAlertAction(title: CONSTANT_STRING_VIDEO_FROM_PHOTO_LIBRARY, style: .default) { (alertAction) in
-            print(alertAction)
-            // function to take a photo
+        let videoAlertActionChoiceExisting = UIAlertAction(title: ConstantsMediaProperties.VideoActionSheetConstants.stringValueVideoFromPhotoLibrary, style: .default) { (alertAction) in
+            
             self.getVideoDataFromLibrary()
         }
         
-        let videoAlertActionTakeVideo = UIAlertAction(title: CONSTANT_STRING_VIDEO_NEW_RECORD, style: .default) { (alertAction) in
-            print(alertAction)
-            // function to take a photo
+        let videoAlertActionTakeVideo = UIAlertAction(title: ConstantsMediaProperties.VideoActionSheetConstants.stringValueVideoNewRecord, style: .default) { (alertAction) in
+            
             self.takeVideoData()
         }
         
-        let videoAlertActionPlayVideo = UIAlertAction(title: CONSTANT_STRING_VIDEO_PLAY, style: .default) { (alertAction) in
-            print(alertAction)
-            // function to take a photo
+        let videoAlertActionPlayVideo = UIAlertAction(title: ConstantsMediaProperties.VideoActionSheetConstants.stringValueVideoPlay, style: .default) { (alertAction) in
+
             self.playVideo(url: self.pinDataObject.videoDataUrl as URL)
             
         }
         
-        let cancelAlertAction = UIAlertAction(title: CONSTANT_STRING_VIDEO_CANCEL, style: .cancel) { (alertAction) in
+        let videoAlertActionDeleteVideo = UIAlertAction(title: ConstantsMediaProperties.VideoActionSheetConstants.stringValueVideoDelete, style: .destructive) { (alertAction) in
+            
+            self.deleteVideoProcess()
+        }
+        
+        
+        let cancelAlertAction = UIAlertAction(title: ConstantsMediaProperties.VideoActionSheetConstants.stringValueActionSheetCancelButtonTitle, style: .cancel) { (alertAction) in
             print(alertAction)
         }
         
@@ -286,6 +289,7 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         
         if self.pinDataObject.videoExistFlag {
             videoAlertController.addAction(videoAlertActionPlayVideo)
+            videoAlertController.addAction(videoAlertActionDeleteVideo)
         }
         
         videoAlertController.addAction(cancelAlertAction)
@@ -317,8 +321,6 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
     //
     func decideHowProfilePictureLoads() {
         
-        print("decideHowProfilPictureLoads starts")
-        
         let profilePictureAlertController = UIAlertController(title: "Choose Profile Picture", message: nil, preferredStyle: .actionSheet)
         
         let cameraAlertAction = UIAlertAction(title: "Take a photo", style: .default) { (alertAction) in
@@ -344,42 +346,19 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         
     }
     
-    func tata() {
-        print("aha yakaladık")
-        
-        let image = UIImage(named: "image1.png")
-        
-        self.yarroAnno.customCalloutView?.addImageButton.setImage(image, for: .normal)
-        
-        for annotation in self.mapView.annotations as [MKAnnotation] {
-            print("loop1")
-        }
-        
-    }
-    
     func setSelectedImageToButton() {
         
-        print("setSelectedImageToButton starts")
-        print("pinDataObject.isPictureExist : \(pinDataObject.isPictureExist)")
-        
-        //let image = UIImage(named: "image1.png")
-        
         for annotation in self.mapView.annotations as [MKAnnotation] {
-            print("setSelectedImageToButton tüm annotationlar alınır: \(self.mapView.annotations.count)")
+            
             if let currentAnnotation = self.mapView.view(for: annotation) as? PersonAnnotationView {
-                print("Current displayed annotation bulduk")
                 
                 if pinDataObject.isPictureExist {
-                    
-                    print("point1")
                     
                     if let newImage = self.pinDataObject.pictureOnPin as UIImage? {
                         currentAnnotation.customCalloutView?.addImageButton.setImage(newImage, for: .normal)
                     }
                     
                 } else {
-                    
-                    print("point2")
                     
                     currentAnnotation.customCalloutView?.addImageButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.PHOTO_CAMERA_IMAGE)
                     
@@ -402,6 +381,10 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
                         
                     }
                     
+                } else {
+                    
+                    currentAnnotation.customCalloutView?.addVideoButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.PLAY_VIDEO_IMAGE)
+                    
                 }
                 
             }
@@ -410,9 +393,6 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
     }
     
     func setCaptureImageOfTextFieldOnButton() {
-        
-        print("setCaptureImageOfTextFieldOnButton starts")
-        print("text : \(self.pinDataObject.textOnPin)")
         
         for annotation in self.mapView.annotations as [MKAnnotation] {
             
@@ -427,8 +407,6 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
                     }
                     
                 } else {
-                    
-                    print("point2")
                     
                     currentAnnotation.customCalloutView?.addTextButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.TEXT_MATERIAL_IMAGE)
                     
@@ -448,17 +426,14 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         
         if durationSecondValue > ConstantsMediaProperties.VideoProperties.selectedVideoDurationLimit {
             
-            print("büyük data")
             createAlertForGreaterSizeVideos()
             return false
             
         } else {
             
-            print("tamam sıkıntı yok")
             return true
             
         }
-        
         
     }
     
@@ -481,8 +456,6 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
     
     func informationForVideoData() {
         
-        print("informationForVideoData starts")
-        
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
         let alertAppearance = SCLAlertView.SCLAppearance()
@@ -496,6 +469,26 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
         }
         
     }
+    
+    func deleteVideoProcess() {
+        
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
+        let alertAppearance = SCLAlertView.SCLAppearance()
+        
+        let alertView = SCLAlertView(appearance: alertAppearance)
+        
+        alertView.addButton(ConstantsMediaProperties.VideoActionSheetAlertButtonTitles.stringValueVideoDeletedConfirmButtonTitle) {
+            
+            self.pinDataObject.setVideoExistFlag(inputVideoExistFlag: false)
+            self.setSelectedVideoImageToButton()
+        }
+        
+        alertView.showWarning(ConstantsMediaProperties.VideoActionSheetWarningTitles.stringValueVideoDeletedAlertTitle, subTitle: ConstantsMediaProperties.VideoActionSheetWarningSentencesConstants.stringValueVideoGetDeleted, closeButtonTitle: ConstantsMediaProperties.VideoActionSheetAlertButtonTitles.stringValueVideoDeletedCancelButtonTitle)
+        
+    }
+    
+    
     
 }
 
