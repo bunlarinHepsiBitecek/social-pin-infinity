@@ -32,7 +32,7 @@ extension WelcomeFirstPinViewController {
         
         let videoID = NSUUID().uuidString
         
-        let task = Storage.storage().reference().child(FirebaseModels.Users.CHILD_USERS).child(FirebaseModels.Locations.CHILD_LOCATIONS).child(videoID).putFile(from: self.pinDataObject.videoDataUrlFirebase as URL, metadata: nil) { (metadata, error) in
+        let task = Storage.storage().reference().child(FirebaseModels.Users.CHILD_USERS).child(FirebaseModels.Locations.CHILD_LOCATIONS).child("\(videoID).mov").putFile(from: self.pinDataObject.videoDataUrl as URL, metadata: nil) { (metadata, error) in
             
             if error != nil {
                 

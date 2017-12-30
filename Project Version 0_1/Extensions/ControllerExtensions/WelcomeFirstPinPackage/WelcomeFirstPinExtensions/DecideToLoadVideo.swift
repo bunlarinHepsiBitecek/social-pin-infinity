@@ -95,6 +95,7 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
             print("videoUrl : \(videoUrl)")
             
             print("picker.videoMaximumDuration : \(picker.videoMaximumDuration)")
+            print("picker.mediatype : \(picker.mediaTypes)")
             
             if checkDurationTimeOfSelectedVideoFromLibrary(inputUrl: videoUrl as URL) {
                 
@@ -106,7 +107,6 @@ extension WelcomeFirstPinViewController : UIImagePickerControllerDelegate, UINav
                 }
                 
                 getVideoSnapShotAsAnImage(url: videoUrl)
-                //handleVideoSelectedProcess(url: videoUrl)
                 dismissActionSheet()
                 
             } else {
