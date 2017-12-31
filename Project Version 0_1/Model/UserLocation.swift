@@ -49,7 +49,7 @@ class UserLocation {
     func getJSONObject() -> Dictionary<String, String> {
         
         if !self._userLocationID.isEmpty {
-            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Location + "-" + self.userLocationID, inputValue: self._userLocationID)
+            self.appendAttributeToDictionary(inputKey: self.userLocationID, inputValue: self._userLocationID)
         }
         
         return userLocationDictionary

@@ -66,6 +66,9 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         tempMapView = self.mapView
         
+        let trackingButton = MKUserTrackingButton(mapView: self.mapView)
+        trackingButton.frame.origin = CGPoint(x: self.view.frame.width - 40, y: 80)
+        self.view.addSubview(trackingButton)
     }
     
     func setupCompassButton() {
@@ -138,13 +141,9 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         // add current location information to both userLocation object and pindata
         pinDataObject.location.setCurrentLocation(locationCoordinate: location)
+        
     }
-    
-    @IBAction func currentLocationButton(_ sender: UIButton) {
-        locationManager.stopUpdatingLocation()
-        locationManager.startUpdatingLocation()
-    }
-    
+ 
     @IBAction func dropPinButtonTapped(_ sender: UIButton) {
        
         print("dropPinButton is clicked")

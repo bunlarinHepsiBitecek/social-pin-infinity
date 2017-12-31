@@ -151,6 +151,7 @@
 		AD5A44461FE509BA00266548 /* gender_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5A44451FE509B900266548 /* gender_woman.png */; };
 		AD641ECE1FDDD254002E483B /* gender_man.png in Resources */ = {isa = PBXBuildFile; fileRef = AD641ECC1FDDD254002E483B /* gender_man.png */; };
 		AD7FB67E1FF80FE4001AD14B /* SelectedAnnotationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7FB67D1FF80FE4001AD14B /* SelectedAnnotationOperation.swift */; };
+		AD7FB6801FF84ED4001AD14B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7FB67F1FF84ED4001AD14B /* MapKit.framework */; };
 		ADB505AA1FDB1C6500F81046 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */; };
 		ADB505AB1FDB1C6500F81046 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */; };
 		ADB505AF1FDB333B00F81046 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB505AC1FDB333B00F81046 /* image1.png */; };
@@ -309,6 +310,7 @@
 		AD5A44451FE509B900266548 /* gender_woman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_woman.png; sourceTree = "<group>"; };
 		AD641ECC1FDDD254002E483B /* gender_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_man.png; sourceTree = "<group>"; };
 		AD7FB67D1FF80FE4001AD14B /* SelectedAnnotationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAnnotationOperation.swift; sourceTree = "<group>"; };
+		AD7FB67F1FF84ED4001AD14B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		ADB505AC1FDB333B00F81046 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7FB6801FF84ED4001AD14B /* MapKit.framework in Frameworks */,
 				0476E4F9FFF99A10D02F1BB7 /* Pods_Project_Version_0_1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1074,6 +1077,7 @@
 		C502180E30BA6FDA6C25691D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD7FB67F1FF84ED4001AD14B /* MapKit.framework */,
 				BF2EAC58EB2B78FDCBF4F5D0 /* Pods_Project_Version_0_1.framework */,
 			);
 			name = Frameworks;
@@ -1116,6 +1120,12 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 							com.apple.SafariKeychain = {
 								enabled = 1;
 							};
