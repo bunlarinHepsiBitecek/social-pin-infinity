@@ -54,16 +54,49 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        locationManager.distanceFilter = 10.0
         
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.showsCompass = true
-        
-        //setProfileImage()
+    
+        let trackingButton = MKUserTrackingButton(mapView: self.mapView)
+        trackingButton.frame.origin = CGPoint(x: self.view.frame.width - 40, y: 80)
+        self.view.addSubview(trackingButton)
         
         tempMapView = self.mapView
         
     }
+    
+    func setupCompassButton() {
+        let compass = MKCompassButton(mapView: mapView)
+        compass.compassVisibility = .visible
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: compass)
+        mapView.showsCompass = true
+    }
+    
+    func setupUserTrackingButtonAndScaleView() {
+        mapView.showsUserLocation = true
+        
+        let button = MKUserTrackingButton(mapView: mapView)
+        button.layer.backgroundColor = UIColor(white: 1, alpha: 0.8).cgColor
+        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 5
+        button.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(button)
+        
+        let scale = MKScaleView(mapView: mapView)
+        scale.legendAlignment = .trailing
+        scale.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(scale)
+        
+        NSLayoutConstraint.activate([button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
+                                     button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+                                     scale.trailingAnchor.constraint(equalTo: button.leadingAnchor, constant: -10),
+                                     scale.centerYAnchor.constraint(equalTo: button.centerYAnchor)])
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
