@@ -388,7 +388,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rx3-QD-GtG">
                                 <rect key="frame" x="49" y="136" width="277" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <string key="text">Hello :) Would you like yo mark your first Pin ?
 </string>
                                 <fontDescription key="fontDescription" name="GloriaHallelujah" family="Gloria Hallelujah" pointSize="17"/>
@@ -397,19 +397,19 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9H-VB-wE8">
                                 <rect key="frame" x="49" y="377" width="70" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GloriaHallelujah" family="Gloria Hallelujah" pointSize="17"/>
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="gotoGuidanceNext:" destination="HOL-hH-bht" eventType="touchUpInside" id="M4c-VO-wCW"/>
-                                    <segue destination="8Ep-AU-w6S" kind="presentation" id="6V2-Wk-Q2F"/>
+                                    <segue destination="8Ep-AU-w6S" kind="presentation" identifier="gotoGuidance2" id="6V2-Wk-Q2F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGh-Su-Eh7">
                                 <rect key="frame" x="256" y="377" width="70" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GloriaHallelujah" family="Gloria Hallelujah" pointSize="17"/>
                                 <state key="normal" title="No">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -443,18 +443,18 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shake the phone :)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi5-ag-XcZ">
                                 <rect key="frame" x="72" y="55" width="239" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GloriaHallelujah" family="Gloria Hallelujah" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shake.png" translatesAutoresizingMaskIntoConstraints="NO" id="KXw-TJ-sex">
                                 <rect key="frame" x="67" y="102" width="240" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right-drawn-arrow_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="pRP-SV-Ri0">
                                 <rect key="frame" x="189" y="423" width="75" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="eWc-6y-8dA">
                                 <rect key="frame" x="299" y="471" width="60" height="60"/>
@@ -497,14 +497,14 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or click the button on the next page :)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MB1-Og-hGb">
                                 <rect key="frame" x="72" y="313" width="239" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GloriaHallelujah" family="Gloria Hallelujah" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQ7-B7-6XU" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
                                 <rect key="frame" x="133" y="569" width="117" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GloriaHallelujah" family="Gloria Hallelujah" pointSize="17"/>
                                 <state key="normal" title="Got it :)">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -546,7 +546,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oIe-Rk-aAq">
                                 <rect key="frame" x="36" y="20" width="228" height="262"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speech-bubble.png" translatesAutoresizingMaskIntoConstraints="NO" id="F2E-zb-4GL">
                                         <rect key="frame" x="8" y="8" width="210" height="176"/>
@@ -589,7 +589,7 @@
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ng-Be-kAJ">
                                 <rect key="frame" x="205" y="175" width="154" height="213"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHY-nK-BB9" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
                                         <rect key="frame" x="100" y="158" width="50" height="50"/>
@@ -632,7 +632,7 @@
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ba0-Qy-L3X">
                                 <rect key="frame" x="36" y="299" width="228" height="262"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speech-bubble.png" translatesAutoresizingMaskIntoConstraints="NO" id="1gj-EP-mHx">
                                         <rect key="frame" x="8" y="8" width="210" height="176"/>
@@ -675,7 +675,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xk4-2b-e9e" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
                                 <rect key="frame" x="129" y="569" width="117" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GloriaHallelujah" family="Gloria Hallelujah" pointSize="17"/>
                                 <state key="normal" title="Got it :)">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -721,7 +721,7 @@
         <image name="speech-bubble.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H93-wD-l1o"/>
-        <segue reference="tH7-dz-Db7"/>
+        <segue reference="6V2-Wk-Q2F"/>
+        <segue reference="xGB-Xf-ZYT"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -37,7 +37,7 @@ class guidance_step1_ViewController: UIViewController {
         button1.setTitle("", for: .normal)
         button2.setTitle("", for: .normal)
         
-        //performSegue(withIdentifier: "gotoGuidance2", sender: self)
+        performSegue(withIdentifier: "gotoGuidance2", sender: self)
         
     }
     
@@ -47,7 +47,6 @@ class guidance_step1_ViewController: UIViewController {
         
     }
     
-    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "gotoGuidance2" {
@@ -58,7 +57,7 @@ class guidance_step1_ViewController: UIViewController {
         }
         
         
-    }*/
+    }
     
 
 }

@@ -59,10 +59,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.showsCompass = true
-    
-        let trackingButton = MKUserTrackingButton(mapView: self.mapView)
-        trackingButton.frame.origin = CGPoint(x: self.view.frame.width - 40, y: 80)
-        self.view.addSubview(trackingButton)
+        mapView.isRotateEnabled = true
+        mapView.isOpaque = true
         
         tempMapView = self.mapView
         
