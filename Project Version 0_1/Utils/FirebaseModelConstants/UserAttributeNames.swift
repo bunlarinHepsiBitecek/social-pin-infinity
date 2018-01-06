@@ -59,6 +59,14 @@ struct FirebaseModels {
     struct Locations {
         static let CHILD_LOCATIONS = "Locations"
     }
+    
+    struct UserLocations {
+        static let CHILD_USER_LOCATIONS = "UserLocations"
+    }
+    
+    struct PinItems {
+        static let CHILD_PIN_ITEMS = "PinItems"
+    }
 }
 
 struct FirebaseModelConstants {
@@ -90,6 +98,10 @@ struct FirebaseModelConstants {
         static let Geolocation : String = "geolocation"
         static let Latitude : String = "latitude"
         static let Longitude : String = "longitude"
+    }
+    
+    struct UserLocations {
+        // TO DO
     }
     
     struct PinItem {

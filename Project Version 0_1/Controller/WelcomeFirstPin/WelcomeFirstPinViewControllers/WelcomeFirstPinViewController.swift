@@ -92,7 +92,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         print("Remzi:  WelcomeFirstPinViewController viewWillAppear girdi")
         super.viewWillAppear(animated)
