@@ -24,14 +24,14 @@ class Location {
     private var _userID : String
     private var _countryCode : String
     private var _countryName : String
-    private var _timeStamp : String
+    private var _timeStamp : Int
     private var _postalCode : String
     private var _thorough : String
     private var _subThorough : String
     private var _latitude : Double
     private var _longitude : Double
     
-    private var _locationDictionary : Dictionary<String, String> = [:]
+    private var _locationDictionary : Dictionary<String, Any> = [:]
     
     init() {
         self._currentLocation = CLLocationCoordinate2D()
@@ -39,7 +39,7 @@ class Location {
         self._userID = SPACE_CHARACTER
         self._countryCode = SPACE_CHARACTER
         self._countryName = SPACE_CHARACTER
-        self._timeStamp = SPACE_CHARACTER
+        self._timeStamp = 0
         self._postalCode = SPACE_CHARACTER
         self._thorough = SPACE_CHARACTER
         self._subThorough = SPACE_CHARACTER
@@ -50,7 +50,7 @@ class Location {
         
     }
     
-    var locationDictionary : Dictionary<String, String> {
+    var locationDictionary : Dictionary<String, Any> {
         return _locationDictionary
     }
     
@@ -78,7 +78,7 @@ class Location {
         return _countryName
     }
     
-    var timeStamp : String {
+    var timeStamp : Int {
         return _timeStamp
     }
     
@@ -126,7 +126,7 @@ class Location {
         self._countryName = inputCountryName
     }
     
-    func setTimestamp(inputTimestamp : String) {
+    func setTimestamp(inputTimestamp : Int) {
         self._timeStamp = inputTimestamp
     }
     
@@ -150,13 +150,13 @@ class Location {
         self._longitude = inputLongitude
     }
     
-    func appendAttributeToDictionary(inputKey : String, inputValue : String) {
+    func appendAttributeToDictionary(inputKey : String, inputValue : Any) {
         
         self._locationDictionary[inputKey] = inputValue
         
     }
     
-    func getJSONObject() -> Dictionary<String, String> {
+    func getJSONObject() -> Dictionary<String, Any> {
         
         if !self._userID.isEmpty {
             self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Users.UserID, inputValue: self._userID)
@@ -170,9 +170,12 @@ class Location {
             self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.CountryName, inputValue: self._countryName)
         }
         
-        if !self._timeStamp.isEmpty {
+        if self._timeStamp > 0 {
             self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Timestamp, inputValue: self._timeStamp)
+        } else {
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Timestamp, inputValue: [".sv": "timestamp"])
         }
+        
         
         if !self._postalCode.isEmpty {
             self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.PostalCode, inputValue: self._postalCode)
@@ -187,11 +190,11 @@ class Location {
         }
         
         if !self._latitude.isZero {
-            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Latitude, inputValue: String(self._latitude))
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Latitude, inputValue: self._latitude)
         }
         
         if !self._longitude.isZero {
-            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Longitude, inputValue: String(self._longitude))
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.Longitude, inputValue: self._longitude)
         }
         
         return locationDictionary

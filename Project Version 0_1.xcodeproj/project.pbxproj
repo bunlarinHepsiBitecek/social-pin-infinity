@@ -155,6 +155,11 @@
 		A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E361FD207CA0009322E /* UIViewExtensions.swift */; };
 		A7DD2E391FD2DC110009322E /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E381FD2DC110009322E /* Information.swift */; };
 		AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A34401FE1C41B0054801D /* InformationAlertView.swift */; };
+		AD48E13D2001037B0042020C /* DatabaseFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E13C2001037B0042020C /* DatabaseFriends.swift */; };
+		AD48E13F20010D7A0042020C /* PinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E13E20010D7A0042020C /* PinModels.swift */; };
+		AD48E1412001176F0042020C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E1402001176F0042020C /* Group.swift */; };
+		AD48E14320011EA60042020C /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E14220011EA60042020C /* Friend.swift */; };
+		AD48E145200120970042020C /* NotificationSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E144200120970042020C /* NotificationSent.swift */; };
 		AD5A44461FE509BA00266548 /* gender_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5A44451FE509B900266548 /* gender_woman.png */; };
 		AD641ECE1FDDD254002E483B /* gender_man.png in Resources */ = {isa = PBXBuildFile; fileRef = AD641ECC1FDDD254002E483B /* gender_man.png */; };
 		AD7FB67E1FF80FE4001AD14B /* SelectedAnnotationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7FB67D1FF80FE4001AD14B /* SelectedAnnotationOperation.swift */; };
@@ -321,6 +326,11 @@
 		A7DD2E361FD207CA0009322E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		A7DD2E381FD2DC110009322E /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		AD1A34401FE1C41B0054801D /* InformationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAlertView.swift; sourceTree = "<group>"; };
+		AD48E13C2001037B0042020C /* DatabaseFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFriends.swift; sourceTree = "<group>"; };
+		AD48E13E20010D7A0042020C /* PinModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModels.swift; sourceTree = "<group>"; };
+		AD48E1402001176F0042020C /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		AD48E14220011EA60042020C /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		AD48E144200120970042020C /* NotificationSent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSent.swift; sourceTree = "<group>"; };
 		AD5A44451FE509B900266548 /* gender_woman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_woman.png; sourceTree = "<group>"; };
 		AD641ECC1FDDD254002E483B /* gender_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_man.png; sourceTree = "<group>"; };
 		AD7FB67D1FF80FE4001AD14B /* SelectedAnnotationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAnnotationOperation.swift; sourceTree = "<group>"; };
@@ -906,6 +916,10 @@
 				A7DD2E381FD2DC110009322E /* Information.swift */,
 				AD1A34401FE1C41B0054801D /* InformationAlertView.swift */,
 				A72AE3821FFF684000657A4D /* PinDropButtonObjects.swift */,
+				AD48E13E20010D7A0042020C /* PinModels.swift */,
+				AD48E1402001176F0042020C /* Group.swift */,
+				AD48E14220011EA60042020C /* Friend.swift */,
+				AD48E144200120970042020C /* NotificationSent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -984,6 +998,7 @@
 				A75E3F601FE5B7A0007165DE /* DatabaseLocation.swift */,
 				A75E3F641FE5E831007165DE /* DatabaseUserLocation.swift */,
 				A75CE07E1FEF0202004703F5 /* DatabasePinItems.swift */,
+				AD48E13C2001037B0042020C /* DatabaseFriends.swift */,
 			);
 			path = DatabaseServices;
 			sourceTree = "<group>";
@@ -1354,6 +1369,7 @@
 				A72AE3882000E42300657A4D /* MainHomeViewController.swift in Sources */,
 				A767CEE71FD4AA4200E70B16 /* AlertControllerConstants.swift in Sources */,
 				A7DD2E131FD1B1600009322E /* ServerAccessExtensionFunctions.swift in Sources */,
+				AD48E13F20010D7A0042020C /* PinModels.swift in Sources */,
 				A72D9EE01FF5B1D3001C2098 /* AlertWarningConstants.swift in Sources */,
 				A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */,
 				A72D2C6D1FD98594008BE2D2 /* KeyChainConstants.swift in Sources */,
@@ -1396,6 +1412,7 @@
 				A75E3F651FE5E831007165DE /* DatabaseUserLocation.swift in Sources */,
 				A75CE0771FEE6982004703F5 /* PinData.swift in Sources */,
 				A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */,
+				AD48E13D2001037B0042020C /* DatabaseFriends.swift in Sources */,
 				A75E3F631FE5E6A5007165DE /* UserLocation.swift in Sources */,
 				A7D1CBA51FD44AEA0082BC02 /* UINavigationBarCustomDesign.swift in Sources */,
 				A72705C31FC8973F006C2504 /* NavigationBarController.swift in Sources */,
@@ -1424,6 +1441,7 @@
 				A75E3F5A1FE56D9F007165DE /* Location.swift in Sources */,
 				A7DD2E151FD1B1EE0009322E /* SwiftKeyChainExtensionFunctions.swift in Sources */,
 				A7DD2E391FD2DC110009322E /* Information.swift in Sources */,
+				AD48E145200120970042020C /* NotificationSent.swift in Sources */,
 				A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */,
 				A72D9EDE1FF5066D001C2098 /* DefaultImageConstantNames.swift in Sources */,
 				A72CAA8B1FD685E000308DED /* Genders.swift in Sources */,
@@ -1434,6 +1452,7 @@
 				A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */,
 				A72AFBE91FCDF77C0018254E /* InformationMessages.swift in Sources */,
 				A75CE0611FED4280004703F5 /* PinDataPictureViewController.swift in Sources */,
+				AD48E14320011EA60042020C /* Friend.swift in Sources */,
 				A75CE0791FEE81AF004703F5 /* DecideToLoadVideo.swift in Sources */,
 				A77033301FFABB9B004E3C7B /* FacebookLoginProperties.swift in Sources */,
 				A7D1CBAE1FD460660082BC02 /* UITextFieldCustomDesign.swift in Sources */,
@@ -1442,6 +1461,7 @@
 				A72705C11FC885B8006C2504 /* MainPageViewController.swift in Sources */,
 				A72AFBE01FCDE8D70018254E /* ProjectSettingsConstants.swift in Sources */,
 				A75F40261FC0DBCC00495228 /* EntranceViewController.swift in Sources */,
+				AD48E1412001176F0042020C /* Group.swift in Sources */,
 				A75CE0A41FF2B36B004703F5 /* PersonPinDetailMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

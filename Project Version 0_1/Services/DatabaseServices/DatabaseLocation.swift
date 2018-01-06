@@ -31,7 +31,7 @@ class DatabaseLocation {
         
     }
     
-    func createFirbaseDatabaseLocation(locationID: String, locationData: Dictionary<String, String>) {
+    func createFirbaseDatabaseLocation(locationID: String, locationData: Dictionary<String, Any>) {
         print("createFirbaseDatabaseLocation starts")
         print("locationID : \(locationID)")
         getDatabaseReferenceLocation.child(locationID).updateChildValues(locationData)

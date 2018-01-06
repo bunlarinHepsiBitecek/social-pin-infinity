@@ -59,9 +59,34 @@ struct FirebaseModels {
     struct Locations {
         static let CHILD_LOCATIONS = "Locations"
     }
+    
+    struct PinItems {
+        static let childPinItems = "PinItems"
+    }
+    
+    struct Friends {
+        static let childFriends = "Friends"
+    }
+    
+    struct Groups {
+        static let childGroups = "Groups"
+    }
+    
+    struct UserGroups {
+        static let childUserGroups = "UserGroups"
+    }
+    
+    struct PinModels {
+        static let childPinModels = "PinModels"
+    }
+    
+    struct NotificationSent {
+        static let childNotificationSent = "NotificationSent"
+    }
 }
 
 struct FirebaseModelConstants {
+    static let Timestamp = "timestamp"
     
     struct Users {
         static let UserID : String = "userID"
@@ -100,6 +125,17 @@ struct FirebaseModelConstants {
         static let textID = "textId"
         static let textURL = "textURL"
         static let text = "text"
+    }
+    
+    struct PinModels {
+        static let Notified = "notified"
+        static let Owner = "owner"
+        static let PinType = "pinType"
+        static let ToWhom = "toWhom"
+    }
+    
+    struct NotificationSent {
+        static let Timestamp = "timestamp"
     }
 }
 
