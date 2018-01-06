@@ -110,6 +110,7 @@ extension LoginViewController {
                  */
             } else {
                 
+                self.setProfileImage()
                 self.stopSpinner()
                 
                 print("loginButtonClick : user is logged in successfully")
@@ -155,6 +156,63 @@ extension LoginViewController {
         
         activityIndicator.stopAnimating()
         view.resetViewBackgroundColor()
+    }
+    
+    func setProfileImage() {
+        
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        let userRef = ref.child("Users").child(uid!)
+        
+        userRef.observeSingleEvent(of: .value) { (dataSnapShot) in
+            
+            if !dataSnapShot.exists() {
+                
+                print("cıkıyoruz")
+                return
+                
+            }
+            
+            
+            let userInfo = dataSnapShot.value as! NSDictionary
+            
+            print("userinfo : \(userInfo)")
+            
+            let profileUrl = userInfo["profilePictureUrl"] as! String
+            
+            print("profileUrl : \(profileUrl)")
+            
+            let storageRef = Storage.storage().reference(forURL: profileUrl)
+            
+            storageRef.downloadURL(completion: { (url, error) in
+                
+                if error != nil {
+                    
+                    if let errorMessage = error as NSError? {
+                        
+                        print("errorMesssage : \(errorMessage.userInfo)")
+                        print("errorMesssage : \(errorMessage.localizedDescription)")
+                        
+                    }
+                    
+                } else {
+                    
+                    print("x")
+                    
+                    do {
+                        
+                        let data = try Data(contentsOf: url!)
+                        let image = UIImage(data: data as Data)
+                        self.userDatabaseObjectToPass.setUserProfilePicture(inputUserProfileImage: image!)
+                        
+                    } catch {
+                        
+                        print("boku yedik")
+                        
+                    }
+                }
+            })
+        }
     }
     
 }

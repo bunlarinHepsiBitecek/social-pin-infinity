@@ -43,7 +43,7 @@ class guidance_step1_ViewController: UIViewController {
     
     @IBAction func exitToMainScreen(_ sender: Any) {
         
-        performSegue(withIdentifier: "goToMainPageFromGuidance", sender: self)
+        performSegue(withIdentifier: "goToMainHomePageFromGuidance", sender: self)
         
     }
     

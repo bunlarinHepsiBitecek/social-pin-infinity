@@ -20,10 +20,19 @@ private let kPersonAnnotationName = "kPersonAnnotationName"
 
 class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, PersonPinDetailMapViewDelegate {
     
+    @IBOutlet var buttonAllFriends: UIButtonCustomDesign!
+    @IBOutlet var buttonOnlyMe: UIButtonCustomDesign!
+    @IBOutlet var buttonSpecialFriends: UIButtonCustomDesign!
+    @IBOutlet var buttonMainDropPin: UIButtonCustomDesign!
     @IBOutlet var mapView: MKMapView!
+    
+    var allFriendButtonCenter : CGPoint!
+    var onlyMeButtonCenter : CGPoint!
+    var specialButtonCenter : CGPoint!
     
     var tempMapView = MKMapView()
     
+    var mainPinDropButtonTapped : Bool = false
     /*
         pinDataObject will be used to hold all annotation properties; image, video, text dropped onto pin
      */
@@ -46,6 +55,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         super.viewDidLoad()
         
         self.navigationController?.disableNavigationBar()
+        arrangeCenterOfAdditionalButtons()
+        
         
         print("welcomeFirstPin starts")
         print("userID : \(user.userID)")
@@ -67,6 +78,23 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         let trackingButton = MKUserTrackingButton(mapView: self.mapView)
         trackingButton.frame.origin = CGPoint(x: self.view.frame.width - 40, y: 80)
         self.view.addSubview(trackingButton)
+    }
+    
+    func arrangeCenterOfAdditionalButtons() {
+        
+        self.buttonOnlyMe.setImage(self.user.userProfilePicture, for: .normal)
+        
+        allFriendButtonCenter = buttonAllFriends.center
+        onlyMeButtonCenter = buttonOnlyMe.center
+        specialButtonCenter = buttonSpecialFriends.center
+        
+        self.buttonOnlyMe.center = self.buttonMainDropPin.center
+        self.buttonAllFriends.center = self.buttonMainDropPin.center
+        self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+        
+        self.buttonOnlyMe.shadowOpacity = 50
+        self.buttonOnlyMe.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.buttonOnlyMe.shadowRadius = 50
     }
     
     func setupCompassButton() {
@@ -141,14 +169,54 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         pinDataObject.location.setCurrentLocation(locationCoordinate: location)
         
     }
+    
+    func doTheAnimation() {
+        
+        if !mainPinDropButtonTapped {
+        
+            UIView.animate(withDuration: 0.3) {
+                
+                self.buttonSpecialFriends.center = self.specialButtonCenter
+                self.buttonAllFriends.center = self.allFriendButtonCenter
+                self.buttonOnlyMe.center = self.onlyMeButtonCenter
+                
+                }
+            
+            mainPinDropButtonTapped = true
+            
+        } else {
+            
+            UIView.animate(withDuration: 0.3) {
+                
+                self.arrangeCenterOfAdditionalButtons()
+            }
+            
+            mainPinDropButtonTapped = false
+        }
+        
+    }
  
     @IBAction func dropPinButtonTapped(_ sender: UIButton) {
        
+        if user.isUserGetInformedFromGuidance4 {
+            
+            doTheAnimation()
+            
+        } else {
+            
+            goToGuidanceStep4()
+            
+        }
+        
+        //doTheAnimation()
+        
+        
         print("dropPinButton is clicked")
         print("isPinDropped : \(pinDataObject.isPinDropped)")
         
         //dropPinOnMap()
         
+        /*
         if user.isUserGetInformedFromGuidence {
             
             dropPinOnMap()
@@ -166,7 +234,29 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                 
             }
          
+        }*/
+        
+    }
+    
+    func goToGuidanceStep4() {
+        
+        print("goToGuidanceStep4 starts")
+        
+        if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "guidance_step4_ViewController_storyBoardID") as? guidance_step4_ViewController {
+            
+            destinationViewController.tempMapView = self.mapView
+            destinationViewController.tempUser = self.user
+            destinationViewController.tempPinData = self.pinDataObject
+            destinationViewController.tempAnnotation = self.annotation
+            
+            destinationViewController.allFriendButtonCenter = self.allFriendButtonCenter
+            destinationViewController.onlyMeButtonCenter = self.onlyMeButtonCenter
+            destinationViewController.specialButtonCenter = self.specialButtonCenter
+            
+            present(destinationViewController, animated: true, completion: nil)
+            
         }
+        
         
     }
     
@@ -253,7 +343,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
 
     @IBAction func nextButtonClicked(_ sender: Any) {
         
-        performSegue(withIdentifier: "goToMainPage", sender: self)
+        performSegue(withIdentifier: "goToMainHomePageFromNextButton", sender: self)
         
     }
     
@@ -313,8 +403,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                         let data = try Data(contentsOf: url!)
                         let image = UIImage(data: data as Data)
                         //self.cameraButton.setImage(image, for: .normal)
-                        
-                        self.pinDataObject.setPictureOnPin(inputPictureOnPin: image!)
+                        self.buttonOnlyMe.setImage(image, for: .normal)
+                        //self.pinDataObject.setPictureOnPin(inputPictureOnPin: image!)
                     
                     } catch {
                         
@@ -456,6 +546,28 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
     }
     
+    @IBAction func specialPinDropButtonsClicked(_ sender: Any) {
+        
+         if user.isUserGetInformedFromGuidence {
+         
+         dropPinOnMap()
+         
+         } else {
+         
+         if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "guidance_step3_ViewController_storyBoardID") as? guidance_step3_ViewController {
+         
+         destinationViewController.tempMapView = self.mapView
+         destinationViewController.tempUser = self.user
+         destinationViewController.tempPinData = self.pinDataObject
+         destinationViewController.tempAnnotation = self.annotation
+         
+         present(destinationViewController, animated: true, completion: nil)
+         
+         }
+         
+         }
+        
+    }
     
 }
 

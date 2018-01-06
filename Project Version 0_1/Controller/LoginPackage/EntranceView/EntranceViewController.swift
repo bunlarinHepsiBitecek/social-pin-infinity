@@ -41,6 +41,23 @@ class EntranceViewController: UIViewController,  FBSDKLoginButtonDelegate {
         }
         
         twitterLogin()
+        
+        setFacebookAccessTokenPermissions()
+        
+    }
+    
+    func setFacebookAccessTokenPermissions() {
+        
+        /*
+         user friends listesini almak için facebook butonuna permission verelim
+         */
+        
+        let permissions = [FacebookProperties.FacebookAccessTokenPermissions.public_profile
+            ,FacebookProperties.FacebookAccessTokenPermissions.email
+            ,FacebookProperties.FacebookAccessTokenPermissions.user_friends]
+        
+        facebookLoginButton.readPermissions = permissions
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

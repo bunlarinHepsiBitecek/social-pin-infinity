@@ -23,6 +23,12 @@
 		A72705C71FC8A7E2006C2504 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705C61FC8A7E2006C2504 /* AddImageViewController.swift */; };
 		A72705CB1FC8AD33006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72705CA1FC8AD32006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */; };
 		A72705CE1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705CD1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift */; };
+		A72AE37E1FFE1DCE00657A4D /* party.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE37C1FFE1DCD00657A4D /* party.png */; };
+		A72AE37F1FFE1DCE00657A4D /* group-of-men.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE37D1FFE1DCE00657A4D /* group-of-men.png */; };
+		A72AE3811FFE5C3C00657A4D /* guidance_step4_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */; };
+		A72AE3831FFF684000657A4D /* PinDropButtonObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3821FFF684000657A4D /* PinDropButtonObjects.swift */; };
+		A72AE3852000E09300657A4D /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72AE3842000E09300657A4D /* HomePage.storyboard */; };
+		A72AE3882000E42300657A4D /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3872000E42300657A4D /* MainHomeViewController.swift */; };
 		A72AFBCF1FCCBCF30018254E /* PrepareUserProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBCE1FCCBCF30018254E /* PrepareUserProfileData.swift */; };
 		A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBD51FCDCE110018254E /* CreateDatabaseFunctions.swift */; };
 		A72AFBD81FCDD2640018254E /* StorageConstantNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */; };
@@ -125,6 +131,7 @@
 		A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEE81FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift */; };
 		A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEEA1FD4E61000E70B16 /* UINavigationItem.swift */; };
 		A767CEF01FD5392400E70B16 /* UIAlertControllerCustomDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEEF1FD5392400E70B16 /* UIAlertControllerCustomDesign.swift */; };
+		A77033301FFABB9B004E3C7B /* FacebookLoginProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770332F1FFABB9B004E3C7B /* FacebookLoginProperties.swift */; };
 		A778D9E31FC9AE6200F38438 /* DatabaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */; };
 		A778D9E61FC9BC4900F38438 /* UserAttributeNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */; };
 		A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9F81FC9D5DF00F38438 /* PageItemController.swift */; };
@@ -178,6 +185,12 @@
 		A72705C61FC8A7E2006C2504 /* AddImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageViewController.swift; sourceTree = "<group>"; };
 		A72705CA1FC8AD32006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg"; path = "../556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg"; sourceTree = "<group>"; };
 		A72705CD1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUserProfilePictureFunctions.swift; sourceTree = "<group>"; };
+		A72AE37C1FFE1DCD00657A4D /* party.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = party.png; sourceTree = "<group>"; };
+		A72AE37D1FFE1DCE00657A4D /* group-of-men.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group-of-men.png"; sourceTree = "<group>"; };
+		A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guidance_step4_ViewController.swift; sourceTree = "<group>"; };
+		A72AE3821FFF684000657A4D /* PinDropButtonObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDropButtonObjects.swift; sourceTree = "<group>"; };
+		A72AE3842000E09300657A4D /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		A72AE3872000E42300657A4D /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
 		A72AFBCE1FCCBCF30018254E /* PrepareUserProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareUserProfileData.swift; sourceTree = "<group>"; };
 		A72AFBD51FCDCE110018254E /* CreateDatabaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDatabaseFunctions.swift; sourceTree = "<group>"; };
 		A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstantNames.swift; sourceTree = "<group>"; };
@@ -284,6 +297,7 @@
 		A767CEE81FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageExtensionFunctions.swift; sourceTree = "<group>"; };
 		A767CEEA1FD4E61000E70B16 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
 		A767CEEF1FD5392400E70B16 /* UIAlertControllerCustomDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerCustomDesign.swift; sourceTree = "<group>"; };
+		A770332F1FFABB9B004E3C7B /* FacebookLoginProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginProperties.swift; sourceTree = "<group>"; };
 		A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUser.swift; sourceTree = "<group>"; };
 		A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAttributeNames.swift; sourceTree = "<group>"; };
 		A778D9F81FC9D5DF00F38438 /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
@@ -378,6 +392,14 @@
 			path = ControllerExtensions;
 			sourceTree = "<group>";
 		};
+		A72AE3862000E3FB00657A4D /* MainHomePackage */ = {
+			isa = PBXGroup;
+			children = (
+				A72AE3872000E42300657A4D /* MainHomeViewController.swift */,
+			);
+			path = MainHomePackage;
+			sourceTree = "<group>";
+		};
 		A72AFBD01FCCC1A40018254E /* TemporaryAddImageController */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +426,7 @@
 				A75F40111FC0B7C600495228 /* LaunchScreen.storyboard */,
 				A75F400C1FC0B7C600495228 /* Main.storyboard */,
 				A7B17CCF1FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard */,
+				A72AE3842000E09300657A4D /* HomePage.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -687,6 +710,7 @@
 				A7194DAF1FEA1FF700586038 /* guidance_step1_ViewController.swift */,
 				A7194DB81FEA231700586038 /* guidance_step2_ViewController.swift */,
 				A76628DD1FF7C3750008FE63 /* guidance_step3_ViewController.swift */,
+				A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */,
 			);
 			path = GuidanceModalViewControllers;
 			sourceTree = "<group>";
@@ -863,6 +887,7 @@
 		A75F401C1FC0D5DF00495228 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A72AE3862000E3FB00657A4D /* MainHomePackage */,
 				A75E3F4D1FE3C01B007165DE /* LoginPackage */,
 				A75E3F4A1FE3310E007165DE /* WelcomeFirstPin */,
 			);
@@ -880,6 +905,7 @@
 				A75CE0761FEE6982004703F5 /* PinData.swift */,
 				A7DD2E381FD2DC110009322E /* Information.swift */,
 				AD1A34401FE1C41B0054801D /* InformationAlertView.swift */,
+				A72AE3821FFF684000657A4D /* PinDropButtonObjects.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -887,6 +913,7 @@
 		A75F401E1FC0D5F300495228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A770332E1FFABB80004E3C7B /* LoginPermissions */,
 				A72D9EE11FF63718001C2098 /* MediaProperties */,
 				A72D9EDC1FF50658001C2098 /* DefaultImagesNames */,
 				A75CE0A51FF37A00004703F5 /* LocationManager */,
@@ -942,6 +969,14 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		A770332E1FFABB80004E3C7B /* LoginPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A770332F1FFABB9B004E3C7B /* FacebookLoginProperties.swift */,
+			);
+			path = LoginPermissions;
+			sourceTree = "<group>";
+		};
 		A778D9E11FC9AE4600F38438 /* DatabaseServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -987,6 +1022,8 @@
 		A79FFB201FE85E68006D4D1E /* PinImages */ = {
 			isa = PBXGroup;
 			children = (
+				A72AE37D1FFE1DCE00657A4D /* group-of-men.png */,
+				A72AE37C1FFE1DCD00657A4D /* party.png */,
 				A7C4DF221FF4C4B8009656F3 /* rounded-check-mark- (1).png */,
 				A7C4DF231FF4C4B8009656F3 /* rounded-check-mark-.png */,
 				A7C4DF1F1FF4C31F009656F3 /* recycle-bin (1).png */,
@@ -1170,6 +1207,8 @@
 				ADB505B01FDB333B00F81046 /* image2.png in Resources */,
 				A75CE0941FF2AEB8004703F5 /* maps.png in Resources */,
 				AD5A44461FE509BA00266548 /* gender_woman.png in Resources */,
+				A72AE37E1FFE1DCE00657A4D /* party.png in Resources */,
+				A72AE37F1FFE1DCE00657A4D /* group-of-men.png in Resources */,
 				A75CE0931FF2AEB8004703F5 /* pin-profile-2.png in Resources */,
 				A72CAA831FD6855200308DED /* ic_password_checkmark@2x.png in Resources */,
 				A7C4DF241FF4C4B9009656F3 /* rounded-check-mark- (1).png in Resources */,
@@ -1199,6 +1238,7 @@
 				A79FFB221FE85E91006D4D1E /* maps64.png in Resources */,
 				A75CE0A31FF2B36B004703F5 /* PinView.xib in Resources */,
 				A7194DB51FEA21ED00586038 /* shake.png in Resources */,
+				A72AE3852000E09300657A4D /* HomePage.storyboard in Resources */,
 				A72CAA821FD6855200308DED /* ic_password_checkmark@3x.png in Resources */,
 				A72CAA871FD6855200308DED /* ic_eye_closed@3x.png in Resources */,
 				ADB505AF1FDB333B00F81046 /* image1.png in Resources */,
@@ -1266,6 +1306,8 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -1281,6 +1323,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -1297,6 +1341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75E3F5F1FE5AD16007165DE /* ParseLocationData.swift in Sources */,
+				A72AE3831FFF684000657A4D /* PinDropButtonObjects.swift in Sources */,
 				AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */,
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
@@ -1306,6 +1351,7 @@
 				A75CE0681FED6B2E004703F5 /* UIImageViewCustomDesign.swift in Sources */,
 				A75CE0841FF0419C004703F5 /* PinTextDataExtensions.swift in Sources */,
 				A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */,
+				A72AE3882000E42300657A4D /* MainHomeViewController.swift in Sources */,
 				A767CEE71FD4AA4200E70B16 /* AlertControllerConstants.swift in Sources */,
 				A7DD2E131FD1B1600009322E /* ServerAccessExtensionFunctions.swift in Sources */,
 				A72D9EE01FF5B1D3001C2098 /* AlertWarningConstants.swift in Sources */,
@@ -1319,6 +1365,7 @@
 				A75E3F481FE29FE4007165DE /* FTPopOverMenu.swift in Sources */,
 				A7194DB01FEA1FF700586038 /* guidance_step1_ViewController.swift in Sources */,
 				A72AFBE61FCDEDA70018254E /* SendVerificationExtensions.swift in Sources */,
+				A72AE3811FFE5C3C00657A4D /* guidance_step4_ViewController.swift in Sources */,
 				A7B17CCE1FE1709C00A8B7DA /* InformationPopupExtensions.swift in Sources */,
 				ADB505AA1FDB1C6500F81046 /* SCLAlertView.swift in Sources */,
 				A7DD2E171FD1BEEE0009322E /* ValidationExtensionFunctions.swift in Sources */,
@@ -1388,6 +1435,7 @@
 				A72AFBE91FCDF77C0018254E /* InformationMessages.swift in Sources */,
 				A75CE0611FED4280004703F5 /* PinDataPictureViewController.swift in Sources */,
 				A75CE0791FEE81AF004703F5 /* DecideToLoadVideo.swift in Sources */,
+				A77033301FFABB9B004E3C7B /* FacebookLoginProperties.swift in Sources */,
 				A7D1CBAE1FD460660082BC02 /* UITextFieldCustomDesign.swift in Sources */,
 				A76628DE1FF7C3750008FE63 /* guidance_step3_ViewController.swift in Sources */,
 				A72CAA8F1FD689B200308DED /* RegisterViewControllerExtentions.swift in Sources */,

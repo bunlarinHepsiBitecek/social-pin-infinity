@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         //Twitter
-        Twitter.sharedInstance().start(withConsumerKey: TWITTER_CUSTOMER_KEY, consumerSecret: TWITTER_CUSTOMER_SECRETKEY)
+        TWTRTwitter.sharedInstance().start(withConsumerKey: TWITTER_CUSTOMER_KEY, consumerSecret: TWITTER_CUSTOMER_SECRETKEY)
         
         return true
     }
