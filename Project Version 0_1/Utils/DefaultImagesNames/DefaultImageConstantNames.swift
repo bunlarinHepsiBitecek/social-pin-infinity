@@ -16,6 +16,7 @@ struct ConstantDefaultImages {
         static let PHOTO_CAMERA_IMAGE = "photo-camera.png"
         static let PLAY_VIDEO_IMAGE = "play-button.png"
         static let TEXT_MATERIAL_IMAGE = "school-material.png"
+        static let MAIN_DROP_PIN_BUTTON_IMAGE = "location.png"
     }
     
 }

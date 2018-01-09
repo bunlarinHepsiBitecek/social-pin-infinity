@@ -111,8 +111,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="specialPinDropButtonsClicked:" destination="Ep7-7e-VvO" eventType="touchUpInside" id="AW5-kL-AeP"/>
+                                    <action selector="allFriendsDropPinClicked:" destination="Ep7-7e-VvO" eventType="touchUpInside" id="kU0-cw-wCn"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqh-JR-LJJ" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
+                                <rect key="frame" x="94" y="534" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="rounded-check-mark- (1).png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animate" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.97647058819999999" green="0.74901960779999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFW-F7-uKm" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
                                 <rect key="frame" x="157" y="466" width="60" height="60"/>
@@ -132,7 +150,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="specialPinDropButtonsClicked:" destination="Ep7-7e-VvO" eventType="touchUpInside" id="ZLN-Gp-67F"/>
+                                    <action selector="onlyMeDropPinClicked:" destination="Ep7-7e-VvO" eventType="touchUpInside" id="ekx-fS-cmI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jU-4q-nIK" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
@@ -153,8 +171,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="specialPinDropButtonsClicked:" destination="Ep7-7e-VvO" eventType="touchUpInside" id="9z3-25-6Zv"/>
+                                    <action selector="specificPersonOrGroupDropPinClicked:" destination="Ep7-7e-VvO" eventType="touchUpInside" id="ao8-lv-pJZ"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjb-12-dJp" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
+                                <rect key="frame" x="230" y="534" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="toxic-cross.png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animate" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.97647058819999999" green="0.74901960779999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -162,6 +198,8 @@
                     </view>
                     <connections>
                         <outlet property="buttonAllFriends" destination="0t8-GI-IOy" id="aA7-qy-S5h"/>
+                        <outlet property="buttonConfirmPinData" destination="Xqh-JR-LJJ" id="6tY-tv-GFV"/>
+                        <outlet property="buttonDeletePinData" destination="Kjb-12-dJp" id="RKQ-jj-q1D"/>
                         <outlet property="buttonMainDropPin" destination="C4u-uC-dlR" id="lE2-Mp-6qP"/>
                         <outlet property="buttonOnlyMe" destination="cFW-F7-uKm" id="GKl-fe-CZM"/>
                         <outlet property="buttonSpecialFriends" destination="4jU-4q-nIK" id="P7T-bk-AW6"/>
@@ -910,6 +948,7 @@
         <image name="shake.png" width="512" height="512"/>
         <image name="speech-bubble (2).png" width="512" height="512"/>
         <image name="speech-bubble.png" width="512" height="512"/>
+        <image name="toxic-cross.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="H93-wD-l1o"/>

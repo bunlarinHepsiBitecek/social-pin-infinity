@@ -23,6 +23,10 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     @IBOutlet var buttonAllFriends: UIButtonCustomDesign!
     @IBOutlet var buttonOnlyMe: UIButtonCustomDesign!
     @IBOutlet var buttonSpecialFriends: UIButtonCustomDesign!
+    
+    @IBOutlet var buttonConfirmPinData: UIButtonCustomDesign!
+    @IBOutlet var buttonDeletePinData: UIButtonCustomDesign!
+    
     @IBOutlet var buttonMainDropPin: UIButtonCustomDesign!
     @IBOutlet var mapView: MKMapView!
     
@@ -31,6 +35,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     var specialButtonCenter : CGPoint!
     
     var tempMapView = MKMapView()
+    
+    var pinDropObjects : PinDropButtonObjects = PinDropButtonObjects()
     
     var mainPinDropButtonTapped : Bool = false
     /*
@@ -51,12 +57,16 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     var locationManager = CLLocationManager()
     let geocoder = CLGeocoder()
     
+    /*
+        viewDidLoad
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.disableNavigationBar()
-        arrangeCenterOfAdditionalButtons()
         
+        // the functin below is used to relocate the buttons behind the main drop button
+        relocateAdditionalButtonsToCenter()
         
         print("welcomeFirstPin starts")
         print("userID : \(user.userID)")
@@ -78,23 +88,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         let trackingButton = MKUserTrackingButton(mapView: self.mapView)
         trackingButton.frame.origin = CGPoint(x: self.view.frame.width - 40, y: 80)
         self.view.addSubview(trackingButton)
-    }
-    
-    func arrangeCenterOfAdditionalButtons() {
-        
-        self.buttonOnlyMe.setImage(self.user.userProfilePicture, for: .normal)
-        
-        allFriendButtonCenter = buttonAllFriends.center
-        onlyMeButtonCenter = buttonOnlyMe.center
-        specialButtonCenter = buttonSpecialFriends.center
-        
-        self.buttonOnlyMe.center = self.buttonMainDropPin.center
-        self.buttonAllFriends.center = self.buttonMainDropPin.center
-        self.buttonSpecialFriends.center = self.buttonMainDropPin.center
-        
-        self.buttonOnlyMe.shadowOpacity = 50
-        self.buttonOnlyMe.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        self.buttonOnlyMe.shadowRadius = 50
     }
     
     func setupCompassButton() {
@@ -147,7 +140,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         print("Remzi:  WelcomeFirstPinViewController viewWillAppear girdi")
         super.viewWillAppear(animated)
@@ -170,70 +162,53 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
     }
     
-    func doTheAnimation() {
-        
-        if !mainPinDropButtonTapped {
-        
-            UIView.animate(withDuration: 0.3) {
-                
-                self.buttonSpecialFriends.center = self.specialButtonCenter
-                self.buttonAllFriends.center = self.allFriendButtonCenter
-                self.buttonOnlyMe.center = self.onlyMeButtonCenter
-                
-                }
-            
-            mainPinDropButtonTapped = true
-            
-        } else {
-            
-            UIView.animate(withDuration: 0.3) {
-                
-                self.arrangeCenterOfAdditionalButtons()
-            }
-            
-            mainPinDropButtonTapped = false
-        }
-        
-    }
- 
     @IBAction func dropPinButtonTapped(_ sender: UIButton) {
        
-        if user.isUserGetInformedFromGuidance4 {
+        print("dropPinButtonTapped starts")
+        print("user.isUserGetInformedFromGuidance4 : \(user.isUserGetInformedFromGuidance4)")
+        print("mainPinDropButtonTapped : \(mainPinDropButtonTapped)")
+        
+        
+        if isMainButtonPinDropOrConfirmationButton() {
             
-            doTheAnimation()
+            doTheAnimationForConfirmationButtons()
+            
             
         } else {
             
-            goToGuidanceStep4()
+            if user.isUserGetInformedFromGuidance4 {
+                
+                doTheAnimationForSpecificPinDropButtons()
+                
+            } else {
+                
+                goToGuidanceStep4()
+            }
             
         }
         
-        //doTheAnimation()
-        
-        
-        print("dropPinButton is clicked")
-        print("isPinDropped : \(pinDataObject.isPinDropped)")
-        
-        //dropPinOnMap()
         
         /*
-        if user.isUserGetInformedFromGuidence {
+        if pinDataObject.isPinDropped {
             
-            dropPinOnMap()
+            print("check1")
+            
+            takasi()
             
         } else {
             
-            if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "guidance_step3_ViewController_storyBoardID") as? guidance_step3_ViewController {
-         
-                destinationViewController.tempMapView = self.mapView
-                destinationViewController.tempUser = self.user
-                destinationViewController.tempPinData = self.pinDataObject
-                destinationViewController.tempAnnotation = self.annotation
+            print("check2")
+            
+            if user.isUserGetInformedFromGuidance4 {
                 
-                present(destinationViewController, animated: true, completion: nil)
+                doTheAnimation()
+                
+            } else {
+                
+                goToGuidanceStep4()
                 
             }
-         
+            
         }*/
         
     }
@@ -257,7 +232,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             
         }
         
-        
     }
     
     
@@ -265,7 +239,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         checkPinDataUploadedToDatabase()
         
-        //addPinAnnotation(for: mapView.centerCoordinate)
         if !pinDataObject.isPinDropped {
             addPinAnnotation(for: pinDataObject.location.currenLocation)
             
@@ -442,7 +415,10 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     func okRequestForPerson(pinData : PinData) {
         print("Remzi: ok click")
         self.savePinDataToFirebase()
+        hideSelectedDropPinButton()
         showAlert()
+        
+        
     }
     
     
@@ -463,10 +439,20 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             self.mapView.removeAnnotation(self.mapView.selectedAnnotations.last!)
             
             self.pinDataObject.resetPinDataFlags()
+            self.pinDropObjects.resetClickedInfo()
+            //self.setAdditionalPinButtonBehindTheMain()
+            
+            self.resetDropPinCenter()
+            
+            self.mainPinDropButtonTapped = false
+            
+            self.buttonMainDropPin.setImage(UIImage(named: ConstantDefaultImages.MapAnnotation.MAIN_DROP_PIN_BUTTON_IMAGE), for: .normal)
             
         }
         
         alertView.showWarning(ConstantStrings.AlertInfoHeaders.STRING_WARNING, subTitle: ConstantStrings.WarningSentences.STRING_WARNING_DATA_ON_PIN_GET_ERASED, closeButtonTitle: ConstantStrings.ButtonTitles.STRING_CANCEL)
+        
+        
         
     }
     
@@ -543,29 +529,351 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             self.decideHowProfilePictureLoads()
         }
         
+    }
+    
+    func gotoGuidanceStep3() {
+        
+        if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "guidance_step3_ViewController_storyBoardID") as? guidance_step3_ViewController {
+            
+            destinationViewController.tempMapView = self.mapView
+            destinationViewController.tempUser = self.user
+            destinationViewController.tempPinData = self.pinDataObject
+            destinationViewController.tempAnnotation = self.annotation
+            
+            present(destinationViewController, animated: true, completion: nil)
+            
+        }
         
     }
     
-    @IBAction func specialPinDropButtonsClicked(_ sender: Any) {
+    func decideFlowWhenDropPinButtonsClicked() {
         
-         if user.isUserGetInformedFromGuidence {
-         
-         dropPinOnMap()
-         
-         } else {
-         
-         if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "guidance_step3_ViewController_storyBoardID") as? guidance_step3_ViewController {
-         
-         destinationViewController.tempMapView = self.mapView
-         destinationViewController.tempUser = self.user
-         destinationViewController.tempPinData = self.pinDataObject
-         destinationViewController.tempAnnotation = self.annotation
-         
-         present(destinationViewController, animated: true, completion: nil)
-         
-         }
-         
-         }
+        if user.isUserGetInformedFromGuidence {
+            
+            dropPinOnMap()
+            
+        } else {
+            
+            gotoGuidanceStep3()
+            
+        }
+        
+    }
+    
+    func yarro(completion: (_ result: String) -> Void) {
+        
+        print("yarro starts")
+        pinDropObjects.pinButtonAllFriendsClicked = true
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.buttonAllFriends.center = self.pinDropObjects.centerInfoForSelectedButton
+            self.buttonOnlyMe.center = self.buttonMainDropPin.center
+            self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+            
+        }
+        
+        decideFlowWhenDropPinButtonsClicked()
+        
+        completion("yarrox")
+        
+    }
+    
+    func startAnimateForButtonAllFriends(completion: (_ result: Bool) -> Void) {
+        
+        print("startAnimateForButtonAllFriends starts")
+        pinDropObjects.pinButtonAllFriendsClicked = true
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.buttonAllFriends.center = self.buttonMainDropPin.center
+            self.buttonOnlyMe.center = self.buttonMainDropPin.center
+            self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+            
+        }
+        
+        decideFlowWhenDropPinButtonsClicked()
+        
+        completion(true)
+        
+    }
+    
+    func startAnimateForButtonOnlyMe(completion: (_ result: Bool) -> Void) {
+        
+        print("startAnimateForButtonOnlyMe starts")
+        pinDropObjects.pinButtonOnlyMeClicked = true
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.buttonAllFriends.center = self.buttonMainDropPin.center
+            self.buttonOnlyMe.center = self.buttonMainDropPin.center
+            self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+            
+        }
+        
+        decideFlowWhenDropPinButtonsClicked()
+        
+        completion(true)
+        
+    }
+    
+    func startAnimateForButtonSpecial(completion: (_ result: Bool) -> Void) {
+        
+        print("startAnimateForButstartAnimateForButtonSpecialtonAllFriends starts")
+        pinDropObjects.pinButtonSpecialPersonOrGroupClicked = true
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.buttonAllFriends.center = self.buttonMainDropPin.center
+            self.buttonOnlyMe.center = self.buttonMainDropPin.center
+            self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+            
+        }
+        
+        decideFlowWhenDropPinButtonsClicked()
+        
+        completion(true)
+        
+    }
+    
+    @IBAction func allFriendsDropPinClicked(_ sender: Any) {
+        
+        startAnimateForButtonAllFriends { (result) in
+            
+            if result {
+                
+                self.buttonMainDropPin.setImage(self.buttonAllFriends.currentImage, for: .normal)
+                
+                doTheAnimationForConfirmationButtons()
+                
+            }
+            
+        }
+        
+        /*
+        pinDropObjects.pinButtonAllFriendsClicked = true
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.buttonAllFriends.center = self.pinDropObjects.centerInfoForSelectedButton
+            self.buttonOnlyMe.center = self.buttonMainDropPin.center
+            self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+            
+        }
+        
+        decideFlowWhenDropPinButtonsClicked()*/
+        
+    }
+    
+    @IBAction func onlyMeDropPinClicked(_ sender: Any) {
+        
+        startAnimateForButtonOnlyMe { (result) in
+            
+            if result {
+                
+                self.buttonMainDropPin.setImage(self.buttonOnlyMe.currentImage, for: .normal)
+                
+                doTheAnimationForConfirmationButtons()
+                
+            }
+        }
+        
+        /*
+        pinDropObjects.pinButtonOnlyMeClicked = true
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.buttonOnlyMe.center = self.pinDropObjects.centerInfoForSelectedButton
+            self.buttonAllFriends.center = self.buttonMainDropPin.center
+            self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+            
+            
+            
+        }
+        
+        decideFlowWhenDropPinButtonsClicked()*/
+        
+    }
+    
+    @IBAction func specificPersonOrGroupDropPinClicked(_ sender: Any) {
+        
+        startAnimateForButtonSpecial { (result) in
+            
+            if result {
+                
+                self.buttonMainDropPin.setImage(self.buttonSpecialFriends.currentImage, for: .normal)
+                
+                doTheAnimationForConfirmationButtons()
+                
+            }
+            
+        }
+        
+        /*
+        pinDropObjects.pinButtonSpecialPersonOrGroupClicked = true
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.buttonSpecialFriends.center = self.pinDropObjects.centerInfoForSelectedButton
+            self.buttonOnlyMe.center = self.buttonMainDropPin.center
+            self.buttonAllFriends.center = self.buttonMainDropPin.center
+            
+        }
+        
+        decideFlowWhenDropPinButtonsClicked()*/
+        
+    }
+    
+    func setAdditionalPinButtonBehindTheMain() {
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.buttonAllFriends.center = self.buttonMainDropPin.center
+            self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+            self.buttonOnlyMe.center = self.buttonMainDropPin.center
+            
+        }
+        
+    }
+    
+    func resetDropPinCenter() {
+        
+        print("resetDropPinCenter starts")
+        print("onlyMe : \(pinDropObjects.pinButtonOnlyMe)")
+        print("allFriends :\(pinDropObjects.pinButtonAllFriends)")
+        print("special : \(pinDropObjects.pinButtonSpecialPersonOrGroup)")
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.buttonAllFriends.center = self.buttonMainDropPin.center
+            self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+            self.buttonOnlyMe.center = self.buttonMainDropPin.center
+            self.buttonDeletePinData.center = self.buttonMainDropPin.center
+            self.buttonConfirmPinData.center = self.buttonMainDropPin.center
+            
+        }
+        
+        
+    }
+    
+    func takasi() {
+        
+        print("takasi starts")
+        print("mainPinDropButtonTapped : \(mainPinDropButtonTapped)")
+        print("self.pinDropObjects.centerInfoForSelectedButton : \(self.pinDropObjects.centerInfoForSelectedButton)")
+        print("self.buttonMainDropPin.center : \(self.buttonMainDropPin.center)")
+        
+        print("pinButtonOnlyMeClicked : \(pinDropObjects.pinButtonOnlyMeClicked)")
+        print("pinButtonSpecialPersonOrGroupClicked : \(pinDropObjects.pinButtonSpecialPersonOrGroupClicked)")
+        print("pinButtonAllFriendsClicked : \(pinDropObjects.pinButtonAllFriendsClicked)")
+        
+        if !mainPinDropButtonTapped {
+            
+            print("erkut1")
+            if pinDropObjects.pinButtonOnlyMeClicked {
+                
+                UIView.animate(withDuration: 0.3) {
+                    
+                    self.buttonOnlyMe.center = self.pinDropObjects.centerInfoForSelectedButton
+                    
+                }
+                
+            }
+            
+            if pinDropObjects.pinButtonSpecialPersonOrGroupClicked {
+                
+                UIView.animate(withDuration: 0.3) {
+                    
+                    self.buttonSpecialFriends.center = self.pinDropObjects.centerInfoForSelectedButton
+                    
+                }
+                
+            }
+            
+            if pinDropObjects.pinButtonAllFriendsClicked {
+                
+                UIView.animate(withDuration: 0.3) {
+                    
+                    self.buttonAllFriends.center = self.pinDropObjects.centerInfoForSelectedButton
+                    
+                }
+                
+            }
+            
+            mainPinDropButtonTapped = true
+            
+            
+        } else {
+            
+            print("erkut2")
+            if pinDropObjects.pinButtonOnlyMeClicked {
+                
+                UIView.animate(withDuration: 0.3) {
+                    
+                    self.buttonOnlyMe.center = self.buttonMainDropPin.center
+                    
+                }
+                
+            }
+            
+            if pinDropObjects.pinButtonSpecialPersonOrGroupClicked {
+                
+                UIView.animate(withDuration: 0.3) {
+                    
+                    self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+                    
+                }
+                
+            }
+            
+            if pinDropObjects.pinButtonAllFriendsClicked {
+                
+                UIView.animate(withDuration: 0.3) {
+                    
+                    self.buttonAllFriends.center = self.buttonMainDropPin.center
+                    
+                }
+                
+            }
+            
+            mainPinDropButtonTapped = false
+        }
+        
+    }
+    
+    func hideSelectedDropPinButton() {
+        
+        if pinDropObjects.pinButtonOnlyMeClicked {
+            
+            UIView.animate(withDuration: 0.3) {
+                
+                self.buttonOnlyMe.center = self.buttonMainDropPin.center
+                
+            }
+            
+        }
+        
+        if pinDropObjects.pinButtonSpecialPersonOrGroupClicked {
+            
+            UIView.animate(withDuration: 0.3) {
+                
+                self.buttonSpecialFriends.center = self.buttonMainDropPin.center
+                
+            }
+            
+        }
+        
+        if pinDropObjects.pinButtonAllFriendsClicked {
+            
+            UIView.animate(withDuration: 0.3) {
+                
+                self.buttonAllFriends.center = self.buttonMainDropPin.center
+                
+            }
+            
+        }
+        
+        mainPinDropButtonTapped = false
         
     }
     

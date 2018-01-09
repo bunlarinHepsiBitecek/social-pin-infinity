@@ -29,6 +29,9 @@
 		A72AE3831FFF684000657A4D /* PinDropButtonObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3821FFF684000657A4D /* PinDropButtonObjects.swift */; };
 		A72AE3852000E09300657A4D /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72AE3842000E09300657A4D /* HomePage.storyboard */; };
 		A72AE3882000E42300657A4D /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3872000E42300657A4D /* MainHomeViewController.swift */; };
+		A72AE38A2000EB4300657A4D /* ArrangePinDropFrameLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3892000EB4300657A4D /* ArrangePinDropFrameLocations.swift */; };
+		A72AE38C2001362300657A4D /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE38B2001362300657A4D /* HomePageViewController.swift */; };
+		A72AE38E2001376A00657A4D /* DecideToLoadPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE38D2001376A00657A4D /* DecideToLoadPicture.swift */; };
 		A72AFBCF1FCCBCF30018254E /* PrepareUserProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBCE1FCCBCF30018254E /* PrepareUserProfileData.swift */; };
 		A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBD51FCDCE110018254E /* CreateDatabaseFunctions.swift */; };
 		A72AFBD81FCDD2640018254E /* StorageConstantNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */; };
@@ -76,7 +79,6 @@
 		A75CE0611FED4280004703F5 /* PinDataPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0601FED4280004703F5 /* PinDataPictureViewController.swift */; };
 		A75CE0651FED4DB8004703F5 /* toxic-cross.png in Resources */ = {isa = PBXBuildFile; fileRef = A75CE0631FED4DB7004703F5 /* toxic-cross.png */; };
 		A75CE0681FED6B2E004703F5 /* UIImageViewCustomDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0671FED6B2E004703F5 /* UIImageViewCustomDesign.swift */; };
-		A75CE06C1FED8DDA004703F5 /* DecideToLoadPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE06B1FED8DDA004703F5 /* DecideToLoadPicture.swift */; };
 		A75CE0771FEE6982004703F5 /* PinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0761FEE6982004703F5 /* PinData.swift */; };
 		A75CE0791FEE81AF004703F5 /* DecideToLoadVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE0781FEE81AF004703F5 /* DecideToLoadVideo.swift */; };
 		A75CE07F1FEF0202004703F5 /* DatabasePinItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CE07E1FEF0202004703F5 /* DatabasePinItems.swift */; };
@@ -191,6 +193,9 @@
 		A72AE3821FFF684000657A4D /* PinDropButtonObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDropButtonObjects.swift; sourceTree = "<group>"; };
 		A72AE3842000E09300657A4D /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		A72AE3872000E42300657A4D /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
+		A72AE3892000EB4300657A4D /* ArrangePinDropFrameLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrangePinDropFrameLocations.swift; sourceTree = "<group>"; };
+		A72AE38B2001362300657A4D /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		A72AE38D2001376A00657A4D /* DecideToLoadPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecideToLoadPicture.swift; sourceTree = "<group>"; };
 		A72AFBCE1FCCBCF30018254E /* PrepareUserProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareUserProfileData.swift; sourceTree = "<group>"; };
 		A72AFBD51FCDCE110018254E /* CreateDatabaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDatabaseFunctions.swift; sourceTree = "<group>"; };
 		A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstantNames.swift; sourceTree = "<group>"; };
@@ -240,7 +245,6 @@
 		A75CE0601FED4280004703F5 /* PinDataPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataPictureViewController.swift; sourceTree = "<group>"; };
 		A75CE0631FED4DB7004703F5 /* toxic-cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toxic-cross.png"; sourceTree = "<group>"; };
 		A75CE0671FED6B2E004703F5 /* UIImageViewCustomDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewCustomDesign.swift; sourceTree = "<group>"; };
-		A75CE06B1FED8DDA004703F5 /* DecideToLoadPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecideToLoadPicture.swift; sourceTree = "<group>"; };
 		A75CE0761FEE6982004703F5 /* PinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinData.swift; sourceTree = "<group>"; };
 		A75CE0781FEE81AF004703F5 /* DecideToLoadVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecideToLoadVideo.swift; sourceTree = "<group>"; };
 		A75CE07E1FEF0202004703F5 /* DatabasePinItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabasePinItems.swift; sourceTree = "<group>"; };
@@ -396,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				A72AE3872000E42300657A4D /* MainHomeViewController.swift */,
+				A72AE38B2001362300657A4D /* HomePageViewController.swift */,
 			);
 			path = MainHomePackage;
 			sourceTree = "<group>";
@@ -817,10 +822,11 @@
 			isa = PBXGroup;
 			children = (
 				A75E3F5E1FE5AD16007165DE /* ParseLocationData.swift */,
-				A75CE06B1FED8DDA004703F5 /* DecideToLoadPicture.swift */,
 				A75CE0781FEE81AF004703F5 /* DecideToLoadVideo.swift */,
 				A75CE0801FF03F6F004703F5 /* SavePinData.swift */,
 				AD7FB67D1FF80FE4001AD14B /* SelectedAnnotationOperation.swift */,
+				A72AE3892000EB4300657A4D /* ArrangePinDropFrameLocations.swift */,
+				A72AE38D2001376A00657A4D /* DecideToLoadPicture.swift */,
 			);
 			path = WelcomeFirstPinExtensions;
 			sourceTree = "<group>";
@@ -1360,6 +1366,7 @@
 				A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */,
 				A72705C71FC8A7E2006C2504 /* AddImageViewController.swift in Sources */,
 				A72CAA861FD6855200308DED /* PasswordToggleVisibilityView.swift in Sources */,
+				A72AE38C2001362300657A4D /* HomePageViewController.swift in Sources */,
 				A75E3F441FE29FE4007165DE /* UIControl+Point.swift in Sources */,
 				A75CE07F1FEF0202004703F5 /* DatabasePinItems.swift in Sources */,
 				A75E3F481FE29FE4007165DE /* FTPopOverMenu.swift in Sources */,
@@ -1401,6 +1408,7 @@
 				A72705C31FC8973F006C2504 /* NavigationBarController.swift in Sources */,
 				A7D1CBA21FD449780082BC02 /* UIButtonCustomDesign.swift in Sources */,
 				A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift in Sources */,
+				A72AE38E2001376A00657A4D /* DecideToLoadPicture.swift in Sources */,
 				A72D9EDB1FF4E73F001C2098 /* UITextViewExtension.swift in Sources */,
 				A75E3F451FE29FE4007165DE /* UIScreen+Frame.swift in Sources */,
 				A75E3F511FE54341007165DE /* WelcomeFirstPinViewController.swift in Sources */,
@@ -1417,7 +1425,6 @@
 				A75CE0A11FF2B36B004703F5 /* PinView.swift in Sources */,
 				A73828301FC35DCB003C1827 /* Validation.swift in Sources */,
 				A75CE0861FF04A7D004703F5 /* PinImageDataExtensions.swift in Sources */,
-				A75CE06C1FED8DDA004703F5 /* DecideToLoadPicture.swift in Sources */,
 				A72AFBEE1FCE796D0018254E /* UIImageViewExtensions.swift in Sources */,
 				A7407F0D1FC79B1D00DAAF44 /* UITextFieldExtensions.swift in Sources */,
 				A75E3F611FE5B7A0007165DE /* DatabaseLocation.swift in Sources */,
@@ -1428,6 +1435,7 @@
 				A72D9EDE1FF5066D001C2098 /* DefaultImageConstantNames.swift in Sources */,
 				A72CAA8B1FD685E000308DED /* Genders.swift in Sources */,
 				A75CE0811FF03F6F004703F5 /* SavePinData.swift in Sources */,
+				A72AE38A2000EB4300657A4D /* ArrangePinDropFrameLocations.swift in Sources */,
 				A72CAA7F1FD6855200308DED /* HideShowPasswordTextField.swift in Sources */,
 				ADB505B31FDB348500F81046 /* EntranceViewPerformSegueExtention.swift in Sources */,
 				A7194DB91FEA231700586038 /* guidance_step2_ViewController.swift in Sources */,

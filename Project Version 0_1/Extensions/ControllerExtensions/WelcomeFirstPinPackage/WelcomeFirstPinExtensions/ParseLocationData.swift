@@ -64,26 +64,6 @@ extension WelcomeFirstPinViewController {
             
         }
         
-        // timestamp set edilmedi henüz
-        
-        /*
-        print("LocationID : \(self.pinDataObject.location.locationId)")
-        
-        let newUserLocation = UserLocation()
-        
-        newUserLocation.setUserID(inputUserID: user.userID)
-        newUserLocation.setUserLocationID(inputUserLocationID: self.pinDataObject.location.locationId)
-        
-        newUserLocation.getUserJSONObject()
-        
-        print("LocationID : \(newUserLocation.userLocationID)")
-        
-        DatabaseLocation.ds.createFirbaseDatabaseLocation(locationID: self.pinDataObject.location.locationId, locationData: self.pinDataObject.location.locationDictionary)
-    
-        DatabaseUserLocation.ds.createFirbaseDatabaseUserLocation(userID: self.user.userID, userLocationData: newUserLocation.userLocationDictionary)
- 
-         */
-        
     }
     
 }

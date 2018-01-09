@@ -189,7 +189,24 @@ extension WelcomeFirstPinViewController {
             contentViewCornerRadius : 20
         )
         let alertView = SCLAlertView(appearance: appearance)
-        alertView.showSuccess(Constants.WelcomeFirstPin.Success, subTitle: Constants.WelcomeFirstPin.Message, closeButtonTitle: Constants.WelcomeFirstPin.Dismiss,  timeout: SCLAlertView.SCLTimeoutConfiguration(timeoutValue: 3.0, timeoutAction:timeoutAction))
+        alertView.showSuccess(Constants.WelcomeFirstPin.Success, subTitle: Constants.WelcomeFirstPin.Message, closeButtonTitle: Constants.WelcomeFirstPin.Dismiss,  timeout: SCLAlertView.SCLTimeoutConfiguration(timeoutValue: 10.0, timeoutAction:timeoutAction)).setDismissBlock {
+        
+            print("Home page gidiyoruz!")
+            self.gotoHomePage()
+            
+        }
+    }
+    
+    func gotoHomePage() {
+        
+        if let destinationViewController = UIStoryboard(name: "HomePage", bundle: nil).instantiateViewController(withIdentifier: "HomePage_referenceID") as? HomePageViewController {
+            
+            destinationViewController.user = self.user
+            
+            present(destinationViewController, animated: true, completion: nil)
+            
+        }
+        
     }
     
 }
