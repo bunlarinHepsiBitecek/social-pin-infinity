@@ -22,13 +22,11 @@ class DatabasePinItem {
     var getDatabaseReference : DatabaseReference {
         
         return _database_reference
-        
     }
     
     var getDatabaseReferencePinItem : DatabaseReference {
         
         return _database_reference_pinItem
-        
     }
     
     func createFirbaseDatabasePinItem(userID: String, locationID : String, pinItemData: Dictionary<String, String>) {
@@ -45,5 +43,5 @@ class DatabasePinItem {
         print("locationID : \(locationID)")
         getDatabaseReferencePinItem.child(userID).child(locationID).child(keyName).setValue(keyValue)
     }
-        
+    
 }

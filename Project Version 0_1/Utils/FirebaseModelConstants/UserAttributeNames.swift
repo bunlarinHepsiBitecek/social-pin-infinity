@@ -115,6 +115,7 @@ struct FirebaseModelConstants {
         static let Geolocation : String = "geolocation"
         static let Latitude : String = "latitude"
         static let Longitude : String = "longitude"
+        static let UserID : String = "userID"
     }
     
     struct PinItem {

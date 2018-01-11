@@ -160,6 +160,7 @@
 		AD48E1412001176F0042020C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E1402001176F0042020C /* Group.swift */; };
 		AD48E14320011EA60042020C /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E14220011EA60042020C /* Friend.swift */; };
 		AD48E145200120970042020C /* NotificationSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E144200120970042020C /* NotificationSent.swift */; };
+		AD48E14920012BF90042020C /* ShowPinsOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E14820012BF90042020C /* ShowPinsOnMapViewController.swift */; };
 		AD5A44461FE509BA00266548 /* gender_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5A44451FE509B900266548 /* gender_woman.png */; };
 		AD641ECE1FDDD254002E483B /* gender_man.png in Resources */ = {isa = PBXBuildFile; fileRef = AD641ECC1FDDD254002E483B /* gender_man.png */; };
 		AD7FB67E1FF80FE4001AD14B /* SelectedAnnotationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7FB67D1FF80FE4001AD14B /* SelectedAnnotationOperation.swift */; };
@@ -331,6 +332,7 @@
 		AD48E1402001176F0042020C /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		AD48E14220011EA60042020C /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		AD48E144200120970042020C /* NotificationSent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSent.swift; sourceTree = "<group>"; };
+		AD48E14820012BF90042020C /* ShowPinsOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPinsOnMapViewController.swift; sourceTree = "<group>"; };
 		AD5A44451FE509B900266548 /* gender_woman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_woman.png; sourceTree = "<group>"; };
 		AD641ECC1FDDD254002E483B /* gender_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_man.png; sourceTree = "<group>"; };
 		AD7FB67D1FF80FE4001AD14B /* SelectedAnnotationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAnnotationOperation.swift; sourceTree = "<group>"; };
@@ -897,6 +899,7 @@
 		A75F401C1FC0D5DF00495228 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AD48E14620012B770042020C /* HomePackage */,
 				A72AE3862000E3FB00657A4D /* MainHomePackage */,
 				A75E3F4D1FE3C01B007165DE /* LoginPackage */,
 				A75E3F4A1FE3310E007165DE /* WelcomeFirstPin */,
@@ -1106,6 +1109,22 @@
 				A7407F061FC705D000DAAF44 /* ConstanctUserKeyValues.swift */,
 			);
 			path = Character;
+			sourceTree = "<group>";
+		};
+		AD48E14620012B770042020C /* HomePackage */ = {
+			isa = PBXGroup;
+			children = (
+				AD48E14720012BA50042020C /* ShowPins */,
+			);
+			path = HomePackage;
+			sourceTree = "<group>";
+		};
+		AD48E14720012BA50042020C /* ShowPins */ = {
+			isa = PBXGroup;
+			children = (
+				AD48E14820012BF90042020C /* ShowPinsOnMapViewController.swift */,
+			);
+			path = ShowPins;
 			sourceTree = "<group>";
 		};
 		ADB505B41FDB38C800F81046 /* RegisterView */ = {
@@ -1423,6 +1442,7 @@
 				A75E3F511FE54341007165DE /* WelcomeFirstPinViewController.swift in Sources */,
 				A72705CE1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift in Sources */,
 				A75E3F471FE29FE4007165DE /* FTConstants.swift in Sources */,
+				AD48E14920012BF90042020C /* ShowPinsOnMapViewController.swift in Sources */,
 				A72D2C751FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift in Sources */,
 				A7DD2E111FD1A8440009322E /* PerformSegueExtensionFunctions.swift in Sources */,
 				A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */,

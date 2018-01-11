@@ -144,7 +144,8 @@ extension WelcomeFirstPinViewController {
     
     func createPinToFirebase() {
         let locationID = NSUUID().uuidString
-        self.pinDataObject.location.setLocationId(inputLocationId: locationID)
+        //self.pinDataObject.location.setLocationId(inputLocationId: locationID)
+        self.pinDataObject.location.locationId = locationID
         
         createUserLocationInstance()
         createLocationInstance()
@@ -155,8 +156,10 @@ extension WelcomeFirstPinViewController {
     
     func createUserLocationInstance() {
         let userLocation = UserLocation()
-        userLocation.setUserID(inputUserID: self.user.userID)
-        userLocation.setUserLocationID(inputUserLocationID: self.pinDataObject.location.locationId)
+        //userLocation.setUserID(inputUserID: self.user.userID)
+        //userLocation.setUserLocationID(inputUserLocationID: self.pinDataObject.location.locationId)
+        userLocation.userID = self.user.userID
+        userLocation.userLocationID = self.pinDataObject.location.locationId
         
         DatabaseUserLocation.ds.createFirbaseDatabaseUserLocation(userID: self.user.userID, userLocationData: userLocation.getJSONObject())
     }

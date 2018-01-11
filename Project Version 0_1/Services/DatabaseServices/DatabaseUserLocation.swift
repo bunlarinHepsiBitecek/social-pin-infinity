@@ -31,7 +31,7 @@ class DatabaseUserLocation {
         
     }
     
-    func createFirbaseDatabaseUserLocation(userID: String, userLocationData: Dictionary<String, String>) {
+    func createFirbaseDatabaseUserLocation(userID: String, userLocationData: Dictionary<String, Any>) {
         print("createFirbaseDatabaseUserLocation starts")
         print("userID : \(userID)")
         getDatabaseReferenceUserLocation.child(userID).updateChildValues(userLocationData)
