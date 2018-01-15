@@ -15,5 +15,8 @@ struct ConstantsForLocationParameters {
         static let LATITUDE_DELTA_DEGREE_0_002 : Double = 0.002
         static let LONGITUDE_DELTA_DEGREE_0_002 : Double = 0.002
         
+        static let distanceFilterForLocationManager_10_meters : Double = 10.0
+        static let distanceFilterForLocationManager_1_meter : Double = 1.0
+        
     }
 }

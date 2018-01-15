@@ -23,6 +23,11 @@
 		A72705C71FC8A7E2006C2504 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705C61FC8A7E2006C2504 /* AddImageViewController.swift */; };
 		A72705CB1FC8AD33006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72705CA1FC8AD32006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */; };
 		A72705CE1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72705CD1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift */; };
+		A729EA81200A97060051AC92 /* ImageVideoProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA80200A97060051AC92 /* ImageVideoProcess.swift */; };
+		A729EA83200A98460051AC92 /* PictureLoadingProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA82200A98460051AC92 /* PictureLoadingProcess.swift */; };
+		A729EA85200B740B0051AC92 /* AlertProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA84200B740B0051AC92 /* AlertProcessing.swift */; };
+		A729EA87200B76F50051AC92 /* PinAnnotationProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA86200B76F50051AC92 /* PinAnnotationProcess.swift */; };
+		A729EA89200B83C40051AC92 /* SegueEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA88200B83C40051AC92 /* SegueEnums.swift */; };
 		A72AE37E1FFE1DCE00657A4D /* party.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE37C1FFE1DCD00657A4D /* party.png */; };
 		A72AE37F1FFE1DCE00657A4D /* group-of-men.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE37D1FFE1DCE00657A4D /* group-of-men.png */; };
 		A72AE3811FFE5C3C00657A4D /* guidance_step4_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */; };
@@ -32,6 +37,12 @@
 		A72AE38A2000EB4300657A4D /* ArrangePinDropFrameLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3892000EB4300657A4D /* ArrangePinDropFrameLocations.swift */; };
 		A72AE38C2001362300657A4D /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE38B2001362300657A4D /* HomePageViewController.swift */; };
 		A72AE38E2001376A00657A4D /* DecideToLoadPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE38D2001376A00657A4D /* DecideToLoadPicture.swift */; };
+		A72AE39220054A3B00657A4D /* PinDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE39120054A3B00657A4D /* PinDropViewController.swift */; };
+		A72AE3942005C8E500657A4D /* plus-sign-in-a-black-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE3932005C8E400657A4D /* plus-sign-in-a-black-circle.png */; };
+		A72AE3962005CE8300657A4D /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE3952005CE8300657A4D /* plus.png */; };
+		A72AE4852007848100657A4D /* MapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE4842007848100657A4D /* MapViewExtensions.swift */; };
+		A72AE487200A2EE000657A4D /* ButtonExtensionsOnCurrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE486200A2EE000657A4D /* ButtonExtensionsOnCurrentView.swift */; };
+		A72AE48A200A507200657A4D /* SegueConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE489200A507200657A4D /* SegueConstants.swift */; };
 		A72AFBCF1FCCBCF30018254E /* PrepareUserProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBCE1FCCBCF30018254E /* PrepareUserProfileData.swift */; };
 		A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBD51FCDCE110018254E /* CreateDatabaseFunctions.swift */; };
 		A72AFBD81FCDD2640018254E /* StorageConstantNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */; };
@@ -187,6 +198,11 @@
 		A72705C61FC8A7E2006C2504 /* AddImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageViewController.swift; sourceTree = "<group>"; };
 		A72705CA1FC8AD32006C2504 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg"; path = "../556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg"; sourceTree = "<group>"; };
 		A72705CD1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUserProfilePictureFunctions.swift; sourceTree = "<group>"; };
+		A729EA80200A97060051AC92 /* ImageVideoProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVideoProcess.swift; sourceTree = "<group>"; };
+		A729EA82200A98460051AC92 /* PictureLoadingProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureLoadingProcess.swift; sourceTree = "<group>"; };
+		A729EA84200B740B0051AC92 /* AlertProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProcessing.swift; sourceTree = "<group>"; };
+		A729EA86200B76F50051AC92 /* PinAnnotationProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotationProcess.swift; sourceTree = "<group>"; };
+		A729EA88200B83C40051AC92 /* SegueEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueEnums.swift; sourceTree = "<group>"; };
 		A72AE37C1FFE1DCD00657A4D /* party.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = party.png; sourceTree = "<group>"; };
 		A72AE37D1FFE1DCE00657A4D /* group-of-men.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group-of-men.png"; sourceTree = "<group>"; };
 		A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guidance_step4_ViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +212,12 @@
 		A72AE3892000EB4300657A4D /* ArrangePinDropFrameLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrangePinDropFrameLocations.swift; sourceTree = "<group>"; };
 		A72AE38B2001362300657A4D /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		A72AE38D2001376A00657A4D /* DecideToLoadPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecideToLoadPicture.swift; sourceTree = "<group>"; };
+		A72AE39120054A3B00657A4D /* PinDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDropViewController.swift; sourceTree = "<group>"; };
+		A72AE3932005C8E400657A4D /* plus-sign-in-a-black-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-sign-in-a-black-circle.png"; sourceTree = "<group>"; };
+		A72AE3952005CE8300657A4D /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		A72AE4842007848100657A4D /* MapViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewExtensions.swift; sourceTree = "<group>"; };
+		A72AE486200A2EE000657A4D /* ButtonExtensionsOnCurrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensionsOnCurrentView.swift; sourceTree = "<group>"; };
+		A72AE489200A507200657A4D /* SegueConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueConstants.swift; sourceTree = "<group>"; };
 		A72AFBCE1FCCBCF30018254E /* PrepareUserProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareUserProfileData.swift; sourceTree = "<group>"; };
 		A72AFBD51FCDCE110018254E /* CreateDatabaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDatabaseFunctions.swift; sourceTree = "<group>"; };
 		A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstantNames.swift; sourceTree = "<group>"; };
@@ -390,6 +412,7 @@
 		A72705CC1FC91DF3006C2504 /* ControllerExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				A72AE483200782D900657A4D /* PinDropPageExtensions */,
 				A75E3F5C1FE5ACDD007165DE /* WelcomeFirstPinPackage */,
 				A75E3F5B1FE5ACCA007165DE /* LoginPackage */,
 			);
@@ -401,8 +424,31 @@
 			children = (
 				A72AE3872000E42300657A4D /* MainHomeViewController.swift */,
 				A72AE38B2001362300657A4D /* HomePageViewController.swift */,
+				A72AE39120054A3B00657A4D /* PinDropViewController.swift */,
 			);
 			path = MainHomePackage;
+			sourceTree = "<group>";
+		};
+		A72AE483200782D900657A4D /* PinDropPageExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A72AE4842007848100657A4D /* MapViewExtensions.swift */,
+				A72AE486200A2EE000657A4D /* ButtonExtensionsOnCurrentView.swift */,
+				A729EA80200A97060051AC92 /* ImageVideoProcess.swift */,
+				A729EA82200A98460051AC92 /* PictureLoadingProcess.swift */,
+				A729EA84200B740B0051AC92 /* AlertProcessing.swift */,
+				A729EA86200B76F50051AC92 /* PinAnnotationProcess.swift */,
+			);
+			path = PinDropPageExtensions;
+			sourceTree = "<group>";
+		};
+		A72AE488200A504500657A4D /* SegueConstants */ = {
+			isa = PBXGroup;
+			children = (
+				A72AE489200A507200657A4D /* SegueConstants.swift */,
+				A729EA88200B83C40051AC92 /* SegueEnums.swift */,
+			);
+			path = SegueConstants;
 			sourceTree = "<group>";
 		};
 		A72AFBD01FCCC1A40018254E /* TemporaryAddImageController */ = {
@@ -919,6 +965,7 @@
 		A75F401E1FC0D5F300495228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A72AE488200A504500657A4D /* SegueConstants */,
 				A770332E1FFABB80004E3C7B /* LoginPermissions */,
 				A72D9EE11FF63718001C2098 /* MediaProperties */,
 				A72D9EDC1FF50658001C2098 /* DefaultImagesNames */,
@@ -1028,6 +1075,8 @@
 		A79FFB201FE85E68006D4D1E /* PinImages */ = {
 			isa = PBXGroup;
 			children = (
+				A72AE3952005CE8300657A4D /* plus.png */,
+				A72AE3932005C8E400657A4D /* plus-sign-in-a-black-circle.png */,
 				A72AE37D1FFE1DCE00657A4D /* group-of-men.png */,
 				A72AE37C1FFE1DCD00657A4D /* party.png */,
 				A7C4DF221FF4C4B8009656F3 /* rounded-check-mark- (1).png */,
@@ -1206,6 +1255,7 @@
 				A72CAA7E1FD6855200308DED /* ic_eye_open@2x.png in Resources */,
 				A75E3F6E1FE79B69007165DE /* school-material.png in Resources */,
 				A76628E01FF7C7260008FE63 /* speech-bubble.png in Resources */,
+				A72AE3942005C8E500657A4D /* plus-sign-in-a-black-circle.png in Resources */,
 				A71811DF1FEA16B900771EE5 /* KGFonts-TOU.txt in Resources */,
 				A71B49FE1FD3112400B69E71 /* camera_icon_new.png in Resources */,
 				A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */,
@@ -1239,6 +1289,7 @@
 				A72CAA7D1FD6855200308DED /* ic_eye_open@3x.png in Resources */,
 				A7C4DF251FF4C4B9009656F3 /* rounded-check-mark-.png in Resources */,
 				A71811DE1FEA16B900771EE5 /* gloriahallelujah.ttf in Resources */,
+				A72AE3962005CE8300657A4D /* plus.png in Resources */,
 				A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */,
 				A75CE0961FF2AEB8004703F5 /* ok.png in Resources */,
 				A79FFB221FE85E91006D4D1E /* maps64.png in Resources */,
@@ -1359,13 +1410,17 @@
 				A72AFBD61FCDCE110018254E /* CreateDatabaseFunctions.swift in Sources */,
 				A72AE3882000E42300657A4D /* MainHomeViewController.swift in Sources */,
 				A767CEE71FD4AA4200E70B16 /* AlertControllerConstants.swift in Sources */,
+				A72AE4852007848100657A4D /* MapViewExtensions.swift in Sources */,
+				A72AE39220054A3B00657A4D /* PinDropViewController.swift in Sources */,
 				A7DD2E131FD1B1600009322E /* ServerAccessExtensionFunctions.swift in Sources */,
 				A72D9EE01FF5B1D3001C2098 /* AlertWarningConstants.swift in Sources */,
 				A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */,
 				A72D2C6D1FD98594008BE2D2 /* KeyChainConstants.swift in Sources */,
 				A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */,
 				A72705C71FC8A7E2006C2504 /* AddImageViewController.swift in Sources */,
+				A729EA85200B740B0051AC92 /* AlertProcessing.swift in Sources */,
 				A72CAA861FD6855200308DED /* PasswordToggleVisibilityView.swift in Sources */,
+				A72AE48A200A507200657A4D /* SegueConstants.swift in Sources */,
 				A72AE38C2001362300657A4D /* HomePageViewController.swift in Sources */,
 				A75E3F441FE29FE4007165DE /* UIControl+Point.swift in Sources */,
 				A75CE07F1FEF0202004703F5 /* DatabasePinItems.swift in Sources */,
@@ -1381,6 +1436,7 @@
 				A778D9E31FC9AE6200F38438 /* DatabaseUser.swift in Sources */,
 				A79FFB191FE8534A006D4D1E /* UIView+BezierPaths.swift in Sources */,
 				A75E3F461FE29FE4007165DE /* FTConfiguration.swift in Sources */,
+				A72AE487200A2EE000657A4D /* ButtonExtensionsOnCurrentView.swift in Sources */,
 				A72D9ED91FF4E21B001C2098 /* UILabelExtensions.swift in Sources */,
 				A75CE09C1FF2B023004703F5 /* PersonAnnotationView.swift in Sources */,
 				A75CE0A71FF37A24004703F5 /* LocationCoordinateConstantValues.swift in Sources */,
@@ -1394,6 +1450,7 @@
 				A75CE09B1FF2B023004703F5 /* PersonAnnotation.swift in Sources */,
 				A72CAA921FD689D100308DED /* EntranceViewControllerExtention.swift in Sources */,
 				A767CEF01FD5392400E70B16 /* UIAlertControllerCustomDesign.swift in Sources */,
+				A729EA87200B76F50051AC92 /* PinAnnotationProcess.swift in Sources */,
 				A72AFBE31FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift in Sources */,
 				A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */,
 				A72705C51FC8A2A6006C2504 /* User.swift in Sources */,
@@ -1410,6 +1467,7 @@
 				A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift in Sources */,
 				A72AE38E2001376A00657A4D /* DecideToLoadPicture.swift in Sources */,
 				A72D9EDB1FF4E73F001C2098 /* UITextViewExtension.swift in Sources */,
+				A729EA89200B83C40051AC92 /* SegueEnums.swift in Sources */,
 				A75E3F451FE29FE4007165DE /* UIScreen+Frame.swift in Sources */,
 				A75E3F511FE54341007165DE /* WelcomeFirstPinViewController.swift in Sources */,
 				A72705CE1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift in Sources */,
@@ -1418,9 +1476,11 @@
 				A7DD2E111FD1A8440009322E /* PerformSegueExtensionFunctions.swift in Sources */,
 				A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */,
 				A72AFBD81FCDD2640018254E /* StorageConstantNames.swift in Sources */,
+				A729EA83200A98460051AC92 /* PictureLoadingProcess.swift in Sources */,
 				A72AFBCF1FCCBCF30018254E /* PrepareUserProfileData.swift in Sources */,
 				A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */,
 				A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */,
+				A729EA81200A97060051AC92 /* ImageVideoProcess.swift in Sources */,
 				A72AFBDC1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift in Sources */,
 				A75CE0A11FF2B36B004703F5 /* PinView.swift in Sources */,
 				A73828301FC35DCB003C1827 /* Validation.swift in Sources */,

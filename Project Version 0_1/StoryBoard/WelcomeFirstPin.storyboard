@@ -131,6 +131,9 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="savePinDropData:" destination="Ep7-7e-VvO" eventType="touchUpInside" id="sJV-CO-4pf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFW-F7-uKm" customClass="UIButtonCustomDesign" customModule="Project_Version_0_1" customModuleProvider="target">
                                 <rect key="frame" x="157" y="466" width="60" height="60"/>
@@ -191,6 +194,9 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelPinDropProcess:" destination="Ep7-7e-VvO" eventType="touchUpInside" id="T6K-NT-iC8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

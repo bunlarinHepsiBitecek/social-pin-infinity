@@ -90,6 +90,21 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         self.view.addSubview(trackingButton)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        print("WelcomeFirstPin_2_ViewController viewDidDisappear starts")
+        
+        locationManager.stopUpdatingLocation()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        print("WelcomeFirstPin_2_ViewController viewWillDisappear starts")
+        
+        locationManager.stopUpdatingLocation()
+        
+    }
+    
     func setupCompassButton() {
         let compass = MKCompassButton(mapView: mapView)
         compass.compassVisibility = .visible
@@ -412,6 +427,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
     }
     
+    /*
     func okRequestForPerson(pinData : PinData) {
         print("Remzi: ok click")
         self.savePinDataToFirebase()
@@ -419,12 +435,13 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         showAlert()
         
         
-    }
+    }*/
     
     
     /*
         red button on pin to delete everthing related to pin data, and marker itself dropped on map
      */
+    /*
     func cancelRequestForPerson(pinData : PinData) {
         print("Remzi: cancel click")
         print("count : \(self.mapView.annotations.count)")
@@ -454,7 +471,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         
         
         
-    }
+    }*/
     
     /*
         to add text, note whatever a person writes on dropped pin on
@@ -517,6 +534,9 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
                 
                 destinationViewController.pinDataObject = self.pinDataObject
                 destinationViewController.tempMapView = self.tempMapView
+                
+                // tell destination view where it is being called
+                destinationViewController.callerView = ViewControllerEnums.WelcomeFirstPin
                 
                 present(destinationViewController, animated: true, completion: {
                     print("gidiyoruz :)")
@@ -874,6 +894,42 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         }
         
         mainPinDropButtonTapped = false
+        
+    }
+    
+    @IBAction func cancelPinDropProcess(_ sender: Any) {
+        
+        let alertAppearance = SCLAlertView.SCLAppearance()
+        
+        let alertView = SCLAlertView(appearance: alertAppearance)
+        
+        alertView.addButton(ConstantStrings.ButtonTitles.STRING_OK) {
+            
+            self.mapView.removeAnnotation(self.mapView.selectedAnnotations.last!)
+            
+            self.pinDataObject.resetPinDataFlags()
+            self.pinDropObjects.resetClickedInfo()
+            //self.setAdditionalPinButtonBehindTheMain()
+            
+            self.resetDropPinCenter()
+            
+            self.mainPinDropButtonTapped = false
+            
+            self.buttonMainDropPin.setImage(UIImage(named: ConstantDefaultImages.MapAnnotation.MAIN_DROP_PIN_BUTTON_IMAGE), for: .normal)
+            
+        }
+        
+        alertView.showWarning(ConstantStrings.AlertInfoHeaders.STRING_WARNING, subTitle: ConstantStrings.WarningSentences.STRING_WARNING_DATA_ON_PIN_GET_ERASED, closeButtonTitle: ConstantStrings.ButtonTitles.STRING_CANCEL)
+        
+        
+    }
+    
+    @IBAction func savePinDropData(_ sender: Any) {
+        
+        print("Remzi: ok click")
+        self.savePinDataToFirebase()
+        hideSelectedDropPinButton()
+        showAlert()
         
     }
     

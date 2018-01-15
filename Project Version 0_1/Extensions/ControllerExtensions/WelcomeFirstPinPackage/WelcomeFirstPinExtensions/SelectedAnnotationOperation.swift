@@ -85,6 +85,10 @@ extension WelcomeFirstPinViewController {
                         
                     }
                     
+                } else {
+                    
+                    currentAnnotation.customCalloutView?.addVideoButton.setImagesToButton(inputImageNameString: ConstantDefaultImages.MapAnnotation.PLAY_VIDEO_IMAGE)
+                    
                 }
                 
             }

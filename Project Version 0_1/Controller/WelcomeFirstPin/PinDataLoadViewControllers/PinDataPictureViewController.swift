@@ -22,6 +22,8 @@ class PinDataPictureViewController: UIViewController {
     
     var tempMapView = MKMapView()
     
+    var callerView : ViewControllerEnums!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,8 +38,13 @@ class PinDataPictureViewController: UIViewController {
     
 
     @IBAction func checkPictureButtonClicked(_ sender: Any) {
+
+        print("checkPictureButtonClicked starts")
+        print("callerView : \(callerView)")
+    
+        setPictureDataOnPin(type: callerView)
         
-        setPictureDataOnPin()
+        //setPictureDataOnPin(type: .PinDrop)
         
     }
     

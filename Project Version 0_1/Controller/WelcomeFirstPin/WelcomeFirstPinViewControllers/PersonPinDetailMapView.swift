@@ -12,8 +12,9 @@ protocol PersonPinDetailMapViewDelegate: class {
     func addImageRequestForPerson(pinData : PinData)
     func addVideoRequestForPerson(pinData : PinData)
     func addTextRequestForPerson(pinData : PinData)
+    /*
     func okRequestForPerson(pinData : PinData)
-    func cancelRequestForPerson(pinData : PinData)
+    func cancelRequestForPerson(pinData : PinData)*/
 }
 
 class PersonPinDetailMapView: UIView {
@@ -23,8 +24,9 @@ class PersonPinDetailMapView: UIView {
     @IBOutlet var addImageButton: UIButton!
     @IBOutlet var addVideoButton: UIButton!
     @IBOutlet var addTextButton: UIButton!
-    @IBOutlet var okButton: UIButton!
-    @IBOutlet var cancelButon: UIButton!
+    
+    /*@IBOutlet var okButton: UIButton!
+    @IBOutlet var cancelButon: UIButton!*/
     
     
     // data
@@ -59,7 +61,7 @@ class PersonPinDetailMapView: UIView {
         delegate?.addTextRequestForPerson(pinData : pinData)
     }
     
-    
+    /*
     @IBAction func okButton(_ sender: Any) {
         print("Remzi: ok ")
         delegate?.okRequestForPerson(pinData : pinData)
@@ -68,7 +70,7 @@ class PersonPinDetailMapView: UIView {
     @IBAction func cancelButton(_ sender: Any) {
         print("Remzi: cancel ")
         delegate?.cancelRequestForPerson(pinData : pinData)
-    }
+    }*/
     
     
     /*
@@ -105,6 +107,7 @@ class PersonPinDetailMapView: UIView {
         }
         
         // ok button
+        /*
         if let result = okButton.hitTest(convert(point, to: okButton), with: event) {
             return result
         }
@@ -112,7 +115,7 @@ class PersonPinDetailMapView: UIView {
         // ok button
         if let result = cancelButon.hitTest(convert(point, to: cancelButon), with: event) {
             return result
-        }
+        }*/
         
         // fallback to our background content view
         return backgroundContentButton.hitTest(convert(point, to: backgroundContentButton), with: event)

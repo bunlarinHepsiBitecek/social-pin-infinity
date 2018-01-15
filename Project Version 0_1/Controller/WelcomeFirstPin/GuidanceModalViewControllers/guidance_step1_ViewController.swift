@@ -37,27 +37,32 @@ class guidance_step1_ViewController: UIViewController {
         button1.setTitle("", for: .normal)
         button2.setTitle("", for: .normal)
         
-        performSegue(withIdentifier: "gotoGuidance2", sender: self)
+        performSegue(withIdentifier: ViewConstants.SegueConstants.gotoGuidance2, sender: self)
         
     }
     
     @IBAction func exitToMainScreen(_ sender: Any) {
         
-        performSegue(withIdentifier: "goToMainHomePageFromGuidance", sender: self)
+        performSegue(withIdentifier: ViewConstants.SegueConstants.goToMainHomePageFromGuidance, sender: self)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "gotoGuidance2" {
+        if segue.identifier == ViewConstants.SegueConstants.gotoGuidance2 {
             
             if let guidance_2 = segue.destination as? guidance_step2_ViewController {
                 guidance_2.user = user
             }
+            
+        } else if segue.identifier == ViewConstants.SegueConstants.goToMainHomePageFromGuidance {
+            
+            if let homePage = segue.destination as?  HomePageViewController {
+                homePage.user = user
+            }
+            
         }
         
-        
     }
-    
 
 }

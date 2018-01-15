@@ -25,18 +25,56 @@ extension PinDataPictureViewController {
         
     }
     
-    func setPictureDataOnPin() {
+    func setPictureDataOnPin(type : ViewControllerEnums) {
         
         print("setPictureDataOnPin starts")
         
-        
-        if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "welcomeFirstPin_storyBoard_ID") as? WelcomeFirstPinViewController {
+        switch type {
+        case .PinDrop:
+            print("Pindrop selected")
+            setPictureDataOnPinInPinDropView()
             
-            print("erkut2")
+        case .WelcomeFirstPin:
+            print("WelcomeFirstPin selected")
+            setPictureDataOnPinInWelcomeFirstPinView()
+            
+        default:
+            print("none select")
+        }
+        
+    }
+    
+    func setPictureDataOnPinInWelcomeFirstPinView() {
+        
+        print("setPictureDataOnPinInWelcomeFirstPinView starts")
+        
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.WelcomeFirstPin, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.welcomeFirstPin_storyBoard_ID) as? WelcomeFirstPinViewController {
+            
+            print("rekut !")
             
             //destinationViewController.setSelectedImageToButton()
             destinationViewController.pinDataObject = self.pinDataObject
             destinationViewController.mapView = tempMapView
+            destinationViewController.setSelectedImageToButton()
+            
+        } else {
+            
+            print("yarro oldun")
+        }
+        
+        dismissCurrentView()
+        
+    }
+    
+    func setPictureDataOnPinInPinDropView() {
+        
+        print("setPictureDataOnPinInPinDropView starts")
+        
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.HomePage, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.PinDropViewController_storyBoard_ID) as? PinDropViewController {
+            
+            //destinationViewController.setSelectedImageToButton()
+            destinationViewController.pinDataObject = self.pinDataObject
+            destinationViewController.mapViewObject = tempMapView
             //destinationViewController.tata()
             destinationViewController.setSelectedImageToButton()
             

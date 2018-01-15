@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomePageViewController: UITabBarController {
+class HomePageViewController: UITabBarController, UITabBarControllerDelegate {
 
     var user : User = User()
     
@@ -27,6 +27,23 @@ class HomePageViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-
-
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        
+        print("tabBarController didSelect starts")
+        
+        if viewController is PinDropViewController {
+            
+            print("PinDropViewController is selected")
+            
+        }
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        print("tabBarController shouldSelect starts")
+        
+        return true
+        
+    }
+    
 }

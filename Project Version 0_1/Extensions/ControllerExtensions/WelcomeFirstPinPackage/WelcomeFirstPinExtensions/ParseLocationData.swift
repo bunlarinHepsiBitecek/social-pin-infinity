@@ -15,6 +15,7 @@ extension WelcomeFirstPinViewController {
         
         print("getLocationDataParsed starts")
         
+
         self.pinDataObject.location.setUserID(inputUserID: user.userID)
         
         //let tempString = NSUUID().uuidString
