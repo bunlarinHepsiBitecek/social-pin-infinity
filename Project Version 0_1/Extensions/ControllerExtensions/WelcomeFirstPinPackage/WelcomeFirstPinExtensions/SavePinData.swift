@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-extension PinDropViewController {
+extension WelcomeFirstPinViewController {
     
     func savePinDataToFirebase() {
         

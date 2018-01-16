@@ -97,6 +97,25 @@ class PinDropViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         return annotationView
     }
     
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        print("didAddAnnotationViews")
+        let visibleRect = mapView.annotationVisibleRect
+        //let annotationView: MKAnnotationView = views[0]
+        for view:MKAnnotationView in views{
+            let endFrame:CGRect = view.frame
+            var startFrame:CGRect = endFrame
+            startFrame.origin.y = visibleRect.origin.y - startFrame.size.height
+            view.frame = startFrame;
+            
+            UIView.beginAnimations("drop", context: nil)
+            UIView.setAnimationDuration(0.5)
+            
+            view.frame = endFrame;
+            
+            UIView.commitAnimations()
+        }
+    }
+    
     func mapView(_ mapView: MKMapView, didChange mode: MKUserTrackingMode, animated: Bool) {
         
         print("MKUserTrackingMode starts")
@@ -155,7 +174,7 @@ class PinDropViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
         self.mapViewObject.setRegion(region, animated: true)
         
-        pinDataObject.location.setCurrentLocation(locationCoordinate: location)
+        pinDataObject.location.currenLocation = location
         
         print("span : \(span)")
         

@@ -436,6 +436,7 @@
 		A72AE3862000E3FB00657A4D /* MainHomePackage */ = {
 			isa = PBXGroup;
 			children = (
+				AD48E14620012B770042020C /* HomePackage */,
 				A72AE3872000E42300657A4D /* MainHomeViewController.swift */,
 				A72AE38B2001362300657A4D /* HomePageViewController.swift */,
 				A72AE39120054A3B00657A4D /* PinDropViewController.swift */,
@@ -954,7 +955,6 @@
 		A75F401C1FC0D5DF00495228 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AD48E14620012B770042020C /* HomePackage */,
 				A72AE3862000E3FB00657A4D /* MainHomePackage */,
 				A75E3F4D1FE3C01B007165DE /* LoginPackage */,
 				A75E3F4A1FE3310E007165DE /* WelcomeFirstPin */,
