@@ -231,7 +231,7 @@ class PinDropViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     func yarro()  {
         
-        
+        print("yarro")
     }
     
     
