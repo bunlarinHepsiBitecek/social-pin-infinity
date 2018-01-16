@@ -1,15 +1,15 @@
 //
-//  SavePinData.swift
+//  PinDataSaveProcess.swift
 //  Project Version 0_1
 //
-//  Created by Erkut Baş on 24.12.2017.
-//  Copyright © 2017 Erkut Baş. All rights reserved.
+//  Created by Erkut Baş on 15.01.2018.
+//  Copyright © 2018 Erkut Baş. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-extension PinDropViewController {
+extension WelcomeFirstPinViewController {
     
     func savePinDataToFirebase() {
         
@@ -190,7 +190,7 @@ extension PinDropViewController {
         )
         let alertView = SCLAlertView(appearance: appearance)
         alertView.showSuccess(Constants.WelcomeFirstPin.Success, subTitle: Constants.WelcomeFirstPin.Message, closeButtonTitle: Constants.WelcomeFirstPin.Dismiss,  timeout: SCLAlertView.SCLTimeoutConfiguration(timeoutValue: 10.0, timeoutAction:timeoutAction)).setDismissBlock {
-        
+            
             print("Home page gidiyoruz!")
             //self.gotoHomePage()
             
@@ -210,4 +210,3 @@ extension PinDropViewController {
     }
     
 }
-

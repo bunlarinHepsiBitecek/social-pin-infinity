@@ -106,28 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/WelcomeFirstPinPackage/ModalViewControllerExtension/PinImageDataExtensions.swift"
-            timestampString = "537723700.665018"
+            timestampString = "537810881.503754"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "erasePictureDataOnPin()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Project Version 0_1/Extensions/ControllerExtensions/WelcomeFirstPinPackage/ModalViewControllerExtension/PinImageDataExtensions.swift"
-            timestampString = "537723700.665091"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "erasePictureDataOnPin()"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "erasePictureDataOnPin(callerView:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -138,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/WelcomeFirstPinPackage/ModalViewControllerExtension/PinTextDataExtensions.swift"
-            timestampString = "536318807.060306"
+            timestampString = "537810881.503828"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "eraseTextFieldFromPinData()"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "eraseTextFieldFromPinData(callerView:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/WelcomeFirstPin/WelcomeFirstPinViewControllers/WelcomeFirstPinViewController.swift"
-            timestampString = "537723700.665198"
+            timestampString = "537810881.503907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "264"
@@ -218,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/WelcomeFirstPin/WelcomeFirstPinViewControllers/WelcomeFirstPinViewController.swift"
-            timestampString = "537723700.6656229"
+            timestampString = "537810881.504017"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "290"
@@ -234,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/WelcomeFirstPin/WelcomeFirstPinViewControllers/WelcomeFirstPinViewController.swift"
-            timestampString = "537723700.665887"
+            timestampString = "537810881.5040751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "300"
@@ -250,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/WelcomeFirstPin/WelcomeFirstPinViewControllers/WelcomeFirstPinViewController.swift"
-            timestampString = "537723700.666141"
+            timestampString = "537810881.5041291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "302"
@@ -266,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/WelcomeFirstPin/WelcomeFirstPinViewControllers/WelcomeFirstPinViewController.swift"
-            timestampString = "537723700.666396"
+            timestampString = "537810881.504182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -282,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/WelcomeFirstPin/WelcomeFirstPinViewControllers/WelcomeFirstPinViewController.swift"
-            timestampString = "537723700.666647"
+            timestampString = "537810881.504236"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -298,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/WelcomeFirstPin/WelcomeFirstPinViewControllers/WelcomeFirstPinViewController.swift"
-            timestampString = "537723700.66695"
+            timestampString = "537810881.50429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "458"
@@ -586,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/WelcomeFirstPin/WelcomeFirstPinViewControllers/WelcomeFirstPinViewController.swift"
-            timestampString = "537723700.667769"
+            timestampString = "537810881.5047131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "747"
-            endingLineNumber = "747"
+            startingLineNumber = "729"
+            endingLineNumber = "729"
             landmarkName = "setAdditionalPinButtonBehindTheMain()"
             landmarkType = "7">
          </BreakpointContent>
@@ -618,7 +602,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/WelcomeFirstPin/WelcomeFirstPinViewControllers/WelcomeFirstPinViewController.swift"
-            timestampString = "537723700.668189"
+            timestampString = "537810881.504797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "182"
@@ -634,7 +618,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/WelcomeFirstPin/WelcomeFirstPinViewControllers/WelcomeFirstPinViewController.swift"
-            timestampString = "537723700.668509"
+            timestampString = "537810881.504853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "187"
@@ -650,7 +634,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/PinDropPageExtensions/ButtonExtensionsOnCurrentView.swift"
-            timestampString = "537723700.668794"
+            timestampString = "537810881.50491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -666,7 +650,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/PinDropPageExtensions/ButtonExtensionsOnCurrentView.swift"
-            timestampString = "537723700.668866"
+            timestampString = "537810881.504971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -682,7 +666,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/PinDropPageExtensions/ButtonExtensionsOnCurrentView.swift"
-            timestampString = "537723700.6689301"
+            timestampString = "537810881.505028"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -698,7 +682,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/PinDropPageExtensions/ButtonExtensionsOnCurrentView.swift"
-            timestampString = "537723700.668992"
+            timestampString = "537810881.505084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "234"
@@ -714,7 +698,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/PinDropPageExtensions/ButtonExtensionsOnCurrentView.swift"
-            timestampString = "537723700.669052"
+            timestampString = "537810881.505137"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -730,11 +714,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/PinDropViewController.swift"
-            timestampString = "537723700.6691099"
+            timestampString = "537810881.5051889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226">
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "PinDropViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -744,7 +730,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/PinDropPageExtensions/PinAnnotationProcess.swift"
-            timestampString = "537723700.669171"
+            timestampString = "537810881.505248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
@@ -760,12 +746,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/WelcomeFirstPinPackage/WelcomeFirstPinExtensions/SelectedAnnotationOperation.swift"
-            timestampString = "537723700.669439"
+            timestampString = "537810881.505563"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
             endingLineNumber = "74"
             landmarkName = "setSelectedVideoImageToButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/WelcomeFirstPinPackage/WelcomeFirstPinExtensions/SavePinData.swift"
+            timestampString = "537810881.5056109"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "createLocationInstance()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/WelcomeFirstPinPackage/WelcomeFirstPinExtensions/SavePinData.swift"
+            timestampString = "537810881.505652"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "createPinItemInstance()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

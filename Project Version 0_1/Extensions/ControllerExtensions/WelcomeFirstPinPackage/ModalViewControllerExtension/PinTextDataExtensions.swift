@@ -11,7 +11,29 @@ import AudioUnit
 
 extension PinTextDataViewController {
     
-    func getScreenShotOfTextFieldAndSetPinData() {
+    func getScreenShotOfTextFieldAndSetPinData(callerView : ViewControllerEnums) {
+        
+        switch callerView {
+        case .WelcomeFirstPin:
+            print("back to welcomeFirstPinView")
+            getScreenShotOfTextFieldAndSetPinDataForWelcomeFirstPin()
+            
+        case .PinDrop:
+            print("back to pinDropView")
+            getScreenShotOfTextFieldAndSetPinDataForPinDropView()
+            
+        default:
+            print("Do nothing")
+            return
+        }
+        
+        
+        
+        dismissTheCurrentView()
+        
+    }
+    
+    func getScreenShotOfTextFieldAndSetPinDataForWelcomeFirstPin() {
         
         self.textField.textAlignment = .center
         
@@ -19,7 +41,7 @@ extension PinTextDataViewController {
         self.textField.drawHierarchy(in: self.textField.bounds, afterScreenUpdates: true)
         let copied = UIGraphicsGetImageFromCurrentImageContext();
         
-        if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "welcomeFirstPin_storyBoard_ID") as? WelcomeFirstPinViewController {
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.WelcomeFirstPin, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.welcomeFirstPin_storyBoard_ID) as? WelcomeFirstPinViewController {
             
             print("erkut2")
             
@@ -31,14 +53,35 @@ extension PinTextDataViewController {
             destinationViewController.mapView = tempMapView
             destinationViewController.setCaptureImageOfTextFieldOnButton()
             
-        } else {
-            
-            print("yarro oldun")
         }
         
         UIGraphicsEndImageContext();
         
-        dismissTheCurrentView()
+    }
+    
+    func getScreenShotOfTextFieldAndSetPinDataForPinDropView() {
+        
+        self.textField.textAlignment = .center
+        
+        UIGraphicsBeginImageContextWithOptions(self.textField.bounds.size, false, 0);
+        self.textField.drawHierarchy(in: self.textField.bounds, afterScreenUpdates: true)
+        let copied = UIGraphicsGetImageFromCurrentImageContext();
+        
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.HomePage, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.PinDropViewController_storyBoard_ID) as? PinDropViewController {
+            
+            print("erkut2")
+            
+            self.pinDataObject.setTextCaptureImage(inputCapturedImage: copied!)
+            self.pinDataObject.isCapturedTextExist(inputBooleanValue: true)
+            self.pinDataObject.setTextOnPin(inputTextOnPin: self.textField.text)
+            
+            destinationViewController.pinDataObject = self.pinDataObject
+            destinationViewController.mapViewObject = tempMapView
+            destinationViewController.setCaptureImageOfTextFieldOnButton()
+            
+        }
+        
+        UIGraphicsEndImageContext();
         
     }
     
@@ -61,7 +104,7 @@ extension PinTextDataViewController {
         
     }
     
-    func eraseTextFieldFromPinData() {
+    func eraseTextFieldFromPinData(callerView : ViewControllerEnums) {
         
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
@@ -71,29 +114,61 @@ extension PinTextDataViewController {
         
         alertView.addButton("OK") {
             
-            if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "welcomeFirstPin_storyBoard_ID") as? WelcomeFirstPinViewController {
+            switch callerView {
+            case .WelcomeFirstPin:
+                print("Back to WelcomeFirstPin")
+                self.eraseTextFieldFromPinDataForWelcomeFirstPin()
                 
-                print("erkut2")
+            case .PinDrop:
+                print("Back to PinDrop")
+                self.eraseTextFieldFromPinDataForPinDropView()
                 
-                self.pinDataObject.isCapturedTextExist(inputBooleanValue: false)
-                self.pinDataObject.setTextOnPin(inputTextOnPin: SPACE_CHARACTER)
-                
-                destinationViewController.pinDataObject = self.pinDataObject
-                destinationViewController.mapView = self.tempMapView
-                destinationViewController.setCaptureImageOfTextFieldOnButton()
-                
-            } else {
-                
-                print("yarro oldun")
+            default:
+                print("Do nothing")
+                return
             }
-            
-            UIGraphicsEndImageContext();
-            
-            self.dismissTheCurrentView()
             
         }
         
         alertView.showWarning(ConstantStrings.AlertInfoHeaders.STRING_WARNING, subTitle: ConstantStrings.WarningSentences.STRING_WARNING_PICTURE_WILL_ERASED, closeButtonTitle: ConstantStrings.ButtonTitles.STRING_CANCEL)
+        
+    }
+    
+    func eraseTextFieldFromPinDataForWelcomeFirstPin() {
+        
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.WelcomeFirstPin, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.welcomeFirstPin_storyBoard_ID) as? WelcomeFirstPinViewController {
+            
+            self.pinDataObject.isCapturedTextExist(inputBooleanValue: false)
+            self.pinDataObject.setTextOnPin(inputTextOnPin: SPACE_CHARACTER)
+            
+            destinationViewController.pinDataObject = self.pinDataObject
+            destinationViewController.mapView = self.tempMapView
+            destinationViewController.setCaptureImageOfTextFieldOnButton()
+            
+        }
+        
+        UIGraphicsEndImageContext();
+        
+        self.dismissTheCurrentView()
+        
+    }
+    
+    func eraseTextFieldFromPinDataForPinDropView() {
+        
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.HomePage, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.PinDropViewController_storyBoard_ID) as? PinDropViewController {
+            
+            self.pinDataObject.isCapturedTextExist(inputBooleanValue: false)
+            self.pinDataObject.setTextOnPin(inputTextOnPin: SPACE_CHARACTER)
+            
+            destinationViewController.pinDataObject = self.pinDataObject
+            destinationViewController.mapViewObject = self.tempMapView
+            destinationViewController.setCaptureImageOfTextFieldOnButton()
+            
+        }
+        
+        UIGraphicsEndImageContext();
+        
+        self.dismissTheCurrentView()
         
     }
     

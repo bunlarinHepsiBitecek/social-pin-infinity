@@ -244,8 +244,19 @@ extension PinDropViewController {
         
     }
     
-    
-    
-    
+    func resetDropPinCenter(inputCGPointValue: CGPoint) {
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.buttonPinDropAllFriends.center = inputCGPointValue
+            self.buttonPinDropSpecialFriends.center = inputCGPointValue
+            self.buttonPinDropOnlyMe.center = inputCGPointValue
+            self.buttonDeletePindData.center = inputCGPointValue
+            self.buttonSavePinData.center = inputCGPointValue
+            
+        }
+        
+        
+    }
     
 }

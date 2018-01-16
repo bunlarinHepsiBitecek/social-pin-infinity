@@ -25,11 +25,11 @@ extension PinDataPictureViewController {
         
     }
     
-    func setPictureDataOnPin(type : ViewControllerEnums) {
+    func setPictureDataOnPin(callerView : ViewControllerEnums) {
         
         print("setPictureDataOnPin starts")
         
-        switch type {
+        switch callerView {
         case .PinDrop:
             print("Pindrop selected")
             setPictureDataOnPinInPinDropView()
@@ -103,7 +103,8 @@ extension PinDataPictureViewController {
         
     }
     
-    func erasePictureDataOnPin() {
+    
+    func erasePictureDataOnPin(callerView : ViewControllerEnums) {
         
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
@@ -113,27 +114,58 @@ extension PinDataPictureViewController {
         
         alertView.addButton("OK") {
             
-            if let destinationViewController = UIStoryboard(name: "WelcomeFirstPin", bundle: nil).instantiateViewController(withIdentifier: "welcomeFirstPin_storyBoard_ID") as? WelcomeFirstPinViewController {
+            switch callerView {
+            case .PinDrop:
+                print("Back to PinDropView")
+                self.erasePictureDataOnPinInPinDrop()
                 
-                print("erkut2")
-                self.pinDataObject.setPictureOnPin(inputPictureOnPin: UIImage())
-                self.pinDataObject.isPictureExist(inputBooleanValue: false)
+            case .WelcomeFirstPin:
+                print("Back to WelcomeFirstPinView")
+                self.erasePictureDataOnPinInWelcomeFirstPin()
                 
-                destinationViewController.pinDataObject = self.pinDataObject
-                destinationViewController.mapView = self.tempMapView
-                destinationViewController.setSelectedImageToButton()
-                
-            } else {
-                
-                print("yarro oldun")
+            default:
+                print("Do nothing")
             }
-            
-            self.dismissCurrentView()
             
         }
         
         alertView.showWarning(ConstantStrings.AlertInfoHeaders.STRING_WARNING, subTitle: ConstantStrings.WarningSentences.STRING_WARNING_PICTURE_WILL_ERASED, closeButtonTitle: ConstantStrings.ButtonTitles.STRING_CANCEL)
         
     }
+    
+    func erasePictureDataOnPinInWelcomeFirstPin() {
+        
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.WelcomeFirstPin, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.welcomeFirstPin_storyBoard_ID) as? WelcomeFirstPinViewController {
+            
+            self.pinDataObject.setPictureOnPin(inputPictureOnPin: UIImage())
+            self.pinDataObject.isPictureExist(inputBooleanValue: false)
+            
+            destinationViewController.pinDataObject = self.pinDataObject
+            destinationViewController.mapView = self.tempMapView
+            destinationViewController.setSelectedImageToButton()
+            
+        }
+        
+        self.dismissCurrentView()
+        
+    }
+    
+    func erasePictureDataOnPinInPinDrop() {
+        
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.HomePage, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.PinDropViewController_storyBoard_ID) as? PinDropViewController {
+            
+            self.pinDataObject.setPictureOnPin(inputPictureOnPin: UIImage())
+            self.pinDataObject.isPictureExist(inputBooleanValue: false)
+            
+            destinationViewController.pinDataObject = self.pinDataObject
+            destinationViewController.mapViewObject = self.tempMapView
+            destinationViewController.setSelectedImageToButton()
+            
+        }
+        
+        self.dismissCurrentView()
+        
+    }
+    
     
 }

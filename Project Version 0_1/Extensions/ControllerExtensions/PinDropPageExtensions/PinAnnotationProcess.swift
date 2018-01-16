@@ -169,19 +169,49 @@ extension PinDropViewController {
         
         print("addTextRequestForPerson starts")
         
-        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.WelcomeFirstPin, bundle: nil).instantiateViewController(withIdentifier: "PinTextDataViewController_storyBoardID") as? PinTextDataViewController {
-            
-            print("erkut2")
-            
-            //destinationViewController.pinDataImage.image = pinDataObject.pictureOnPin
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.WelcomeFirstPin, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.PinTextDataViewController_storyBoardID) as? PinTextDataViewController {
             
             destinationViewController.pinDataObject = self.pinDataObject
-            //destinationViewController.tempMapView = self.tempMapView
+            destinationViewController.tempMapView = self.mapViewObject
+            destinationViewController.callerView = ViewControllerEnums.PinDrop
             
             present(destinationViewController, animated: true, completion: {
                 print("gidiyoruz :)")
             })
         }
+        
+    }
+    
+    func pinDataSaveProcessInitiate() {
+        
+        self.savePinDataToFirebase()
+        //hideSelectedDropPinButton()
+        showAlert()
+        
+    }
+    
+    func deletePinDataProcessInitiate() {
+        
+        let alertAppearance = SCLAlertView.SCLAppearance()
+        
+        let alertView = SCLAlertView(appearance: alertAppearance)
+        
+        alertView.addButton(ConstantStrings.ButtonTitles.STRING_OK) {
+            
+            self.mapViewObject.removeAnnotation(self.mapViewObject.selectedAnnotations.last!)
+            
+            self.pinDataObject.resetPinDataFlags()
+            self.pinDropObjects.resetClickedInfo()
+            
+            self.resetDropPinCenter(inputCGPointValue: self.buttonPinDropMain.center)
+            
+            self.mainPinDropButtonClicked = false
+            
+            self.buttonPinDropMain.setImage(UIImage(named: ConstantDefaultImages.MapAnnotation.MAIN_DROP_PIN_BUTTON_IMAGE), for: .normal)
+            
+        }
+        
+        alertView.showWarning(ConstantStrings.AlertInfoHeaders.STRING_WARNING, subTitle: ConstantStrings.WarningSentences.STRING_WARNING_DATA_ON_PIN_GET_ERASED, closeButtonTitle: ConstantStrings.ButtonTitles.STRING_CANCEL)
         
     }
     

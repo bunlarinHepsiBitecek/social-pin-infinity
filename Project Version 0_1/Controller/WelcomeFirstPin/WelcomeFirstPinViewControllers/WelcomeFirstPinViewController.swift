@@ -487,6 +487,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             
             destinationViewController.pinDataObject = self.pinDataObject
             destinationViewController.tempMapView = self.tempMapView
+            destinationViewController.callerView = ViewControllerEnums.WelcomeFirstPin
             
             present(destinationViewController, animated: true, completion: {
                 print("gidiyoruz :)")
@@ -577,25 +578,6 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             gotoGuidanceStep3()
             
         }
-        
-    }
-    
-    func yarro(completion: (_ result: String) -> Void) {
-        
-        print("yarro starts")
-        pinDropObjects.pinButtonAllFriendsClicked = true
-        
-        UIView.animate(withDuration: 0.3) {
-            
-            self.buttonAllFriends.center = self.pinDropObjects.centerInfoForSelectedButton
-            self.buttonOnlyMe.center = self.buttonMainDropPin.center
-            self.buttonSpecialFriends.center = self.buttonMainDropPin.center
-            
-        }
-        
-        decideFlowWhenDropPinButtonsClicked()
-        
-        completion("yarrox")
         
     }
     

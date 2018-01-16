@@ -42,15 +42,13 @@ class PinDataPictureViewController: UIViewController {
         print("checkPictureButtonClicked starts")
         print("callerView : \(callerView)")
     
-        setPictureDataOnPin(type: callerView)
-        
-        //setPictureDataOnPin(type: .PinDrop)
+        setPictureDataOnPin(callerView: callerView)
         
     }
     
     @IBAction func exitButtonClicked(_ sender: Any) {
         
-        erasePictureDataOnPin()
+        erasePictureDataOnPin(callerView: callerView)
         
     }
     

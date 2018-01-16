@@ -20,6 +20,8 @@ class PinTextDataViewController: UIViewController {
     var pinDataObject = PinData()
     var tempMapView = MKMapView()
     
+    var callerView : ViewControllerEnums!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,13 +44,13 @@ class PinTextDataViewController: UIViewController {
          
          */
         print("******* : \(textField.text)")
-        getScreenShotOfTextFieldAndSetPinData()
+        getScreenShotOfTextFieldAndSetPinData(callerView: callerView)
         
     }
     
     @IBAction func garbageButtonClicked(_ sender: Any) {
         
-        eraseTextFieldFromPinData()
+        eraseTextFieldFromPinData(callerView: callerView)
         
     }
 }

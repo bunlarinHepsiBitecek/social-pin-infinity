@@ -28,6 +28,7 @@
 		A729EA85200B740B0051AC92 /* AlertProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA84200B740B0051AC92 /* AlertProcessing.swift */; };
 		A729EA87200B76F50051AC92 /* PinAnnotationProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA86200B76F50051AC92 /* PinAnnotationProcess.swift */; };
 		A729EA89200B83C40051AC92 /* SegueEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA88200B83C40051AC92 /* SegueEnums.swift */; };
+		A729EA8B200D3E300051AC92 /* PinDataSaveProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA8A200D3E300051AC92 /* PinDataSaveProcess.swift */; };
 		A72AE37E1FFE1DCE00657A4D /* party.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE37C1FFE1DCD00657A4D /* party.png */; };
 		A72AE37F1FFE1DCE00657A4D /* group-of-men.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE37D1FFE1DCE00657A4D /* group-of-men.png */; };
 		A72AE3811FFE5C3C00657A4D /* guidance_step4_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */; };
@@ -203,6 +204,7 @@
 		A729EA84200B740B0051AC92 /* AlertProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProcessing.swift; sourceTree = "<group>"; };
 		A729EA86200B76F50051AC92 /* PinAnnotationProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotationProcess.swift; sourceTree = "<group>"; };
 		A729EA88200B83C40051AC92 /* SegueEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueEnums.swift; sourceTree = "<group>"; };
+		A729EA8A200D3E300051AC92 /* PinDataSaveProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataSaveProcess.swift; sourceTree = "<group>"; };
 		A72AE37C1FFE1DCD00657A4D /* party.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = party.png; sourceTree = "<group>"; };
 		A72AE37D1FFE1DCE00657A4D /* group-of-men.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group-of-men.png"; sourceTree = "<group>"; };
 		A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guidance_step4_ViewController.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 				A729EA82200A98460051AC92 /* PictureLoadingProcess.swift */,
 				A729EA84200B740B0051AC92 /* AlertProcessing.swift */,
 				A729EA86200B76F50051AC92 /* PinAnnotationProcess.swift */,
+				A729EA8A200D3E300051AC92 /* PinDataSaveProcess.swift */,
 			);
 			path = PinDropPageExtensions;
 			sourceTree = "<group>";
@@ -1480,6 +1483,7 @@
 				A72AFBCF1FCCBCF30018254E /* PrepareUserProfileData.swift in Sources */,
 				A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */,
 				A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */,
+				A729EA8B200D3E300051AC92 /* PinDataSaveProcess.swift in Sources */,
 				A729EA81200A97060051AC92 /* ImageVideoProcess.swift in Sources */,
 				A72AFBDC1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift in Sources */,
 				A75CE0A11FF2B36B004703F5 /* PinView.swift in Sources */,

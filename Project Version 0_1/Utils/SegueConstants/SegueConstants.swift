@@ -29,6 +29,7 @@ struct ViewConstants {
         static let PinDataPictureViewController_storyBoardID = "PinDataPictureViewController_storyBoardID"
         static let welcomeFirstPin_storyBoard_ID = "welcomeFirstPin_storyBoard_ID"
         static let PinDropViewController_storyBoard_ID = "PinDropViewController_storyBoard_ID"
+        static let PinTextDataViewController_storyBoardID = "PinTextDataViewController_storyBoardID"
         
     }
     

@@ -196,9 +196,15 @@ class PinDropViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     }
     
     @IBAction func pinDataSaveClicked(_ sender: Any) {
+        
+        pinDataSaveProcessInitiate()
+        
     }
     
     @IBAction func deletePinDataClicked(_ sender: Any) {
+        
+        deletePinDataProcessInitiate()
+        
     }
     
     /*
@@ -220,6 +226,11 @@ class PinDropViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     func addTextRequestForPerson(pinData: PinData) {
         
         addTextRequestForPersonProcessInitiate()
+        
+    }
+    
+    func yarro()  {
+        
         
     }
     
