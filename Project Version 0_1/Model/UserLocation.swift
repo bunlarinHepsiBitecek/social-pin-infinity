@@ -7,49 +7,63 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class UserLocation {
     
     private var _userID : String
     private var _userLocationID : String
     
-    private var _userLocationDictionary : Dictionary<String, String> = [:]
+    private var _userLocationDictionary : Dictionary<String, Any> = [:]
     
     init() {
-        
         self._userID = SPACE_CHARACTER
         self._userLocationID = SPACE_CHARACTER
-        
     }
     
+    init(snapshot : DataSnapshot, userID: String) {
+        self._userID = userID
+        self._userLocationID = snapshot.key
+        
+        //let data = snapshot.value as! Dictionary<String, Any>
+    }
+    
+    
     var userID : String {
-        return _userID
+        get {
+            return self._userID
+        }
+        set(inputValue) {
+            self._userID = inputValue
+        }
     }
     
     var userLocationID : String {
-        return _userLocationID
+        get {
+            return self._userLocationID
+        }
+        set(inputValue) {
+            self._userLocationID = inputValue
+        }
     }
     
-    var userLocationDictionary : Dictionary<String, String> {
-        return _userLocationDictionary
+    var userLocationDictionary : Dictionary<String, Any> {
+        get {
+            return self._userLocationDictionary
+        }
+        set(inputValue) {
+            self._userLocationDictionary = inputValue
+        }
     }
     
-    func setUserID(inputUserID :String) {
-        self._userID = inputUserID
-    }
-    
-    func setUserLocationID(inputUserLocationID : String) {
-        self._userLocationID = inputUserLocationID
-    }
-    
-    func appendAttributeToDictionary(inputKey : String, inputValue : String) {
+    func appendAttributeToDictionary(inputKey : String, inputValue : Any) {
         self._userLocationDictionary[inputKey] = inputValue
     }
     
-    func getJSONObject() -> Dictionary<String, String> {
+    func getJSONObject() -> Dictionary<String, Any> {
         
         if !self._userLocationID.isEmpty {
-            self.appendAttributeToDictionary(inputKey: self.userLocationID, inputValue: self._userLocationID)
+            self.appendAttributeToDictionary(inputKey: self.userLocationID, inputValue: true)
         }
         
         return userLocationDictionary

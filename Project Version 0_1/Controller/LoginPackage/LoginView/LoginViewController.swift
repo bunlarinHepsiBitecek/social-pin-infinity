@@ -119,12 +119,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         
     }
     
-    @IBAction func map(_ sender: Any) {
-        
-        performSegue(withIdentifier: "goToWelcomeFirstPin_2", sender: self)
-        
-    }
-    
 }
 
 

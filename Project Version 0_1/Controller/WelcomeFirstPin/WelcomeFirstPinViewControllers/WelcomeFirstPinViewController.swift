@@ -52,6 +52,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     
     var controlFlag : Bool = false
     var returnFlag : Bool = true
+    var mapHasCenteredOnce = false
+    let centerRegionRadius: CLLocationDistance = 500 // map focus
     
     var user: User = User()
     var locationManager = CLLocationManager()
@@ -82,12 +84,14 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         mapView.showsCompass = true
         mapView.isRotateEnabled = true
         mapView.isOpaque = true
+        //mapView.userTrackingMode = .follow  // burası açılırsa mapview track modda focuslanır
         
         tempMapView = self.mapView
         
         let trackingButton = MKUserTrackingButton(mapView: self.mapView)
         trackingButton.frame.origin = CGPoint(x: self.view.frame.width - 40, y: 80)
         self.view.addSubview(trackingButton)
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -141,6 +145,7 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        locationAuthStatus()
         
         print("WelcomeFirstPinViewController - viewDidAppear starts")
         print("returnFlag : \(returnFlag)")
@@ -160,9 +165,17 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         super.viewWillAppear(animated)
     }
     
+    func locationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            mapView.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        print("LocationManager Starts.......")
+        print("Welcome LocationManager Starts.......")
         
         let location = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
         
@@ -171,9 +184,17 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         let region = MKCoordinateRegion(center: location, span: span)
         
         self.mapView.setRegion(region, animated: true)
-        
+ 
         // add current location information to both userLocation object and pindata
-        pinDataObject.location.setCurrentLocation(locationCoordinate: location)
+        //pinDataObject.location.setCurrentLocation(locationCoordinate: location)
+        pinDataObject.location.currenLocation = location
+        
+        /*
+        let locationShort = CLLocation(latitude: location.latitude, longitude: location.longitude)
+        if !self.mapHasCenteredOnce {
+            centerMapOnLocation(location: locationShort)
+            self.mapHasCenteredOnce = true
+        } */
         
     }
     
@@ -295,6 +316,25 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
         }
     }
     
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        print("didAddAnnotationViews")
+        let visibleRect = mapView.annotationVisibleRect
+        //let annotationView: MKAnnotationView = views[0]
+        for view:MKAnnotationView in views{
+            let endFrame:CGRect = view.frame
+            var startFrame:CGRect = endFrame
+            startFrame.origin.y = visibleRect.origin.y - startFrame.size.height
+            view.frame = startFrame;
+            
+            UIView.beginAnimations("drop", context: nil)
+            UIView.setAnimationDuration(0.5)
+            
+            view.frame = endFrame;
+            
+            UIView.commitAnimations()
+        }
+    }
+    
     // MARK: - MKMapViewDelegate methods
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         print("Remzi: WelcomeFirstPinViewController mapView girdi")
@@ -324,7 +364,8 @@ class WelcomeFirstPinViewController: UIViewController, MKMapViewDelegate, CLLoca
             if !self.pinDataObject.location.isPinDropped {
                 addPinAnnotation(for: self.pinDataObject.location.currenLocation)
                 // current location alındığı bilgisi set edilir
-                self.pinDataObject.location.setIsPinDropped(isPinDropped: true)
+                //self.pinDataObject.location.setIsPinDropped(isPinDropped: true)
+                self.pinDataObject.location.isPinDropped = true
             }
         }
     }

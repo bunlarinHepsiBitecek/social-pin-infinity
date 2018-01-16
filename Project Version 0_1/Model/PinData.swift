@@ -198,7 +198,6 @@ class PinData {
     }
     
     func isPictureExist(inputBooleanValue : Bool) {
-        print("isPictureExist starts")
         self._isPictureExist = inputBooleanValue
     }
     
