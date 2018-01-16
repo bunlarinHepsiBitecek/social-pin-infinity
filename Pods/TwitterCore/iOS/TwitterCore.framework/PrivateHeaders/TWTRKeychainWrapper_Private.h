@@ -19,10 +19,8 @@
  This header is private to the Twitter Core SDK and not exposed for public SDK consumption
  */
 
-#import <Foundation/Foundation.h>
+#import "TWTRKeychainWrapper.h"
 
-@interface TWTRAppInstallationUUID : NSObject
-
-+ (NSString *)appInstallationUUID;
-
+@interface TWTRKeychainWrapper ()
+- (BOOL)writeToKeychain;
 @end

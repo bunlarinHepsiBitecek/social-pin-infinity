@@ -19,10 +19,11 @@
  This header is private to the Twitter Core SDK and not exposed for public SDK consumption
  */
 
-#import <Foundation/Foundation.h>
+#import "TWTRNetworking.h"
 
-@interface TWTRAppInstallationUUID : NSObject
+@interface TWTRUserAPIClient : TWTRNetworking
 
-+ (NSString *)appInstallationUUID;
+- (instancetype)initWithAuthConfig:(TWTRAuthConfig *)authConfig NS_UNAVAILABLE;
+- (instancetype)initWithAuthConfig:(TWTRAuthConfig *)authConfig authToken:(NSString *)authToken authTokenSecret:(NSString *)authTokenSecret;
 
 @end

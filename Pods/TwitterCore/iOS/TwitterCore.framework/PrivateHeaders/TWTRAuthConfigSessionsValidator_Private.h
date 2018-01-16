@@ -19,10 +19,11 @@
  This header is private to the Twitter Core SDK and not exposed for public SDK consumption
  */
 
-#import <Foundation/Foundation.h>
+#include "TWTRAuthConfigSessionsValidator.h"
 
-@interface TWTRAppInstallationUUID : NSObject
+@interface TWTRAuthConfigSessionsValidator ()
 
-+ (NSString *)appInstallationUUID;
+- (BOOL)doesSessionStoreNeedPurge;
+- (void)purgeSessionsFromSessionStore;
 
 @end
