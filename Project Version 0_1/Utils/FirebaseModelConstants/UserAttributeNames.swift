@@ -65,7 +65,7 @@ struct FirebaseModels {
     }
     
     struct Friends {
-        static let childFriends = "Friends"
+        static let childFriends : String = "Friends"
     }
     
     struct Groups {

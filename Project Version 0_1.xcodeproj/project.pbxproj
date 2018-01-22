@@ -146,10 +146,20 @@
 		A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEEA1FD4E61000E70B16 /* UINavigationItem.swift */; };
 		A767CEF01FD5392400E70B16 /* UIAlertControllerCustomDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767CEEF1FD5392400E70B16 /* UIAlertControllerCustomDesign.swift */; };
 		A77033301FFABB9B004E3C7B /* FacebookLoginProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770332F1FFABB9B004E3C7B /* FacebookLoginProperties.swift */; };
+		A770436C2012D62D0081D242 /* UserFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770436B2012D62D0081D242 /* UserFriends.swift */; };
+		A770436F20136A5A0081D242 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770436E20136A5A0081D242 /* ContactsTableViewController.swift */; };
+		A770437120136B820081D242 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A770437020136B810081D242 /* user.png */; };
+		A770437420136CCA0081D242 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770437320136CCA0081D242 /* AccountViewController.swift */; };
+		A7704378201384CB0081D242 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7704377201384CB0081D242 /* ContactsViewController.swift */; };
+		A770437A201385AE0081D242 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7704379201385AE0081D242 /* ContactsTableViewCell.swift */; };
+		A770437C20138C610081D242 /* TableViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770437B20138C610081D242 /* TableViewConstants.swift */; };
 		A778D9E31FC9AE6200F38438 /* DatabaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */; };
 		A778D9E61FC9BC4900F38438 /* UserAttributeNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */; };
 		A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9F81FC9D5DF00F38438 /* PageItemController.swift */; };
 		A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9F91FC9D5DF00F38438 /* PageViewController.swift */; };
+		A784306F200FA6BF000FF263 /* UserForPrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784306E200FA6BF000FF263 /* UserForPrototypeCell.swift */; };
+		A796807B20129B92006BAE8D /* UserFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796807A20129B92006BAE8D /* UserFriend.swift */; };
+		A796807D2012A862006BAE8D /* UserFriendChildData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796807C2012A862006BAE8D /* UserFriendChildData.swift */; };
 		A79FFB191FE8534A006D4D1E /* UIView+BezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79FFB181FE8534A006D4D1E /* UIView+BezierPaths.swift */; };
 		A79FFB221FE85E91006D4D1E /* maps64.png in Resources */ = {isa = PBXBuildFile; fileRef = A79FFB211FE85E91006D4D1E /* maps64.png */; };
 		A7B17CCE1FE1709C00A8B7DA /* InformationPopupExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B17CCD1FE1709C00A8B7DA /* InformationPopupExtensions.swift */; };
@@ -332,10 +342,20 @@
 		A767CEEA1FD4E61000E70B16 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
 		A767CEEF1FD5392400E70B16 /* UIAlertControllerCustomDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerCustomDesign.swift; sourceTree = "<group>"; };
 		A770332F1FFABB9B004E3C7B /* FacebookLoginProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginProperties.swift; sourceTree = "<group>"; };
+		A770436B2012D62D0081D242 /* UserFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriends.swift; sourceTree = "<group>"; };
+		A770436E20136A5A0081D242 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		A770437020136B810081D242 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		A770437320136CCA0081D242 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		A7704377201384CB0081D242 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		A7704379201385AE0081D242 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		A770437B20138C610081D242 /* TableViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewConstants.swift; sourceTree = "<group>"; };
 		A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUser.swift; sourceTree = "<group>"; };
 		A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAttributeNames.swift; sourceTree = "<group>"; };
 		A778D9F81FC9D5DF00F38438 /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		A778D9F91FC9D5DF00F38438 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		A784306E200FA6BF000FF263 /* UserForPrototypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserForPrototypeCell.swift; sourceTree = "<group>"; };
+		A796807A20129B92006BAE8D /* UserFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriend.swift; sourceTree = "<group>"; };
+		A796807C2012A862006BAE8D /* UserFriendChildData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendChildData.swift; sourceTree = "<group>"; };
 		A79FFB181FE8534A006D4D1E /* UIView+BezierPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+BezierPaths.swift"; sourceTree = "<group>"; };
 		A79FFB211FE85E91006D4D1E /* maps64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps64.png; sourceTree = "<group>"; };
 		A7B17CCD1FE1709C00A8B7DA /* InformationPopupExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPopupExtensions.swift; sourceTree = "<group>"; };
@@ -426,7 +446,7 @@
 		A72705CC1FC91DF3006C2504 /* ControllerExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				A72AE483200782D900657A4D /* PinDropPageExtensions */,
+				A770437520136ED90081D242 /* HomePageExtensions */,
 				A75E3F5C1FE5ACDD007165DE /* WelcomeFirstPinPackage */,
 				A75E3F5B1FE5ACCA007165DE /* LoginPackage */,
 			);
@@ -436,6 +456,8 @@
 		A72AE3862000E3FB00657A4D /* MainHomePackage */ = {
 			isa = PBXGroup;
 			children = (
+				A770437220136CAA0081D242 /* AccountManagement */,
+				A770436D20136A300081D242 /* ContactsAndGroups */,
 				AD48E14620012B770042020C /* HomePackage */,
 				A72AE3872000E42300657A4D /* MainHomeViewController.swift */,
 				A72AE38B2001362300657A4D /* HomePageViewController.swift */,
@@ -463,6 +485,7 @@
 			children = (
 				A72AE489200A507200657A4D /* SegueConstants.swift */,
 				A729EA88200B83C40051AC92 /* SegueEnums.swift */,
+				A770437B20138C610081D242 /* TableViewConstants.swift */,
 			);
 			path = SegueConstants;
 			sourceTree = "<group>";
@@ -948,6 +971,7 @@
 			children = (
 				A7D1CB9F1FD4494D0082BC02 /* DesignableClasses */,
 				A72CAA711FD6853400308DED /* HideShowPasswordTextField */,
+				A7704379201385AE0081D242 /* ContactsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -978,6 +1002,10 @@
 				AD48E1402001176F0042020C /* Group.swift */,
 				AD48E14220011EA60042020C /* Friend.swift */,
 				AD48E144200120970042020C /* NotificationSent.swift */,
+				A784306E200FA6BF000FF263 /* UserForPrototypeCell.swift */,
+				A796807A20129B92006BAE8D /* UserFriend.swift */,
+				A770436B2012D62D0081D242 /* UserFriends.swift */,
+				A796807C2012A862006BAE8D /* UserFriendChildData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1048,6 +1076,39 @@
 				A770332F1FFABB9B004E3C7B /* FacebookLoginProperties.swift */,
 			);
 			path = LoginPermissions;
+			sourceTree = "<group>";
+		};
+		A770436D20136A300081D242 /* ContactsAndGroups */ = {
+			isa = PBXGroup;
+			children = (
+				A770436E20136A5A0081D242 /* ContactsTableViewController.swift */,
+				A7704377201384CB0081D242 /* ContactsViewController.swift */,
+			);
+			path = ContactsAndGroups;
+			sourceTree = "<group>";
+		};
+		A770437220136CAA0081D242 /* AccountManagement */ = {
+			isa = PBXGroup;
+			children = (
+				A770437320136CCA0081D242 /* AccountViewController.swift */,
+			);
+			path = AccountManagement;
+			sourceTree = "<group>";
+		};
+		A770437520136ED90081D242 /* HomePageExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A770437620136EE90081D242 /* AccountPageExtensions */,
+				A72AE483200782D900657A4D /* PinDropPageExtensions */,
+			);
+			path = HomePageExtensions;
+			sourceTree = "<group>";
+		};
+		A770437620136EE90081D242 /* AccountPageExtensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccountPageExtensions;
 			sourceTree = "<group>";
 		};
 		A778D9E11FC9AE4600F38438 /* DatabaseServices */ = {
@@ -1188,6 +1249,7 @@
 		ADB505B41FDB38C800F81046 /* RegisterView */ = {
 			isa = PBXGroup;
 			children = (
+				A770437020136B810081D242 /* user.png */,
 				AD5A44451FE509B900266548 /* gender_woman.png */,
 				AD641ECC1FDDD254002E483B /* gender_man.png */,
 			);
@@ -1308,6 +1370,7 @@
 				A75F40131FC0B7C600495228 /* LaunchScreen.storyboard in Resources */,
 				A75CE0651FED4DB8004703F5 /* toxic-cross.png in Resources */,
 				A71BDC4D1FDF1EA80059EE43 /* error@2x.png in Resources */,
+				A770437120136B820081D242 /* user.png in Resources */,
 				AD641ECE1FDDD254002E483B /* gender_man.png in Resources */,
 				A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */,
 				A75CE0951FF2AEB8004703F5 /* current-location.png in Resources */,
@@ -1435,6 +1498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75E3F5F1FE5AD16007165DE /* ParseLocationData.swift in Sources */,
+				A7704378201384CB0081D242 /* ContactsViewController.swift in Sources */,
 				A72AE3831FFF684000657A4D /* PinDropButtonObjects.swift in Sources */,
 				AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */,
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
@@ -1459,6 +1523,7 @@
 				A729EA85200B740B0051AC92 /* AlertProcessing.swift in Sources */,
 				A72CAA861FD6855200308DED /* PasswordToggleVisibilityView.swift in Sources */,
 				A72AE48A200A507200657A4D /* SegueConstants.swift in Sources */,
+				A770437A201385AE0081D242 /* ContactsTableViewCell.swift in Sources */,
 				A72AE38C2001362300657A4D /* HomePageViewController.swift in Sources */,
 				A75E3F441FE29FE4007165DE /* UIControl+Point.swift in Sources */,
 				A75CE07F1FEF0202004703F5 /* DatabasePinItems.swift in Sources */,
@@ -1473,6 +1538,7 @@
 				A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */,
 				A778D9E31FC9AE6200F38438 /* DatabaseUser.swift in Sources */,
 				A79FFB191FE8534A006D4D1E /* UIView+BezierPaths.swift in Sources */,
+				A770436C2012D62D0081D242 /* UserFriends.swift in Sources */,
 				A75E3F461FE29FE4007165DE /* FTConfiguration.swift in Sources */,
 				A72AE487200A2EE000657A4D /* ButtonExtensionsOnCurrentView.swift in Sources */,
 				A72D9ED91FF4E21B001C2098 /* UILabelExtensions.swift in Sources */,
@@ -1491,9 +1557,11 @@
 				A729EA87200B76F50051AC92 /* PinAnnotationProcess.swift in Sources */,
 				A72AFBE31FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift in Sources */,
 				A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */,
+				A796807D2012A862006BAE8D /* UserFriendChildData.swift in Sources */,
 				A72705C51FC8A2A6006C2504 /* User.swift in Sources */,
 				A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */,
 				AD7FB67E1FF80FE4001AD14B /* SelectedAnnotationOperation.swift in Sources */,
+				A770436F20136A5A0081D242 /* ContactsTableViewController.swift in Sources */,
 				A7194DBD1FED036E00586038 /* PinTextDataViewController.swift in Sources */,
 				A75E3F651FE5E831007165DE /* DatabaseUserLocation.swift in Sources */,
 				A75CE0771FEE6982004703F5 /* PinData.swift in Sources */,
@@ -1502,6 +1570,7 @@
 				A75E3F631FE5E6A5007165DE /* UserLocation.swift in Sources */,
 				A7D1CBA51FD44AEA0082BC02 /* UINavigationBarCustomDesign.swift in Sources */,
 				A72705C31FC8973F006C2504 /* NavigationBarController.swift in Sources */,
+				A770437C20138C610081D242 /* TableViewConstants.swift in Sources */,
 				A7D1CBA21FD449780082BC02 /* UIButtonCustomDesign.swift in Sources */,
 				A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift in Sources */,
 				A72AE38E2001376A00657A4D /* DecideToLoadPicture.swift in Sources */,
@@ -1509,6 +1578,7 @@
 				A729EA89200B83C40051AC92 /* SegueEnums.swift in Sources */,
 				A75E3F451FE29FE4007165DE /* UIScreen+Frame.swift in Sources */,
 				A75E3F511FE54341007165DE /* WelcomeFirstPinViewController.swift in Sources */,
+				A796807B20129B92006BAE8D /* UserFriend.swift in Sources */,
 				A72705CE1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift in Sources */,
 				A75E3F471FE29FE4007165DE /* FTConstants.swift in Sources */,
 				AD48E14920012BF90042020C /* ShowPinsOnMapViewController.swift in Sources */,
@@ -1544,6 +1614,7 @@
 				A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */,
 				A72AFBE91FCDF77C0018254E /* InformationMessages.swift in Sources */,
 				A75CE0611FED4280004703F5 /* PinDataPictureViewController.swift in Sources */,
+				A770437420136CCA0081D242 /* AccountViewController.swift in Sources */,
 				AD48E14320011EA60042020C /* Friend.swift in Sources */,
 				A75CE0791FEE81AF004703F5 /* DecideToLoadVideo.swift in Sources */,
 				A77033301FFABB9B004E3C7B /* FacebookLoginProperties.swift in Sources */,
@@ -1551,6 +1622,7 @@
 				A76628DE1FF7C3750008FE63 /* guidance_step3_ViewController.swift in Sources */,
 				A72CAA8F1FD689B200308DED /* RegisterViewControllerExtentions.swift in Sources */,
 				A72705C11FC885B8006C2504 /* MainPageViewController.swift in Sources */,
+				A784306F200FA6BF000FF263 /* UserForPrototypeCell.swift in Sources */,
 				A72AFBE01FCDE8D70018254E /* ProjectSettingsConstants.swift in Sources */,
 				A75F40261FC0DBCC00495228 /* EntranceViewController.swift in Sources */,
 				AD48E1412001176F0042020C /* Group.swift in Sources */,

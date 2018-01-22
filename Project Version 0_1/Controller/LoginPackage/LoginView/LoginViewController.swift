@@ -12,7 +12,7 @@ import FirebaseAuth
 import SwiftKeychainWrapper
 import CheckBox
 
-class LoginViewController: UIViewController, UITextFieldDelegate{
+class LoginViewController: UIViewController, UITextFieldDelegate, NSCacheDelegate{
     
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
@@ -72,6 +72,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         Login Button Clicked
      */
     @IBAction func loginButtonClick(_ sender: UIButton) {
+        
+        print("loginButtonClick")
         
         guard checkValidateRequiredField() else {
             return

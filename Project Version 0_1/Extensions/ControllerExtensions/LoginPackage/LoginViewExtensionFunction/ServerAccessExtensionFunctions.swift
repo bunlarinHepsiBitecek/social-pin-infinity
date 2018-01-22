@@ -12,6 +12,10 @@ import Firebase
 import FirebaseAuth
 import SwiftKeychainWrapper
 
+let denemeCache = NSCache<NSString, UserFriends>()
+
+var tempUserFriendsDictionary = [UserFriend]()
+
 extension LoginViewController {
     
     /*
@@ -111,6 +115,7 @@ extension LoginViewController {
             } else {
                 
                 self.setProfileImage()
+                self.getUserFriendListData()
                 self.stopSpinner()
                 
                 print("loginButtonClick : user is logged in successfully")
@@ -214,5 +219,238 @@ extension LoginViewController {
             })
         }
     }
+    
+    func getUserFriendList() {
+     
+        print("getUserFriendList starts")
+        
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        print("userID : \(uid)")
+        
+        let yarroRef = ref.child("Friends").child(uid!)
+        
+        print("yarroRef :\(yarroRef)")
+        
+        yarroRef.observe(DataEventType.childAdded, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                let userX = UserForPrototypeCell(dictionary: dictionary)
+                userList.append(userX)
+                
+                //this will crash because of background thread, so lets use dispatch_async to fix
+                
+            }
+            
+        }) { (error) in
+            
+            if let errorMessage = error as NSError? {
+                
+                print("?????????errorMessage : \(errorMessage)")
+                print("?????????errorMessage : \(errorMessage.userInfo)")
+                print("?????????errorMessage : \(errorMessage.localizedDescription)")
+                
+            }
+            
+        }
+        
+        yarroRef.observe(DataEventType.value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                let userX = UserForPrototypeCell(dictionary: dictionary)
+                userList.append(userX)
+                
+                //this will crash because of background thread, so lets use dispatch_async to fix
+                /*
+                 DispatchQueue.main.async(execute: {
+                 self.tableView.reloadData()
+                 })*/
+                
+            }
+            
+        }) { (error) in
+            
+            if let errorMessage = error as NSError? {
+                
+                print("?????????errorMessage : \(errorMessage)")
+                print("?????????errorMessage : \(errorMessage.userInfo)")
+                print("?????????errorMessage : \(errorMessage.localizedDescription)")
+                
+            }
+            
+        }
+        
+        for item in userList {
+            
+            print("---> :\(item.userName)")
+            print("---> :\(item.userImageUrl)")
+            
+        }
+        
+        
+    }
+    
+    func getUserFriendList2() {
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        print("userID : \(uid)")
+        
+        let yarroRef = String(describing: ref.child("Friends").child(uid!))
+        let yarroRefUrl = URL(string: yarroRef)
+        
+        yarroRefUrl?.baseURL
+        
+        print("----a :\(yarroRefUrl?.baseURL)")
+        print("----b :\(yarroRefUrl?.absoluteURL)")
+        print("----c :\(yarroRefUrl?.isFileURL)")
+        
+        print("yarroRef :\(yarroRef)")
+        print("yarroRefUrl :\(yarroRefUrl)")
+        
+        let request = NSURLRequest(url: (yarroRefUrl?.absoluteURL)!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 30.0)
+        
+        let request2 = URLRequest(url: yarroRefUrl!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 30.0)
+        
+        print("request : \(request)")
+        print("request2 :\(request2)")
+        
+        //let task = URLSession.shared.dataTask(with: request2)
+        
+        /*
+        let task2 = URLSession.shared.dataTask(with: request2) { (data, urlResponse, error) in
+            
+            print("data : \(data)")
+            print("urlResponse :\(urlResponse)")
+            print("error :\(error)")
+            
+            let responseObject = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any]
+            
+            print("responseObject :\(String(describing: responseObject))")
+            
+           
+        }
+        
+        task2.resume()
+        
+        print("task2 :\(task2)")*/
+        
+    }
+    
+    
+    
+    func getUserFriendListData() {
+        
+        print("getUserFriendListData starts")
+        
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        let userFriendsReference = ref.child(FirebaseModels.Friends.childFriends).child(uid!)
+        
+        userFriendsReference.observe(DataEventType.value, with: { (dataSnapShot) in
+            
+            if !dataSnapShot.exists() {
+                return
+            }
+            
+            if let snapshot = dataSnapShot.children.allObjects as? [DataSnapshot] {
+            
+                print("snapShot : \(snapshot)")
+            
+                for snap in snapshot {
+                    
+                    print("snap : \(snap)")
+                    print("snapx : \(snap.key)")
+                    print("snapy : \(snap.value)")
+                    
+                    if let snapDictionary = snap.value as? NSDictionary {
+                        
+                        print("snapDictionary : \(snapDictionary)")
+                        
+                        let tempUserFriendObject = UserFriend(dataDictionary: snapDictionary as! [String : AnyObject])
+                        tempUserFriendObject.userID = snap.key
+                        
+                        print("boko : \(tempUserFriendObject.userFriendChildData.userImageUrl)")
+                        
+                        if !tempUserFriendObject.userFriendChildData.userImageUrl.isEmpty {
+                            
+                            let storageRef = Storage.storage().reference(forURL: tempUserFriendObject.userFriendChildData.userImageUrl)
+                            
+                            print("storageRef : \(storageRef)")
+                            
+                            storageRef.downloadURL(completion: { (url, error) in
+                                
+                                if error != nil {
+                                    
+                                    if let errorMessage = error as NSError? {
+                                        
+                                        print("errorMessage : \(errorMessage.localizedDescription)")
+                                        print("errorMessage : \(errorMessage.userInfo)")
+                                        
+                                    }
+                                    
+                                } else {
+                                    
+                                    do {
+                                        
+                                        let data = try Data(contentsOf: url!)
+                                        let image = UIImage(data: data as Data)
+                                        
+                                        tempUserFriendObject.userImage = image!
+                                        
+                                        
+                                        
+                                    } catch {
+                                        
+                                        print("boku yedik")
+                                        
+                                    }
+                                    
+                                }
+                                
+                            })
+                            
+                            
+                        }
+                        
+                        tempUserFriendsDictionary.append(tempUserFriendObject)
+                        
+                        
+                        
+                    }
+                    
+                }
+                
+                let something = UserFriends()
+                something.userFriendList = tempUserFriendsDictionary
+                
+                
+                
+                DispatchQueue.main.async(execute: {
+                    
+                    denemeCache.setObject(something, forKey: "data" as NSString)
+                    
+                })
+                
+            }
+            
+        }) { (error) in
+            
+            if let errorMessage = error as NSError! {
+                
+                print("errorMessage : \(errorMessage.localizedDescription)")
+                print("errorMessage : \(errorMessage.userInfo)")
+                
+            }
+            
+        }
+        
+        print("zalalalaal : \(tempUserFriendsDictionary.count)")
+        
+        
+        
+    }
+    
     
 }
