@@ -53,24 +53,6 @@ class PinDropViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
         print("PinDropViewController starts")
         
-
-        print("denemeCache : \(denemeCache)")
-        print("denemeCache : \(denemeCache)")
-        
-        print("deneme : \(denemeCache.object(forKey: "data" as NSString))")
-        
-        
-        let yarro = denemeCache.object(forKey: "data" as NSString)
-        
-        for x in (yarro?.userFriendList)! {
-            
-        
-            print("x : \(x.userFriendChildData.userImageUrl)")
-            print("x : \(x.userFriendChildData.userName)")
-            
-        }
-        
-        
         processNeedsToCompleteWhenViewLoaded()
     }
     

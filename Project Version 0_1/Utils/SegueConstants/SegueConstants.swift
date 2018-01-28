@@ -32,6 +32,11 @@ struct ViewConstants {
         static let PinTextDataViewController_storyBoardID = "PinTextDataViewController_storyBoardID"
         static let ContactsTableViewController_storyBoardID = "ContactsTableViewController_storyBoardID"
         static let ContactsViewController_storyBoardID = "ContactsViewController_storyBoardID"
+        static let VerificationViewController_storyBoardID = "VerificationViewController_storyBoardID"
+        static let mainPageVC_storyBoardID = "mainPageVC_storyBoardID"
+        static let EntranceVC_storyBoardID = "EntranceVC_storyBoardID"
+        static let FromMainBoardToWelcomeFirstPinBoard_storyBoardID = "FromMainBoardToWelcomeFirstPinBoard_storyBoardID"
+        static let AccountViewController_storyBoardID = "AccountViewController_storyBoardID"
         
     }
     

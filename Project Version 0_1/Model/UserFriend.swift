@@ -12,12 +12,14 @@ class UserFriend {
     
     private var _userID : String
     private var _userImage : UIImage
+    private var _userImageLoaded : Bool
     private var _userFriendChildData : UserFriendChildData
     
     init() {
         
         _userID = SPACE_CHARACTER
         _userImage = UIImage()
+        _userImageLoaded = false
         _userFriendChildData = UserFriendChildData()
 
     }
@@ -26,16 +28,26 @@ class UserFriend {
         
         _userID = SPACE_CHARACTER
         _userImage = UIImage()
+        _userImageLoaded = false
         _userFriendChildData = UserFriendChildData(dataDictionary: dataDictionary)
         
     }
-
+    
     var userID: String {
         get {
             return _userID
         }
         set {
             _userID = newValue
+        }
+    }
+    
+    var userImageLoaded: Bool {
+        get {
+            return _userImageLoaded
+        }
+        set {
+            _userImageLoaded = newValue
         }
     }
     

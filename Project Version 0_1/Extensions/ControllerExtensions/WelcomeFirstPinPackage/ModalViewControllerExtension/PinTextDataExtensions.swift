@@ -27,8 +27,6 @@ extension PinTextDataViewController {
             return
         }
         
-        
-        
         dismissTheCurrentView()
         
     }

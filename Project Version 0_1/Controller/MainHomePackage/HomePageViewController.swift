@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class HomePageViewController: UITabBarController, UITabBarControllerDelegate {
 
     var user : User = User()
+    var sectionBasedObject = SectionBasedFriendsData()
+    
+    var tempDictionary = NSDictionary() as! [String : [UserFriend]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,9 @@ class HomePageViewController: UITabBarController, UITabBarControllerDelegate {
         
         print("HomePageViewController starts")
         print("userid : \(user.userID)")
-
+        
+        getUserFriendListData()
+        
     }
 
     override func didReceiveMemoryWarning() {

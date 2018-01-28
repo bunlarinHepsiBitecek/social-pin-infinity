@@ -138,6 +138,8 @@
 		A75F40261FC0DBCC00495228 /* EntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40251FC0DBCC00495228 /* EntranceViewController.swift */; };
 		A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F402E1FC1D3E300495228 /* UIViewDesign.swift */; };
 		A75F40351FC238B600495228 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40341FC238B600495228 /* StartPageViewController.swift */; };
+		A760C49D20183B210050EA16 /* SectionBasedFriendsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A760C49C20183B210050EA16 /* SectionBasedFriendsData.swift */; };
+		A760C49F20183F140050EA16 /* ContactsViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A760C49E20183F140050EA16 /* ContactsViewController2.swift */; };
 		A76628DE1FF7C3750008FE63 /* guidance_step3_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76628DD1FF7C3750008FE63 /* guidance_step3_ViewController.swift */; };
 		A76628E01FF7C7260008FE63 /* speech-bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = A76628DF1FF7C7250008FE63 /* speech-bubble.png */; };
 		A76628E21FF7CC680008FE63 /* speech-bubble (2).png in Resources */ = {isa = PBXBuildFile; fileRef = A76628E11FF7CC670008FE63 /* speech-bubble (2).png */; };
@@ -150,7 +152,6 @@
 		A770436F20136A5A0081D242 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770436E20136A5A0081D242 /* ContactsTableViewController.swift */; };
 		A770437120136B820081D242 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A770437020136B810081D242 /* user.png */; };
 		A770437420136CCA0081D242 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770437320136CCA0081D242 /* AccountViewController.swift */; };
-		A7704378201384CB0081D242 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7704377201384CB0081D242 /* ContactsViewController.swift */; };
 		A770437A201385AE0081D242 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7704379201385AE0081D242 /* ContactsTableViewCell.swift */; };
 		A770437C20138C610081D242 /* TableViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770437B20138C610081D242 /* TableViewConstants.swift */; };
 		A778D9E31FC9AE6200F38438 /* DatabaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */; };
@@ -160,6 +161,12 @@
 		A784306F200FA6BF000FF263 /* UserForPrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784306E200FA6BF000FF263 /* UserForPrototypeCell.swift */; };
 		A796807B20129B92006BAE8D /* UserFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796807A20129B92006BAE8D /* UserFriend.swift */; };
 		A796807D2012A862006BAE8D /* UserFriendChildData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796807C2012A862006BAE8D /* UserFriendChildData.swift */; };
+		A79F7807201A30BF00A20679 /* MainPageControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79F7806201A30BF00A20679 /* MainPageControllerExtension.swift */; };
+		A79F780A201A33C600A20679 /* HomePageServerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79F7809201A33C600A20679 /* HomePageServerExtensions.swift */; };
+		A79F780D201BC80F00A20679 /* ContactDataProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79F780C201BC80F00A20679 /* ContactDataProcess.swift */; };
+		A79F780F201BE18500A20679 /* CacheConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79F780E201BE18500A20679 /* CacheConstants.swift */; };
+		A79F7812201BE53C00A20679 /* LetterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79F7811201BE53C00A20679 /* LetterConstants.swift */; };
+		A79F7814201D26D000A20679 /* DenemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79F7813201D26D000A20679 /* DenemeViewController.swift */; };
 		A79FFB191FE8534A006D4D1E /* UIView+BezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79FFB181FE8534A006D4D1E /* UIView+BezierPaths.swift */; };
 		A79FFB221FE85E91006D4D1E /* maps64.png in Resources */ = {isa = PBXBuildFile; fileRef = A79FFB211FE85E91006D4D1E /* maps64.png */; };
 		A7B17CCE1FE1709C00A8B7DA /* InformationPopupExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B17CCD1FE1709C00A8B7DA /* InformationPopupExtensions.swift */; };
@@ -334,6 +341,8 @@
 		A75F40251FC0DBCC00495228 /* EntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceViewController.swift; sourceTree = "<group>"; };
 		A75F402E1FC1D3E300495228 /* UIViewDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewDesign.swift; sourceTree = "<group>"; };
 		A75F40341FC238B600495228 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
+		A760C49C20183B210050EA16 /* SectionBasedFriendsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBasedFriendsData.swift; sourceTree = "<group>"; };
+		A760C49E20183F140050EA16 /* ContactsViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController2.swift; sourceTree = "<group>"; };
 		A76628DD1FF7C3750008FE63 /* guidance_step3_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guidance_step3_ViewController.swift; sourceTree = "<group>"; };
 		A76628DF1FF7C7250008FE63 /* speech-bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech-bubble.png"; sourceTree = "<group>"; };
 		A76628E11FF7CC670008FE63 /* speech-bubble (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech-bubble (2).png"; sourceTree = "<group>"; };
@@ -346,7 +355,6 @@
 		A770436E20136A5A0081D242 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		A770437020136B810081D242 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		A770437320136CCA0081D242 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		A7704377201384CB0081D242 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		A7704379201385AE0081D242 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		A770437B20138C610081D242 /* TableViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewConstants.swift; sourceTree = "<group>"; };
 		A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUser.swift; sourceTree = "<group>"; };
@@ -356,6 +364,12 @@
 		A784306E200FA6BF000FF263 /* UserForPrototypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserForPrototypeCell.swift; sourceTree = "<group>"; };
 		A796807A20129B92006BAE8D /* UserFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriend.swift; sourceTree = "<group>"; };
 		A796807C2012A862006BAE8D /* UserFriendChildData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendChildData.swift; sourceTree = "<group>"; };
+		A79F7806201A30BF00A20679 /* MainPageControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageControllerExtension.swift; sourceTree = "<group>"; };
+		A79F7809201A33C600A20679 /* HomePageServerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageServerExtensions.swift; sourceTree = "<group>"; };
+		A79F780C201BC80F00A20679 /* ContactDataProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataProcess.swift; sourceTree = "<group>"; };
+		A79F780E201BE18500A20679 /* CacheConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheConstants.swift; sourceTree = "<group>"; };
+		A79F7811201BE53C00A20679 /* LetterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterConstants.swift; sourceTree = "<group>"; };
+		A79F7813201D26D000A20679 /* DenemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenemeViewController.swift; sourceTree = "<group>"; };
 		A79FFB181FE8534A006D4D1E /* UIView+BezierPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+BezierPaths.swift"; sourceTree = "<group>"; };
 		A79FFB211FE85E91006D4D1E /* maps64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps64.png; sourceTree = "<group>"; };
 		A7B17CCD1FE1709C00A8B7DA /* InformationPopupExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPopupExtensions.swift; sourceTree = "<group>"; };
@@ -446,6 +460,7 @@
 		A72705CC1FC91DF3006C2504 /* ControllerExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				A79F780B201BC7F400A20679 /* ContactViewController */,
 				A770437520136ED90081D242 /* HomePageExtensions */,
 				A75E3F5C1FE5ACDD007165DE /* WelcomeFirstPinPackage */,
 				A75E3F5B1FE5ACCA007165DE /* LoginPackage */,
@@ -619,6 +634,7 @@
 		A72D2C621FD85738008BE2D2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A79F7810201BE52A00A20679 /* Letters */,
 				A72D2C631FD85746008BE2D2 /* Text Fonts */,
 			);
 			path = Fonts;
@@ -884,6 +900,7 @@
 		A75E3F5B1FE5ACCA007165DE /* LoginPackage */ = {
 			isa = PBXGroup;
 			children = (
+				A79F7805201A309900A20679 /* MainPageControllerExtensions */,
 				A74FD5EF1FDB7A6E00062483 /* RegistrationViewControllerExtensions */,
 				A72CAA901FD689BE00308DED /* EntranceView */,
 				A7DD2E0B1FD1A4860009322E /* LoginViewExtensionFunction */,
@@ -1006,6 +1023,7 @@
 				A796807A20129B92006BAE8D /* UserFriend.swift */,
 				A770436B2012D62D0081D242 /* UserFriends.swift */,
 				A796807C2012A862006BAE8D /* UserFriendChildData.swift */,
+				A760C49C20183B210050EA16 /* SectionBasedFriendsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1082,7 +1100,8 @@
 			isa = PBXGroup;
 			children = (
 				A770436E20136A5A0081D242 /* ContactsTableViewController.swift */,
-				A7704377201384CB0081D242 /* ContactsViewController.swift */,
+				A760C49E20183F140050EA16 /* ContactsViewController2.swift */,
+				A79F7813201D26D000A20679 /* DenemeViewController.swift */,
 			);
 			path = ContactsAndGroups;
 			sourceTree = "<group>";
@@ -1098,6 +1117,7 @@
 		A770437520136ED90081D242 /* HomePageExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				A79F7808201A338C00A20679 /* HomePageExtension */,
 				A770437620136EE90081D242 /* AccountPageExtensions */,
 				A72AE483200782D900657A4D /* PinDropPageExtensions */,
 			);
@@ -1128,6 +1148,7 @@
 			children = (
 				A778D9E51FC9BC4900F38438 /* UserAttributeNames.swift */,
 				A72AFBD71FCDD2640018254E /* StorageConstantNames.swift */,
+				A79F780E201BE18500A20679 /* CacheConstants.swift */,
 			);
 			path = FirebaseModelConstants;
 			sourceTree = "<group>";
@@ -1152,6 +1173,38 @@
 				A72AFBCE1FCCBCF30018254E /* PrepareUserProfileData.swift */,
 			);
 			path = ExtensionLoginViewController;
+			sourceTree = "<group>";
+		};
+		A79F7805201A309900A20679 /* MainPageControllerExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A79F7806201A30BF00A20679 /* MainPageControllerExtension.swift */,
+			);
+			path = MainPageControllerExtensions;
+			sourceTree = "<group>";
+		};
+		A79F7808201A338C00A20679 /* HomePageExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A79F7809201A33C600A20679 /* HomePageServerExtensions.swift */,
+			);
+			path = HomePageExtension;
+			sourceTree = "<group>";
+		};
+		A79F780B201BC7F400A20679 /* ContactViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A79F780C201BC80F00A20679 /* ContactDataProcess.swift */,
+			);
+			path = ContactViewController;
+			sourceTree = "<group>";
+		};
+		A79F7810201BE52A00A20679 /* Letters */ = {
+			isa = PBXGroup;
+			children = (
+				A79F7811201BE53C00A20679 /* LetterConstants.swift */,
+			);
+			path = Letters;
 			sourceTree = "<group>";
 		};
 		A79FFB201FE85E68006D4D1E /* PinImages */ = {
@@ -1498,10 +1551,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75E3F5F1FE5AD16007165DE /* ParseLocationData.swift in Sources */,
-				A7704378201384CB0081D242 /* ContactsViewController.swift in Sources */,
 				A72AE3831FFF684000657A4D /* PinDropButtonObjects.swift in Sources */,
 				AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */,
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
+				A79F780A201A33C600A20679 /* HomePageServerExtensions.swift in Sources */,
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
 				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
 				A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift in Sources */,
@@ -1533,6 +1586,7 @@
 				A72AE3811FFE5C3C00657A4D /* guidance_step4_ViewController.swift in Sources */,
 				A7B17CCE1FE1709C00A8B7DA /* InformationPopupExtensions.swift in Sources */,
 				ADB505AA1FDB1C6500F81046 /* SCLAlertView.swift in Sources */,
+				A760C49F20183F140050EA16 /* ContactsViewController2.swift in Sources */,
 				A7DD2E171FD1BEEE0009322E /* ValidationExtensionFunctions.swift in Sources */,
 				A7407F071FC705D000DAAF44 /* ConstanctUserKeyValues.swift in Sources */,
 				A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */,
@@ -1543,6 +1597,7 @@
 				A72AE487200A2EE000657A4D /* ButtonExtensionsOnCurrentView.swift in Sources */,
 				A72D9ED91FF4E21B001C2098 /* UILabelExtensions.swift in Sources */,
 				A75CE09C1FF2B023004703F5 /* PersonAnnotationView.swift in Sources */,
+				A79F7814201D26D000A20679 /* DenemeViewController.swift in Sources */,
 				A75CE0A71FF37A24004703F5 /* LocationCoordinateConstantValues.swift in Sources */,
 				A7DD2E0F1FD1A7140009322E /* ProcessingUserData.swift in Sources */,
 				A75E3F491FE29FE4007165DE /* FTPopOverMenuCell.swift in Sources */,
@@ -1574,9 +1629,11 @@
 				A7D1CBA21FD449780082BC02 /* UIButtonCustomDesign.swift in Sources */,
 				A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift in Sources */,
 				A72AE38E2001376A00657A4D /* DecideToLoadPicture.swift in Sources */,
+				A79F780D201BC80F00A20679 /* ContactDataProcess.swift in Sources */,
 				A72D9EDB1FF4E73F001C2098 /* UITextViewExtension.swift in Sources */,
 				A729EA89200B83C40051AC92 /* SegueEnums.swift in Sources */,
 				A75E3F451FE29FE4007165DE /* UIScreen+Frame.swift in Sources */,
+				A79F7807201A30BF00A20679 /* MainPageControllerExtension.swift in Sources */,
 				A75E3F511FE54341007165DE /* WelcomeFirstPinViewController.swift in Sources */,
 				A796807B20129B92006BAE8D /* UserFriend.swift in Sources */,
 				A72705CE1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift in Sources */,
@@ -1587,6 +1644,7 @@
 				A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */,
 				A72AFBD81FCDD2640018254E /* StorageConstantNames.swift in Sources */,
 				A729EA83200A98460051AC92 /* PictureLoadingProcess.swift in Sources */,
+				A79F7812201BE53C00A20679 /* LetterConstants.swift in Sources */,
 				A72AFBCF1FCCBCF30018254E /* PrepareUserProfileData.swift in Sources */,
 				A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */,
 				A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */,
@@ -1594,6 +1652,7 @@
 				A729EA81200A97060051AC92 /* ImageVideoProcess.swift in Sources */,
 				A72AFBDC1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift in Sources */,
 				A75CE0A11FF2B36B004703F5 /* PinView.swift in Sources */,
+				A760C49D20183B210050EA16 /* SectionBasedFriendsData.swift in Sources */,
 				A73828301FC35DCB003C1827 /* Validation.swift in Sources */,
 				A75CE0861FF04A7D004703F5 /* PinImageDataExtensions.swift in Sources */,
 				A72AFBEE1FCE796D0018254E /* UIImageViewExtensions.swift in Sources */,
@@ -1621,6 +1680,7 @@
 				A7D1CBAE1FD460660082BC02 /* UITextFieldCustomDesign.swift in Sources */,
 				A76628DE1FF7C3750008FE63 /* guidance_step3_ViewController.swift in Sources */,
 				A72CAA8F1FD689B200308DED /* RegisterViewControllerExtentions.swift in Sources */,
+				A79F780F201BE18500A20679 /* CacheConstants.swift in Sources */,
 				A72705C11FC885B8006C2504 /* MainPageViewController.swift in Sources */,
 				A784306F200FA6BF000FF263 /* UserForPrototypeCell.swift in Sources */,
 				A72AFBE01FCDE8D70018254E /* ProjectSettingsConstants.swift in Sources */,

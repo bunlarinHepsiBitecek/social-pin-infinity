@@ -334,7 +334,7 @@
         <!--welcomeFirstPin_storyBoard_ID-->
         <scene sceneID="P2k-c9-qYs">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="yarro" storyboardName="WelcomeFirstPin" referencedIdentifier="welcomeFirstPin_storyBoard_ID" id="Jhg-Io-BcF" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="FromMainBoardToWelcomeFirstPinBoard_storyBoardID" storyboardName="WelcomeFirstPin" referencedIdentifier="welcomeFirstPin_storyBoard_ID" id="Jhg-Io-BcF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Key-CU-xV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-714" y="636"/>

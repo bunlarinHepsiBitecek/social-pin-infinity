@@ -13,7 +13,8 @@ extension LoginViewController {
     
     func gotoVerificationView(inputUserIsEmailVerifiedFlag : Bool) {
         
-        let verificationViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "VerificationViewController_storyBoardID") as! VerificationViewController
+        
+        let verificationViewControllerObject = storyboard?.instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.VerificationViewController_storyBoardID) as! VerificationViewController
         
         verificationViewControllerObject.userObjectInVerificationView = self.userDatabaseObjectToPass
         
@@ -21,7 +22,7 @@ extension LoginViewController {
             
             print(">> : \(USER_EMAIL_VERIFICATION_REQUIRED)")
             
-            var informationMessage = Information()
+            let informationMessage = Information()
             informationMessage.setVerificationNotifMessage(inputMessage: USER_EMAIL_VERIFICATION_NOTIF_FAILED)
             
             verificationViewControllerObject.verificationMessage = informationMessage
@@ -33,7 +34,7 @@ extension LoginViewController {
     
     func gotoMainPage() {
         
-        let mainPageViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "mainPageVC_storyBoardID") as! MainPageViewController
+        let mainPageViewControllerObject = storyboard?.instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.mainPageVC_storyBoardID) as! MainPageViewController
         
         mainPageViewControllerObject.user = userDatabaseObjectToPass
         

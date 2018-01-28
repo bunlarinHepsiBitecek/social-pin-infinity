@@ -110,7 +110,11 @@ extension AddImageViewController : UIImagePickerControllerDelegate, UINavigation
         
         print("setSelectedImageToUser starts")
         
-        self.userObject.setUserProfilePicture(inputUserProfileImage: self.imageView.image!)
+        let compressedImageData = UIImageJPEGRepresentation(self.imageView.image!, 0.0)
+        let inputImage = UIImage(data: compressedImageData!)
+        
+        //self.userObject.setUserProfilePicture(inputUserProfileImage: self.imageView.image!)
+        self.userObject.setUserProfilePicture(inputUserProfileImage: inputImage!)
         
     }
     

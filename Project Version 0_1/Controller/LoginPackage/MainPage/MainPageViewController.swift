@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class MainPageViewController: UIViewController {
     
@@ -30,10 +31,6 @@ class MainPageViewController: UIViewController {
         
         directToWelcomeFirstPin()
         
-        //performSegue(withIdentifier: "goToWelcomeFirstPin", sender: self)
-        
-        //checkUserRegisterFirstTime()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,15 +38,7 @@ class MainPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func directToWelcomeFirstPin() {
-        
-        let newView = storyboard?.instantiateViewController(withIdentifier: "yarro") as! WelcomeFirstPinViewController
-        
-        newView.user = user
-        
-        navigationController?.pushViewController(newView, animated: true)
-        
-    }
+    
     
     @IBAction func LogoutButtonClicked(_ sender: UIButton) {
         
@@ -67,21 +56,5 @@ class MainPageViewController: UIViewController {
         
     }
     
-    private func directCurrentPageToEntrancePage() {
-        
-        let entranceViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "EntranceVC_storyBoardID") as! EntranceViewController
-        
-        navigationController?.pushViewController(entranceViewControllerObject, animated: true)
-        
-    }
     
-    func checkUserRegisterFirstTime() {
-        
-        if information.callerView == "callerVerification" {
-            
-            performSegue(withIdentifier: "goToWelcomeFirstPin", sender: self)
-            
-        }
-        
-    }
 }

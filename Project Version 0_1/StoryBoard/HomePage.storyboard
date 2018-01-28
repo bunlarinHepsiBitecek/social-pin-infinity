@@ -186,7 +186,7 @@
         <!--Account-->
         <scene sceneID="vY0-sZ-3mB">
             <objects>
-                <viewController id="DZ7-e9-pcS" customClass="AccountViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController_storyBoardID" id="DZ7-e9-pcS" customClass="AccountViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Nh-Dk-n3m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +212,7 @@
         <!--Item-->
         <scene sceneID="PUk-wk-WKu">
             <objects>
-                <viewController id="IGe-h2-kfI" sceneMemberID="viewController">
+                <viewController id="IGe-h2-kfI" customClass="DenemeViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gWJ-e6-aeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="-247" y="-267"/>
         </scene>
-        <!--Contacts View Controller-->
+        <!--Contacts View Controller2-->
         <scene sceneID="O42-kE-ee7">
             <objects>
-                <viewController storyboardIdentifier="ContactsViewController_storyBoardID" id="qDL-iY-NS8" customClass="ContactsViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactsViewController_storyBoardID" modalPresentationStyle="overCurrentContext" id="qDL-iY-NS8" customClass="ContactsViewController2" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Hi-BK-gre">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,7 +348,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="nw4-4k-YyH">
-                                        <rect key="frame" x="36" y="0.0" width="318" height="56"/>
+                                        <rect key="frame" x="36" y="0.0" width="99" height="56"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <offsetWrapper key="searchTextPositionAdjustment" horizontal="5" vertical="0.0"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -361,25 +361,45 @@
                                             <segment title="Gruplar"/>
                                         </segments>
                                     </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0WT-GC-2iH">
+                                        <rect key="frame" x="182" y="0.0" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="ttt:" destination="qDL-iY-NS8" eventType="editingChanged" id="dmS-gj-x6Q"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ge-o1-Bb4">
+                                <rect key="frame" x="31" y="18" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="close:" destination="qDL-iY-NS8" eventType="touchUpInside" id="v43-xI-BsP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="g9M-6p-6sw"/>
                     </view>
                     <connections>
-                        <outlet property="searchController" destination="nw4-4k-YyH" id="IIq-CC-fhT"/>
+                        <outlet property="friendsTableView" destination="fyR-pI-PTX" id="nRm-hG-nTl"/>
+                        <outlet property="searchController" destination="nw4-4k-YyH" id="0YN-bm-rTQ"/>
+                        <outlet property="ttt" destination="0WT-GC-2iH" id="W4g-KQ-ybT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epM-cJ-oBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2802.4000000000001" y="-266.71664167916043"/>
         </scene>
-        <!--Contacts Table View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="6r9-fr-lQL">
             <objects>
-                <tableViewController storyboardIdentifier="ContactsTableViewController_storyBoardID" id="Pee-IO-EE6" customClass="ContactsTableViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ContactsTableViewController_storyBoardID" id="Pee-IO-EE6" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="f8b-wf-3co">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
