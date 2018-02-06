@@ -10,6 +10,7 @@ import UIKit
 
 extension ContactsViewController2 {
     
+    /*
     func rearrangeDataForCache() {
         
         if let unwrappedObject = denemeCache2.object(forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString) {
@@ -311,8 +312,9 @@ extension ContactsViewController2 {
         
         getImagesFromDataStorage()
         
-    }
+    }*/
     
+    /*
     func getImagesFromDataStorage() {
         
         if let unwrappedSectionBasedObj = denemeCache2.object(forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString) {
@@ -362,6 +364,6 @@ extension ContactsViewController2 {
             
         }
     
-    }
+    }*/
     
 }

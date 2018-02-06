@@ -11,10 +11,13 @@ import Firebase
 
 let cacheDataForFriendList = NSCache<NSString, SectionBasedFriendsData>()
 
+let cachedFriendProfileImages = NSCache<NSString, UIImage>() 
+
 class SectionBasedFriendsData {
     
-    private var _tempUserFriendsDictionary : [UserFriend]
-    private var _tempUserFriendsDictionarySorted : [UserFriend]
+    private var _userFriendsDictionary : [UserFriend]
+    private var _userFriendsDictionarySorted : [UserFriend]
+    private var _userSearchResultFriendList : [UserFriend]
     private var _sectionDictionary = NSDictionary() as! [String : [UserFriend]]
     private var _keyData : Array<String>
     
@@ -47,8 +50,9 @@ class SectionBasedFriendsData {
     
     init() {
         
-        _tempUserFriendsDictionary = []
-        _tempUserFriendsDictionarySorted = []
+        _userFriendsDictionary = []
+        _userFriendsDictionarySorted = []
+        _userSearchResultFriendList = []
         _sectionDictionary = NSDictionary() as! [String : [UserFriend]]
         _keyData = Array()
         
@@ -81,23 +85,33 @@ class SectionBasedFriendsData {
         
     }
     
-    var tempUserFriendsDictionary : [UserFriend] {
+    var userFriendsDictionary : [UserFriend] {
         
         get {
-            return _tempUserFriendsDictionary
+            return _userFriendsDictionary
         }
         set {
-            _tempUserFriendsDictionary = newValue
+            _userFriendsDictionary = newValue
         }
     }
     
-    var tempUserFriendsDictionarySorted : [UserFriend] {
+    var userFriendsDictionarySorted : [UserFriend] {
         
         get {
-            return _tempUserFriendsDictionarySorted
+            return _userFriendsDictionarySorted
         }
         set {
-            _tempUserFriendsDictionarySorted = newValue
+            _userFriendsDictionarySorted = newValue
+        }
+    }
+    
+    var userSearchResultFriendList : [UserFriend] {
+        
+        get {
+            return _userSearchResultFriendList
+        }
+        set {
+            _userSearchResultFriendList = newValue
         }
     }
     
@@ -380,6 +394,43 @@ class SectionBasedFriendsData {
         set {
             _friendListInitial_Z = newValue
         }
+    }
+    
+    func sortDictionaryData() {
+        
+        _userFriendsDictionarySorted = _userFriendsDictionary.sorted(by:{ $0.userFriendChildData.userName < $1.userFriendChildData.userName})
+        
+    }
+    
+    func deleteDataFromInitialBasedFriendLists() {
+        
+        friendListInitial_A.removeAll()
+        friendListInitial_B.removeAll()
+        friendListInitial_C.removeAll()
+        friendListInitial_D.removeAll()
+        friendListInitial_E.removeAll()
+        friendListInitial_F.removeAll()
+        friendListInitial_G.removeAll()
+        friendListInitial_H.removeAll()
+        friendListInitial_I.removeAll()
+        friendListInitial_J.removeAll()
+        friendListInitial_K.removeAll()
+        friendListInitial_L.removeAll()
+        friendListInitial_M.removeAll()
+        friendListInitial_N.removeAll()
+        friendListInitial_O.removeAll()
+        friendListInitial_P.removeAll()
+        friendListInitial_Q.removeAll()
+        friendListInitial_R.removeAll()
+        friendListInitial_S.removeAll()
+        friendListInitial_T.removeAll()
+        friendListInitial_U.removeAll()
+        friendListInitial_V.removeAll()
+        friendListInitial_W.removeAll()
+        friendListInitial_X.removeAll()
+        friendListInitial_Y.removeAll()
+        friendListInitial_Z.removeAll()
+        
     }
     
 }

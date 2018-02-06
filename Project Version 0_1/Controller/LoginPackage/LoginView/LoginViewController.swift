@@ -48,7 +48,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NSCacheDelegat
         self.navigationItem.setNavigationItemTitles()
     }
     
-    // to close keyboard when touches somewhere else but kwyboard
+    // to close keyboard when touches somewhere else but keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.view.endEditing(true)

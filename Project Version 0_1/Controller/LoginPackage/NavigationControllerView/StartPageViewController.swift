@@ -22,6 +22,9 @@ class StartPageViewController: UINavigationController {
         
         self.navigationItem.setNavigationItemTitles()
         
+        print("data size : \(cachedFriendProfileImages.object(forKey: "https://firebasestorage.googleapis.com/v0/b/social-media-infinity.appspot.com/o/Users%2FProfileImages%2F3c3f9f33_d58f_48ef_b_VemLR.jpg?alt=media&token=fda788b6-347d-4a8b-9940-8c1317f1b665" as NSString))")
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -12,10 +12,16 @@ class ContactsTableViewCell: UITableViewCell {
 
     @IBOutlet var friendsImage: UIImageViewCustomDesign!
     @IBOutlet var friendsNameText: UILabel!
+    @IBOutlet var friendSelectedImage: UIImageViewCustomDesign!
+    
+    var isCellSelected : Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        layer.backgroundColor = UIColor.red.cgColor
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -25,8 +25,8 @@ extension UIView {
     
     func changeCornerRadiues() {
         
-        
         layer.cornerRadius = 10.0
         
     }
+    
 }

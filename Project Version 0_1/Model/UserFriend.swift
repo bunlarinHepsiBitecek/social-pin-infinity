@@ -14,6 +14,10 @@ class UserFriend {
     private var _userImage : UIImage
     private var _userImageLoaded : Bool
     private var _userFriendChildData : UserFriendChildData
+    private var _isUserSelected : Bool
+    
+    private var _userCellSecionInfo : Int
+    private var _userCellRowInfo : Int
     
     init() {
         
@@ -21,6 +25,9 @@ class UserFriend {
         _userImage = UIImage()
         _userImageLoaded = false
         _userFriendChildData = UserFriendChildData()
+        _isUserSelected = false
+        _userCellSecionInfo = 0
+        _userCellRowInfo = 0
 
     }
     
@@ -30,6 +37,9 @@ class UserFriend {
         _userImage = UIImage()
         _userImageLoaded = false
         _userFriendChildData = UserFriendChildData(dataDictionary: dataDictionary)
+        _isUserSelected = false
+        _userCellSecionInfo = 0
+        _userCellRowInfo = 0
         
     }
     
@@ -69,6 +79,33 @@ class UserFriend {
             _userFriendChildData = newValue
         }
         
+    }
+    
+    var isUserSelected : Bool {
+        get {
+            return _isUserSelected
+        }
+        set {
+            _isUserSelected = newValue
+        }
+    }
+    
+    var userCellSecionInfo : Int {
+        get {
+            return _userCellSecionInfo
+        }
+        set {
+            _userCellSecionInfo = newValue
+        }
+    }
+    
+    var userCellRowInfo : Int {
+        get {
+            return _userCellRowInfo
+        }
+        set {
+            _userCellRowInfo = newValue
+        }
     }
     
 }

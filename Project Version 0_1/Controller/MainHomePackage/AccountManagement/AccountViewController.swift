@@ -10,11 +10,12 @@ import UIKit
 
 class AccountViewController: UIViewController {
 
+    @IBOutlet var denemeLabel: UILabel!
     /*
         user object
      */
     var user = User()
-    var sectionBasedObject = SectionBasedFriendsData()
+    var sectionBasedFriendsDataObject = SectionBasedFriendsData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class AccountViewController: UIViewController {
         print("AccountViewController viewDidLoad starts")
         
         processNeedsToCompleteWhenViewLoaded()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,25 +31,27 @@ class AccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-    
-        print("AccountViewController viewDidAppear starts")
-        
-        //denemeCache2.setObject(sectionBasedObject, forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString)
-        
-        let temp = denemeCache2.object(forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString)
-        
-        print("temp : \(temp?.tempUserFriendsDictionary.count)")
-        print("temp : \(temp?.tempUserFriendsDictionarySorted.count)")
-        print("temp : \(temp?.sectionDictionary.count)")
-        
-        
-    }
-
     @IBAction func openAccountViewController(_ sender: Any) {
         
+        /*
         if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.HomePage, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.ContactsViewController_storyBoardID) as? ContactsViewController2 {
             
+            
+            present(destinationViewController, animated: true, completion: nil)
+            
+        }*/
+        
+        /*
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.HomePage, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.ContactsNewTableViewController_storyBoardID) as? ContactsNewTableViewController {
+            
+            
+            present(destinationViewController, animated: true, completion: nil)
+            
+        }*/
+        
+        if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.HomePage, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.ContactsNewViewController_storyBoardID) as? ContactsNewViewController {
+            
+            destinationViewController.friendsData = self.sectionBasedFriendsDataObject
             
             present(destinationViewController, animated: true, completion: nil)
             
@@ -57,9 +61,15 @@ class AccountViewController: UIViewController {
     
     func getUserObject() {
         
+        print("getUserObject starts")
+        
         if let tabBarController = self.tabBarController as? HomePageViewController {
             
             self.user = tabBarController.user
+            self.sectionBasedFriendsDataObject = tabBarController.sectionBasedFriendsDataObject
+            
+            print("data : \(sectionBasedFriendsDataObject.userFriendsDictionary.count)")
+            
         }
         
         print("self.user : \(user.userID)")

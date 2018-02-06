@@ -23,7 +23,7 @@ extension HomePageViewController {
 
         if let userID = userID {
             
-            readFriendListFromDatabase(inputUserID: userID, inputDatabaseReference: databaseReference)
+            readFriendListFromDatabase(inputUserID: userID, inputDatabaseReference: databaseReference) 
             
         } else {
             
@@ -55,21 +55,20 @@ extension HomePageViewController {
                         
                         tempUserFriendObject.userID = snap.key
                         
-                        self.sectionBasedObject.tempUserFriendsDictionary.append(tempUserFriendObject)
+                        self.sectionBasedFriendsDataObject.userFriendsDictionary.append(tempUserFriendObject)
                         
                     }
-                    
                 }
             }
             
-            denemeCache2.setObject(self.sectionBasedObject, forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString)
-            
+            //denemeCache2.setObject(self.sectionBasedObject, forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString)
+            /*
             let temp = denemeCache2.object(forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString)
             
             print("temp : \(temp?.tempUserFriendsDictionary.count)")
             print("temp : \(temp?.tempUserFriendsDictionarySorted.count)")
             print("temp : \(temp?.sectionDictionary.count)")
-            
+            */
             
         }) { (error) in
             

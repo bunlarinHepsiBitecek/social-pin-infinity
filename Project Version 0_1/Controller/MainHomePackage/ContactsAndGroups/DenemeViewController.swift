@@ -21,23 +21,4 @@ class DenemeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        print("rearrangeDataForCache starts")
-        print("denemeCache2.object(forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString) : \(denemeCache2.object(forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString))")
-        
-        let temp = denemeCache2.object(forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString)
-        
-        for item in (temp?.tempUserFriendsDictionary)! {
-            
-            
-            print("item data : \(item.userFriendChildData.userName)")
-            
-        }
-        
-        print("temp data : \(String(describing: temp?.tempUserFriendsDictionary))")
-        
-    }
-    
-
 }

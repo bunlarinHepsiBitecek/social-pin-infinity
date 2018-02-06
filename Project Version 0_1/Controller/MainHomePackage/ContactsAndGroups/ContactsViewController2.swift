@@ -21,24 +21,42 @@ class ContactsViewController2: UIViewController, UITableViewDelegate, UITableVie
     
     var isSearching : Bool = false
     
-    @IBOutlet var ttt: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("ContactsViewController2 starts")
         
-        rearrangeDataForCache()    
+        //rearrangeDataForCache()    
         
         // Do any additional setup after loading the view.
         
-        sectionBasedObject = denemeCache2.object(forKey: "DataPreparedSectionBased" as NSString)!
+        //sectionBasedObject = denemeCache2.object(forKey: "DataPreparedSectionBased" as NSString)!
 
-        friendsTableView.showsVerticalScrollIndicator = true
+        searchController.isTranslucent = true
+        searchController.alpha = 1
+        searchController.backgroundImage = UIImage()
+        searchController.barTintColor = UIColor.clear
+
+        friendsTableView.separatorColor = UIColor.gray
         
+        for views in searchController.subviews {
+            
+            print("view class : \(views)")
+            
+            if views.isKind(of: UITextField.self) {
+                
+                print("yarro başkan")
+                let textField = views as! UITextField
+                textField.backgroundColor = UIColor.lightGray
+            }
+            
+        }
+        
+        
+        /*
         print("sectionbased : \(sectionBasedObject.tempUserFriendsDictionary.count)")
         print("sectionbased : \(sectionBasedObject.tempUserFriendsDictionarySorted.count)")
-        print("sectionbased : \(sectionBasedObject.sectionDictionary.count)")
+        print("sectionbased : \(sectionBasedObject.sectionDictionary.count)")*/
         
     }
     
@@ -52,53 +70,148 @@ class ContactsViewController2: UIViewController, UITableViewDelegate, UITableVie
      tableView override functions
      */
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        /*
+        let cell : ContactsTableViewCell = {
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.CellConstants.friendsCell) as? ContactsTableViewCell else {
+                
+                return UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: TableViewConstants.CellConstants.friendsCell) as! ContactsTableViewCell
+                
+                
+            }
+            
+            return cell as! ContactsTableViewCell
+            
+        }()*/
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.CellConstants.friendsCell, for: indexPath) as! ContactsTableViewCell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.CellConstants.friendsCell) as? ContactsTableViewCell {
+            
+            if isSearching {
+                
+                userFriendData = searchResultFriendList[indexPath.row]
+                
+            } else {
+                
+                if indexPath.section == 0 {
+                    
+                    userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+                    
+                } else if indexPath.section == 1 {
+                    
+                    userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+                    
+                } else if indexPath.section == 2 {
+                    
+                    userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+                    
+                }
+                
+            }
+            
+            cell.friendsImage.image = userFriendData.userImage
+            cell.friendsNameText.text = userFriendData.userFriendChildData.userName
+            
+            return cell
+            
+        } else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.CellConstants.friendsCell, for: indexPath) as! ContactsTableViewCell
+            
+            if isSearching {
+                
+                userFriendData = searchResultFriendList[indexPath.row]
+                
+            } else {
+                
+                if indexPath.section == 0 {
+                    
+                    userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+                    
+                } else if indexPath.section == 1 {
+                    
+                    userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+                    
+                } else if indexPath.section == 2 {
+                    
+                    userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+                    
+                }
+                
+            }
+            
+            cell.friendsImage.image = userFriendData.userImage
+            cell.friendsNameText.text = userFriendData.userFriendChildData.userName
+            
+            return cell
+            
+        }
         
-        if indexPath.section == 0 {
+        //let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.CellConstants.friendsCell, for: indexPath) as! ContactsTableViewCell
+        
+        /*
+        if isSearching {
             
-            userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+            userFriendData = searchResultFriendList[indexPath.row]
             
-        } else if indexPath.section == 1 {
+        } else {
             
-            userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
-            
-        } else if indexPath.section == 2 {
-            
-            userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+            if indexPath.section == 0 {
+                
+                userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+                
+            } else if indexPath.section == 1 {
+                
+                userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+                
+            } else if indexPath.section == 2 {
+                
+                userFriendData = sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[indexPath.section]]![indexPath.row]
+                
+            }
             
         }
         
         cell.friendsImage.image = userFriendData.userImage
         cell.friendsNameText.text = userFriendData.userFriendChildData.userName
+        */
         
-        return cell
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         print("numberOfRowsInSection starts")
         print("section : \(section)")
         
-        if sectionBasedObject.keyData[section] == "E" {
+        if isSearching {
             
-            print("(sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)! : \((sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!)")
-            return (sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!
-            
-        } else if sectionBasedObject.keyData[section] == "S" {
-            
-            print("(sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)! : \((sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!)")
-            return (sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!
-            
-        } else if sectionBasedObject.keyData[section] == "T" {
-            
-            print("(sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)! : \((sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!)")
-            return (sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!
+            return searchResultFriendList.count
             
         } else {
             
-            return 0
+            if sectionBasedObject.keyData[section] == "E" {
+                
+                print("(sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)! : \((sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!)")
+                return (sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!
+                
+            } else if sectionBasedObject.keyData[section] == "S" {
+                
+                print("(sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)! : \((sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!)")
+                return (sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!
+                
+            } else if sectionBasedObject.keyData[section] == "T" {
+                
+                print("(sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)! : \((sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!)")
+                return (sectionBasedObject.sectionDictionary[sectionBasedObject.keyData[section]]?.count)!
+                
+            } else {
+                
+                return 0
+            }
+            
         }
         
     }
@@ -109,14 +222,32 @@ class ContactsViewController2: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return sectionBasedObject.keyData[section]
+        if isSearching {
+        
+            return "Search Results"
+            
+        } else {
+            
+            return sectionBasedObject.keyData[section]
+            
+        }
+        
+        
 
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
+        if isSearching {
+            
+            return 1
+            
+        } else  {
+            
+            return sectionBasedObject.keyData.count
+        }
         
-        return sectionBasedObject.keyData.count
+        
         
     }
 
@@ -128,35 +259,114 @@ class ContactsViewController2: UIViewController, UITableViewDelegate, UITableVie
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        print("searchBar starts : \(searchBar.text)")
+        searchResultFriendList.removeAll()
         
-        if searchBar.text == nil || searchBar.text == "" {
-            
-            isSearching = false
-            
-        } else {
+        print("searchBar starts : \(String(describing: searchBar.text))")
+        print("searchText : \(searchText)")
+        print("searchText.isEmpty : \(searchText.isEmpty)")
+        
+        /*
+        if !searchText.isEmpty {
             
             for item in sectionBasedObject.tempUserFriendsDictionary {
                 
-                if item.userFriendChildData.userName.lowercased().range(of: searchBar.text!) != nil {
+                var splitArray = [Substring]()
+                
+                print("item.userFriendChildData.userName.lowercased() : \(item.userFriendChildData.userName.lowercased())")
+                
+                splitArray = item.userFriendChildData.userName.split(separator: " ")
+                
+                for itemSplitted in splitArray {
                     
-                    searchResultFriendList.append(item)
-                
+                    print("itemSplitted : \(itemSplitted)")
+                    
+                    if itemSplitted.lowercased().hasPrefix(searchBar.text!.lowercased()) {
+                        
+                        searchResultFriendList.append(item)
+                        break
+                        
+                    }
                 }
-                
             }
             
             isSearching = true
             
-        }
+            searchController.setShowsCancelButton(true, animated: true)
+            
+            setfriendsTableViewScrolling(inputValue: false)
+            
+        } else {
+            
+            print("search is empty now")
+            
+            setfriendsTableViewScrolling(inputValue: true)
+            isSearching = false
+            
+            searchController.setShowsCancelButton(false, animated: true)
+            
+        }*/
         
+        self.friendsTableView.reloadData()
         
     }
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.text?.removeAll()
+        
+        isSearching = false
+        
+        setfriendsTableViewScrolling(inputValue: true)
+        searchController.setShowsCancelButton(false, animated: true)
+        self.friendsTableView.reloadData()
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("didSelectRowAt starts")
+        print("indexPath row : \(indexPath.row)")
+        print("indexPath section : \(indexPath.section)")
+        
+        let cell = tableView.cellForRow(at: indexPath) as! ContactsTableViewCell
+        cell.selectionStyle = .none
+        
+        if cell.isCellSelected {
+            
+            UIView.transition(with: cell.friendSelectedImage, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                
+                cell.friendSelectedImage.image = UIImage()
+                
+            }) { (result) in
+                
+                print("result : \(result)")
+                
+            }
+            
+            cell.isCellSelected = false
+            
+        } else {
+            
+            UIView.transition(with: cell.friendSelectedImage, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                
+                cell.friendSelectedImage.image = UIImage(named: "check-mark.png")
+                
+            }) { (result) in
+                
+                print("result : \(result)")
+                
+            }
+            
+            cell.isCellSelected = true
+            
+        }
+            
+    }
     
 
     @IBAction func close(_ sender: Any) {
         
+        /*
         print("close button is tapped")
         
         print("sectionbased : \(sectionBasedObject.tempUserFriendsDictionary.count)")
@@ -169,16 +379,15 @@ class ContactsViewController2: UIViewController, UITableViewDelegate, UITableVie
             
             destinationViewController.sectionBasedObject = self.sectionBasedObject
             
-        }
+        }*/
         
         self.dismiss(animated: true, completion: nil)
         
     }
     
-    @IBAction func ttt(_ sender: Any) {
+    func setfriendsTableViewScrolling(inputValue : Bool) {
         
-        print("bastık!")
-        print(ttt.text)
+        friendsTableView.showsVerticalScrollIndicator = inputValue
         
     }
     
