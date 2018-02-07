@@ -1082,7 +1082,7 @@
                   moduleName = "Project Version 0_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/ContactsAndGroups/ContactsViewController2.swift"
-                  timestampString = "539559771.998729"
+                  timestampString = "539670358.098858"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -1097,7 +1097,7 @@
                   moduleName = "Project Version 0_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/ContactsAndGroups/ContactsViewController2.swift"
-                  timestampString = "539559772.000573"
+                  timestampString = "539670358.1006351"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -1112,7 +1112,7 @@
                   moduleName = "Project Version 0_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/ContactsAndGroups/ContactsViewController2.swift"
-                  timestampString = "539559772.002479"
+                  timestampString = "539670358.10234"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -1127,7 +1127,7 @@
                   moduleName = "Project Version 0_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/ContactsAndGroups/ContactsViewController2.swift"
-                  timestampString = "539559772.004207"
+                  timestampString = "539670358.104082"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -1142,7 +1142,7 @@
                   moduleName = "Project Version 0_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/ContactsAndGroups/ContactsViewController2.swift"
-                  timestampString = "539559772.006108"
+                  timestampString = "539670358.105776"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -1271,7 +1271,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewTableViewController.swift"
-            timestampString = "539297164.451247"
+            timestampString = "539618995.078465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -1287,7 +1287,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewTableViewController.swift"
-            timestampString = "539297164.45143"
+            timestampString = "539618995.078572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -1303,7 +1303,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewTableViewController.swift"
-            timestampString = "539297164.451476"
+            timestampString = "539618995.07862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -1383,11 +1383,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "539606399.382898"
+            timestampString = "539714926.627598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1399,11 +1399,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "539606399.383414"
+            timestampString = "539714926.628046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1415,29 +1415,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "539606399.383636"
+            timestampString = "539714926.628314"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "539606399.38384"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "358"
-            endingLineNumber = "358"
-            landmarkName = "ContactsNewViewController"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1447,13 +1431,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "539606399.384059"
+            timestampString = "539714926.628583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "332"
-            endingLineNumber = "332"
-            landmarkName = "ContactsNewViewController"
-            landmarkType = "3">
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

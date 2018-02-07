@@ -19,6 +19,7 @@ class SectionBasedFriendsData {
     private var _userFriendsDictionarySorted : [UserFriend]
     private var _userSearchResultFriendList : [UserFriend]
     private var _sectionDictionary = NSDictionary() as! [String : [UserFriend]]
+    private var _selectedFriendCollectionDictionary = NSDictionary() as! [String : UserFriend]
     private var _keyData : Array<String>
     
     private var _friendListInitial_A : [UserFriend]
@@ -54,6 +55,7 @@ class SectionBasedFriendsData {
         _userFriendsDictionarySorted = []
         _userSearchResultFriendList = []
         _sectionDictionary = NSDictionary() as! [String : [UserFriend]]
+        _selectedFriendCollectionDictionary = NSDictionary() as! [String : UserFriend]
         _keyData = Array()
         
         _friendListInitial_A = []
@@ -122,6 +124,16 @@ class SectionBasedFriendsData {
         }
         set {
             _sectionDictionary = newValue
+        }
+    }
+    
+    var selectedFriendCollectionDictionary : [String : UserFriend]  {
+    
+        get {
+            return _selectedFriendCollectionDictionary
+        }
+        set {
+            _selectedFriendCollectionDictionary = newValue
         }
     }
     

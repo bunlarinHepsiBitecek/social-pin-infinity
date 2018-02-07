@@ -17,6 +17,7 @@
 		A7194DBD1FED036E00586038 /* PinTextDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7194DBC1FED036E00586038 /* PinTextDataViewController.swift */; };
 		A71B49FE1FD3112400B69E71 /* camera_icon_new.png in Resources */ = {isa = PBXBuildFile; fileRef = A71B49FD1FD3112400B69E71 /* camera_icon_new.png */; };
 		A71BDC4D1FDF1EA80059EE43 /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A71BDC4C1FDF1EA80059EE43 /* error@2x.png */; };
+		A72533632029D80C00E05171 /* cancel_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = A72533622029D80B00E05171 /* cancel_gray.png */; };
 		A726DA5220224FEB009C2D1A /* ContactsNewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726DA5120224FEB009C2D1A /* ContactsNewTableViewController.swift */; };
 		A726DA54202254D5009C2D1A /* ContactsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726DA53202254D5009C2D1A /* ContactsNewViewController.swift */; };
 		A726DA5720248AA7009C2D1A /* ContactsNewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726DA5620248AA7009C2D1A /* ContactsNewTableViewCell.swift */; };
@@ -190,6 +191,7 @@
 		A7DD2E171FD1BEEE0009322E /* ValidationExtensionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E161FD1BEEE0009322E /* ValidationExtensionFunctions.swift */; };
 		A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E361FD207CA0009322E /* UIViewExtensions.swift */; };
 		A7DD2E391FD2DC110009322E /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E381FD2DC110009322E /* Information.swift */; };
+		A7E499FA202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E499F9202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift */; };
 		AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A34401FE1C41B0054801D /* InformationAlertView.swift */; };
 		AD48E13D2001037B0042020C /* DatabaseFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E13C2001037B0042020C /* DatabaseFriends.swift */; };
 		AD48E13F20010D7A0042020C /* PinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E13E20010D7A0042020C /* PinModels.swift */; };
@@ -221,6 +223,7 @@
 		A7194DBC1FED036E00586038 /* PinTextDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTextDataViewController.swift; sourceTree = "<group>"; };
 		A71B49FD1FD3112400B69E71 /* camera_icon_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_icon_new.png; sourceTree = "<group>"; };
 		A71BDC4C1FDF1EA80059EE43 /* error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@2x.png"; sourceTree = "<group>"; };
+		A72533622029D80B00E05171 /* cancel_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel_gray.png; sourceTree = "<group>"; };
 		A726DA5120224FEB009C2D1A /* ContactsNewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNewTableViewController.swift; sourceTree = "<group>"; };
 		A726DA53202254D5009C2D1A /* ContactsNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNewViewController.swift; sourceTree = "<group>"; };
 		A726DA5620248AA7009C2D1A /* ContactsNewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNewTableViewCell.swift; sourceTree = "<group>"; };
@@ -398,6 +401,7 @@
 		A7DD2E161FD1BEEE0009322E /* ValidationExtensionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationExtensionFunctions.swift; sourceTree = "<group>"; };
 		A7DD2E361FD207CA0009322E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		A7DD2E381FD2DC110009322E /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		A7E499F9202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD1A34401FE1C41B0054801D /* InformationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAlertView.swift; sourceTree = "<group>"; };
 		AD48E13C2001037B0042020C /* DatabaseFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFriends.swift; sourceTree = "<group>"; };
 		AD48E13E20010D7A0042020C /* PinModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModels.swift; sourceTree = "<group>"; };
@@ -1018,6 +1022,7 @@
 				A7D1CB9F1FD4494D0082BC02 /* DesignableClasses */,
 				A72CAA711FD6853400308DED /* HideShowPasswordTextField */,
 				A7704379201385AE0081D242 /* ContactsTableViewCell.swift */,
+				A7E499F9202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1333,6 +1338,7 @@
 		ADB505B41FDB38C800F81046 /* RegisterView */ = {
 			isa = PBXGroup;
 			children = (
+				A72533622029D80B00E05171 /* cancel_gray.png */,
 				A770437020136B810081D242 /* user.png */,
 				AD5A44451FE509B900266548 /* gender_woman.png */,
 				AD641ECC1FDDD254002E483B /* gender_man.png */,
@@ -1444,6 +1450,7 @@
 				A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */,
 				A7B17CD01FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard in Resources */,
 				ADB505B01FDB333B00F81046 /* image2.png in Resources */,
+				A72533632029D80C00E05171 /* cancel_gray.png in Resources */,
 				A75CE0941FF2AEB8004703F5 /* maps.png in Resources */,
 				AD5A44461FE509BA00266548 /* gender_woman.png in Resources */,
 				A72AE37E1FFE1DCE00657A4D /* party.png in Resources */,
@@ -1585,6 +1592,7 @@
 				A75E3F5F1FE5AD16007165DE /* ParseLocationData.swift in Sources */,
 				A72AE3831FFF684000657A4D /* PinDropButtonObjects.swift in Sources */,
 				AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */,
+				A7E499FA202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift in Sources */,
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
 				A79F780A201A33C600A20679 /* HomePageServerExtensions.swift in Sources */,
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
