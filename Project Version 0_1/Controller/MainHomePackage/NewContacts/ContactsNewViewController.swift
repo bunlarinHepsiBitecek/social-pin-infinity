@@ -20,19 +20,20 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet var selectedFriendsCollectionView: UICollectionView!
     
     var friendSelectedDictionary = NSDictionary() as! [String : Bool]
+    //var selectedFriendArray = [UserFriend]()
     var countForSelectedFriend : Int = 0
     
-    /*
-        selected friends for collectionview
-     */
-    var selectedFriendsCollectionViewData = [UserFriend]()
-    
     var friendsData = SectionBasedFriendsData()
+    var user = User()
+    
+    var babos = String()
     
     /*
         to manage searching process on tableview
      */
     var isSearching : Bool = false
+    var isCollectionViewOpen : Bool = false
+    var selectedIndexPath = IndexPath()
     
     var boolArray = [[Bool]]()
     
@@ -50,7 +51,7 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
          */
         createSectionsForFriendList()
         
-        var textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
         
         textFieldInsideSearchBar?.textColor = UIColor.black
         textFieldInsideSearchBar?.backgroundColor = UIColor.lightGray
@@ -150,7 +151,6 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
         
         cell.friendName.text = cell.friend.userFriendChildData.userName
         
-        
         if friendSelectedDictionary[cell.friend.userID]! {
             
             cell.friendSelectedImage.image = UIImage(named: "check-mark.png")
@@ -162,18 +162,13 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
         
         print("url : \(cell.friend.userFriendChildData.userImageUrl)")
         
-            cell.friendImage.getImage(cell.friend.userFriendChildData.userImageUrl)
-            
-        
+        cell.friendImage.setImagesFromCacheOrFirebase(cell.friend.userFriendChildData.userImageUrl)
         
         return cell
         
     }
     
-    /*
-        to select cell in tableview
-     */
-    
+    // to select cell in tableview
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath) as! ContactsNewTableViewCell
@@ -181,6 +176,10 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
         print("cell friend userid : \(cell.friend.userID)")
         
         friendSelectedDictionary[cell.friend.userID] = true
+        
+        selectedFriendArray.append(cell.friend)
+        
+        babos = cell.friend.userID
         
         UIView.transition(with: cell.friendSelectedImage, duration: 0.3, options: .transitionCrossDissolve, animations: {
             
@@ -192,37 +191,61 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
             
         }
         
-        selectedFriendCount.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        totalFriendCount.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        slachCharacter.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.countForSelectedFriend += 1
         
-        countForSelectedFriend += 1
-        
-        selectedFriendCount.text = String(countForSelectedFriend)
-        
-        selectedFriendsCollectionViewData.append(cell.friend)
-        
-        if selectedFriendsCollectionViewData.count == 1 {
+        UIView.transition(with: selectedFriendCount, duration: 0.3, options: .transitionCrossDissolve, animations: {
             
-            UIView.transition(with: selectedFriendsCollectionView, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                
-                self.selectedFriendsCollectionView.isHidden = false
-                
-                self.friendsTableView.frame = CGRect(x: self.friendsTableView.frame.origin.x, y: self.friendsTableView.frame.origin.y + self.selectedFriendsCollectionView.frame.height, width: self.friendsTableView.frame.width, height: self.friendsTableView.frame.height - self.selectedFriendsCollectionView.frame.height)
-                
-            }) { (result) in
-                
-                print("result : \(result)")
-                
-            }
+            self.selectedFriendCount.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            self.totalFriendCount.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            self.slachCharacter.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+            self.selectedFriendCount.text = String(self.countForSelectedFriend)
+            
+        }) { (result) in
+            
+            print("result : \(result)")
             
         }
         
+        friendsData.userSelectedFriendsCollectionViewData.append(cell.friend)
         
-        selectedFriendsCollectionView.reloadData()
+        friendsData.selectedFriendForDatabaseOperations[cell.friend.userID] = cell.friend
+        
+        //selectedFriendsCollectionViewData.append(cell.friend)
+        
+        selectedFriendCollectionViewManagement()
+        
+        print("selectedFriendsCollectionView.indexPathsForVisibleItems.last : \(selectedFriendsCollectionView.indexPathsForVisibleItems.last)")
+        
+        let takasi = IndexPath(item: friendsData.userSelectedFriendsCollectionViewData.count - 1, section: 0)
+        
+        selectedFriendsCollectionView.performBatchUpdates({
+            
+            selectedFriendsCollectionView.insertItems(at: [takasi])
+            
+            
+        }) { (result) in
+            
+            print("result : \(result)")
+            
+        }
+        
+        /*
+        if friendsData.userSelectedFriendsCollectionViewData.count > 0 {
+            
+            
+            selectedFriendsCollectionView.scrollToItem(at: indexPath, at: .right, animated: true)
+        }*/
+        
+        
+        
+        
+        //selectedFriendsCollectionView.reloadData()
         
     }
     
+
+    // to deselect cell in tableview
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath) as! ContactsNewTableViewCell
@@ -283,6 +306,40 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
             selectedFriendCount.text = String(countForSelectedFriend)
         }
         
+
+        if let i = selectedFriendArray.index(where: { $0.userID == cell.friend.userID }) {
+
+            print("bulduk minaaa")
+            
+            selectedFriendArray.remove(at: i)
+            
+        }
+        
+        var counter = 0
+        
+        for item in friendsData.userSelectedFriendsCollectionViewData {
+            
+            print("friendsData.userSelectedFriendsCollectionViewData : \(friendsData.userSelectedFriendsCollectionViewData[counter])")
+            
+            print("item.userID : \(item.userID)")
+            print("cell.friend.userID :\(cell.friend.userID)")
+            
+            if item.userID == cell.friend.userID {
+                
+                friendsData.userSelectedFriendsCollectionViewData.remove(at: counter)
+                break
+                
+            }
+            
+            counter += 1
+            
+        }
+        
+        print("friendsData.userSelectedFriendsCollectionViewData.count : \(friendsData.userSelectedFriendsCollectionViewData.count)")
+        
+        selectedFriendsCollectionView.reloadData()
+        
+        selectedFriendCollectionViewManagement()
         
     }
     
@@ -435,10 +492,135 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
-    /*
-        buttons on viewController
-     */
+        return friendsData.userSelectedFriendsCollectionViewData.count
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "erkut", for: indexPath) as! SelectedFriendCollectionViewCell
+        
+        print("cellForItemAtindexPath : \(indexPath)")
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "erkut", for: indexPath) as? SelectedFriendCollectionViewCell  else {
+            
+            return UICollectionViewCell()
+        }
+        
+        if friendsData.userSelectedFriendsCollectionViewData.count > 0 {
+            
+            UIView.transition(with: selectedFriendsCollectionView, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                
+                cell.selectedFriendName.text = self.friendsData.userSelectedFriendsCollectionViewData[indexPath.row].userFriendChildData.userName
+                cell.selectedFriendImage.image = cachedFriendProfileImages.object(forKey: self.friendsData.userSelectedFriendsCollectionViewData[indexPath.row].userFriendChildData.userImageUrl as NSString)
+                
+                cell.friend = self.friendsData.userSelectedFriendsCollectionViewData[indexPath.row]
+                
+            }) { (result) in
+                
+                print("result : \(result)")
+                
+            }
+            
+        }
+        
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = selectedFriendsCollectionView.cellForItem(at: indexPath) as! SelectedFriendCollectionViewCell
+        
+        print("cell data : \(cell.friend.userID)")
+        
+        if let i = friendsData.userSelectedFriendsCollectionViewData.index(where: { $0.userID == cell.friend.userID}) {
+            
+            friendsData.userSelectedFriendsCollectionViewData.remove(at: i)
+            
+        }
+        
+        self.friendSelectedDictionary[cell.friend.userID] = false
+        
+        selectedFriendsCollectionView.deleteItems(at: [indexPath])
+        
+        friendsTableView.reloadData()
+        
+        selectedFriendCollectionViewManagement()
+        
+        print("friendsData.userSelectedFriendsCollectionViewData.count : \(friendsData.userSelectedFriendsCollectionViewData.count)")
+        
+        print("indexPath : \(indexPath)")
+        
+        countForSelectedFriend -= 1
+        
+        if countForSelectedFriend == 0 {
+            
+            UIView.transition(with: selectedFriendCount, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                
+                self.selectedFriendCount.textColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
+                
+            }) { (result) in
+                
+                print("result : \(result)")
+                
+            }
+            
+            UIView.transition(with: totalFriendCount, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                
+                self.totalFriendCount.textColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
+                
+            }) { (result) in
+                
+                print("result : \(result)")
+                
+            }
+            
+            UIView.transition(with: slachCharacter, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                
+                self.slachCharacter.textColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
+                
+            }) { (result) in
+                
+                print("result : \(result)")
+                
+            }
+            
+            
+            self.selectedFriendCount.text = String(self.countForSelectedFriend)
+            
+        } else {
+            
+            selectedFriendCount.text = String(countForSelectedFriend)
+        }
+        
+        
+    }
+    
+    // IBAction Buttons on viewcontroller
+    @IBAction func segmentedChoiceButtonTapped(_ sender: Any) {
+        
+        print("segmentedChoiceButtonTapped starts")
+        
+        if segmentedChoiceButton.selectedSegmentIndex == 0 {
+            
+            print("friends tapped")
+            
+        } else if segmentedChoiceButton.selectedSegmentIndex == 1 {
+            
+            print("groups tapped")
+            
+        } else if segmentedChoiceButton.selectedSegmentIndex == 2 {
+            
+            print("new group create tapped")
+            
+        }
+        
+    }
+
     @IBAction func cancelViewClicked(_ sender: Any) {
         
         for item in friendsData.userFriendsDictionarySorted {
@@ -448,6 +630,7 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
         }
         
         friendsData.deleteDataFromInitialBasedFriendLists()
+        friendsData.userSelectedFriendsCollectionViewData.removeAll()
         
         self.dismiss(animated: true, completion: nil)
         
@@ -455,132 +638,9 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func nextButtonClicked(_ sender: Any) {
         
-        UIView.transition(with: selectedFriendsCollectionView, duration: 0.3, options: .transitionCrossDissolve, animations: {
-            
-            self.selectedFriendsCollectionView.isHidden = false
-            
-            self.friendsTableView.frame = CGRect(x: self.friendsTableView.frame.origin.x, y: self.friendsTableView.frame.origin.y + self.selectedFriendsCollectionView.frame.height, width: self.friendsTableView.frame.width, height: self.friendsTableView.frame.height - self.selectedFriendsCollectionView.frame.height)
-            
-        }) { (result) in
-            
-            print("result : \(result)")
-            
-        }
-    
-        print("selectedFriendsCollectionView.indexPathsForVisibleItems : \(selectedFriendsCollectionView.indexPathsForVisibleItems)")
-        
-        let testUser = UserFriend()
-        
-        testUser.userFriendChildData.userImageUrl = "https://firebasestorage.googleapis.com/v0/b/social-media-infinity.appspot.com/o/Users%2FProfileImages%2FIMG_1338.jpg?alt=media&token=9f5e5cdf-142a-4881-a864-974ad88c6b1a"
-        testUser.userFriendChildData.userName = "Erkut Bas"
-        
-        selectedFriendsCollectionViewData.append(testUser)
-        
-        selectedFriendsCollectionView.reloadData()
-        
-    }
-    
-    /*
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        return 1
-        
-    }*/
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    
-        return selectedFriendsCollectionViewData.count
-        
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "erkut", for: indexPath) as! SelectedFriendCollectionViewCell
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "erkut", for: indexPath) as? SelectedFriendCollectionViewCell  else {
-            
-            return UICollectionViewCell()
-        }
-        
-        if selectedFriendsCollectionViewData.count > 0 {
-            
-            UIView.transition(with: selectedFriendsCollectionView, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                
-                cell.selectedFriendName.text = self.selectedFriendsCollectionViewData[indexPath.row].userFriendChildData.userName
-                cell.selectedFriendImage.image = cachedFriendProfileImages.object(forKey: self.selectedFriendsCollectionViewData[indexPath.row].userFriendChildData.userImageUrl as NSString)
-                
-            }) { (result) in
-                
-                print("result : \(result)")
-                
-            }
-            
-            //selectedFriendsCollectionView.scrollToItem(at: indexPath, at: .right, animated: true)
-            
-            
-            
-        }
-        
-        
-        return cell
-    }
-    
-
-}
-
-extension UIImageView {
-    
-    func getImage(_ urlString: String) {
-        
-        self.image = nil
-        
-        if let tempImage = cachedFriendProfileImages.object(forKey: urlString as NSString) {
-            
-            image = tempImage
-            
-        } else {
-            
-            if !urlString.isEmpty {
-                
-                let url = URL(string: urlString)
-                
-                let request = URLRequest(url: url!)
-                
-                let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, urlResponse, error) in
-                    
-                    if error != nil {
-                        
-                        if let errorMessage = error as NSError? {
-                            
-                            print("errorMessage : \(errorMessage.localizedDescription)")
-                            
-                        }
-                        
-                    } else {
-                        
-                        if let image = UIImage(data: data!) {
-                            
-                            DispatchQueue.main.async(execute: {
-                                
-                                cachedFriendProfileImages.setObject(image, forKey: urlString as NSString)
-                                
-                                self.image = image
-                                
-                            })
-                            
-                        }
-                        
-                    }
-                    
-                })
-                
-                task.resume()
-            }
-            
-            
-        }
+        nextButtonProcessOnContactViewController()
         
     }
     
 }
+

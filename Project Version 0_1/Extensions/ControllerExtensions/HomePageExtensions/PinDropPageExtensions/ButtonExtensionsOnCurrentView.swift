@@ -75,8 +75,12 @@ extension PinDropViewController {
     func relocateSpecificPinDropButtonsBehindMainDropButton() {
         
         print("relocateSpecificPinDropButtonsBehindMainDropButton starts")
+        print("userProfilePictureUrl :\(user.userProfilePictureUrl)")
         
-        setImageToButtonPinDropOnlyMe(inputImage: self.user.userProfilePicture)
+        print("-----> : \(buttonPinDropOnlyMe.imageView?.image)")
+        
+        setImageFromCacheToButtonOnlyMe(inputUrl: user.userProfilePictureUrl)
+        //setImageToButtonPinDropOnlyMe(inputImage: self.user.userProfilePicture)
         
         pinDropObjects.pinButtonAllFriends = self.buttonPinDropAllFriends.center
         pinDropObjects.pinButtonOnlyMe = self.buttonPinDropOnlyMe.center
@@ -89,6 +93,8 @@ extension PinDropViewController {
     }
     
     func relocateSpecificPinDropButtonsToOriginalLocations() {
+        
+        setImageFromCacheToButtonOnlyMe(inputUrl: user.userProfilePictureUrl)
         
         UIView.animate(withDuration: 0.3) {
             
@@ -259,4 +265,97 @@ extension PinDropViewController {
         
     }
     
+    func setImageFromCacheToButtonOnlyMe(inputUrl : String) {
+    
+        print("setImageFromCacheToButtonOnlyMe starts")
+        
+        if let image = cachedProfilePicture.object(forKey: inputUrl as NSString) {
+            
+            print("cache ten profile dataasını okuyabildik")
+            
+            self.buttonPinDropOnlyMe.setImage(image, for: .normal)
+            
+        }
+        
+    }
+    
 }
+
+extension UIButton {
+    
+    func setProfilePictureToButton(_ urlString: String) {
+        
+        if let yarro = imageView {
+            
+            print("setProfilePictureToButton starts")
+            print("urlString : \(urlString)")
+            
+            yarro.image = nil
+            
+            if let tempImage = cachedProfilePicture.object(forKey: urlString as NSString) {
+                
+                print("erku1")
+                print("image : \(tempImage)")
+                print("image : \(tempImage.size)")
+                
+                yarro.image = tempImage
+                
+                self.imageView?.image = tempImage
+                
+            } else {
+                
+                print("erku2")
+                
+                if !urlString.isEmpty {
+                    
+                    print("erku3")
+                    
+                    let url = URL(string: urlString)
+                    
+                    let request = URLRequest(url: url!)
+                    
+                    let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, urlResponse, error) in
+                        
+                        if error != nil {
+                            
+                            if let errorMessage = error as NSError? {
+                                
+                                print("errorMessage : \(errorMessage.localizedDescription)")
+                                
+                            }
+                            
+                        } else {
+                            
+                            print("erku4")
+                            
+                            if let image = UIImage(data: data!) {
+                                
+                                print("erku5")
+                                
+                                DispatchQueue.main.async(execute: {
+                                    
+                                    print("erku6")
+                                    
+                                    cachedProfilePicture.setObject(image, forKey: urlString as NSString)
+                                    
+                                    yarro.image = image
+                                    
+                                })
+                            }
+                        }
+                    })
+                    
+                    task.resume()
+                }
+            }
+            
+        }
+        
+        
+    }
+    
+}
+
+
+
+

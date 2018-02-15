@@ -14,6 +14,9 @@ class SelectedFriendCollectionViewCell: UICollectionViewCell {
     @IBOutlet var deleteImage: UIImageViewCustomDesign!
     @IBOutlet var selectedFriendName: UILabel!
     
+    var friend = UserFriend()
+    var selectedItemSectionInfo : Int!
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()

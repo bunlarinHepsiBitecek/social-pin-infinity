@@ -25,6 +25,10 @@ class HomePageViewController: UITabBarController, UITabBarControllerDelegate {
         print("userid : \(user.userID)")
         
         getUserFriendListData()
+        readUserInfo()
+        //setUserProfilePictureToObject()
+        
+        print("user yarro : \(user.userProfilePictureUrl)")
         
     }
 

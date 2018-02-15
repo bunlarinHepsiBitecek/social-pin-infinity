@@ -138,5 +138,17 @@ struct FirebaseModelConstants {
     struct NotificationSent {
         static let Timestamp = "timestamp"
     }
+    
+    struct Groups {
+        
+        static let Admin = "Admin"
+        static let GroupName = "GroupName"
+        static let GroupPictureUrl = "GroupPictureUrl"
+        static let UserList = "UserList"
+        static let NameSurname = "NameSurname"
+        static let profilePictureUrl = "profilePictureUrl"
+        
+    }
+    
 }
 

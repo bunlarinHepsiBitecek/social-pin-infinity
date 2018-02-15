@@ -11,15 +11,18 @@ import Firebase
 
 let cacheDataForFriendList = NSCache<NSString, SectionBasedFriendsData>()
 
-let cachedFriendProfileImages = NSCache<NSString, UIImage>() 
+let cachedFriendProfileImages = NSCache<NSString, UIImage>()
+
+var selectedFriendArray = [UserFriend]()
 
 class SectionBasedFriendsData {
     
     private var _userFriendsDictionary : [UserFriend]
     private var _userFriendsDictionarySorted : [UserFriend]
     private var _userSearchResultFriendList : [UserFriend]
+    private var _userSelectedFriendsCollectionViewData : [UserFriend]
     private var _sectionDictionary = NSDictionary() as! [String : [UserFriend]]
-    private var _selectedFriendCollectionDictionary = NSDictionary() as! [String : UserFriend]
+    private var _selectedFriendForDatabaseOperations = NSDictionary() as! [String : UserFriend]
     private var _keyData : Array<String>
     
     private var _friendListInitial_A : [UserFriend]
@@ -54,8 +57,9 @@ class SectionBasedFriendsData {
         _userFriendsDictionary = []
         _userFriendsDictionarySorted = []
         _userSearchResultFriendList = []
+        _userSelectedFriendsCollectionViewData = []
         _sectionDictionary = NSDictionary() as! [String : [UserFriend]]
-        _selectedFriendCollectionDictionary = NSDictionary() as! [String : UserFriend]
+        _selectedFriendForDatabaseOperations = NSDictionary() as! [String : UserFriend]
         _keyData = Array()
         
         _friendListInitial_A = []
@@ -117,6 +121,16 @@ class SectionBasedFriendsData {
         }
     }
     
+    var userSelectedFriendsCollectionViewData : [UserFriend] {
+        
+        get {
+            return _userSelectedFriendsCollectionViewData
+        }
+        set {
+            _userSelectedFriendsCollectionViewData = newValue
+        }
+    }
+    
     var sectionDictionary : [String : [UserFriend]]  {
         
         get {
@@ -127,13 +141,13 @@ class SectionBasedFriendsData {
         }
     }
     
-    var selectedFriendCollectionDictionary : [String : UserFriend]  {
-    
+    var selectedFriendForDatabaseOperations : [String : UserFriend]  {
+        
         get {
-            return _selectedFriendCollectionDictionary
+            return _selectedFriendForDatabaseOperations
         }
         set {
-            _selectedFriendCollectionDictionary = newValue
+            _selectedFriendForDatabaseOperations = newValue
         }
     }
     

@@ -523,11 +523,64 @@ extension ContactsNewViewController {
             
         }
 
-    
-    
     }
     
+    func openSelectedFriendCollectionView() {
+        
+        if !isCollectionViewOpen {
+            
+            UIView.transition(with: selectedFriendsCollectionView, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                
+                self.selectedFriendsCollectionView.isHidden = false
+                
+                self.friendsTableView.frame = CGRect(x: self.friendsTableView.frame.origin.x, y: self.friendsTableView.frame.origin.y + self.selectedFriendsCollectionView.frame.height, width: self.friendsTableView.frame.width, height: self.friendsTableView.frame.height - self.selectedFriendsCollectionView.frame.height)
+                
+            }) { (result) in
+                
+                print("result : \(result)")
+                
+            }
+            
+            isCollectionViewOpen = true
+            
+        }
+        
+    }
     
+    func closeSelectedFriendCollectionView() {
+        
+        if isCollectionViewOpen {
+            
+            UIView.transition(with: selectedFriendsCollectionView, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                
+                self.selectedFriendsCollectionView.isHidden = true
+                
+                self.friendsTableView.frame = CGRect(x: self.friendsTableView.frame.origin.x, y: self.friendsTableView.frame.origin.y - self.selectedFriendsCollectionView.frame.height, width: self.friendsTableView.frame.width, height: self.friendsTableView.frame.height + self.selectedFriendsCollectionView.frame.height)
+                
+            }) { (result) in
+                
+                print("result : \(result)")
+                
+            }
+            
+            isCollectionViewOpen = false
+            
+        }
+        
+    }
+    
+    func selectedFriendCollectionViewManagement() {
+        
+        if friendsData.userSelectedFriendsCollectionViewData.count > 0 {
+            
+            openSelectedFriendCollectionView()
+            
+        } else {
+            
+            closeSelectedFriendCollectionView()
+        }
+        
+    }
     
     
     

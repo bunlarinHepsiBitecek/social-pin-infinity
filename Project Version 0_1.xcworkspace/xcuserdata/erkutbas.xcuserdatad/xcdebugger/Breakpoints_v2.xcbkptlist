@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/WelcomeFirstPinPackage/ModalViewControllerExtension/PinImageDataExtensions.swift"
-            timestampString = "537810881.503754"
+            timestampString = "539730332.297647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -714,7 +714,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/PinDropViewController.swift"
-            timestampString = "538919756.492352"
+            timestampString = "540110214.4209599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "242"
@@ -794,7 +794,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/PinDropViewController.swift"
-            timestampString = "538919756.492444"
+            timestampString = "540110214.421307"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "219"
@@ -810,7 +810,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/PinDropViewController.swift"
-            timestampString = "538919756.492481"
+            timestampString = "540110214.421454"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "205"
@@ -954,7 +954,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/PinDropViewController.swift"
-            timestampString = "538919756.492648"
+            timestampString = "540110214.421738"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -1018,7 +1018,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContactDataProcess.swift"
-            timestampString = "539346180.287174"
+            timestampString = "539959775.628335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "307"
@@ -1034,7 +1034,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContactDataProcess.swift"
-            timestampString = "539346180.287464"
+            timestampString = "539959775.628433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "309"
@@ -1050,7 +1050,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContactDataProcess.swift"
-            timestampString = "539346180.287652"
+            timestampString = "539959775.628492"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -1073,83 +1073,6 @@
             endingLineNumber = "9"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_Version_0_1.ContactsViewController2.__deallocating_deinit"
-                  moduleName = "Project Version 0_1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/ContactsAndGroups/ContactsViewController2.swift"
-                  timestampString = "539670358.098858"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_Version_0_1.ContactsViewController2.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Project_Version_0_1.ContactsViewController2"
-                  moduleName = "Project Version 0_1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/ContactsAndGroups/ContactsViewController2.swift"
-                  timestampString = "539670358.1006351"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_Version_0_1.ContactsViewController2.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Project_Version_0_1.ContactsViewController2"
-                  moduleName = "Project Version 0_1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/ContactsAndGroups/ContactsViewController2.swift"
-                  timestampString = "539670358.10234"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "79">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_Version_0_1.ContactsViewController2.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Project_Version_0_1.ContactsViewController2&gt;"
-                  moduleName = "Project Version 0_1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/ContactsAndGroups/ContactsViewController2.swift"
-                  timestampString = "539670358.104082"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_Version_0_1.ContactsViewController2.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Project_Version_0_1.ContactsViewController2&gt;"
-                  moduleName = "Project Version 0_1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/ContactsAndGroups/ContactsViewController2.swift"
-                  timestampString = "539670358.105776"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "49">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1271,7 +1194,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewTableViewController.swift"
-            timestampString = "539618995.078465"
+            timestampString = "540136042.989073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -1287,7 +1210,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewTableViewController.swift"
-            timestampString = "539618995.078572"
+            timestampString = "540136042.989131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -1303,7 +1226,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewTableViewController.swift"
-            timestampString = "539618995.07862"
+            timestampString = "540136042.9891731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -1319,7 +1242,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/AccountManagement/AccountViewController.swift"
-            timestampString = "539560101.8705879"
+            timestampString = "540110214.422168"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -1335,11 +1258,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/AccountManagement/AccountViewController.swift"
-            timestampString = "539560101.870962"
+            timestampString = "540110214.422277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "openAccountViewController(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1351,7 +1274,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/AccountManagement/AccountViewController.swift"
-            timestampString = "539560101.871222"
+            timestampString = "540110214.4223551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -1367,7 +1290,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/AccountManagement/AccountViewController.swift"
-            timestampString = "539560101.871483"
+            timestampString = "540110214.4225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -1383,12 +1306,316 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "539714926.627598"
+            timestampString = "540337433.4246269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+            timestampString = "540337433.425166"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+            timestampString = "540337433.425432"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+            timestampString = "540337433.4257571"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
+            landmarkName = "tableView(_:didDeselectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+            timestampString = "540337433.426089"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+            timestampString = "540337433.426406"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+            timestampString = "540337433.4267401"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+            timestampString = "540337433.427053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "536"
+            endingLineNumber = "536"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+            timestampString = "540337433.427368"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "552"
+            endingLineNumber = "552"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+            timestampString = "540337433.427691"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "550"
+            endingLineNumber = "550"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/HomePageExtensions/PinDropPageExtensions/ButtonExtensionsOnCurrentView.swift"
+            timestampString = "540110214.428093"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "relocateSpecificPinDropButtonsToOriginalLocations()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+            timestampString = "540337433.428058"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "579"
+            endingLineNumber = "579"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Project_Version_0_1.ContactsNewViewController.collectionView(__ObjC.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Project Version 0_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+                  timestampString = "540306951.748386"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "582"
+                  endingLineNumber = "582"
+                  offsetFromSymbolStart = "5542">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 (Swift.Bool) -&gt; () in Project_Version_0_1.ContactsNewViewController.collectionView(__ObjC.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Project Version 0_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
+                  timestampString = "540306951.750942"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "582"
+                  endingLineNumber = "582"
+                  offsetFromSymbolStart = "414">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/GroupCreationViewController.swift"
+            timestampString = "540240015.127408"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/GroupCreationViewController.swift"
+            timestampString = "540240015.1274509"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/GroupCreationViewController.swift"
+            timestampString = "540240015.127493"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/View/GroupCreation2TableViewCell.swift"
+            timestampString = "540397398.410369"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/View/GroupCreation2TableViewCell.swift"
+            timestampString = "540397398.410432"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/View/GroupCreation2TableViewCell.swift"
+            timestampString = "540397398.410478"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
             endingLineNumber = "46"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1398,13 +1625,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "539714926.628046"
+            filePath = "Project Version 0_1/View/GroupCreation2TableViewCell.swift"
+            timestampString = "540397398.410521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1414,13 +1641,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "539714926.628314"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/GroupCreation2ViewController.swift"
+            timestampString = "540397398.410565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "tableView(_:heightForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1430,13 +1657,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "539714926.628583"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/GroupCreation2ViewController.swift"
+            timestampString = "540397398.410605"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "tableView(_:heightForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/View/GroupCreation2TableViewCell.swift"
+            timestampString = "540397398.4106441"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/View/GroupCreation2TableViewCell.swift"
+            timestampString = "540397398.410683"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

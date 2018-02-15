@@ -83,4 +83,103 @@ extension HomePageViewController {
         
     }
     
+    func readUserInfo() {
+        
+        print("readUserInfo starts")
+        
+        let databaseReference = Database.database().reference().child(FirebaseStorageConstants.Users)
+        
+        if let user = Auth.auth().currentUser {
+            
+            print("check1")
+            
+            let childUserReference = databaseReference.child(user.uid)
+            
+            print("childUserReference : \(childUserReference)")
+            
+            childUserReference.observeSingleEvent(of: DataEventType.value, with: { (dataSnapShot) in
+                
+                if !dataSnapShot.exists() {
+                    
+                    print("check2")
+                    return
+                    
+                } else {
+                    
+                    print("check3")
+                    
+                    let userInfo = dataSnapShot.value as! NSDictionary
+                    
+                    print("userinfo : \(userInfo)")
+                    
+                    let profileUrl = userInfo["profilePictureUrl"] as! String
+                    
+                    print("profileUrl : \(profileUrl)")
+                    
+                    self.user.setUserProfilePictureUrl(inputUrl: profileUrl)
+                    
+                    if !profileUrl.isEmpty {
+                        
+                        print("erku3")
+                        
+                        let url = URL(string: profileUrl)
+                        
+                        let request = URLRequest(url: url!)
+                        
+                        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, urlResponse, error) in
+                            
+                            if error != nil {
+                                
+                                if let errorMessage = error as NSError? {
+                                    
+                                    print("errorMessage : \(errorMessage.localizedDescription)")
+                                    
+                                }
+                                
+                            } else {
+                                
+                                print("erku4")
+                                
+                                if let image = UIImage(data: data!) {
+                                    
+                                    print("erku5")
+                                    
+                                    DispatchQueue.main.async(execute: {
+                                        
+                                        print("erku6")
+                                        
+                                        cachedProfilePicture.setObject(image, forKey: profileUrl as NSString)
+                                        
+                                        
+                                    })
+                                }
+                            }
+                        })
+                        
+                        task.resume()
+                    }
+                    
+                }
+                
+            })
+            
+        }
+        
+    }
+    
+    func setUserProfilePictureToObject() {
+        
+        let tempImageView = UIImageView()
+        
+        tempImageView.getProfileImage(user.userProfilePictureUrl)
+        
+        if let image = tempImageView.image {
+            
+            user.setUserProfilePicture(inputUserProfileImage: image)
+            user.isUserProfilePictureGet = true
+            
+        }
+        
+    }
+    
 }

@@ -39,6 +39,8 @@ struct ViewConstants {
         static let AccountViewController_storyBoardID = "AccountViewController_storyBoardID"
         static let ContactsNewTableViewController_storyBoardID = "ContactsNewTableViewController_storyBoardID"
         static let ContactsNewViewController_storyBoardID = "ContactsNewViewController_storyBoardID"
+        static let GroupCreationViewController_storyBoardID = "GroupCreationViewController_storyBoardID"
+        static let GroupCreation2ViewController_storyBoardID = "GroupCreation2ViewController_storyBoardID"
         
     }
     

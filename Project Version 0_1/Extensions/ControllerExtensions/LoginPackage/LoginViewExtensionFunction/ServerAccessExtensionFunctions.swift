@@ -114,7 +114,8 @@ extension LoginViewController {
                  */
             } else {
                 
-                self.setProfileImage()
+                //self.setProfileImage()
+                self.getProfileImage()
                 self.stopSpinner()
                 
                 print("loginButtonClick : user is logged in successfully")
@@ -161,6 +162,75 @@ extension LoginViewController {
         activityIndicator.stopAnimating()
         view.resetViewBackgroundColor()
     }
+    
+    func getProfileImage() {
+        
+        let databaseReference = Database.database().reference()
+        
+        if let user = Auth.auth().currentUser {
+            
+            let childUserReference = databaseReference.child(user.uid)
+            
+            childUserReference.observeSingleEvent(of: DataEventType.value, with: { (dataSnapShot) in
+                
+                if !dataSnapShot.exists() {
+                    
+                    return
+                    
+                } else {
+                    
+                    let userInfo = dataSnapShot.value as! NSDictionary
+                    
+                    print("userinfo : \(userInfo)")
+                    
+                    let profileUrl = userInfo["profilePictureUrl"] as! String
+                    
+                    print("profileUrl : \(profileUrl)")
+                    
+                    if !profileUrl.isEmpty {
+                        
+                        let url = URL(string: profileUrl)
+                        
+                        if let urlUnwrapped = url {
+                            
+                            let request = URLRequest(url: urlUnwrapped)
+                            
+                            let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, urlResponse, error) in
+                                
+                                if error != nil {
+                                    
+                                    if let errorMessage = error as NSError? {
+                                        
+                                        print("errorMessage : \(errorMessage.localizedDescription)")
+                                        
+                                    }
+                                    
+                                } else {
+                                    
+                                    if let image = UIImage(data: data!) {
+                                        
+                                        self.userDatabaseObjectToPass.setUserProfilePicture(inputUserProfileImage: image)
+                                        
+                                    }
+                                }
+                                
+                            })
+                            
+                            task.resume()
+                            
+                        }
+                        
+                        
+                    }
+                    
+                }
+                
+            })
+            
+        }
+        
+    }
+    
     
     func setProfileImage() {
         

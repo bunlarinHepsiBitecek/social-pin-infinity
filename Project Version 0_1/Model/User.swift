@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+let cachedProfilePicture = NSCache<NSString, UIImage>() 
+
 class User {
     
     private var _userID : String
@@ -30,6 +32,8 @@ class User {
     
     private var _userDictionary : Dictionary<String, String> = [:]
     
+    private var _isUserProfilePictureGet : Bool
+    
     init() {
         
         self._userID = SPACE_CHARACTER
@@ -50,6 +54,7 @@ class User {
         
         self._isUserGetInformedFromGuidence = false
         self._isUserGetInformedFromGuidance4 = false
+        self._isUserProfilePictureGet = false
     }
     
     func printUserInfo() {
@@ -221,6 +226,15 @@ class User {
     
     func isUserGetInformedFromGuidance4(inputBooleanValue : Bool) {
         self._isUserGetInformedFromGuidance4 = inputBooleanValue
+    }
+    
+    var isUserProfilePictureGet : Bool {
+        get {
+            return _isUserProfilePictureGet
+        }
+        set {
+            _isUserProfilePictureGet = newValue
+        }
     }
     
     func displayAttributeValues() {
