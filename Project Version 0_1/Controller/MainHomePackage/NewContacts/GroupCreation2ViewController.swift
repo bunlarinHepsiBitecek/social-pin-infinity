@@ -12,6 +12,8 @@ class GroupCreation2ViewController: UIViewController, UITableViewDataSource, UIT
     
     @IBOutlet var collectionTableView: UITableView!
     @IBOutlet var backButton: UIButton!
+    @IBOutlet var groupNameText: UITextField!
+    @IBOutlet var groupImage: UIImageViewCustomDesign!
     
     var user = User()
 
@@ -26,6 +28,8 @@ class GroupCreation2ViewController: UIViewController, UITableViewDataSource, UIT
         collectionTableView.estimatedRowHeight = 500
         
         print("selectedFriendArray : \(selectedFriendArray.count)")
+        
+        groupNameText.borderStyle = .none
 
         // Do any additional setup after loading the view.
         
