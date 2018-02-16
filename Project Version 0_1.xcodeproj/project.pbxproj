@@ -58,8 +58,6 @@
 		A72AFBE61FCDEDA70018254E /* SendVerificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBE51FCDEDA70018254E /* SendVerificationExtensions.swift */; };
 		A72AFBE91FCDF77C0018254E /* InformationMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBE81FCDF77C0018254E /* InformationMessages.swift */; };
 		A72AFBEE1FCE796D0018254E /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AFBED1FCE796D0018254E /* UIImageViewExtensions.swift */; };
-		A72C31AF2031A67100138372 /* GroupCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C31AE2031A67100138372 /* GroupCreationViewController.swift */; };
-		A72C31B12031B57200138372 /* GroupCreationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C31B02031B57200138372 /* GroupCreationCollectionViewCell.swift */; };
 		A72C31B32031C48200138372 /* GroupCreationHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C31B22031C48200138372 /* GroupCreationHeaderCollectionReusableView.swift */; };
 		A72C31B52031C67C00138372 /* photo-camera-group.png in Resources */ = {isa = PBXBuildFile; fileRef = A72C31B42031C67B00138372 /* photo-camera-group.png */; };
 		A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CAA6D1FD5B18D00308DED /* DesignableUITextField.swift */; };
@@ -275,8 +273,6 @@
 		A72AFBE51FCDEDA70018254E /* SendVerificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendVerificationExtensions.swift; sourceTree = "<group>"; };
 		A72AFBE81FCDF77C0018254E /* InformationMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessages.swift; sourceTree = "<group>"; };
 		A72AFBED1FCE796D0018254E /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
-		A72C31AE2031A67100138372 /* GroupCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreationViewController.swift; sourceTree = "<group>"; };
-		A72C31B02031B57200138372 /* GroupCreationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreationCollectionViewCell.swift; sourceTree = "<group>"; };
 		A72C31B22031C48200138372 /* GroupCreationHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreationHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		A72C31B42031C67B00138372 /* photo-camera-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-camera-group.png"; sourceTree = "<group>"; };
 		A72CAA6D1FD5B18D00308DED /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
@@ -490,7 +486,6 @@
 			isa = PBXGroup;
 			children = (
 				A726DA53202254D5009C2D1A /* ContactsNewViewController.swift */,
-				A72C31AE2031A67100138372 /* GroupCreationViewController.swift */,
 				A7A58CF02032A44C00BDBCE8 /* GroupCreation2ViewController.swift */,
 			);
 			path = NewContacts;
@@ -1048,7 +1043,6 @@
 				A7D1CB9F1FD4494D0082BC02 /* DesignableClasses */,
 				A72CAA711FD6853400308DED /* HideShowPasswordTextField */,
 				A7E499F9202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift */,
-				A72C31B02031B57200138372 /* GroupCreationCollectionViewCell.swift */,
 				A72C31B22031C48200138372 /* GroupCreationHeaderCollectionReusableView.swift */,
 				A7A58CF52032A53A00BDBCE8 /* GroupCreation2TableViewCell.swift */,
 				A7A58CF72032A75700BDBCE8 /* GroupCreation2CollectionViewCell.swift */,
@@ -1641,7 +1635,6 @@
 				AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */,
 				A7E499FA202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift in Sources */,
 				A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */,
-				A72C31AF2031A67100138372 /* GroupCreationViewController.swift in Sources */,
 				A79F780A201A33C600A20679 /* HomePageServerExtensions.swift in Sources */,
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
 				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
@@ -1659,7 +1652,6 @@
 				A72D9EE01FF5B1D3001C2098 /* AlertWarningConstants.swift in Sources */,
 				A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */,
 				A72D2C6D1FD98594008BE2D2 /* KeyChainConstants.swift in Sources */,
-				A72C31B12031B57200138372 /* GroupCreationCollectionViewCell.swift in Sources */,
 				A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */,
 				A72705C71FC8A7E2006C2504 /* AddImageViewController.swift in Sources */,
 				A729EA85200B740B0051AC92 /* AlertProcessing.swift in Sources */,
