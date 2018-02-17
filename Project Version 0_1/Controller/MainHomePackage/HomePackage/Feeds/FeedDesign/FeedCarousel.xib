@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedCarousel" customModule="Project_Version_0_1" customModuleProvider="target">
+            <connections>
+                <outlet property="mainView" destination="fvB-SK-c9h" id="xan-c3-GdF"/>
+                <outlet property="pageControl" destination="ifI-Tf-8kJ" id="xEe-vv-dz2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Cx2-tE-baS" userLabel="View">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvB-SK-c9h" userLabel="Main View">
+                    <rect key="frame" x="0.0" y="0.0" width="370" height="166"/>
+                    <color key="backgroundColor" red="0.3453691002" green="1" blue="0.25905904190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkC-FF-X7h" userLabel="Bottom View">
+                    <rect key="frame" x="0.0" y="166" width="370" height="34"/>
+                    <subviews>
+                        <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ifI-Tf-8kJ">
+                            <rect key="frame" x="166" y="-1" width="39" height="37"/>
+                            <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="currentPageIndicatorTintColor" red="0.92549019610000005" green="0.69019607839999997" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </pageControl>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="ifI-Tf-8kJ" firstAttribute="centerY" secondItem="KkC-FF-X7h" secondAttribute="centerY" id="LaY-S1-Ye6"/>
+                        <constraint firstItem="ifI-Tf-8kJ" firstAttribute="centerX" secondItem="KkC-FF-X7h" secondAttribute="centerX" id="yz9-hv-ZGj"/>
+                        <constraint firstAttribute="height" constant="34" id="zX2-Iq-q3n"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="KkC-FF-X7h" secondAttribute="bottom" id="6rv-Fx-MoJ"/>
+                <constraint firstItem="KkC-FF-X7h" firstAttribute="leading" secondItem="Cx2-tE-baS" secondAttribute="leading" id="9Tx-kn-7Z9"/>
+                <constraint firstItem="KkC-FF-X7h" firstAttribute="top" secondItem="fvB-SK-c9h" secondAttribute="bottom" id="AHg-BV-D41"/>
+                <constraint firstItem="fvB-SK-c9h" firstAttribute="leading" secondItem="Cx2-tE-baS" secondAttribute="leading" id="MHd-Ui-cQL"/>
+                <constraint firstAttribute="trailing" secondItem="KkC-FF-X7h" secondAttribute="trailing" id="N3h-kM-omo"/>
+                <constraint firstAttribute="trailing" secondItem="fvB-SK-c9h" secondAttribute="trailing" id="aPA-Y9-i8n"/>
+                <constraint firstItem="fvB-SK-c9h" firstAttribute="top" secondItem="Cx2-tE-baS" secondAttribute="top" id="veF-oj-SAz"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="288" y="247"/>
+        </view>
+    </objects>
+</document>

@@ -29,6 +29,7 @@ class ShowPinsOnMapViewController: UIViewController, MKMapViewDelegate, CLLocati
         //self.navigationController?.disableNavigationBar()
         self.navigationController?.enableNavigationBar()
         
+        /*
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -45,6 +46,26 @@ class ShowPinsOnMapViewController: UIViewController, MKMapViewDelegate, CLLocati
         
         //sil
         user.setUserID(inputUserID: "3DHQI81gRzaaFVTKFkAEhCFMw7N2")
+        */
+        
+        user.setUserID(inputUserID: "ngLuLXIv3UhWLq52B8N82ZYBz5u2")
+        DatabaseFriends.ds.getDatabaseReferenceFriends.child(user.userID).observe(.value) { (snapshot) in
+            guard snapshot.exists() else { return }
+            print("*********************start************")
+            print(snapshot.value)
+            print("**********************end*************")
+            
+            /*
+             if let snap = snapshot.value as? [String:AnyObject] {
+             print("Key :\(snap.keys)")
+             print("Value :\(snap.values)")
+             }
+             */
+            
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                
+            }
+        }
         
     }
 

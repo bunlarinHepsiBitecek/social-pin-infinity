@@ -8,47 +8,17 @@
 
 import Foundation
 
-/*
-let CONSTANT_STRING_USERID : String = "userID"
-let CONSTANT_USERNAME : String = "userName"
-let CONSTANT_NAME_SURNAME : String = "nameSurname"
-let CONSTANT_SURNAME : String = "surname"
-let CONSTANT_GENDER : String = "gender"
-let CONSTANT_BIRTHDAY : String = "birthday"
-let CONSTANT_EMAIL : String = "email"
-let CONSTANT_URL : String = "profilePictureUrl"
-let CONSTANT_PASSWORD : String = "password"
-let CONSTANT_MOBILEPHONE : String = "mobilephone"
-let CONSTANT_PROVIDER : String = "provider"
-let CONSTANT_PROVIDER_ID : String = "providerId"
-let CONSTANT_PROFILE_PICTURE_ID : String = "profilePictureId"
- */
-
-/*
-let CONSTANT_STRING_COUNTRY_CODE : String = "countryCode"
-let CONSTANT_STRING_COUNTRY_NAME : String = "countryName"
-let CONSTANT_STRING_TIMESTAMP : String = "timestamp"
-let CONSTANT_STRING_POSTAL_CODE : String = "postalCode"
-let CONSTANT_STRING_THOROUGH : String = "thorough"
-let CONSTANT_STRING_SUB_THOROUGH : String = "subThorough"
-let CONSTANT_STRING_GEOLOCATION : String = "geolocation"
-let CONSTANT_STRING_LATITUDE : String = "latitude"
-let CONSTANT_STRING_LONGITUDE : String = "longitude"
-
-let CONSTANT_STRING_LOCATION : String = "Location"
-*/
-
-/*
-let CONSTANT_STRING_PICTURE : String = "picture"
-let CONSTANT_STRING_VIDEO : String = "video"
-let CONSTANT_STRING_TEXT : String = "text"
- */
-
 struct FirebaseConstants {
     struct Email {
         //let EMAIL_VERIFICATON_URL = "gotoVerify://social-media-infinity.firebaseapp.com?email=%@"
         static let EmailVerifitactionURL = "gotoVerify://social-media-infinity.firebaseapp.com?email=%@"
     }
+    
+    struct Query {
+        static let LastItemCount : UInt = UInt(20)
+        static let NextItemCount : UInt = UInt(6)
+    }
+    
 }
 
 struct FirebaseModels {
@@ -123,6 +93,7 @@ struct FirebaseModelConstants {
         static let pictureURL = "pictureURL"
         static let videoID = "videoId"
         static let videoURL = "videoURL"
+        static let videoPictureURL = "videoPictureURL"
         static let textID = "textId"
         static let textURL = "textURL"
         static let text = "text"
@@ -133,6 +104,13 @@ struct FirebaseModelConstants {
         static let Owner = "owner"
         static let PinType = "pinType"
         static let ToWhom = "toWhom"
+        static let Timestamp = "timestamp"
+        static let PictureURL = "pictureURL"
+        static let VideoPictureURL = "videoPictureURL"
+        static let TextPictureURL = "textPictureURL"
+        static let VideoURL = "videoURL"
+        static let Text = "text"
+        
     }
     
     struct NotificationSent {

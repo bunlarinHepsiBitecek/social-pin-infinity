@@ -226,43 +226,117 @@
             </objects>
             <point key="canvasLocation" x="-247" y="-1075"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="85N-8N-yIe">
+        <!--Feeds-->
+        <scene sceneID="KiD-4m-duL">
             <objects>
-                <viewController id="x1f-Ah-jLh" customClass="ShowPinsOnMapViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sBG-UC-FSh">
+                <tableViewController id="DWz-Ro-rox" customClass="FeedTableViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rVY-BU-RDD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="237" id="kwe-Nh-BOf">
+                                <rect key="frame" x="0.0" y="28" width="375" height="237"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kwe-Nh-BOf" id="qQT-eK-Nfc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QAn-Zc-LeN">
+                                            <rect key="frame" x="8" y="11" width="79" height="71"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zev-up-sdC">
+                                            <rect key="frame" x="95" y="11" width="181" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Pin Bırakan Kullanıcı Adı"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBK-57-fA9">
+                                            <rect key="frame" x="104" y="52" width="171" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Pin Şehir - Ülke"/>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DWz-Ro-rox" id="8dH-ud-Oix"/>
+                            <outlet property="delegate" destination="DWz-Ro-rox" id="KXx-31-W5w"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Feeds" id="ib8-zb-AT2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIH-9D-S5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1785" y="-1119"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="3Kv-5G-iER">
+            <objects>
+                <viewController id="nYq-Jq-nJM" customClass="FeedViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WO8-gC-XN5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xNy-Ia-6nr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sj3-ey-n8q">
-                                <rect key="frame" x="16" y="20" width="343" height="29"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2cr-Yg-Ndf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Me"/>
-                                    <segment title="Friends"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentChange:" destination="x1f-Ah-jLh" eventType="valueChanged" id="zjI-ut-8VU"/>
-                                </connections>
-                            </segmentedControl>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="251" id="DNG-NS-CAH" customClass="FeedCell" customModule="Project_Version_0_1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="251"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNG-NS-CAH" id="4Vg-Rg-MXP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSH-20-YI6">
+                                                    <rect key="frame" x="15" y="11" width="345" height="221"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo-camera.png" translatesAutoresizingMaskIntoConstraints="NO" id="UT2-Ou-YX6">
+                                                            <rect key="frame" x="8" y="4" width="80" height="80"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" red="0.96018499140000002" green="0.094190517429999995" blue="0.32591149740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I30-cf-QKO">
+                                                            <rect key="frame" x="127" y="33" width="116" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xv-TN-CZc" customClass="FeedCarousel" customModule="Project_Version_0_1" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="86" width="345" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" red="0.97647058819999999" green="0.74901960779999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="carouselView" destination="1xv-TN-CZc" id="PTE-UV-xym"/>
+                                            <outlet property="profileImage" destination="UT2-Ou-YX6" id="HIG-vW-WeA"/>
+                                            <outlet property="userName" destination="I30-cf-QKO" id="rRo-Vb-SBk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="p9Y-Ry-epE" firstAttribute="bottom" secondItem="xNy-Ia-6nr" secondAttribute="bottom" id="OGG-Uj-Cgo"/>
-                            <constraint firstItem="xNy-Ia-6nr" firstAttribute="top" secondItem="sBG-UC-FSh" secondAttribute="top" id="Ook-rE-7qQ"/>
-                            <constraint firstItem="p9Y-Ry-epE" firstAttribute="trailing" secondItem="xNy-Ia-6nr" secondAttribute="trailing" id="aVb-ob-z3F"/>
-                            <constraint firstItem="xNy-Ia-6nr" firstAttribute="leading" secondItem="p9Y-Ry-epE" secondAttribute="leading" id="idi-Ny-Y6X"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="p9Y-Ry-epE"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="row-cB-2eZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="ic_home" id="cKK-Ed-GS9"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="ovP-H9-8iC"/>
+                    <connections>
+                        <outlet property="tableView" destination="2cr-Yg-Ndf" id="h8t-hr-Alu"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LGv-Gs-GxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoL-do-DBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-247" y="-267"/>
+            <point key="canvasLocation" x="-2031.2" y="-275.71214392803603"/>
         </scene>
         <!--Home Page View Controller-->
         <scene sceneID="WfD-nc-2C3">
@@ -278,6 +352,7 @@
                         <segue destination="A7F-Gf-tU5" kind="relationship" relationship="viewControllers" id="NYS-tw-3Fu"/>
                         <segue destination="DZ7-e9-pcS" kind="relationship" relationship="viewControllers" id="f7b-PI-Ceh"/>
                         <segue destination="IGe-h2-kfI" kind="relationship" relationship="viewControllers" id="LUk-Ng-2it"/>
+                        <segue destination="nYq-Jq-nJM" kind="relationship" relationship="viewControllers" id="zWX-9f-dvn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmJ-CY-2pK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,13 +363,13 @@
     <resources>
         <image name="group-of-men.png" width="512" height="512"/>
         <image name="ic_account_box" width="24" height="24"/>
-        <image name="ic_home" width="24" height="24"/>
         <image name="ic_pin_drop" width="24" height="24"/>
         <image name="ic_place" width="24" height="24"/>
         <image name="ic_settings" width="24" height="24"/>
         <image name="location.png" width="512" height="512"/>
         <image name="next.png" width="512" height="512"/>
         <image name="party.png" width="512" height="512"/>
+        <image name="photo-camera.png" width="512" height="512"/>
         <image name="rounded-check-mark- (1).png" width="32" height="32"/>
         <image name="toxic-cross.png" width="512" height="512"/>
     </resources>

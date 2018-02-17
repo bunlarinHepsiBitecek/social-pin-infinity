@@ -15,6 +15,7 @@ extension PinDropViewController {
         
         print("savePinData func is activated")
         loadVideoToStorage()
+        loadVideoImageToStorage()
         loadPinImageToStorage()
         loadTextImageToStorage()
         createPinToFirebase()
@@ -65,6 +66,44 @@ extension PinDropViewController {
             print("firebase video yükleme tamamlandı")
         }
         
+    }
+    
+    /* Load pin image to firebase*/
+    func loadVideoImageToStorage() {
+        guard self.pinDataObject.videoExistFlag else {
+            print("Remzi: Video image yok return")
+            return
+        }
+        
+        let imageID = NSUUID().uuidString
+        
+        let storageReference = Storage.storage().reference().child(FirebaseStorageConstants.Users).child(FirebaseModels.Locations.CHILD_LOCATIONS).child("\(imageID).png")
+        
+        if let uploadData = UIImagePNGRepresentation(self.pinDataObject.videoCapture) {
+            
+            storageReference.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                
+                if error != nil {
+                    
+                    if let errorMessage = error as NSError? {
+                        
+                        print("loadVideoImageToStorage error")
+                        print("errorMessage : \(errorMessage.localizedDescription)")
+                        print("errorMessage : \(errorMessage.userInfo)")
+                    }
+                } else {
+                    
+                    if let storageUrl = (metadata?.downloadURL() as NSURL?) {
+                        print("Yükleme başarılı videoImage storageUrl : \(storageUrl)")
+                        
+                        self.pinDataObject.setVideoIDOnPin(inputVideoIDOnPin: imageID)
+                        self.pinDataObject.setVideoDataUrlFirebase(inputVideoDataUrlFirebase: storageUrl)
+                        self.updatePinItem(key: FirebaseModelConstants.PinItem.videoURL, value: storageUrl.absoluteString!)
+                        
+                    }
+                }
+            })
+        }
     }
     
     /* Load pin image to firebase*/
