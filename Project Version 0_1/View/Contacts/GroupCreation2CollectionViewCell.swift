@@ -13,5 +13,7 @@ class GroupCreation2CollectionViewCell: UICollectionViewCell {
     @IBOutlet var selectedFriendImage: UIImageViewCustomDesign!
     @IBOutlet var selectedFriendName: UILabel!
     
+    var selectedFriend = UserFriend()
+    
 }
 

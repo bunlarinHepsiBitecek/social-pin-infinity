@@ -29,7 +29,7 @@ class GroupCreation2TableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -52,22 +52,41 @@ class GroupCreation2TableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionViewInTableCell.dequeueReusableCell(withReuseIdentifier: "cellCollectionView", for: indexPath) as! GroupCreation2CollectionViewCell
+        guard let cell = collectionViewInTableCell.dequeueReusableCell(withReuseIdentifier: "cellCollectionView", for: indexPath) as? GroupCreation2CollectionViewCell  else {
+            
+            return UICollectionViewCell()
+        }
+        
+        //let cell = collectionViewInTableCell.dequeueReusableCell(withReuseIdentifier: "cellCollectionView", for: indexPath) as! GroupCreation2CollectionViewCell
         
         cell.selectedFriendImage.setImagesFromCacheOrFirebase(selectedFriendArray[indexPath.row].userFriendChildData.userImageUrl)
         cell.selectedFriendName.text = selectedFriendArray[indexPath.row].userFriendChildData.userName
+        
+        cell.selectedFriend = selectedFriendArray[indexPath.row]
         
         return cell
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-     
-        print("collectionViewLayout starts")
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionViewInTableCell.cellForItem(at: indexPath) as! GroupCreation2CollectionViewCell
+        
+        if let i = selectedFriendArray.index(where: { $0.userID == cell.selectedFriend.userID}) {
+            
+            selectedFriendArray.remove(at: i)
+            
+        }
+        
+        // if you don't delete cell from selectedFriendArray before deleteItems, you got an abend because after deleting items from collectionview, function triggers reload collectionview but inside array there is still the specific item exits
+        collectionViewInTableCell.deleteItems(at: [indexPath])
+        
+        // lets inform contacts view about a delete operation is processed in group creation view
+        friendsData.isAnyFriendDeletedFromGroupCreationView = true
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
         
         
-        
-        return CGSize(width: 100, height: 100)
     }
     
 }

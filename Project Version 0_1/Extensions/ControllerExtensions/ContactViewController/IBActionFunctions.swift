@@ -11,7 +11,7 @@ import Firebase
 
 extension ContactsNewViewController {
     
-    func returSegmentedControlChoise() -> EnumSegmentedChoise {
+    func returnSegmentedControlChoise() -> EnumSegmentedChoise {
         
         if segmentedChoiceButton.selectedSegmentIndex == 0 {
             
@@ -35,7 +35,7 @@ extension ContactsNewViewController {
     
     func nextButtonProcessOnContactViewController() {
         
-        switch returSegmentedControlChoise() {
+        switch returnSegmentedControlChoise() {
         case .friends:
             
             print("NextButtonTapped : friends")
@@ -57,6 +57,33 @@ extension ContactsNewViewController {
         }
         
     }
+    
+    func changeNextButtonTextValue() {
+        
+        print("changeNextButtonTextValue starts")
+        
+        switch returnSegmentedControlChoise() {
+        case .friends:
+            
+            nextButton.changePlainButtonFontAndTitle(inputStringTitle: "Add", inputFontSize: 22.0)
+            
+        case .groupCreation:
+            
+            nextButton.changePlainButtonFontAndTitle(inputStringTitle: "Create Group", inputFontSize: 7.0)
+            
+        case .groups:
+
+            nextButton.changePlainButtonFontAndTitle(inputStringTitle: "Add", inputFontSize: 22.0)
+            
+        case .nothing:
+            
+            
+            nextButton.changePlainButtonFontAndTitle(inputStringTitle: "Add", inputFontSize: 22.0)
+            
+        }
+
+    }
+    
     
     func initiateGroupCreationProcess() {
         

@@ -495,6 +495,11 @@
 			isa = PBXGroup;
 			children = (
 				A726DA5620248AA7009C2D1A /* ContactsNewTableViewCell.swift */,
+				A7E499F9202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift */,
+				A72C31B22031C48200138372 /* GroupCreationHeaderCollectionReusableView.swift */,
+				A7A58CF52032A53A00BDBCE8 /* GroupCreation2TableViewCell.swift */,
+				A7A58CF72032A75700BDBCE8 /* GroupCreation2CollectionViewCell.swift */,
+				A7A58CF9203429E000BDBCE8 /* CollectionViewConstants.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -1038,15 +1043,9 @@
 		A75F401B1FC0D5B400495228 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A7A58CF42032A51700BDBCE8 /* New Group1 */,
 				A726DA5520248A53009C2D1A /* Contacts */,
 				A7D1CB9F1FD4494D0082BC02 /* DesignableClasses */,
 				A72CAA711FD6853400308DED /* HideShowPasswordTextField */,
-				A7E499F9202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift */,
-				A72C31B22031C48200138372 /* GroupCreationHeaderCollectionReusableView.swift */,
-				A7A58CF52032A53A00BDBCE8 /* GroupCreation2TableViewCell.swift */,
-				A7A58CF72032A75700BDBCE8 /* GroupCreation2CollectionViewCell.swift */,
-				A7A58CF9203429E000BDBCE8 /* CollectionViewConstants.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1273,13 +1272,6 @@
 				A79FFB211FE85E91006D4D1E /* maps64.png */,
 			);
 			path = PinImages;
-			sourceTree = "<group>";
-		};
-		A7A58CF42032A51700BDBCE8 /* New Group1 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group1";
 			sourceTree = "<group>";
 		};
 		A7D1CB9F1FD4494D0082BC02 /* DesignableClasses */ = {

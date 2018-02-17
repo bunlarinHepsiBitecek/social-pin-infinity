@@ -14,7 +14,7 @@ extension ContactsNewViewController {
         
         print("createSectionsForFriendList starts")
         
-        self.friendsData.sortDictionaryData()
+        friendsData.sortDictionaryData()
         
         for userFriendObject in friendsData.userFriendsDictionarySorted {
             

@@ -13,7 +13,10 @@ let cacheDataForFriendList = NSCache<NSString, SectionBasedFriendsData>()
 
 let cachedFriendProfileImages = NSCache<NSString, UIImage>()
 
+var friendSelectedDictionary = NSDictionary() as! [String : Bool]
+
 var selectedFriendArray = [UserFriend]()
+var friendsData = SectionBasedFriendsData()
 
 class SectionBasedFriendsData {
     
@@ -24,6 +27,8 @@ class SectionBasedFriendsData {
     private var _sectionDictionary = NSDictionary() as! [String : [UserFriend]]
     private var _selectedFriendForDatabaseOperations = NSDictionary() as! [String : UserFriend]
     private var _keyData : Array<String>
+    
+    private var _isAnyFriendDeletedFromGroupCreationView : Bool
     
     private var _friendListInitial_A : [UserFriend]
     private var _friendListInitial_B : [UserFriend]
@@ -61,6 +66,8 @@ class SectionBasedFriendsData {
         _sectionDictionary = NSDictionary() as! [String : [UserFriend]]
         _selectedFriendForDatabaseOperations = NSDictionary() as! [String : UserFriend]
         _keyData = Array()
+        
+        _isAnyFriendDeletedFromGroupCreationView = false
         
         _friendListInitial_A = []
         _friendListInitial_B = []
@@ -158,6 +165,16 @@ class SectionBasedFriendsData {
         }
         set {
             _keyData = newValue
+        }
+    }
+    
+    var isAnyFriendDeletedFromGroupCreationView : Bool {
+        
+        get {
+            return _isAnyFriendDeletedFromGroupCreationView
+        }
+        set {
+            _isAnyFriendDeletedFromGroupCreationView = newValue
         }
     }
     

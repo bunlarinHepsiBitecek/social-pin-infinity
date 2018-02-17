@@ -57,6 +57,7 @@ extension HomePageViewController {
                         
                         self.sectionBasedFriendsDataObject.userFriendsDictionary.append(tempUserFriendObject)
                         
+                        
                     }
                 }
             }

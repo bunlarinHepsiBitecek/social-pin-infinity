@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -19,11 +20,11 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet var slachCharacter: UILabel!
     @IBOutlet var selectedFriendsCollectionView: UICollectionView!
     
-    var friendSelectedDictionary = NSDictionary() as! [String : Bool]
+    //var friendSelectedDictionary = NSDictionary() as! [String : Bool]
     //var selectedFriendArray = [UserFriend]()
     var countForSelectedFriend : Int = 0
     
-    var friendsData = SectionBasedFriendsData()
+    //var friendsData = SectionBasedFriendsData()
     var user = User()
     
     var babos = String()
@@ -75,6 +76,32 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
         selectedFriendsCollectionView.isHidden = true
         
         self.friendsTableView.frame = CGRect(x: self.friendsTableView.frame.origin.x, y: self.friendsTableView.frame.origin.y - self.selectedFriendsCollectionView.frame.height, width: self.friendsTableView.frame.width, height: self.friendsTableView.frame.height + self.selectedFriendsCollectionView.frame.height)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadAfterDeletingItemsFromGroupCreation), name: NSNotification.Name(rawValue: "load"), object: nil)
+        
+        
+    }
+    
+    @objc func reloadAfterDeletingItemsFromGroupCreation() {
+        
+        print("reloadAfterDeletingItemsFromGroupCreation starts")
+        
+        if friendsData.isAnyFriendDeletedFromGroupCreationView {
+            
+            selectedFriendsCollectionView.reloadData()
+            friendsTableView.reloadData()
+            
+            countForSelectedFriend = selectedFriendArray.count
+            
+            selectedFriendCount.text = String(countForSelectedFriend)
+          
+            friendsData.isAnyFriendDeletedFromGroupCreationView = false
+            
+            selectedFriendCollectionViewManagement()
+            
+        }
+        
         
         
     }
@@ -155,9 +182,13 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
             
             cell.friendSelectedImage.image = UIImage(named: "check-mark.png")
             
+            // after reloading tableview selected rows will be gone, that's whhy we need to implement code below
+            friendsTableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+            
         } else {
             
             cell.friendSelectedImage.image = UIImage()
+            
         }
         
         print("url : \(cell.friend.userFriendChildData.userImageUrl)")
@@ -514,10 +545,10 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
             
             UIView.transition(with: selectedFriendsCollectionView, duration: 0.3, options: .transitionCrossDissolve, animations: {
                 
-                cell.selectedFriendName.text = self.friendsData.userSelectedFriendsCollectionViewData[indexPath.row].userFriendChildData.userName
-                cell.selectedFriendImage.image = cachedFriendProfileImages.object(forKey: self.friendsData.userSelectedFriendsCollectionViewData[indexPath.row].userFriendChildData.userImageUrl as NSString)
+                cell.selectedFriendName.text = friendsData.userSelectedFriendsCollectionViewData[indexPath.row].userFriendChildData.userName
+                cell.selectedFriendImage.image = cachedFriendProfileImages.object(forKey: friendsData.userSelectedFriendsCollectionViewData[indexPath.row].userFriendChildData.userImageUrl as NSString)
                 
-                cell.friend = self.friendsData.userSelectedFriendsCollectionViewData[indexPath.row]
+                cell.friend = friendsData.userSelectedFriendsCollectionViewData[indexPath.row]
                 
             }) { (result) in
                 
@@ -543,7 +574,7 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
             
         }
         
-        self.friendSelectedDictionary[cell.friend.userID] = false
+        friendSelectedDictionary[cell.friend.userID] = false
         
         selectedFriendsCollectionView.deleteItems(at: [indexPath])
         
@@ -597,6 +628,14 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
             selectedFriendCount.text = String(countForSelectedFriend)
         }
         
+        if let i = selectedFriendArray.index(where: { $0.userID == cell.friend.userID }) {
+            
+            print("bulduk minaaa")
+            
+            selectedFriendArray.remove(at: i)
+            
+        }
+        
         
     }
     
@@ -605,19 +644,7 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
         
         print("segmentedChoiceButtonTapped starts")
         
-        if segmentedChoiceButton.selectedSegmentIndex == 0 {
-            
-            print("friends tapped")
-            
-        } else if segmentedChoiceButton.selectedSegmentIndex == 1 {
-            
-            print("groups tapped")
-            
-        } else if segmentedChoiceButton.selectedSegmentIndex == 2 {
-            
-            print("new group create tapped")
-            
-        }
+        changeNextButtonTextValue()
         
     }
 
@@ -631,6 +658,9 @@ class ContactsNewViewController: UIViewController, UITableViewDelegate, UITableV
         
         friendsData.deleteDataFromInitialBasedFriendLists()
         friendsData.userSelectedFriendsCollectionViewData.removeAll()
+        
+        // after close contacts view, erase all selected data feeding group creating page
+        selectedFriendArray.removeAll()
         
         self.dismiss(animated: true, completion: nil)
         

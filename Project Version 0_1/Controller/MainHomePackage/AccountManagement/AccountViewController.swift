@@ -51,7 +51,8 @@ class AccountViewController: UIViewController {
         
         if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.HomePage, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.ContactsNewViewController_storyBoardID) as? ContactsNewViewController {
             
-            destinationViewController.friendsData = self.sectionBasedFriendsDataObject
+            //destinationViewController.friendsData = self.sectionBasedFriendsDataObject
+            friendsData = self.sectionBasedFriendsDataObject
             destinationViewController.user = self.user
             
             present(destinationViewController, animated: true, completion: nil)

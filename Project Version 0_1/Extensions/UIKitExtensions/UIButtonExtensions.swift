@@ -34,5 +34,14 @@ extension UIButton {
         
     }
     
+    func changePlainButtonFontAndTitle(inputStringTitle : String, inputFontSize : CGFloat) {
+        
+        setTitle(inputStringTitle, for: .normal)
+        
+        
+        //titleLabel?.font = UIFont(name: "System - System", size: inputFontSize)
+        
+    }
+    
     
 }

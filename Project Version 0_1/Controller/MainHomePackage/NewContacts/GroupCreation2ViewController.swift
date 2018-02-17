@@ -17,8 +17,6 @@ class GroupCreation2ViewController: UIViewController, UITableViewDataSource, UIT
     
     var user = User()
 
-    var tempCollectionViewContentSize = CGFloat()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,11 +28,23 @@ class GroupCreation2ViewController: UIViewController, UITableViewDataSource, UIT
         print("selectedFriendArray : \(selectedFriendArray.count)")
         
         groupNameText.borderStyle = .none
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(takasi), name: NSNotification.Name(rawValue: "refresh"), object: nil)
 
         // Do any additional setup after loading the view.
         
+        
+        
     }
 
+    @objc func takasi() {
+        
+        print("takasi starts")
+        
+        //collectionTableView.reloadSections([0], with: .automatic)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -71,15 +81,6 @@ class GroupCreation2ViewController: UIViewController, UITableViewDataSource, UIT
 
     }
     
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        
-//        print("estimatedHeightForRowAt starts")
-//        print("UITableViewAutomaticDimension : \(UITableViewAutomaticDimension)")
-//        
-//        return UITableViewAutomaticDimension
-//        
-//    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
@@ -92,11 +93,27 @@ class GroupCreation2ViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
        
-        return "takasi bomba"
+        return "Participant : " + String(selectedFriendArray.count)
         
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
+        
+        friendsData.userSelectedFriendsCollectionViewData.removeAll()
+        for item in friendsData.userFriendsDictionarySorted {
+            
+            friendSelectedDictionary[item.userID] = false
+            
+        }
+        
+        for item in selectedFriendArray {
+            
+            friendsData.userSelectedFriendsCollectionViewData.append(item)
+            friendSelectedDictionary[item.userID] = true
+            
+        }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
         
         self.dismiss(animated: true, completion: nil)
         
