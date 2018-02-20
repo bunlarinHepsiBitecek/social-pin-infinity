@@ -107,7 +107,7 @@ struct FirebaseModelConstants {
         static let Timestamp = "timestamp"
         static let PictureURL = "pictureURL"
         static let VideoPictureURL = "videoPictureURL"
-        static let TextPictureURL = "textPictureURL"
+        static let TextPictureURL = "textURL"
         static let VideoURL = "videoURL"
         static let Text = "text"
         

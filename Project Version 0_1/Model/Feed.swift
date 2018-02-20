@@ -74,6 +74,22 @@ class Feed {
         
     }
     
+    func numberOfItem() -> Int {
+        var count = 0
+        
+        if !self.pictureURL.isEmpty {
+            count = count + 1
+        }
+        if !self.videoPictureURL.isEmpty {
+            count = count + 1
+        }
+        if !self.textPictureURL.isEmpty {
+            count = count + 1
+        }
+        
+        return count
+    }
+    
     var locationID : String {
         get {
             return self._locationID

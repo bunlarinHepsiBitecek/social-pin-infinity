@@ -159,8 +159,11 @@ open class FeedCarousel: UIView {
         
         pageControl.numberOfPages = delegate.numberOfItemsInCarouselView(self)
         
-        for index in 0..<delegate.numberOfItemsInCarouselView(self) {
-            addItem(delegate.carouselView(self, itemForRowAtIndex: index))
+        // MARK Remzi: add item when first call to reload data
+        if self.items.count < delegate.numberOfItemsInCarouselView(self) {
+            for index in 0..<delegate.numberOfItemsInCarouselView(self) {
+                addItem(delegate.carouselView(self, itemForRowAtIndex: index))
+            }
         }
     }
     

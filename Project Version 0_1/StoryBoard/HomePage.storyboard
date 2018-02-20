@@ -226,51 +226,6 @@
             </objects>
             <point key="canvasLocation" x="-247" y="-1075"/>
         </scene>
-        <!--Feeds-->
-        <scene sceneID="KiD-4m-duL">
-            <objects>
-                <tableViewController id="DWz-Ro-rox" customClass="FeedTableViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rVY-BU-RDD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="237" id="kwe-Nh-BOf">
-                                <rect key="frame" x="0.0" y="28" width="375" height="237"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kwe-Nh-BOf" id="qQT-eK-Nfc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QAn-Zc-LeN">
-                                            <rect key="frame" x="8" y="11" width="79" height="71"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zev-up-sdC">
-                                            <rect key="frame" x="95" y="11" width="181" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Pin Bırakan Kullanıcı Adı"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBK-57-fA9">
-                                            <rect key="frame" x="104" y="52" width="171" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Pin Şehir - Ülke"/>
-                                        </button>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="DWz-Ro-rox" id="8dH-ud-Oix"/>
-                            <outlet property="delegate" destination="DWz-Ro-rox" id="KXx-31-W5w"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Feeds" id="ib8-zb-AT2"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cIH-9D-S5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1785" y="-1119"/>
-        </scene>
         <!--Feed-->
         <scene sceneID="3Kv-5G-iER">
             <objects>
@@ -298,7 +253,7 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo-camera.png" translatesAutoresizingMaskIntoConstraints="NO" id="UT2-Ou-YX6">
                                                             <rect key="frame" x="8" y="4" width="80" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="0.96018499140000002" green="0.094190517429999995" blue="0.32591149740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I30-cf-QKO">
                                                             <rect key="frame" x="127" y="33" width="116" height="21"/>

@@ -11,16 +11,31 @@ import UIKit
 class CustomView: FeedCarouselItem {
     
     //MARK: outlets
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var imageView: CachedImageView!
     
     // MARK: - properties
     fileprivate var containerView: UIView!
     fileprivate let nibName = "CustomView"
     
+    // MARK: variable
+    fileprivate var viewCreated = false
+    
+    var viewExists : Bool {
+        get {
+            return self.viewCreated
+        }
+        set {
+            self.viewCreated = newValue
+        }
+    }
+    
     
     // MARK: - init
     convenience init(frame: CGRect, number: Int) {
         self.init(frame: frame)
+        
+        // MARK Remzi: when customview created
+        self.viewCreated = true
     }
     
     override init(frame: CGRect) {

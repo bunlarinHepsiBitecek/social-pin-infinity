@@ -73,13 +73,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("Remzi : cellForRowAt indexPath: \(indexPath)")
         
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") {
-//            return cell
-//        }
-//        return UITableViewCell()
+        let cell : FeedCell = {
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as? FeedCell else {
+                return UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "FeedCell") as! FeedCell
+            }
+            return cell
+        }()
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedCell
         cell.feed = feeds[indexPath.item]
+        cell.setupCarousel()
         
         // TODO: Sil
         print("locationID: \(cell.feed.locationID)")

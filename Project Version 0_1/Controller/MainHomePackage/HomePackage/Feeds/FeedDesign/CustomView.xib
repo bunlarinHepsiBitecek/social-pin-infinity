@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="remzi_profile1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0X6-nQ-4iy">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0X6-nQ-4iy">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -28,7 +28,4 @@
             <point key="canvasLocation" x="25" y="51"/>
         </view>
     </objects>
-    <resources>
-        <image name="remzi_profile1.jpg" width="640" height="480"/>
-    </resources>
 </document>
