@@ -39,10 +39,22 @@ extension ContactsNewViewController {
         case .friends:
             
             print("NextButtonTapped : friends")
+            
+            if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.HomePage, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.PhotoPicker3ViewController_storyBoardID) as? PhotoPicker3ViewController {
+                
+                present(destinationViewController, animated: true, completion: nil)
+                
+            }
         
         case .groups:
             
             print("NextButtonTapped : groups")
+            
+            if let destinationViewController = UIStoryboard(name: ViewConstants.StoryBoard.HomePage, bundle: nil).instantiateViewController(withIdentifier: ViewConstants.StoryBoardIdentifiers.PhotoPicker4ViewController_storyBoardID) as? PhotoPicker4ViewController {
+                
+                present(destinationViewController, animated: true, completion: nil)
+                
+            }
             
         case .groupCreation:
             

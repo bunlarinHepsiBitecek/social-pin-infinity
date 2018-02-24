@@ -26,6 +26,9 @@ class HomePageViewController: UITabBarController, UITabBarControllerDelegate {
         
         getUserFriendListData()
         readUserInfo()
+        
+        startGettingGroupDataProcess()
+        
         //setUserProfilePictureToObject()
         
         print("user yarro : \(user.userProfilePictureUrl)")

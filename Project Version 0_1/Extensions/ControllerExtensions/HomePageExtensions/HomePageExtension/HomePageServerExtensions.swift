@@ -62,15 +62,6 @@ extension HomePageViewController {
                 }
             }
             
-            //denemeCache2.setObject(self.sectionBasedObject, forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString)
-            /*
-            let temp = denemeCache2.object(forKey: CacheConstants.KeyValues.DataPreparedSectionBased as NSString)
-            
-            print("temp : \(temp?.tempUserFriendsDictionary.count)")
-            print("temp : \(temp?.tempUserFriendsDictionarySorted.count)")
-            print("temp : \(temp?.sectionDictionary.count)")
-            */
-            
         }) { (error) in
             
             if let errorMessage = error as NSError! {
@@ -79,9 +70,7 @@ extension HomePageViewController {
                 print("errorMessage : \(errorMessage.userInfo)")
                 
             }
-            
         }
-        
     }
     
     func readUserInfo() {
@@ -183,4 +172,161 @@ extension HomePageViewController {
         
     }
     
+    func getUserGroupData(inputGroupID : String) {
+        
+        print("getUserGroupData starts")
+        print("databaseReferenceObject : \(databaseReferenceObject)")
+        print("inputGroupID : \(inputGroupID)")
+        
+        let currentUserID = RequeiredUserData.getCurrentUserID()._currentUserID
+        
+        print("currentUseID : \(currentUserID)")
+        
+        let groupDataReference = databaseReferenceObject.child(FirebaseModels.Groups.childGroups).child(inputGroupID)
+        
+        print("groupDataReference : \(groupDataReference)")
+        
+        groupDataReference.observe(.value) { (dataSnapShot) in
+            
+            if !dataSnapShot.exists() {
+                
+                print("groupDataNotExists")
+                
+                userGroupDataFromFirebase.isGroupDataExists = false
+                
+            }
+            
+            print("datasnapshot : \(dataSnapShot)")
+            
+            if let snapDictionary = dataSnapShot.value as? NSDictionary {
+                
+                print("snapDictionary : \(snapDictionary)")
+                
+                let tempGroupData = Group(dataDictionary: snapDictionary as! [String : Any])
+                
+                userGroupDataFromFirebase = tempGroupData
+                
+                print("userGroupDataFromFirebase : \(userGroupDataFromFirebase.groupName)")
+                print("userGroupDataFromFirebase : \(userGroupDataFromFirebase.adminUserID)")
+                
+                for item in userGroupDataFromFirebase.groupMembers {
+                    
+                    print("--> : \(item.userFriendChildData.userName)")
+                    print("--> : \(item.userFriendChildData.userImageUrl)")
+                    print("--> : \(item.userID)")
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    func getUserGroupList(completion : @escaping (_ result: Bool) -> Void) {
+        
+        print("getUserGroupList starts")
+        
+        print("databaseReferenceObject : \(databaseReferenceObject)")
+        
+        let userGroupListReference = databaseReferenceObject.child(FirebaseModels.UserGroups.childUserGroups).child(RequeiredUserData.getCurrentUserID()._currentUserID)
+        
+        print("userGroupListReference : \(userGroupListReference)")
+        
+        userGroupListReference.observe(.value) { (datasnapshot) in
+            
+//            print("datasnapshot : \(datasnapshot)")
+            
+            if !datasnapshot.exists() {
+                
+                return
+                
+            }
+            
+            constantUserGroupDetailedList.userID = datasnapshot.key
+            
+            if let datasnapshotValueDictionary = datasnapshot.value as? NSDictionary {
+                
+                var counter = 0
+                
+                for item in datasnapshotValueDictionary {
+                    
+                    counter += 1
+                    
+                    if let itemString = item.key as? String {
+                        
+                        let tempGroupObject = Group()
+                        
+                        tempGroupObject.groupID = itemString
+                        constantUserGroupDetailedList.groupList.append(tempGroupObject)
+                        
+                        print("item : \(counter), tempGroupObject.groupID : \(tempGroupObject.groupID)")
+                        
+                    }
+                }
+                
+            }
+            
+            completion(true)
+        }
+        
+        
+    }
+    
+    
+    func startGettingGroupDataProcess() {
+        
+        print("startGettingGroupDataProcess startss")
+        
+        getUserGroupList { (result) in
+            
+            if result {
+                
+                print("listeyi almayı bitirdik sonra yazdırdık")
+                print("let's get group detailed data")
+                
+                print("total group list count : \(constantUserGroupDetailedList.groupList.count)")
+                
+                for item in constantUserGroupDetailedList.groupList {
+                    
+                    print("item.groupID : \(item.groupID)")
+                    
+                    self.getUserGroupData(inputGroupID: item.groupID)
+                    
+                }
+            }
+            
+        }
+        
+        
+        
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -41,6 +41,11 @@ struct ViewConstants {
         static let ContactsNewViewController_storyBoardID = "ContactsNewViewController_storyBoardID"
         static let GroupCreationViewController_storyBoardID = "GroupCreationViewController_storyBoardID"
         static let GroupCreation2ViewController_storyBoardID = "GroupCreation2ViewController_storyBoardID"
+        static let PhotoPickerViewController_storyBoardID = "PhotoPickerViewController_storyBoardID"
+        static let PhotoPicker2ViewController_storyBoardID = "PhotoPicker2ViewController_storyBoardID"
+        static let PhotoPicker3ViewController_storyBoardID = "PhotoPicker3ViewController_storyBoardID"
+        static let PhotoPicker4ViewController_storyBoardID = "PhotoPicker4ViewController_storyBoardID"
+        
         
     }
     

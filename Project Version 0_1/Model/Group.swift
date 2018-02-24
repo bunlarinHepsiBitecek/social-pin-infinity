@@ -8,15 +8,50 @@
 
 import Foundation
 
+var userGroupDataFromFirebase = Group()
+
 class Group {
     private var _groupID : String
     private var _adminUserID : String
     private var _groupName : String
     private var _members : [String] // Contains member of group
     private var _groupPictureUrl : String
-    private var _groupMembers : [UserFriend]
+    private var _groupMembers : [UserFriend] = []
+    private var _isGroupDataExists : Bool
     
     private var _groupDictionary : Dictionary<String, String> = [:]
+    
+    init(dataDictionary : [String : Any]) {
+        
+        self._groupID =  SPACE_CHARACTER
+        self._members = []
+        self._isGroupDataExists = false
+        
+        self._adminUserID = dataDictionary["Admin"] as? String ?? ""
+        self._groupName = dataDictionary["GroupName"] as? String ?? ""
+        self._groupPictureUrl = dataDictionary["GroupPictureUrl"] as? String ?? ""
+        
+        let temp = dataDictionary["UserList"]
+        
+        let tempUserFriend = UserFriend()
+        
+        if let tempData = temp as? NSDictionary {
+            
+            for item in tempData {
+                
+                tempUserFriend.userID = item.key as! String
+                
+                let tempUserFriendChildData = item.value as! [String : Any]
+                
+                tempUserFriend.userFriendChildData.userImageUrl = tempUserFriendChildData["profilePictureUrl"] as! String
+                tempUserFriend.userFriendChildData.userName = tempUserFriendChildData["nameSurname"] as! String
+            
+                self._groupMembers.append(tempUserFriend)
+                
+            }
+        }
+    }
+    
     
     init() {
         self._groupID = SPACE_CHARACTER
@@ -25,6 +60,7 @@ class Group {
         self._members = []
         self._groupPictureUrl = SPACE_CHARACTER
         self._groupMembers = []
+        self._isGroupDataExists = false
     }
     
     var groupID : String {
@@ -78,6 +114,15 @@ class Group {
         }
         set(inputValue) {
             self._groupMembers = inputValue
+        }
+    }
+    
+    var isGroupDataExists : Bool {
+        get {
+            return _isGroupDataExists
+        }
+        set {
+            _isGroupDataExists = newValue
         }
     }
     
