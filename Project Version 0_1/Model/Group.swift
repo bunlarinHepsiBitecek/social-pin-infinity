@@ -8,10 +8,9 @@
 
 import Foundation
 
-var userGroupDataFromFirebase = Group()
-
 class Group {
     private var _groupID : String
+    private var _isGroupActive : Bool
     private var _adminUserID : String
     private var _groupName : String
     private var _members : [String] // Contains member of group
@@ -21,11 +20,12 @@ class Group {
     
     private var _groupDictionary : Dictionary<String, String> = [:]
     
-    init(dataDictionary : [String : Any]) {
+    init(dataDictionary : [String : Any], inputGroupIDValue : String) {
         
-        self._groupID =  SPACE_CHARACTER
+        self._groupID =  inputGroupIDValue
         self._members = []
         self._isGroupDataExists = false
+        self._isGroupActive = false
         
         self._adminUserID = dataDictionary["Admin"] as? String ?? ""
         self._groupName = dataDictionary["GroupName"] as? String ?? ""
@@ -55,6 +55,7 @@ class Group {
     
     init() {
         self._groupID = SPACE_CHARACTER
+        self._isGroupActive = false
         self._adminUserID = SPACE_CHARACTER
         self._groupName = SPACE_CHARACTER
         self._members = []
@@ -69,6 +70,15 @@ class Group {
         }
         set(inputValue) {
             self._groupID = inputValue
+        }
+    }
+    
+    var isGroupActive : Bool {
+        get {
+            return _isGroupActive
+        }
+        set {
+            _isGroupActive = newValue
         }
     }
     
@@ -138,6 +148,35 @@ class Group {
     func appendAttributeToDictionary(inputKey : String, inputValue : String) {
         
         self._groupDictionary[inputKey] = inputValue
+        
+    }
+    
+    func setParsedDataToCurrenctObject(dataDictionary : [String : Any]) {
+        
+        self._adminUserID = dataDictionary["Admin"] as? String ?? ""
+        self._groupName = dataDictionary["GroupName"] as? String ?? ""
+        self._groupPictureUrl = dataDictionary["GroupPictureUrl"] as? String ?? ""
+        
+        let temp = dataDictionary["UserList"]
+        
+        if let tempData = temp as? NSDictionary {
+            
+            for item in tempData {
+                
+                let tempUserFriend = UserFriend()
+                
+                tempUserFriend.userID = item.key as! String
+                
+                let tempUserFriendChildData = item.value as! [String : Any]
+                
+                tempUserFriend.userFriendChildData.userImageUrl = tempUserFriendChildData["profilePictureUrl"] as! String
+                tempUserFriend.userFriendChildData.userName = tempUserFriendChildData["nameSurname"] as! String
+                
+                self._groupMembers.append(tempUserFriend)
+                
+            }
+        }
+        
         
     }
     

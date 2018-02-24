@@ -52,6 +52,15 @@ extension ContactsNewViewController : UITableViewDelegate, UITableViewDataSource
             
             return arrangeSectionsInitialsBased(inputIndexPath: inputIndexPath)
             
+    
+        case .groups:
+            
+            print("switch statement : groups")
+            
+            
+            return UserFriend()
+            
+            
         default:
             
             return UserFriend()
@@ -74,37 +83,45 @@ extension ContactsNewViewController : UITableViewDelegate, UITableViewDataSource
 
         if isSearching {
             
-            //cell.friend = friendsData.userSearchResultFriendList[indexPath.row]
-            
             cell.friend = setSearchResultOfFriendObjectAccordingToIndexPath(inputIndexPath: indexPath)
             
         } else {
-            
-            //cell.friend = arrangeSectionsInitialsBased(inputIndexPath: indexPath)
             
             cell.friend = setFriendObjectAccordingToIndexPath(inputIndexPath: indexPath)
             
         }
         
-        cell.friend.userCellSecionInfo = indexPath.section /* #2 */
-        cell.friend.userCellRowInfo = indexPath.row /* #2 */
-        
         cell.friendName.text = cell.friend.userFriendChildData.userName
         
-        if friendSelectedDictionary[cell.friend.userID]! {
+        switch returnSegmentedControlChoise() {
+        case .friends:
             
-            cell.friendSelectedImage.image = UIImage(named: "check-mark.png")
+            if friendSelectedDictionary[cell.friend.userID]! {
+                
+                cell.friendSelectedImage.image = UIImage(named: "check-mark.png")
+                
+                // after reloading tableview selected rows will be gone, that's why we need to implement code below
+                friendsTableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+                
+            } else {
+                
+                cell.friendSelectedImage.image = UIImage()
+                
+            }
             
-            // after reloading tableview selected rows will be gone, that's why we need to implement code below
-            friendsTableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+            cell.friendImage.setImagesFromCacheOrFirebase(cell.friend.userFriendChildData.userImageUrl)
             
-        } else {
+        case .groups:
             
-            cell.friendSelectedImage.image = UIImage()
+            print("yaro yarro yarro")
+            
+        default:
+            
+            print("takasi takasi takasi")
             
         }
         
-        cell.friendImage.setImagesFromCacheOrFirebase(cell.friend.userFriendChildData.userImageUrl)
+        
         
         return cell
         

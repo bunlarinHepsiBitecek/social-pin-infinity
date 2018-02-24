@@ -579,13 +579,520 @@ extension ContactsNewViewController {
             
             closeSelectedFriendCollectionView()
         }
+
+    }
+    
+    func createSectionsForGroups() {
+        
+        for userGroupObject in constantUserGroupDataObject.userGroupSortedList {
+            
+            if userGroupObject.groupName.hasPrefix(LetterConstants.A) {
+                
+                constantUserGroupDataObject.groupListInitial_A.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.B){
+                
+                constantUserGroupDataObject.groupListInitial_B.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.C) {
+                
+                constantUserGroupDataObject.groupListInitial_C.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.D){
+                
+                constantUserGroupDataObject.groupListInitial_D.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.E) {
+                
+                constantUserGroupDataObject.groupListInitial_E.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.F){
+                
+                constantUserGroupDataObject.groupListInitial_F.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.G) {
+                
+                constantUserGroupDataObject.groupListInitial_G.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.H){
+                
+                constantUserGroupDataObject.groupListInitial_H.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.I) {
+                
+                constantUserGroupDataObject.groupListInitial_I.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.J){
+                
+                constantUserGroupDataObject.groupListInitial_J.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.K) {
+                
+                constantUserGroupDataObject.groupListInitial_K.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.L){
+                
+                constantUserGroupDataObject.groupListInitial_L.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.M) {
+                
+                constantUserGroupDataObject.groupListInitial_M.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.N){
+                
+                constantUserGroupDataObject.groupListInitial_N.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.O) {
+                
+                constantUserGroupDataObject.groupListInitial_O.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.P){
+                
+                constantUserGroupDataObject.groupListInitial_P.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.Q) {
+                
+                constantUserGroupDataObject.groupListInitial_Q.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.R) {
+                
+                constantUserGroupDataObject.groupListInitial_R.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.S){
+                
+                constantUserGroupDataObject.groupListInitial_S.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.T) {
+                
+                constantUserGroupDataObject.groupListInitial_T.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.U){
+                
+                constantUserGroupDataObject.groupListInitial_U.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.V) {
+                
+                constantUserGroupDataObject.groupListInitial_V.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.W){
+                
+                constantUserGroupDataObject.groupListInitial_W.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.X) {
+                
+                constantUserGroupDataObject.groupListInitial_X.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.Y){
+                
+                constantUserGroupDataObject.groupListInitial_Y.append(userGroupObject)
+                
+            } else if userGroupObject.groupName.hasPrefix(LetterConstants.Z) {
+                
+                constantUserGroupDataObject.groupListInitial_Z.append(userGroupObject)
+                
+            }
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_A.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.A] = constantUserGroupDataObject.groupListInitial_A
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_B.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.B] = constantUserGroupDataObject.groupListInitial_B
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_C.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.C] = constantUserGroupDataObject.groupListInitial_C
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_D.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.D] = constantUserGroupDataObject.groupListInitial_D
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_E.count > 0 {
+            
+            print("e count : \(constantUserGroupDataObject.groupListInitial_E.count)")
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.E] = constantUserGroupDataObject.groupListInitial_E
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_F.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.F] = constantUserGroupDataObject.groupListInitial_F
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_G.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.G] = constantUserGroupDataObject.groupListInitial_G
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_H.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.H] = constantUserGroupDataObject.groupListInitial_H
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_I.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.I] = constantUserGroupDataObject.groupListInitial_I
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_J.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.J] = constantUserGroupDataObject.groupListInitial_J
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_K.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.K] = constantUserGroupDataObject.groupListInitial_K
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_L.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.L] = constantUserGroupDataObject.groupListInitial_L
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_M.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.M] = constantUserGroupDataObject.groupListInitial_M
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_N.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.N] = constantUserGroupDataObject.groupListInitial_N
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_O.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.O] = constantUserGroupDataObject.groupListInitial_O
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_P.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.P] = constantUserGroupDataObject.groupListInitial_P
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_Q.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.Q] = constantUserGroupDataObject.groupListInitial_Q
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_R.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.R] = constantUserGroupDataObject.groupListInitial_R
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_S.count > 0 {
+            
+            print("s count : \(constantUserGroupDataObject.groupListInitial_S.count)")
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.S] = constantUserGroupDataObject.groupListInitial_S
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_T.count > 0 {
+            
+            print("t count : \(constantUserGroupDataObject.groupListInitial_T.count)")
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.T] = constantUserGroupDataObject.groupListInitial_T
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_U.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.U] = constantUserGroupDataObject.groupListInitial_U
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_V.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.V] = constantUserGroupDataObject.groupListInitial_V
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_W.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.W] = constantUserGroupDataObject.groupListInitial_W
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_X.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.X] = constantUserGroupDataObject.groupListInitial_X
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_Y.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.Y] = constantUserGroupDataObject.groupListInitial_Y
+            
+        }
+        
+        if constantUserGroupDataObject.groupListInitial_Z.count > 0 {
+            
+            constantUserGroupDataObject.sectionDictionaryForGroups[LetterConstants.Z] = constantUserGroupDataObject.groupListInitial_Z
+            
+        }
+        
+        constantUserGroupDataObject.keyData = Array(constantUserGroupDataObject.sectionDictionaryForGroups.keys).sorted()
         
     }
     
+    func calculateNumberOfSectionsForGroups(inputSectionValue : Int) -> Int {
+        
+        if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.A {
+            
+            return constantUserGroupDataObject.groupListInitial_A.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.B {
+            
+            return constantUserGroupDataObject.groupListInitial_B.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.C {
+            
+            return constantUserGroupDataObject.groupListInitial_C.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.D {
+            
+            return constantUserGroupDataObject.groupListInitial_D.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.E {
+            
+            print("constantUserGroupDataObject.groupListInitial_E.count : \(constantUserGroupDataObject.groupListInitial_E.count)")
+            return constantUserGroupDataObject.groupListInitial_E.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.F {
+            
+            return constantUserGroupDataObject.groupListInitial_F.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.G {
+            
+            return constantUserGroupDataObject.groupListInitial_G.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.H {
+            
+            return constantUserGroupDataObject.groupListInitial_H.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.I {
+            
+            return constantUserGroupDataObject.groupListInitial_I.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.J {
+            
+            return constantUserGroupDataObject.groupListInitial_J.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.K {
+            
+            return constantUserGroupDataObject.groupListInitial_K.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.L {
+            
+            return constantUserGroupDataObject.groupListInitial_L.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.M {
+            
+            return constantUserGroupDataObject.groupListInitial_M.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.N {
+            
+            return constantUserGroupDataObject.groupListInitial_N.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.O {
+            
+            return constantUserGroupDataObject.groupListInitial_O.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.P {
+            
+            return constantUserGroupDataObject.groupListInitial_P.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.Q {
+            
+            return constantUserGroupDataObject.groupListInitial_Q.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.R {
+            
+            return constantUserGroupDataObject.groupListInitial_R.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.S {
+            
+            return constantUserGroupDataObject.groupListInitial_S.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.T {
+            
+            return constantUserGroupDataObject.groupListInitial_T.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.U {
+            
+            return constantUserGroupDataObject.groupListInitial_U.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.V {
+            
+            return constantUserGroupDataObject.groupListInitial_V.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.W {
+            
+            return constantUserGroupDataObject.groupListInitial_W.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.X {
+            
+            return constantUserGroupDataObject.groupListInitial_X.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.Y {
+            
+            return constantUserGroupDataObject.groupListInitial_Y.count
+            
+        } else if constantUserGroupDataObject.keyData[inputSectionValue] == LetterConstants.Z {
+            
+            return constantUserGroupDataObject.groupListInitial_Z.count
+            
+        } else {
+            
+            return 0
+            
+        }
+        
+    }
     
-    
-    
-    
+    func arrangeSectionDataForGroupSegment(inputIndexPath : IndexPath) -> Group {
+        
+        if inputIndexPath.section == 0 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+            
+        } else if inputIndexPath.section == 1 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 2 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 3 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 4 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 5 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 6 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 7 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 8 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 9 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 10 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 11 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 12 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 13 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 14 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 15 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 16 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 17 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 18 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 19 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 20 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 21 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 22 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 23 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 24 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 25 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else if inputIndexPath.section == 26 {
+            
+            return constantUserGroupDataObject.sectionDictionaryForGroups[constantUserGroupDataObject.keyData[inputIndexPath.section]]![inputIndexPath.row]
+            
+        } else {
+            
+            return Group()
+            
+        }
+        
+    }
     
     
     

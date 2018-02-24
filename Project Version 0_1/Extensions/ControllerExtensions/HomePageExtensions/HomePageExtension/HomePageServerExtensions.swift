@@ -172,61 +172,13 @@ extension HomePageViewController {
         
     }
     
-    func getUserGroupData(inputGroupID : String) {
+    /*
+        getting group data from firebase
+     
+     */
+    func getUserAllGroupList(completion : @escaping (_ result: Bool) -> Void) {
         
-        print("getUserGroupData starts")
-        print("databaseReferenceObject : \(databaseReferenceObject)")
-        print("inputGroupID : \(inputGroupID)")
-        
-        let currentUserID = RequeiredUserData.getCurrentUserID()._currentUserID
-        
-        print("currentUseID : \(currentUserID)")
-        
-        let groupDataReference = databaseReferenceObject.child(FirebaseModels.Groups.childGroups).child(inputGroupID)
-        
-        print("groupDataReference : \(groupDataReference)")
-        
-        groupDataReference.observe(.value) { (dataSnapShot) in
-            
-            if !dataSnapShot.exists() {
-                
-                print("groupDataNotExists")
-                
-                userGroupDataFromFirebase.isGroupDataExists = false
-                
-            }
-            
-            print("datasnapshot : \(dataSnapShot)")
-            
-            if let snapDictionary = dataSnapShot.value as? NSDictionary {
-                
-                print("snapDictionary : \(snapDictionary)")
-                
-                let tempGroupData = Group(dataDictionary: snapDictionary as! [String : Any])
-                
-                userGroupDataFromFirebase = tempGroupData
-                
-                print("userGroupDataFromFirebase : \(userGroupDataFromFirebase.groupName)")
-                print("userGroupDataFromFirebase : \(userGroupDataFromFirebase.adminUserID)")
-                
-                for item in userGroupDataFromFirebase.groupMembers {
-                    
-                    print("--> : \(item.userFriendChildData.userName)")
-                    print("--> : \(item.userFriendChildData.userImageUrl)")
-                    print("--> : \(item.userID)")
-                    
-                }
-                
-            }
-            
-        }
-        
-    }
-    
-    func getUserGroupList(completion : @escaping (_ result: Bool) -> Void) {
-        
-        print("getUserGroupList starts")
-        
+        print("getUserAllGroupList starts")
         print("databaseReferenceObject : \(databaseReferenceObject)")
         
         let userGroupListReference = databaseReferenceObject.child(FirebaseModels.UserGroups.childUserGroups).child(RequeiredUserData.getCurrentUserID()._currentUserID)
@@ -235,15 +187,13 @@ extension HomePageViewController {
         
         userGroupListReference.observe(.value) { (datasnapshot) in
             
-//            print("datasnapshot : \(datasnapshot)")
-            
             if !datasnapshot.exists() {
                 
                 return
                 
             }
             
-            constantUserGroupDetailedList.userID = datasnapshot.key
+            constantUserGroupDataObject.user.setUserID(inputUserID: datasnapshot.key)
             
             if let datasnapshotValueDictionary = datasnapshot.value as? NSDictionary {
                 
@@ -253,55 +203,123 @@ extension HomePageViewController {
                     
                     counter += 1
                     
-                    if let itemString = item.key as? String {
+                    let tempGroupObject = Group()
+                    
+                    if let itemValue = item.value as? Int {
                         
-                        let tempGroupObject = Group()
-                        
-                        tempGroupObject.groupID = itemString
-                        constantUserGroupDetailedList.groupList.append(tempGroupObject)
-                        
-                        print("item : \(counter), tempGroupObject.groupID : \(tempGroupObject.groupID)")
+                        tempGroupObject.isGroupActive = Bool(truncating: itemValue as NSNumber)
                         
                     }
+                    
+                    if let itemString = item.key as? String {
+                        
+                        tempGroupObject.groupID = itemString
+                        
+                    }
+                    
+                    constantUserGroupDataObject.userGroupList.append(tempGroupObject)
+                    
+                    print("item : \(counter), tempGroupObject.groupID : \(tempGroupObject.groupID)")
+                    print("item : \(counter), tempGroupObject.isGroupActive : \(tempGroupObject.isGroupActive)")
+                    
                 }
                 
             }
             
             completion(true)
         }
-        
-        
     }
     
-    
+    func getUserGroupData(inputGroupData : Group) {
+        
+        print("getUserGroupData starts")
+        print("databaseReferenceObject : \(databaseReferenceObject)")
+        print("groupID : \(inputGroupData.groupID)")
+        
+        let currentUserID = RequeiredUserData.getCurrentUserID()._currentUserID
+        
+        print("currentUseID : \(currentUserID)")
+        
+        let groupDataReference = databaseReferenceObject.child(FirebaseModels.Groups.childGroups).child(inputGroupData.groupID)
+        
+        print("groupDataReference : \(groupDataReference)")
+        
+        groupDataReference.observe(.value) { (dataSnapShot) in
+            
+            if !dataSnapShot.exists() {
+                
+                print("groupDataNotExists")
+                    
+            }
+            
+            print("datasnapshot : \(dataSnapShot)")
+            
+            if let snapDictionary = dataSnapShot.value as? NSDictionary {
+                
+                print("snapDictionary : \(snapDictionary)")
+                constantUserGroupDataObject.userGroupSortedDictionary[inputGroupData.groupID]?.setParsedDataToCurrenctObject(dataDictionary: snapDictionary as! [String : Any])
+                
+                print("baslıyor..........")
+                
+                print("-> \(constantUserGroupDataObject.userGroupSortedDictionary[inputGroupData.groupID]?.groupID)")
+                print("-> \(constantUserGroupDataObject.userGroupSortedDictionary[inputGroupData.groupID]?.groupName)")
+                print("-> \(constantUserGroupDataObject.userGroupSortedDictionary[inputGroupData.groupID]?.groupMembers.count)")
+                
+                for item in (constantUserGroupDataObject.userGroupSortedDictionary[inputGroupData.groupID]?.groupMembers)! {
+                    
+                    print("starts")
+                    
+                    print("---> : \(item.userFriendChildData.userName)")
+                    print("---> : \(item.userFriendChildData.userImageUrl)")
+                    
+                    print("ends")
+                
+                }
+                
+                
+                print("bitiyor..........")
+                
+            }
+        }
+    }
+
     func startGettingGroupDataProcess() {
         
         print("startGettingGroupDataProcess startss")
         
-        getUserGroupList { (result) in
+        getUserAllGroupList { (result) in
             
             if result {
                 
                 print("listeyi almayı bitirdik sonra yazdırdık")
                 print("let's get group detailed data")
                 
-                print("total group list count : \(constantUserGroupDetailedList.groupList.count)")
+                print("total group list count : \(constantUserGroupDataObject.userGroupList.count)")
                 
-                for item in constantUserGroupDetailedList.groupList {
+                var x = 0
+                
+                constantUserGroupDataObject.sortUserGroupList()
+                constantUserGroupDataObject.loadSortedDictionary()
+                
+                for item in constantUserGroupDataObject.userGroupSortedList {
                     
-                    print("item.groupID : \(item.groupID)")
-                    
-                    self.getUserGroupData(inputGroupID: item.groupID)
-                    
+                    if (constantUserGroupDataObject.userGroupSortedDictionary[item.groupID]?.isGroupActive)! {
+                        
+                        print("item.groupID : \(item.groupID)")
+                        print("item.isGroupActive : \(item.isGroupActive)")
+                        
+                        if item.isGroupActive {
+                            
+                            x += 1
+                            print("x : \(x)")
+                            self.getUserGroupData(inputGroupData: item)
+                            
+                        }
+                    }
                 }
             }
-            
         }
-        
-        
-        
     }
-    
 }
 
 

@@ -42,6 +42,8 @@ class ContactsNewViewController: UIViewController {
         print("ContactsNewViewController viewDidLoad starts")
         
         createSectionsForFriendList()
+        createSectionsForGroups()
+        
         setSearhBarProperties()
         setTotalFriendCount()
         
@@ -97,6 +99,9 @@ class ContactsNewViewController: UIViewController {
         nextButtonProcessOnContactViewController()
         
     }
+    
+
+    
     
 }
 
