@@ -100,6 +100,7 @@ class GroupCreation2ViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func backButtonClicked(_ sender: Any) {
         
         friendsData.userSelectedFriendsCollectionViewData.removeAll()
+        
         for item in friendsData.userFriendsDictionarySorted {
             
             friendSelectedDictionary[item.userID] = false

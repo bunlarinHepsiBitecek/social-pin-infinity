@@ -13,6 +13,7 @@ struct TableViewConstants {
     struct CellConstants {
         
         static let friendsCell = "friendCell"
+        static let groupsCell = "groupsCell"
         
     }
     

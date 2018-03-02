@@ -8,6 +8,7 @@
 
 import UIKit
 
+/*
 extension ContactsNewViewController : UITableViewDelegate, UITableViewDataSource {
     
     // tableview row height
@@ -47,7 +48,6 @@ extension ContactsNewViewController : UITableViewDelegate, UITableViewDataSource
         
         switch returnSegmentedControlChoise() {
         case .friends, .groupCreation:
-            
             print("swicth statement : friend")
             
             return arrangeSectionsInitialsBased(inputIndexPath: inputIndexPath)
@@ -94,7 +94,7 @@ extension ContactsNewViewController : UITableViewDelegate, UITableViewDataSource
         cell.friendName.text = cell.friend.userFriendChildData.userName
         
         switch returnSegmentedControlChoise() {
-        case .friends:
+        case .friends, .groupCreation:
             
             if friendSelectedDictionary[cell.friend.userID]! {
                 
@@ -348,4 +348,4 @@ extension ContactsNewViewController : UITableViewDelegate, UITableViewDataSource
     
     
     
-}
+}*/

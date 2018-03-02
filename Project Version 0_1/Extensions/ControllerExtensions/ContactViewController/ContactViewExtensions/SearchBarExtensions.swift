@@ -41,7 +41,7 @@ extension ContactsNewViewController : UISearchBarDelegate {
             
             searchBar.setShowsCancelButton(true, animated: true)
             
-            setfriendsTableViewScrolling(inputValue: false)
+            containerViewForFriendsTab?.setfriendsTableViewScrolling(inputValue: false)
             
             boolArray.removeAll()
             
@@ -49,7 +49,8 @@ extension ContactsNewViewController : UISearchBarDelegate {
             
             print("search is empty now")
             
-            setfriendsTableViewScrolling(inputValue: true)
+            containerViewForFriendsTab?.setfriendsTableViewScrolling(inputValue: true)
+            
             isSearching = false
             boolArray = Array(repeating: Array(repeating: false, count: friendsData.userFriendsDictionary.count), count: 30)
             
@@ -57,7 +58,9 @@ extension ContactsNewViewController : UISearchBarDelegate {
             
         }
         
-        self.friendsTableView.reloadData()
+        containerViewForFriendsTab?.isSearching = isSearching
+        
+        containerViewForFriendsTab?.tableViewFriends.reloadData()
         
     }
     
@@ -66,13 +69,18 @@ extension ContactsNewViewController : UISearchBarDelegate {
         print("searchBarCancelButtonClicked starts")
         
         searchBar.text?.removeAll()
-        setfriendsTableViewScrolling(inputValue: true)
+        
+        containerViewForFriendsTab?.setfriendsTableViewScrolling(inputValue: true)
+        
         isSearching = false
         boolArray = Array(repeating: Array(repeating: false, count: friendsData.userFriendsDictionary.count), count: 30)
         
         searchBar.setShowsCancelButton(false, animated: true)
         
-        self.friendsTableView.reloadData()
+        containerViewForFriendsTab?.isSearching = isSearching
+        containerViewForFriendsTab?.tableViewFriends.reloadData()
+        
+        //self.friendsTableView.reloadData()
         
     }
     

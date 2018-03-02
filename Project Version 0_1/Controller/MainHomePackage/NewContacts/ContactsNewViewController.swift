@@ -11,14 +11,19 @@ import Firebase
 
 class ContactsNewViewController: UIViewController {
     
-    @IBOutlet var friendsTableView: UITableView!
     @IBOutlet var segmentedChoiceButton: UISegmentedControl!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var totalFriendCount: UILabel!
     @IBOutlet var selectedFriendCount: UILabel!
     @IBOutlet var slachCharacter: UILabel!
-    @IBOutlet var selectedFriendsCollectionView: UICollectionView!
+    @IBOutlet var containerViewObjectForFriends: UIView!
+    
+    @IBOutlet var containerViewObjectForGroups: UIView!
+    
+    // let's create a child view controller object
+    var containerViewForFriendsTab : ContainerFriendsTableViewController?
+    
     
     //var friendSelectedDictionary = NSDictionary() as! [String : Bool]
     //var selectedFriendArray = [UserFriend]()
@@ -41,6 +46,12 @@ class ContactsNewViewController: UIViewController {
 
         print("ContactsNewViewController viewDidLoad starts")
         
+        setSearhBarProperties()
+        setTotalFriendCount()
+        
+        setInitialSegmentPropertiesForContainerViewPresentations()
+        
+        /*
         createSectionsForFriendList()
         createSectionsForGroups()
         
@@ -54,7 +65,21 @@ class ContactsNewViewController: UIViewController {
         setCollectionViewHiddenValue(inputBooleanValue: true)
         arrangeFrameSizeOfTableView()
         notificationCenterGettingInformedFromGroupCreation()
+        */
         
+        notificationCenterGettingInformedFromGroupCreation()
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "SegueForFriends" {
+            
+            containerViewForFriendsTab = segue.destination as? ContainerFriendsTableViewController
+            containerViewForFriendsTab?.isSearching = false
+            containerViewForFriendsTab?.contactsNewViewControllerObject = self
+            
+        }
         
     }
     
@@ -74,6 +99,8 @@ class ContactsNewViewController: UIViewController {
     @IBAction func segmentedChoiceButtonTapped(_ sender: Any) {
         
         changeNextButtonTextValue()
+        
+        setInitialSegmentPropertiesForContainerViewPresentations()
         
     }
 

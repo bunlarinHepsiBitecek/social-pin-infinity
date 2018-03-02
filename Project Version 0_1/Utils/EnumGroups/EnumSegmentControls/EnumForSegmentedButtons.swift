@@ -15,3 +15,10 @@ enum EnumSegmentedChoise {
     case groupCreation
     case nothing
 }
+
+enum EnumContainerView {
+    
+    case containerViewFriend
+    case containerViewGroup
+
+}

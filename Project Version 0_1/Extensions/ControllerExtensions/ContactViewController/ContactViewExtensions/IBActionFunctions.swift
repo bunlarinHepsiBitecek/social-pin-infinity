@@ -89,7 +89,6 @@ extension ContactsNewViewController {
             
         case .nothing:
             
-            
             nextButton.changePlainButtonFontAndTitle(inputStringTitle: "Add", inputFontSize: 22.0)
             
         }

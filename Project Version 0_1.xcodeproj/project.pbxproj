@@ -36,6 +36,14 @@
 		A729EA89200B83C40051AC92 /* SegueEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA88200B83C40051AC92 /* SegueEnums.swift */; };
 		A729EA8B200D3E300051AC92 /* PinDataSaveProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729EA8A200D3E300051AC92 /* PinDataSaveProcess.swift */; };
 		A72A2497201E2DD900500B2F /* check-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = A72A2496201E2DD900500B2F /* check-mark.png */; };
+		A72AAC6E204590130081DF23 /* ContainerFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC6D204590130081DF23 /* ContainerFriendsTableViewController.swift */; };
+		A72AAC71204595890081DF23 /* TableViewExtensionFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC70204595890081DF23 /* TableViewExtensionFriend.swift */; };
+		A72AAC732046BECD0081DF23 /* CollectionViewExtensionFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC722046BECD0081DF23 /* CollectionViewExtensionFriend.swift */; };
+		A72AAC752046EC3C0081DF23 /* ContainerGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC742046EC3C0081DF23 /* ContainerGroupsTableViewController.swift */; };
+		A72AAC792046ECA50081DF23 /* TableViewExtensionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC782046ECA50081DF23 /* TableViewExtensionGroup.swift */; };
+		A72AAC7D204753F10081DF23 /* GeneralPurposeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC7C204753F10081DF23 /* GeneralPurposeFunctions.swift */; };
+		A72AAC812048C6E60081DF23 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC802048C6E60081DF23 /* GroupTableViewCell.swift */; };
+		A72AAC832048D0CF0081DF23 /* yarroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC822048D0CF0081DF23 /* yarroTableViewCell.swift */; };
 		A72AE37E1FFE1DCE00657A4D /* party.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE37C1FFE1DCD00657A4D /* party.png */; };
 		A72AE37F1FFE1DCE00657A4D /* group-of-men.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE37D1FFE1DCE00657A4D /* group-of-men.png */; };
 		A72AE3811FFE5C3C00657A4D /* guidance_step4_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */; };
@@ -268,6 +276,14 @@
 		A729EA88200B83C40051AC92 /* SegueEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueEnums.swift; sourceTree = "<group>"; };
 		A729EA8A200D3E300051AC92 /* PinDataSaveProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataSaveProcess.swift; sourceTree = "<group>"; };
 		A72A2496201E2DD900500B2F /* check-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-mark.png"; sourceTree = "<group>"; };
+		A72AAC6D204590130081DF23 /* ContainerFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerFriendsTableViewController.swift; sourceTree = "<group>"; };
+		A72AAC70204595890081DF23 /* TableViewExtensionFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensionFriend.swift; sourceTree = "<group>"; };
+		A72AAC722046BECD0081DF23 /* CollectionViewExtensionFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtensionFriend.swift; sourceTree = "<group>"; };
+		A72AAC742046EC3C0081DF23 /* ContainerGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerGroupsTableViewController.swift; sourceTree = "<group>"; };
+		A72AAC782046ECA50081DF23 /* TableViewExtensionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensionGroup.swift; sourceTree = "<group>"; };
+		A72AAC7C204753F10081DF23 /* GeneralPurposeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPurposeFunctions.swift; sourceTree = "<group>"; };
+		A72AAC802048C6E60081DF23 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		A72AAC822048D0CF0081DF23 /* yarroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yarroTableViewCell.swift; sourceTree = "<group>"; };
 		A72AE37C1FFE1DCD00657A4D /* party.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = party.png; sourceTree = "<group>"; };
 		A72AE37D1FFE1DCE00657A4D /* group-of-men.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group-of-men.png"; sourceTree = "<group>"; };
 		A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guidance_step4_ViewController.swift; sourceTree = "<group>"; };
@@ -519,6 +535,7 @@
 		A726DA5020224FC7009C2D1A /* NewContacts */ = {
 			isa = PBXGroup;
 			children = (
+				A72AAC6C20458FEA0081DF23 /* ContanierView */,
 				A726DA53202254D5009C2D1A /* ContactsNewViewController.swift */,
 				A7A58CF02032A44C00BDBCE8 /* GroupCreation2ViewController.swift */,
 				A72CECA62038DAF000480457 /* PhotoPickerViewController.swift */,
@@ -543,6 +560,8 @@
 				A77E7B2E203D1EBF00E26CC3 /* PhotoLibraryScrollViewTableViewCell.swift */,
 				A77E7B30203D1EE800E26CC3 /* PhotoLibraryCollectionViewTableViewCell.swift */,
 				A77E7B32203EE54300E26CC3 /* ScrollableImage.swift */,
+				A72AAC802048C6E60081DF23 /* GroupTableViewCell.swift */,
+				A72AAC822048D0CF0081DF23 /* yarroTableViewCell.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -564,6 +583,63 @@
 				A75E3F5B1FE5ACCA007165DE /* LoginPackage */,
 			);
 			path = ControllerExtensions;
+			sourceTree = "<group>";
+		};
+		A72AAC6C20458FEA0081DF23 /* ContanierView */ = {
+			isa = PBXGroup;
+			children = (
+				A72AAC6D204590130081DF23 /* ContainerFriendsTableViewController.swift */,
+				A72AAC742046EC3C0081DF23 /* ContainerGroupsTableViewController.swift */,
+			);
+			path = ContanierView;
+			sourceTree = "<group>";
+		};
+		A72AAC6F2045956D0081DF23 /* ContainerViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A72AAC772046EC860081DF23 /* ContainerForGroups */,
+				A72AAC762046EC6C0081DF23 /* ContainerForFriends */,
+			);
+			path = ContainerViewExtensions;
+			sourceTree = "<group>";
+		};
+		A72AAC762046EC6C0081DF23 /* ContainerForFriends */ = {
+			isa = PBXGroup;
+			children = (
+				A72AAC70204595890081DF23 /* TableViewExtensionFriend.swift */,
+				A72AAC722046BECD0081DF23 /* CollectionViewExtensionFriend.swift */,
+				A72AAC7C204753F10081DF23 /* GeneralPurposeFunctions.swift */,
+			);
+			path = ContainerForFriends;
+			sourceTree = "<group>";
+		};
+		A72AAC772046EC860081DF23 /* ContainerForGroups */ = {
+			isa = PBXGroup;
+			children = (
+				A72AAC782046ECA50081DF23 /* TableViewExtensionGroup.swift */,
+			);
+			path = ContainerForGroups;
+			sourceTree = "<group>";
+		};
+		A72AAC7E2048C1F70081DF23 /* TemporaryUsefulClasses */ = {
+			isa = PBXGroup;
+			children = (
+				A7933E4C204166A800610489 /* CollectionViewExtension.swift */,
+				A7933E4A204165A900610489 /* TableViewExtensions.swift */,
+				A726DA582024F860009C2D1A /* PrepareSectionBasedFriendsList.swift */,
+			);
+			path = TemporaryUsefulClasses;
+			sourceTree = "<group>";
+		};
+		A72AAC7F2048C2A40081DF23 /* ContactViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A7387039203AFEF000436C87 /* PhotoPicker3Delegate.swift */,
+				A728D74820415AA0002CB5E7 /* SearchBarExtensions.swift */,
+				A728D74A20415B3B002CB5E7 /* ContactViewFunctions.swift */,
+				A7E499FF202F1D1100B1CB24 /* IBActionFunctions.swift */,
+			);
+			path = ContactViewExtensions;
 			sourceTree = "<group>";
 		};
 		A72AE3862000E3FB00657A4D /* MainHomePackage */ = {
@@ -1296,13 +1372,9 @@
 		A79F780B201BC7F400A20679 /* ContactViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A726DA582024F860009C2D1A /* PrepareSectionBasedFriendsList.swift */,
-				A7E499FF202F1D1100B1CB24 /* IBActionFunctions.swift */,
-				A7387039203AFEF000436C87 /* PhotoPicker3Delegate.swift */,
-				A728D74820415AA0002CB5E7 /* SearchBarExtensions.swift */,
-				A728D74A20415B3B002CB5E7 /* ContactViewFunctions.swift */,
-				A7933E4A204165A900610489 /* TableViewExtensions.swift */,
-				A7933E4C204166A800610489 /* CollectionViewExtension.swift */,
+				A72AAC7F2048C2A40081DF23 /* ContactViewExtensions */,
+				A72AAC7E2048C1F70081DF23 /* TemporaryUsefulClasses */,
+				A72AAC6F2045956D0081DF23 /* ContainerViewExtensions */,
 			);
 			path = ContactViewController;
 			sourceTree = "<group>";
@@ -1717,6 +1789,7 @@
 				A72D9EE01FF5B1D3001C2098 /* AlertWarningConstants.swift in Sources */,
 				A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */,
 				A72D2C6D1FD98594008BE2D2 /* KeyChainConstants.swift in Sources */,
+				A72AAC832048D0CF0081DF23 /* yarroTableViewCell.swift in Sources */,
 				A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */,
 				A72705C71FC8A7E2006C2504 /* AddImageViewController.swift in Sources */,
 				A729EA85200B740B0051AC92 /* AlertProcessing.swift in Sources */,
@@ -1755,6 +1828,7 @@
 				A75F40221FC0D99D00495228 /* LoginViewController.swift in Sources */,
 				A75F40351FC238B600495228 /* StartPageViewController.swift in Sources */,
 				A72D9EE31FF63744001C2098 /* MediaProperties.swift in Sources */,
+				A72AAC792046ECA50081DF23 /* TableViewExtensionGroup.swift in Sources */,
 				A778D9E61FC9BC4900F38438 /* UserAttributeNames.swift in Sources */,
 				A75CE09B1FF2B023004703F5 /* PersonAnnotation.swift in Sources */,
 				A72CAA921FD689D100308DED /* EntranceViewControllerExtention.swift in Sources */,
@@ -1766,6 +1840,7 @@
 				A7933E4B204165A900610489 /* TableViewExtensions.swift in Sources */,
 				A7E499FC202B65FC00B1CB24 /* UIImageCacheProcess.swift in Sources */,
 				A796807D2012A862006BAE8D /* UserFriendChildData.swift in Sources */,
+				A72AAC752046EC3C0081DF23 /* ContainerGroupsTableViewController.swift in Sources */,
 				A72705C51FC8A2A6006C2504 /* User.swift in Sources */,
 				A778D9FA1FC9D5DF00F38438 /* PageItemController.swift in Sources */,
 				AD7FB67E1FF80FE4001AD14B /* SelectedAnnotationOperation.swift in Sources */,
@@ -1793,6 +1868,7 @@
 				A72705CE1FC91E9D006C2504 /* PickUserProfilePictureFunctions.swift in Sources */,
 				A75E3F471FE29FE4007165DE /* FTConstants.swift in Sources */,
 				AD48E14920012BF90042020C /* ShowPinsOnMapViewController.swift in Sources */,
+				A72AAC71204595890081DF23 /* TableViewExtensionFriend.swift in Sources */,
 				A775EDC92039C123007231FF /* PhotoPicker2ViewController.swift in Sources */,
 				A7B1E9E6203AF52800536E50 /* PhotoPicker3ViewController.swift in Sources */,
 				A72D2C751FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift in Sources */,
@@ -1821,6 +1897,8 @@
 				A726DA54202254D5009C2D1A /* ContactsNewViewController.swift in Sources */,
 				A7DD2E391FD2DC110009322E /* Information.swift in Sources */,
 				AD48E145200120970042020C /* NotificationSent.swift in Sources */,
+				A72AAC732046BECD0081DF23 /* CollectionViewExtensionFriend.swift in Sources */,
+				A72AAC7D204753F10081DF23 /* GeneralPurposeFunctions.swift in Sources */,
 				A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */,
 				A77E7B2D203C52B200E26CC3 /* PhotoPicker4ViewController.swift in Sources */,
 				A72D9EDE1FF5066D001C2098 /* DefaultImageConstantNames.swift in Sources */,
@@ -1844,7 +1922,9 @@
 				A7A58CF12032A44C00BDBCE8 /* GroupCreation2ViewController.swift in Sources */,
 				A79F780F201BE18500A20679 /* CacheConstants.swift in Sources */,
 				A72705C11FC885B8006C2504 /* MainPageViewController.swift in Sources */,
+				A72AAC812048C6E60081DF23 /* GroupTableViewCell.swift in Sources */,
 				A784306F200FA6BF000FF263 /* UserForPrototypeCell.swift in Sources */,
+				A72AAC6E204590130081DF23 /* ContainerFriendsTableViewController.swift in Sources */,
 				A728D74B20415B3B002CB5E7 /* ContactViewFunctions.swift in Sources */,
 				A72AFBE01FCDE8D70018254E /* ProjectSettingsConstants.swift in Sources */,
 				A75F40261FC0DBCC00495228 /* EntranceViewController.swift in Sources */,

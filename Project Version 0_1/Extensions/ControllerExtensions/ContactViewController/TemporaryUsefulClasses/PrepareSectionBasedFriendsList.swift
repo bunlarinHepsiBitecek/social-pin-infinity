@@ -8,6 +8,7 @@
 
 import UIKit
 
+/*
 extension ContactsNewViewController {
     
     func createSectionsForFriendList() {
@@ -547,6 +548,7 @@ extension ContactsNewViewController {
         
     }
     
+    /*
     func closeSelectedFriendCollectionView() {
         
         if isCollectionViewOpen {
@@ -567,7 +569,7 @@ extension ContactsNewViewController {
             
         }
         
-    }
+    }*/
     
     func selectedFriendCollectionViewManagement() {
         
@@ -1125,4 +1127,4 @@ extension ContactsNewViewController {
     
     
     
-}
+}*/
