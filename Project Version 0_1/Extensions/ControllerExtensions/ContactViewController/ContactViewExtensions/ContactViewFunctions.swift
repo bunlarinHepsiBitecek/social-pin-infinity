@@ -96,6 +96,7 @@ extension ContactsNewViewController {
         
     }
     
+    
     func setInitialSegmentPropertiesForContainerViewPresentations() {
         
         switch returnSegmentedControlChoise() {

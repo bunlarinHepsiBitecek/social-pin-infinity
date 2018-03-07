@@ -14,9 +14,9 @@ extension UIImageView {
         function below is used for setting cached images for friendlist or getting data from firebase if user
         reopen application and load data async to cache for further uses
      */
-    func setImagesFromCacheOrFirebase(_ urlString: String) {
+    func setImagesFromCacheOrFirebaseForFriend(_ urlString: String) {
         
-        print("setImagesFromCacheOrFirebase starts")
+        print("setImagesFromCacheOrFirebaseForFriend starts")
         
         self.image = nil
         
@@ -60,6 +60,121 @@ extension UIImageView {
                 task.resume()
             }
         }
+    }
+    
+    func setImagesFromCacheOrFirebaseForGroup(_ urlString: String) {
+        
+        print("setImagesFromCacheOrFirebaseForGroup starts")
+        
+        self.image = nil
+        
+        if let tempImage = cachedGroupImages.object(forKey: urlString as NSString) {
+            
+            image = tempImage
+            
+        } else {
+            
+            if !urlString.isEmpty {
+                
+                let url = URL(string: urlString)
+                
+                let request = URLRequest(url: url!)
+                
+                let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, urlResponse, error) in
+                    
+                    if error != nil {
+                        
+                        if let errorMessage = error as NSError? {
+                            
+                            print("errorMessage : \(errorMessage.localizedDescription)")
+                            
+                        }
+                        
+                    } else {
+                        
+                        if let image = UIImage(data: data!) {
+                            
+                            DispatchQueue.main.async(execute: {
+                                
+                                cachedGroupImages.setObject(image, forKey: urlString as NSString)
+                                
+                                self.image = image
+                                
+                            })
+                        }
+                    }
+                })
+                
+                task.resume()
+            }
+        }
+    }
+    
+    func setImagesFromCacheOrFirebaseForGroupMembers(_ urlString: String) {
+        
+        print("setImagesFromCacheOrFirebaseForGroupMembers starts")
+        
+        self.image = nil
+        
+        if let tempImage = cachedGroupMemberImages.object(forKey: urlString as NSString) {
+            
+            image = tempImage
+            
+        } else {
+            
+            if !urlString.isEmpty {
+                
+                let url = URL(string: urlString)
+                
+                let request = URLRequest(url: url!)
+                
+                let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, urlResponse, error) in
+                    
+                    if error != nil {
+                        
+                        if let errorMessage = error as NSError? {
+                            
+                            print("errorMessage : \(errorMessage.localizedDescription)")
+                            
+                        }
+                        
+                    } else {
+                        
+                        if let image = UIImage(data: data!) {
+                            
+                            DispatchQueue.main.async(execute: {
+                                
+                                cachedGroupMemberImages.setObject(image, forKey: urlString as NSString)
+                                
+                                self.image = image
+                                
+                            })
+                        }
+                    }
+                })
+                
+                task.resume()
+            }
+        }
+    }
+    
+    func setImagesFromCacheOrFirebase(_ urlString: String, inputChannel : EnumCachedImageChoise) {
+        
+        switch inputChannel {
+        case .friends:
+            
+            setImagesFromCacheOrFirebaseForFriend(urlString)
+            
+        case .groups:
+            
+            setImagesFromCacheOrFirebaseForGroup(urlString)
+
+        case .groupMembers:
+            
+            setImagesFromCacheOrFirebaseForGroupMembers(urlString)
+            
+        }
+        
     }
     
     /*

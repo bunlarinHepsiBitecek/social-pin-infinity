@@ -99,7 +99,7 @@ class ContactsNewViewController: UIViewController {
     @IBAction func segmentedChoiceButtonTapped(_ sender: Any) {
         
         changeNextButtonTextValue()
-        
+        changeColorOfTotalSelectedFriendBasedOnSegmentedButtonChoise()
         setInitialSegmentPropertiesForContainerViewPresentations()
         
     }
@@ -114,6 +114,8 @@ class ContactsNewViewController: UIViewController {
         
         friendsData.deleteDataFromInitialBasedFriendLists()
         friendsData.userSelectedFriendsCollectionViewData.removeAll()
+        
+        constantUserGroupDataObject.deleteDataFromInitialBasedGroupLists()
         
         selectedFriendArray.removeAll()
         

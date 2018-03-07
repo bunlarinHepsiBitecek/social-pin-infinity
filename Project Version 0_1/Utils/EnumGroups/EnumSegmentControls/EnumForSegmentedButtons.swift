@@ -22,3 +22,11 @@ enum EnumContainerView {
     case containerViewGroup
 
 }
+
+enum EnumCachedImageChoise {
+    
+    case friends
+    case groups
+    case groupMembers
+    
+}

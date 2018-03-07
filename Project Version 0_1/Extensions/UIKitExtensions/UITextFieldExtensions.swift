@@ -38,6 +38,15 @@ extension UITextField {
         
     }
     
+    func addLeftViewToTextField(_ inputWidthValue : CGFloat) {
+        
+        let padding = UIView(frame: CGRect(x: 0, y: 0, width: inputWidthValue, height: self.frame.size.height))
+        
+        self.leftView = padding
+        self.leftViewMode = .always
+        
+    }
+    
     func hideRightViewButton() {
         
         if let _ =  self.rightView {

@@ -75,21 +75,13 @@ extension ContactsNewViewController {
         print("changeNextButtonTextValue starts")
         
         switch returnSegmentedControlChoise() {
-        case .friends:
+        case .friends, .groups, .nothing:
             
             nextButton.changePlainButtonFontAndTitle(inputStringTitle: "Add", inputFontSize: 22.0)
             
         case .groupCreation:
             
             nextButton.changePlainButtonFontAndTitle(inputStringTitle: "Create Group", inputFontSize: 7.0)
-            
-        case .groups:
-
-            nextButton.changePlainButtonFontAndTitle(inputStringTitle: "Add", inputFontSize: 22.0)
-            
-        case .nothing:
-            
-            nextButton.changePlainButtonFontAndTitle(inputStringTitle: "Add", inputFontSize: 22.0)
             
         }
 
@@ -126,6 +118,44 @@ extension ContactsNewViewController {
             
         }
         
+    }
+    
+    func changeColorOfTotalSelectedFriendBasedOnSegmentedButtonChoise() {
+        
+        switch returnSegmentedControlChoise() {
+        case .friends, .groupCreation, .nothing:
+            
+            encolor()
+            
+        case .groups:
+            
+            decolorize()
+            
+        }
+        
+    }
+    
+    func encolor() {
+        
+        UIView.transition(with: selectedFriendCount, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            
+            self.selectedFriendCount.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            self.totalFriendCount.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            self.slachCharacter.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+        })
+        
+    }
+    
+    func decolorize() {
+        
+        UIView.transition(with: selectedFriendCount, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            
+            self.selectedFriendCount.textColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
+            self.totalFriendCount.textColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
+            self.slachCharacter.textColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
+            
+        })
     }
     
 }

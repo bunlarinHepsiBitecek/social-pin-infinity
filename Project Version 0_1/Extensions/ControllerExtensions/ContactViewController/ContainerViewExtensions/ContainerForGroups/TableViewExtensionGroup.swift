@@ -12,21 +12,39 @@ extension ContainerGroupsTableViewController : UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell : yarroTableViewCell = {
+        print("cellForRowAt starts----------------------------")
+        print("indexPath :\(indexPath)")
+        
+        let cell : GroupTableViewCell = {
             
-            guard let cell = tableViewGroups.dequeueReusableCell(withIdentifier: TableViewConstants.CellConstants.groupsCell) as? yarroTableViewCell else {
+            guard let cell = tableViewGroups.dequeueReusableCell(withIdentifier: CommonConstants.TableViewConstants.CellConstants.groupsCell) as? GroupTableViewCell else {
                 
-                return UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: TableViewConstants.CellConstants.groupsCell) as! yarroTableViewCell
+                return UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: CommonConstants.TableViewConstants.CellConstants.groupsCell) as! GroupTableViewCell
             }
-            return cell as yarroTableViewCell
+            return cell as GroupTableViewCell
         }()
         
         cell.groupObj = constantUserGroupDataObject.arrangeSectionDataForGroupSegment(inputIndexPath: indexPath)
         
         cell.groupName.text = cell.groupObj.groupName
         
-        cell.groupImage.image = UIImage(named: "user.png")
+        cell.groupImage.setImagesFromCacheOrFirebase(cell.groupObj.groupPictureUrl, inputChannel: .groups)
         
+        print("groupObject groupID :\(cell.groupObj.groupID)")
+        print("groupObject groupName :\(cell.groupObj.groupName)")
+        
+        
+        for item in groupObject.groupMembers {
+            
+            print("item :\(item.userFriendChildData.userName)")
+            print("item :\(item.userFriendChildData.userImageUrl)")
+            
+        }
+        
+        
+        cell.accessoryType = .disclosureIndicator
+        
+        print("cellForRowAt ends----------------------------")
         return cell
         
         
@@ -56,5 +74,100 @@ extension ContainerGroupsTableViewController : UITableViewDataSource, UITableVie
         
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        print("group tableview editing is activated")
+        
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let cellAtIndex = tableView.cellForRow(at: indexPath) as! GroupTableViewCell
+        
+        groupObject = cellAtIndex.groupObj
+        
+        print("groupObject groupID :\(groupObject.groupID)")
+        print("groupObject groupName :\(groupObject.groupName)")
+        
+
+        for item in groupObject.groupMembers {
+            
+            print("item :\(item.userFriendChildData.userName)")
+            print("item :\(item.userFriendChildData.userImageUrl)")
+            
+        }
+        
+        
+        
+        print("indexPath.section :\(indexPath.section)")
+        print("indexPath.row :\(indexPath.row)")
+        
+        let delete = UITableViewRowAction(style: .destructive, title: CommonConstants.TableViewEditingStyleButtons.Delete) { (action, indexPath) in
+
+        }
+        
+        
+        
+        let info = UITableViewRowAction(style: .default, title: CommonConstants.TableViewEditingStyleButtons.More) { (action, indexPath) in
+
+            
+            print("ahanda infoya bastim")
+            
+            self.openActionsForGroupInfo()
+            
+            
+        }
+        
+        
+        info.backgroundColor = UIColor.lightGray
+        
+        return [delete, info]
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        print("didselect is activated")
+        print("indexPath :\(indexPath)")
+        
+        let cell = tableView.cellForRow(at: indexPath) as! GroupTableViewCell
+        
+    
+        print("cell groupName :\(cell.groupObj.groupName)")
+        print("cell groupID :\(cell.groupObj.groupID)")
+        print("cell groupMembers.count :\(cell.groupObj.groupMembers.count)")
+        
+        
+        
+    }
+    
+    
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

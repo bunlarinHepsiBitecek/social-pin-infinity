@@ -43,7 +43,7 @@
 		A72AAC792046ECA50081DF23 /* TableViewExtensionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC782046ECA50081DF23 /* TableViewExtensionGroup.swift */; };
 		A72AAC7D204753F10081DF23 /* GeneralPurposeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC7C204753F10081DF23 /* GeneralPurposeFunctions.swift */; };
 		A72AAC812048C6E60081DF23 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC802048C6E60081DF23 /* GroupTableViewCell.swift */; };
-		A72AAC832048D0CF0081DF23 /* yarroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC822048D0CF0081DF23 /* yarroTableViewCell.swift */; };
+		A72AAC8520493D960081DF23 /* ScrollableImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AAC8420493D960081DF23 /* ScrollableImageViewController.swift */; };
 		A72AE37E1FFE1DCE00657A4D /* party.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE37C1FFE1DCD00657A4D /* party.png */; };
 		A72AE37F1FFE1DCE00657A4D /* group-of-men.png in Resources */ = {isa = PBXBuildFile; fileRef = A72AE37D1FFE1DCE00657A4D /* group-of-men.png */; };
 		A72AE3811FFE5C3C00657A4D /* guidance_step4_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */; };
@@ -95,7 +95,15 @@
 		A72D9EDE1FF5066D001C2098 /* DefaultImageConstantNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D9EDD1FF5066D001C2098 /* DefaultImageConstantNames.swift */; };
 		A72D9EE01FF5B1D3001C2098 /* AlertWarningConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D9EDF1FF5B1D3001C2098 /* AlertWarningConstants.swift */; };
 		A72D9EE31FF63744001C2098 /* MediaProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D9EE21FF63744001C2098 /* MediaProperties.swift */; };
+		A72F0BC5204B22EC0091A8B9 /* GroupInfoChangedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72F0BC4204B22EC0091A8B9 /* GroupInfoChangedViewController.swift */; };
+		A72F0BC7204B673E0091A8B9 /* zach-miles-229113-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72F0BC6204B673D0091A8B9 /* zach-miles-229113-unsplash.jpg */; };
 		A733776E1FDE164200E40EAC /* InformationMessageForVerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A733776D1FDE164200E40EAC /* InformationMessageForVerificationController.swift */; };
+		A737FC58204AB267006AD1F6 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737FC57204AB267006AD1F6 /* CommonConstants.swift */; };
+		A737FC5B204AB807006AD1F6 /* CommonFunctionsForGroupContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737FC5A204AB807006AD1F6 /* CommonFunctionsForGroupContainer.swift */; };
+		A737FC5E204AEA66006AD1F6 /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737FC5D204AEA66006AD1F6 /* GroupInfoViewController.swift */; };
+		A737FC61204AEFC3006AD1F6 /* TableViewGroupInfoExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737FC60204AEFC3006AD1F6 /* TableViewGroupInfoExtensions.swift */; };
+		A737FC63204B1215006AD1F6 /* GroupMembersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737FC62204B1215006AD1F6 /* GroupMembersTableViewCell.swift */; };
+		A737FC65204B12F4006AD1F6 /* GroupMemberHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737FC64204B12F4006AD1F6 /* GroupMemberHeaderTableViewCell.swift */; };
 		A73828301FC35DCB003C1827 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738282F1FC35DCB003C1827 /* Validation.swift */; };
 		A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828311FC36379003C1827 /* ConstantCharacters.swift */; };
 		A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828371FC3E196003C1827 /* VerificationViewController.swift */; };
@@ -103,6 +111,7 @@
 		A738703C203AFFF100436C87 /* PhotoLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738703B203AFFF100436C87 /* PhotoLibraryCollectionViewCell.swift */; };
 		A7387040203BC87A00436C87 /* cancel_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = A738703E203BC87900436C87 /* cancel_shadow.png */; };
 		A7387041203BC87A00436C87 /* checked_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = A738703F203BC87900436C87 /* checked_shadow.png */; };
+		A73BC647204E0AF300C5B9A1 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73BC646204E0AF300C5B9A1 /* DetailHeaderView.swift */; };
 		A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7407F031FC4B7C600DAAF44 /* GoogleService-Info.plist */; };
 		A7407F071FC705D000DAAF44 /* ConstanctUserKeyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F061FC705D000DAAF44 /* ConstanctUserKeyValues.swift */; };
 		A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F0A1FC799FA00DAAF44 /* UIButtonExtensions.swift */; };
@@ -283,7 +292,7 @@
 		A72AAC782046ECA50081DF23 /* TableViewExtensionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensionGroup.swift; sourceTree = "<group>"; };
 		A72AAC7C204753F10081DF23 /* GeneralPurposeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPurposeFunctions.swift; sourceTree = "<group>"; };
 		A72AAC802048C6E60081DF23 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
-		A72AAC822048D0CF0081DF23 /* yarroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yarroTableViewCell.swift; sourceTree = "<group>"; };
+		A72AAC8420493D960081DF23 /* ScrollableImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableImageViewController.swift; sourceTree = "<group>"; };
 		A72AE37C1FFE1DCD00657A4D /* party.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = party.png; sourceTree = "<group>"; };
 		A72AE37D1FFE1DCE00657A4D /* group-of-men.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group-of-men.png"; sourceTree = "<group>"; };
 		A72AE3801FFE5C3C00657A4D /* guidance_step4_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guidance_step4_ViewController.swift; sourceTree = "<group>"; };
@@ -336,7 +345,15 @@
 		A72D9EDF1FF5B1D3001C2098 /* AlertWarningConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWarningConstants.swift; sourceTree = "<group>"; };
 		A72D9EE21FF63744001C2098 /* MediaProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaProperties.swift; sourceTree = "<group>"; };
 		A72D9EE51FF790D4001C2098 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg"; sourceTree = "<group>"; };
+		A72F0BC4204B22EC0091A8B9 /* GroupInfoChangedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInfoChangedViewController.swift; sourceTree = "<group>"; };
+		A72F0BC6204B673D0091A8B9 /* zach-miles-229113-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zach-miles-229113-unsplash.jpg"; sourceTree = "<group>"; };
 		A733776D1FDE164200E40EAC /* InformationMessageForVerificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageForVerificationController.swift; sourceTree = "<group>"; };
+		A737FC57204AB267006AD1F6 /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
+		A737FC5A204AB807006AD1F6 /* CommonFunctionsForGroupContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctionsForGroupContainer.swift; sourceTree = "<group>"; };
+		A737FC5D204AEA66006AD1F6 /* GroupInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInfoViewController.swift; sourceTree = "<group>"; };
+		A737FC60204AEFC3006AD1F6 /* TableViewGroupInfoExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewGroupInfoExtensions.swift; sourceTree = "<group>"; };
+		A737FC62204B1215006AD1F6 /* GroupMembersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMembersTableViewCell.swift; sourceTree = "<group>"; };
+		A737FC64204B12F4006AD1F6 /* GroupMemberHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemberHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		A738282F1FC35DCB003C1827 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A73828311FC36379003C1827 /* ConstantCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantCharacters.swift; sourceTree = "<group>"; };
 		A73828371FC3E196003C1827 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +361,7 @@
 		A738703B203AFFF100436C87 /* PhotoLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A738703E203BC87900436C87 /* cancel_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel_shadow.png; sourceTree = "<group>"; };
 		A738703F203BC87900436C87 /* checked_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked_shadow.png; sourceTree = "<group>"; };
+		A73BC646204E0AF300C5B9A1 /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		A7407F031FC4B7C600DAAF44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7407F051FC4B8D100DAAF44 /* Project Version 0_1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Project Version 0_1.entitlements"; sourceTree = "<group>"; };
 		A7407F061FC705D000DAAF44 /* ConstanctUserKeyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstanctUserKeyValues.swift; sourceTree = "<group>"; };
@@ -535,6 +553,7 @@
 		A726DA5020224FC7009C2D1A /* NewContacts */ = {
 			isa = PBXGroup;
 			children = (
+				A737FC5C204AE61B006AD1F6 /* GroupInfo */,
 				A72AAC6C20458FEA0081DF23 /* ContanierView */,
 				A726DA53202254D5009C2D1A /* ContactsNewViewController.swift */,
 				A7A58CF02032A44C00BDBCE8 /* GroupCreation2ViewController.swift */,
@@ -561,7 +580,9 @@
 				A77E7B30203D1EE800E26CC3 /* PhotoLibraryCollectionViewTableViewCell.swift */,
 				A77E7B32203EE54300E26CC3 /* ScrollableImage.swift */,
 				A72AAC802048C6E60081DF23 /* GroupTableViewCell.swift */,
-				A72AAC822048D0CF0081DF23 /* yarroTableViewCell.swift */,
+				A737FC62204B1215006AD1F6 /* GroupMembersTableViewCell.swift */,
+				A737FC64204B12F4006AD1F6 /* GroupMemberHeaderTableViewCell.swift */,
+				A73BC646204E0AF300C5B9A1 /* DetailHeaderView.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -590,6 +611,7 @@
 			children = (
 				A72AAC6D204590130081DF23 /* ContainerFriendsTableViewController.swift */,
 				A72AAC742046EC3C0081DF23 /* ContainerGroupsTableViewController.swift */,
+				A72AAC8420493D960081DF23 /* ScrollableImageViewController.swift */,
 			);
 			path = ContanierView;
 			sourceTree = "<group>";
@@ -617,6 +639,7 @@
 			isa = PBXGroup;
 			children = (
 				A72AAC782046ECA50081DF23 /* TableViewExtensionGroup.swift */,
+				A737FC5A204AB807006AD1F6 /* CommonFunctionsForGroupContainer.swift */,
 			);
 			path = ContainerForGroups;
 			sourceTree = "<group>";
@@ -871,6 +894,54 @@
 			path = EntranceAnimations;
 			sourceTree = "<group>";
 		};
+		A737FC51204AAE02006AD1F6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A737FC54204AB1BA006AD1F6 /* DefaultConstants */,
+				A778D9E41FC9BC2700F38438 /* FirebaseModelConstants */,
+				A72AFBE71FCDF7640018254E /* EmailMessages */,
+				A7DD2E3A1FD2DD7B0009322E /* Character */,
+				A72D2C621FD85738008BE2D2 /* Fonts */,
+				A72D2C6B1FD9857B008BE2D2 /* KeyChainConstants */,
+				A72D9EDC1FF50658001C2098 /* DefaultImagesNames */,
+				A72D9EE11FF63718001C2098 /* MediaProperties */,
+				A72AE488200A504500657A4D /* SegueConstants */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A737FC54204AB1BA006AD1F6 /* DefaultConstants */ = {
+			isa = PBXGroup;
+			children = (
+				A737FC57204AB267006AD1F6 /* CommonConstants.swift */,
+			);
+			path = DefaultConstants;
+			sourceTree = "<group>";
+		};
+		A737FC55204AB1CE006AD1F6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A737FC5C204AE61B006AD1F6 /* GroupInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A737FC5D204AEA66006AD1F6 /* GroupInfoViewController.swift */,
+				A72F0BC4204B22EC0091A8B9 /* GroupInfoChangedViewController.swift */,
+			);
+			path = GroupInfo;
+			sourceTree = "<group>";
+		};
+		A737FC5F204AEFA8006AD1F6 /* GroupInfoExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A737FC60204AEFC3006AD1F6 /* TableViewGroupInfoExtensions.swift */,
+			);
+			path = GroupInfoExtension;
+			sourceTree = "<group>";
+		};
 		A738282D1FC352F3003C1827 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
@@ -953,6 +1024,7 @@
 		A74FD5F41FDDC7E100062483 /* EnumGroups */ = {
 			isa = PBXGroup;
 			children = (
+				A72CAA8C1FD685E900308DED /* Gender */,
 				A7E49A01202F1D5E00B1CB24 /* EnumSegmentControls */,
 				A74FD5F51FDDC7F700062483 /* EnumWarning */,
 			);
@@ -1217,22 +1289,14 @@
 		A75F401E1FC0D5F300495228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A72AE488200A504500657A4D /* SegueConstants */,
+				A737FC51204AAE02006AD1F6 /* Constants */,
 				A770332E1FFABB80004E3C7B /* LoginPermissions */,
-				A72D9EE11FF63718001C2098 /* MediaProperties */,
-				A72D9EDC1FF50658001C2098 /* DefaultImagesNames */,
 				A75CE0A51FF37A00004703F5 /* LocationManager */,
 				A738282E1FC35DBB003C1827 /* Validations */,
 				A75E3F3D1FE29D75007165DE /* Popover */,
 				A74FD5F41FDDC7E100062483 /* EnumGroups */,
-				A72D2C6B1FD9857B008BE2D2 /* KeyChainConstants */,
-				A72D2C621FD85738008BE2D2 /* Fonts */,
-				A72CAA8C1FD685E900308DED /* Gender */,
 				A767CEE51FD4AA2F00E70B16 /* Alert */,
-				A7DD2E3A1FD2DD7B0009322E /* Character */,
-				A72AFBE71FCDF7640018254E /* EmailMessages */,
 				A72AFBE11FCDE8F60018254E /* IOS */,
-				A778D9E41FC9BC2700F38438 /* FirebaseModelConstants */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1333,6 +1397,8 @@
 		A778D9E71FC9CA5300F38438 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A72F0BC6204B673D0091A8B9 /* zach-miles-229113-unsplash.jpg */,
+				A737FC55204AB1CE006AD1F6 /* New Group */,
 				A738703D203BC86700436C87 /* Contacts */,
 				A72D9EE41FF790BA001C2098 /* EntranceAnimations */,
 				A7194DB11FEA213B00586038 /* Guidance */,
@@ -1372,6 +1438,7 @@
 		A79F780B201BC7F400A20679 /* ContactViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A737FC5F204AEFA8006AD1F6 /* GroupInfoExtension */,
 				A72AAC7F2048C2A40081DF23 /* ContactViewExtensions */,
 				A72AAC7E2048C1F70081DF23 /* TemporaryUsefulClasses */,
 				A72AAC6F2045956D0081DF23 /* ContainerViewExtensions */,
@@ -1631,6 +1698,7 @@
 				A7A58CFC2034E8E000BDBCE8 /* back.png in Resources */,
 				A75CE0651FED4DB8004703F5 /* toxic-cross.png in Resources */,
 				A71BDC4D1FDF1EA80059EE43 /* error@2x.png in Resources */,
+				A72F0BC7204B673E0091A8B9 /* zach-miles-229113-unsplash.jpg in Resources */,
 				A7387040203BC87A00436C87 /* cancel_shadow.png in Resources */,
 				A79D65A1203561880004589B /* photo-camera-lines-variant.png in Resources */,
 				A770437120136B820081D242 /* user.png in Resources */,
@@ -1775,6 +1843,7 @@
 				A72CAA6E1FD5B18D00308DED /* DesignableUITextField.swift in Sources */,
 				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
 				A74FD5F11FDB7A8800062483 /* ServerAccessExtensionFunctions_forRegistration.swift in Sources */,
+				A737FC63204B1215006AD1F6 /* GroupMembersTableViewCell.swift in Sources */,
 				A74FD5F71FDDC80700062483 /* EnumForValidations.swift in Sources */,
 				A75CE0681FED6B2E004703F5 /* UIImageViewCustomDesign.swift in Sources */,
 				A75CE0841FF0419C004703F5 /* PinTextDataExtensions.swift in Sources */,
@@ -1789,7 +1858,6 @@
 				A72D9EE01FF5B1D3001C2098 /* AlertWarningConstants.swift in Sources */,
 				A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */,
 				A72D2C6D1FD98594008BE2D2 /* KeyChainConstants.swift in Sources */,
-				A72AAC832048D0CF0081DF23 /* yarroTableViewCell.swift in Sources */,
 				A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */,
 				A72705C71FC8A7E2006C2504 /* AddImageViewController.swift in Sources */,
 				A729EA85200B740B0051AC92 /* AlertProcessing.swift in Sources */,
@@ -1818,6 +1886,7 @@
 				A72AE487200A2EE000657A4D /* ButtonExtensionsOnCurrentView.swift in Sources */,
 				A7A58CFA203429E000BDBCE8 /* CollectionViewConstants.swift in Sources */,
 				A72D9ED91FF4E21B001C2098 /* UILabelExtensions.swift in Sources */,
+				A73BC647204E0AF300C5B9A1 /* DetailHeaderView.swift in Sources */,
 				A75CE09C1FF2B023004703F5 /* PersonAnnotationView.swift in Sources */,
 				A7E499FE202F147100B1CB24 /* DatabaseGroup.swift in Sources */,
 				A77E7B37203F49FE00E26CC3 /* RequiredUserData.swift in Sources */,
@@ -1849,6 +1918,7 @@
 				A75CE0771FEE6982004703F5 /* PinData.swift in Sources */,
 				A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */,
 				AD48E13D2001037B0042020C /* DatabaseFriends.swift in Sources */,
+				A737FC61204AEFC3006AD1F6 /* TableViewGroupInfoExtensions.swift in Sources */,
 				A7F05444203AC49100B39B11 /* PhotoSpecialScrollView.swift in Sources */,
 				A75E3F631FE5E6A5007165DE /* UserLocation.swift in Sources */,
 				A728D74920415AA0002CB5E7 /* SearchBarExtensions.swift in Sources */,
@@ -1858,6 +1928,7 @@
 				A770437C20138C610081D242 /* TableViewConstants.swift in Sources */,
 				A7D1CBA21FD449780082BC02 /* UIButtonCustomDesign.swift in Sources */,
 				A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift in Sources */,
+				A737FC5B204AB807006AD1F6 /* CommonFunctionsForGroupContainer.swift in Sources */,
 				A72AE38E2001376A00657A4D /* DecideToLoadPicture.swift in Sources */,
 				A72D9EDB1FF4E73F001C2098 /* UITextViewExtension.swift in Sources */,
 				A729EA89200B83C40051AC92 /* SegueEnums.swift in Sources */,
@@ -1879,6 +1950,7 @@
 				A79F7812201BE53C00A20679 /* LetterConstants.swift in Sources */,
 				A72AFBCF1FCCBCF30018254E /* PrepareUserProfileData.swift in Sources */,
 				A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */,
+				A72AAC8520493D960081DF23 /* ScrollableImageViewController.swift in Sources */,
 				A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */,
 				A729EA8B200D3E300051AC92 /* PinDataSaveProcess.swift in Sources */,
 				A729EA81200A97060051AC92 /* ImageVideoProcess.swift in Sources */,
@@ -1900,12 +1972,15 @@
 				A72AAC732046BECD0081DF23 /* CollectionViewExtensionFriend.swift in Sources */,
 				A72AAC7D204753F10081DF23 /* GeneralPurposeFunctions.swift in Sources */,
 				A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */,
+				A737FC65204B12F4006AD1F6 /* GroupMemberHeaderTableViewCell.swift in Sources */,
 				A77E7B2D203C52B200E26CC3 /* PhotoPicker4ViewController.swift in Sources */,
 				A72D9EDE1FF5066D001C2098 /* DefaultImageConstantNames.swift in Sources */,
 				A72CAA8B1FD685E000308DED /* Genders.swift in Sources */,
 				A75CE0811FF03F6F004703F5 /* SavePinData.swift in Sources */,
 				A72AE38A2000EB4300657A4D /* ArrangePinDropFrameLocations.swift in Sources */,
 				A72CAA7F1FD6855200308DED /* HideShowPasswordTextField.swift in Sources */,
+				A72F0BC5204B22EC0091A8B9 /* GroupInfoChangedViewController.swift in Sources */,
+				A737FC58204AB267006AD1F6 /* CommonConstants.swift in Sources */,
 				ADB505B31FDB348500F81046 /* EntranceViewPerformSegueExtention.swift in Sources */,
 				A7194DB91FEA231700586038 /* guidance_step2_ViewController.swift in Sources */,
 				A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */,
@@ -1922,6 +1997,7 @@
 				A7A58CF12032A44C00BDBCE8 /* GroupCreation2ViewController.swift in Sources */,
 				A79F780F201BE18500A20679 /* CacheConstants.swift in Sources */,
 				A72705C11FC885B8006C2504 /* MainPageViewController.swift in Sources */,
+				A737FC5E204AEA66006AD1F6 /* GroupInfoViewController.swift in Sources */,
 				A72AAC812048C6E60081DF23 /* GroupTableViewCell.swift in Sources */,
 				A784306F200FA6BF000FF263 /* UserForPrototypeCell.swift in Sources */,
 				A72AAC6E204590130081DF23 /* ContainerFriendsTableViewController.swift in Sources */,

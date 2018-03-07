@@ -59,7 +59,9 @@ class GroupCreation2TableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         
         //let cell = collectionViewInTableCell.dequeueReusableCell(withReuseIdentifier: "cellCollectionView", for: indexPath) as! GroupCreation2CollectionViewCell
         
-        cell.selectedFriendImage.setImagesFromCacheOrFirebase(selectedFriendArray[indexPath.row].userFriendChildData.userImageUrl)
+        cell.selectedFriendImage.setImagesFromCacheOrFirebase(selectedFriendArray[indexPath.row].userFriendChildData.userImageUrl, inputChannel: .friends)
+        
+        //cell.selectedFriendImage.setImagesFromCacheOrFirebase(selectedFriendArray[indexPath.row].userFriendChildData.userImageUrl)
         cell.selectedFriendName.text = selectedFriendArray[indexPath.row].userFriendChildData.userName
         
         cell.selectedFriend = selectedFriendArray[indexPath.row]

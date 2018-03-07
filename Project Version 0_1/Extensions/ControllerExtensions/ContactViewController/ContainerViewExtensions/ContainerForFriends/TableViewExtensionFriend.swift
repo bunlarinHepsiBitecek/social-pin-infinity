@@ -40,8 +40,8 @@ extension ContainerFriendsTableViewController : UITableViewDelegate, UITableView
         
         let cell : ContactsNewTableViewCell = {
             
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.CellConstants.friendsCell) as? ContactsNewTableViewCell else {
-                return UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: TableViewConstants.CellConstants.friendsCell) as! ContactsNewTableViewCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier:      CommonConstants.TableViewConstants.CellConstants.friendsCell) as? ContactsNewTableViewCell else {
+                return UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: CommonConstants.TableViewConstants.CellConstants.friendsCell) as! ContactsNewTableViewCell
             }
             return cell as ContactsNewTableViewCell
         }()
@@ -76,7 +76,7 @@ extension ContainerFriendsTableViewController : UITableViewDelegate, UITableView
             
         }
         
-        cell.friendImage.setImagesFromCacheOrFirebase(cell.friend.userFriendChildData.userImageUrl)
+        cell.friendImage.setImagesFromCacheOrFirebase(cell.friend.userFriendChildData.userImageUrl, inputChannel: .friends)
         
         return cell
         

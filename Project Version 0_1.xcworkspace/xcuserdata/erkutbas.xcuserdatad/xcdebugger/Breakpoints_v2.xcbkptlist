@@ -1306,11 +1306,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "541669556.804669"
+            timestampString = "541764868.0570149"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "nextButtonClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1338,11 +1338,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContactsNewViewController.swift"
-            timestampString = "541669556.804763"
+            timestampString = "541764868.057099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135">
+            startingLineNumber = "137"
+            endingLineNumber = "137">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1496,11 +1496,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/View/Contacts/GroupCreation2TableViewCell.swift"
-            timestampString = "541643275.189871"
+            timestampString = "541702663.167285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1512,11 +1512,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/View/Contacts/GroupCreation2TableViewCell.swift"
-            timestampString = "541643275.189921"
+            timestampString = "541702663.167335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1656,11 +1656,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/View/Contacts/GroupCreation2TableViewCell.swift"
-            timestampString = "541643275.190084"
+            timestampString = "541702663.167516"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2072,7 +2072,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForFriends/TableViewExtensionFriend.swift"
-            timestampString = "541669556.805445"
+            timestampString = "541983790.21966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
@@ -2184,7 +2184,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForFriends/TableViewExtensionFriend.swift"
-            timestampString = "541669556.8059011"
+            timestampString = "541983790.220058"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -2200,7 +2200,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForFriends/TableViewExtensionFriend.swift"
-            timestampString = "541669556.8061481"
+            timestampString = "541983790.2202671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
@@ -2216,7 +2216,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForFriends/TableViewExtensionFriend.swift"
-            timestampString = "541669556.806404"
+            timestampString = "541983790.220466"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -2232,12 +2232,266 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForFriends/TableViewExtensionFriend.swift"
-            timestampString = "541669556.806627"
+            timestampString = "541983790.220668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Controller/MainHomePackage/NewContacts/ContanierView/ContainerFriendsTableViewController.swift"
+            timestampString = "541811116.144949"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "ContainerFriendsTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Project_Version_0_1.ContainerFriendsTableViewController.isSearching.getter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Bool&gt;"
+                  moduleName = "Project Version 0_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/NewContacts/ContanierView/ContainerFriendsTableViewController.swift"
+                  timestampString = "541764221.2901911"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Project_Version_0_1.ContainerFriendsTableViewController.isSearching.setter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Bool&gt;"
+                  moduleName = "Project Version 0_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/NewContacts/ContanierView/ContainerFriendsTableViewController.swift"
+                  timestampString = "541764221.29361"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Project_Version_0_1.ContainerFriendsTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Project_Version_0_1.ContainerFriendsTableViewController"
+                  moduleName = "Project Version 0_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/NewContacts/ContanierView/ContainerFriendsTableViewController.swift"
+                  timestampString = "541764221.295306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "454">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Project_Version_0_1.ContainerFriendsTableViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Project_Version_0_1.ContainerFriendsTableViewController&gt;"
+                  moduleName = "Project Version 0_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erkutbas/Documents/DevlerLigiBasladi/Project%20Version%200_1/Project%20Version%200_1/Controller/MainHomePackage/NewContacts/ContanierView/ContainerFriendsTableViewController.swift"
+                  timestampString = "541764221.29703"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "355">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/GroupInfoExtension/TableViewGroupInfoExtensions.swift"
+            timestampString = "542026313.8698471"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/GroupInfoExtension/TableViewGroupInfoExtensions.swift"
+            timestampString = "542026313.871941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/GroupInfoExtension/TableViewGroupInfoExtensions.swift"
+            timestampString = "542026313.872342"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/GroupInfoExtension/TableViewGroupInfoExtensions.swift"
+            timestampString = "542026313.87273"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForGroups/TableViewExtensionGroup.swift"
+            timestampString = "541989890.9991421"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForGroups/TableViewExtensionGroup.swift"
+            timestampString = "541989890.99919"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForGroups/TableViewExtensionGroup.swift"
+            timestampString = "541989890.999235"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForGroups/TableViewExtensionGroup.swift"
+            timestampString = "541989890.99928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForGroups/TableViewExtensionGroup.swift"
+            timestampString = "541989890.999325"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForGroups/TableViewExtensionGroup.swift"
+            timestampString = "541989890.999368"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "numberOfSections(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project Version 0_1/Extensions/ControllerExtensions/ContactViewController/ContainerViewExtensions/ContainerForGroups/TableViewExtensionGroup.swift"
+            timestampString = "541989890.999411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "tableView(_:titleForHeaderInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

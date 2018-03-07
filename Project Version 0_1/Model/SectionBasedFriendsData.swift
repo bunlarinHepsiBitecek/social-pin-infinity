@@ -12,6 +12,8 @@ import Firebase
 let cacheDataForFriendList = NSCache<NSString, SectionBasedFriendsData>()
 
 let cachedFriendProfileImages = NSCache<NSString, UIImage>()
+let cachedGroupImages = NSCache<NSString, UIImage>()
+let cachedGroupMemberImages = NSCache<NSString, UIImage>()
 
 var friendSelectedDictionary = NSDictionary() as! [String : Bool]
 

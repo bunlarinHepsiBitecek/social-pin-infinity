@@ -12,6 +12,8 @@ class ContainerGroupsTableViewController: UIViewController {
 
     @IBOutlet var tableViewGroups: UITableView!
     
+    var groupObject = Group()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

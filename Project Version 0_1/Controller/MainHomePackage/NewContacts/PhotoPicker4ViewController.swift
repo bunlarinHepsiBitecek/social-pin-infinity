@@ -8,23 +8,18 @@
 
 import UIKit
 
-class PhotoPicker4ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ScrollableImageDeleagate {
-
-    @IBOutlet var denemeScroll: ScrollableImage!
-    @IBOutlet var denemeImage: UIImageView!
+class PhotoPicker4ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var tableViewForPhotoManagement: UITableView!
+    @IBOutlet var containerViewObject: UIView!
+    
+    var childScrollableView : ScrollableImageViewController!
     
     var sectionHeaders = ["erkut1"]
     
     override func viewDidLoad() {
         
-        denemeImage.image = UIImage(named: "user.png")
-        
-        tableViewForPhotoManagement.bounces = true
-        denemeScroll.delegatePass = self
-        
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -69,10 +64,6 @@ class PhotoPicker4ViewController: UIViewController, UITableViewDataSource, UITab
         
     }
     
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return denemeImage
-    }
-    
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
        
         print("zoom etik")
@@ -88,30 +79,11 @@ class PhotoPicker4ViewController: UIViewController, UITableViewDataSource, UITab
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
 
-        print("scrollview : \(scrollView)")
         
+        print("erkut")
         
   
     }
-    
-    func touchBegan() {
-        
-        print("touchBegan haydaaaa")
-        
-        self.tableViewForPhotoManagement.isScrollEnabled = false
-        self.tableViewForPhotoManagement.isUserInteractionEnabled = true
-        self.denemeScroll.isScrollEnabled = true
-        self.denemeImage.isUserInteractionEnabled = true
-        self.denemeScroll.isUserInteractionEnabled = true
-        
-    }
-    
-    func touchMoved() {
-        print("touchMoved haydaaa")
-    }
-    
-    
-    
     
 
 }

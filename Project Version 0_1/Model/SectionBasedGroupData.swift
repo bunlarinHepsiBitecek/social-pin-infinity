@@ -412,6 +412,38 @@ class SectionBasedGroupData {
         
     }
     
+    func deleteDataFromInitialBasedGroupLists() {
+        
+        groupListInitial_A.removeAll()
+        groupListInitial_B.removeAll()
+        groupListInitial_C.removeAll()
+        groupListInitial_D.removeAll()
+        groupListInitial_E.removeAll()
+        groupListInitial_F.removeAll()
+        groupListInitial_G.removeAll()
+        groupListInitial_H.removeAll()
+        groupListInitial_I.removeAll()
+        groupListInitial_J.removeAll()
+        groupListInitial_K.removeAll()
+        groupListInitial_L.removeAll()
+        groupListInitial_M.removeAll()
+        groupListInitial_N.removeAll()
+        groupListInitial_O.removeAll()
+        groupListInitial_P.removeAll()
+        groupListInitial_Q.removeAll()
+        groupListInitial_R.removeAll()
+        groupListInitial_S.removeAll()
+        groupListInitial_T.removeAll()
+        groupListInitial_U.removeAll()
+        groupListInitial_V.removeAll()
+        groupListInitial_W.removeAll()
+        groupListInitial_X.removeAll()
+        groupListInitial_Y.removeAll()
+        groupListInitial_Z.removeAll()
+        
+
+    }
+    
     func createSectionsForGroups() {
         
         for userGroupObject in constantUserGroupDataObject.userGroupSortedList {
