@@ -195,6 +195,7 @@
 		A7933E4B204165A900610489 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7933E4A204165A900610489 /* TableViewExtensions.swift */; };
 		A7933E4D204166A800610489 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7933E4C204166A800610489 /* CollectionViewExtension.swift */; };
 		A7933E4F2041957600610489 /* SectionBasedGroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7933E4E2041957600610489 /* SectionBasedGroupData.swift */; };
+		A794472620519B0D006128C5 /* PhotoPickerTableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794472520519B0D006128C5 /* PhotoPickerTableViewCellExtensions.swift */; };
 		A796807B20129B92006BAE8D /* UserFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796807A20129B92006BAE8D /* UserFriend.swift */; };
 		A796807D2012A862006BAE8D /* UserFriendChildData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796807C2012A862006BAE8D /* UserFriendChildData.swift */; };
 		A79D65A1203561880004589B /* photo-camera-lines-variant.png in Resources */ = {isa = PBXBuildFile; fileRef = A79D65A0203561880004589B /* photo-camera-lines-variant.png */; };
@@ -236,6 +237,8 @@
 		A7E49A03202F1D8400B1CB24 /* EnumForSegmentedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E49A02202F1D8400B1CB24 /* EnumForSegmentedButtons.swift */; };
 		A7F05441203A0CC100B39B11 /* GridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F05440203A0CC100B39B11 /* GridView.xib */; };
 		A7F05444203AC49100B39B11 /* PhotoSpecialScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F05443203AC49100B39B11 /* PhotoSpecialScrollView.swift */; };
+		A7F6F7DC204FF99F004C3CBC /* PhotoPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F6F7DB204FF99F004C3CBC /* PhotoPickerTableViewCell.swift */; };
+		A7F6F7DE20502794004C3CBC /* PhotoPickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F6F7DD20502794004C3CBC /* PhotoPickerCollectionViewCell.swift */; };
 		AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A34401FE1C41B0054801D /* InformationAlertView.swift */; };
 		AD48E13D2001037B0042020C /* DatabaseFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E13C2001037B0042020C /* DatabaseFriends.swift */; };
 		AD48E13F20010D7A0042020C /* PinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E13E20010D7A0042020C /* PinModels.swift */; };
@@ -448,6 +451,7 @@
 		A7933E4A204165A900610489 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
 		A7933E4C204166A800610489 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		A7933E4E2041957600610489 /* SectionBasedGroupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBasedGroupData.swift; sourceTree = "<group>"; };
+		A794472520519B0D006128C5 /* PhotoPickerTableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerTableViewCellExtensions.swift; sourceTree = "<group>"; };
 		A796807A20129B92006BAE8D /* UserFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriend.swift; sourceTree = "<group>"; };
 		A796807C2012A862006BAE8D /* UserFriendChildData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendChildData.swift; sourceTree = "<group>"; };
 		A79D65A0203561880004589B /* photo-camera-lines-variant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-camera-lines-variant.png"; sourceTree = "<group>"; };
@@ -489,6 +493,8 @@
 		A7E49A02202F1D8400B1CB24 /* EnumForSegmentedButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForSegmentedButtons.swift; sourceTree = "<group>"; };
 		A7F05440203A0CC100B39B11 /* GridView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridView.xib; sourceTree = "<group>"; };
 		A7F05443203AC49100B39B11 /* PhotoSpecialScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSpecialScrollView.swift; sourceTree = "<group>"; };
+		A7F6F7DB204FF99F004C3CBC /* PhotoPickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerTableViewCell.swift; sourceTree = "<group>"; };
+		A7F6F7DD20502794004C3CBC /* PhotoPickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD1A34401FE1C41B0054801D /* InformationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAlertView.swift; sourceTree = "<group>"; };
 		AD48E13C2001037B0042020C /* DatabaseFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFriends.swift; sourceTree = "<group>"; };
 		AD48E13E20010D7A0042020C /* PinModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModels.swift; sourceTree = "<group>"; };
@@ -553,6 +559,7 @@
 		A726DA5020224FC7009C2D1A /* NewContacts */ = {
 			isa = PBXGroup;
 			children = (
+				A7F6F7DA204FEBB7004C3CBC /* PhotoPickerControllers */,
 				A737FC5C204AE61B006AD1F6 /* GroupInfo */,
 				A72AAC6C20458FEA0081DF23 /* ContanierView */,
 				A726DA53202254D5009C2D1A /* ContactsNewViewController.swift */,
@@ -1419,6 +1426,14 @@
 			path = ExtensionLoginViewController;
 			sourceTree = "<group>";
 		};
+		A794472420519ACE006128C5 /* PhotoPickerExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A794472520519B0D006128C5 /* PhotoPickerTableViewCellExtensions.swift */,
+			);
+			path = PhotoPickerExtensions;
+			sourceTree = "<group>";
+		};
 		A79F7805201A309900A20679 /* MainPageControllerExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1438,6 +1453,7 @@
 		A79F780B201BC7F400A20679 /* ContactViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A794472420519ACE006128C5 /* PhotoPickerExtensions */,
 				A737FC5F204AEFA8006AD1F6 /* GroupInfoExtension */,
 				A72AAC7F2048C2A40081DF23 /* ContactViewExtensions */,
 				A72AAC7E2048C1F70081DF23 /* TemporaryUsefulClasses */,
@@ -1545,6 +1561,15 @@
 				A7F05440203A0CC100B39B11 /* GridView.xib */,
 			);
 			path = GridView;
+			sourceTree = "<group>";
+		};
+		A7F6F7DA204FEBB7004C3CBC /* PhotoPickerControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7F6F7DB204FF99F004C3CBC /* PhotoPickerTableViewCell.swift */,
+				A7F6F7DD20502794004C3CBC /* PhotoPickerCollectionViewCell.swift */,
+			);
+			path = PhotoPickerControllers;
 			sourceTree = "<group>";
 		};
 		AD48E14620012B770042020C /* HomePackage */ = {
@@ -1929,6 +1954,7 @@
 				A7D1CBA21FD449780082BC02 /* UIButtonCustomDesign.swift in Sources */,
 				A74FD5F31FDB7C1C00062483 /* SwiftKeyChainExtensionFunctions_forRegistration.swift in Sources */,
 				A737FC5B204AB807006AD1F6 /* CommonFunctionsForGroupContainer.swift in Sources */,
+				A7F6F7DE20502794004C3CBC /* PhotoPickerCollectionViewCell.swift in Sources */,
 				A72AE38E2001376A00657A4D /* DecideToLoadPicture.swift in Sources */,
 				A72D9EDB1FF4E73F001C2098 /* UITextViewExtension.swift in Sources */,
 				A729EA89200B83C40051AC92 /* SegueEnums.swift in Sources */,
@@ -1971,6 +1997,7 @@
 				AD48E145200120970042020C /* NotificationSent.swift in Sources */,
 				A72AAC732046BECD0081DF23 /* CollectionViewExtensionFriend.swift in Sources */,
 				A72AAC7D204753F10081DF23 /* GeneralPurposeFunctions.swift in Sources */,
+				A794472620519B0D006128C5 /* PhotoPickerTableViewCellExtensions.swift in Sources */,
 				A767CEE91FD4B3C200E70B16 /* InformationMessageExtensionFunctions.swift in Sources */,
 				A737FC65204B12F4006AD1F6 /* GroupMemberHeaderTableViewCell.swift in Sources */,
 				A77E7B2D203C52B200E26CC3 /* PhotoPicker4ViewController.swift in Sources */,
@@ -1980,6 +2007,7 @@
 				A72AE38A2000EB4300657A4D /* ArrangePinDropFrameLocations.swift in Sources */,
 				A72CAA7F1FD6855200308DED /* HideShowPasswordTextField.swift in Sources */,
 				A72F0BC5204B22EC0091A8B9 /* GroupInfoChangedViewController.swift in Sources */,
+				A7F6F7DC204FF99F004C3CBC /* PhotoPickerTableViewCell.swift in Sources */,
 				A737FC58204AB267006AD1F6 /* CommonConstants.swift in Sources */,
 				ADB505B31FDB348500F81046 /* EntranceViewPerformSegueExtention.swift in Sources */,
 				A7194DB91FEA231700586038 /* guidance_step2_ViewController.swift in Sources */,

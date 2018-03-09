@@ -45,6 +45,8 @@ struct CommonConstants {
             static let groupsCell = "groupsCell"
             static let headerCellGroupInfo = "headerCellGroupInfo"
             static let groupMembersCell = "groupMembersCell"
+            static let CellCollectionViewPhotoLibrary = "CellCollectionViewPhotoLibrary"
+            static let CellTableViewPhotoLibraryCollection = "CellTableViewPhotoLibraryCollection"
             
         }
         

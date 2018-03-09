@@ -31,7 +31,7 @@ class PhotoPicker4ViewController: UIViewController, UITableViewDataSource, UITab
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 100
+        return 1
         
     }
     
@@ -43,6 +43,7 @@ class PhotoPicker4ViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        /*
         if indexPath.section == 0 {
             
             let cell = tableViewForPhotoManagement.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -54,8 +55,14 @@ class PhotoPicker4ViewController: UIViewController, UITableViewDataSource, UITab
             
         }
         
-        return UITableViewCell()
+        return UITableViewCell()*/
         
+        
+        let cell = tableViewForPhotoManagement.dequeueReusableCell(withIdentifier: CommonConstants.TableViewConstants.CellConstants.CellTableViewPhotoLibraryCollection, for: indexPath) as! PhotoPickerTableViewCell
+        
+        
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -64,6 +71,13 @@ class PhotoPicker4ViewController: UIViewController, UITableViewDataSource, UITab
         
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 1000
+        
+    }
+
+    /*
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
        
         print("zoom etik")
@@ -84,6 +98,6 @@ class PhotoPicker4ViewController: UIViewController, UITableViewDataSource, UITab
         
   
     }
-    
+    */
 
 }
