@@ -8,7 +8,23 @@
 
 import UIKit
 import MapKit
-import FirebaseDatabase
+
+enum PinType: String {
+    case friends, person, me, group
+    
+    public var stringValue: String {
+        switch self {
+        case .friends:
+            return "friends"
+        case .person:
+            return "person"
+        case .me:
+            return "me"
+        case .group:
+            return "group"
+        }
+    }
+}
 
 class Location {
     
@@ -26,6 +42,13 @@ class Location {
     private var _subThorough : String
     private var _latitude : Double
     private var _longitude : Double
+    private var _pinType : PinType
+    private var _toWhom : [String]
+    private var _pictureURL : String
+    private var _textPictureURL : String
+    private var _videoPictureURL : String
+    private var _videoURL : String
+    private var _text : String
     
     private var _locationDictionary : Dictionary<String, Any> = [:]
     
@@ -44,20 +67,25 @@ class Location {
         
         self._locationId = SPACE_CHARACTER
         
+        self._pinType = .me
+        self._toWhom = []
+        self._pictureURL = SPACE_CHARACTER
+        self._videoPictureURL = SPACE_CHARACTER
+        self._videoURL = SPACE_CHARACTER
+        self._textPictureURL = SPACE_CHARACTER
+        self._text = SPACE_CHARACTER
+        
     }
     
     //init(snapshot : DataSnapshot, userID: String) {
     
-    init(snapshot : Dictionary<String, Any>, locationID : String ) {
+    init(data : Dictionary<String, Any>, locationID : String ) {
         //print("Location sınıfındayım snapvalue : \(String(describing: snapshot.value))")
         print("Location sınıfındayım locID: \(locationID)")
         
         self._isPinDropped = false
         
-        //self._locationId = snapshot.key
-        //let data = snapshot.value as! Dictionary<String, Any>
         self._locationId = locationID
-        let data = snapshot
         self._userID = data[FirebaseModelConstants.Locations.UserID] as? String ?? SPACE_CHARACTER
         self._countryCode = data[FirebaseModelConstants.Locations.CountryCode] as? String ?? SPACE_CHARACTER
         self._countryName = data[FirebaseModelConstants.Locations.CountryName] as? String ?? SPACE_CHARACTER
@@ -68,6 +96,14 @@ class Location {
         self._latitude = data[FirebaseModelConstants.Locations.Latitude] as? Double ?? DEFAULT_DOUBLE_VALUE
         self._longitude = data[FirebaseModelConstants.Locations.Longitude] as? Double ?? DEFAULT_DOUBLE_VALUE
         self._currentLocation = CLLocationCoordinate2D(latitude: self._latitude, longitude: self._latitude)
+        
+        self._pinType = data[FirebaseModelConstants.Locations.PinType] as? PinType ?? .me
+        self._toWhom = data[FirebaseModelConstants.Locations.ToWhom] as? [String] ?? []
+        self._pictureURL = data[FirebaseModelConstants.Locations.PictureURL] as? String ?? SPACE_CHARACTER
+        self._videoPictureURL = data[FirebaseModelConstants.Locations.VideoPictureURL] as? String ?? SPACE_CHARACTER
+        self._textPictureURL = data[FirebaseModelConstants.Locations.TextPictureURL] as? String ?? SPACE_CHARACTER
+        self._videoURL = data[FirebaseModelConstants.Locations.VideoURL] as? String ?? SPACE_CHARACTER
+        self._text = data[FirebaseModelConstants.Locations.Text] as? String ?? SPACE_CHARACTER
         
         print("--------------------------Location")
         print(userID,self._countryCode,self._countryName, self._postalCode,locationId, self._latitude, self._longitude)
@@ -191,108 +227,63 @@ class Location {
         }
     }
     
-    
-    /*
-    var locationDictionary : Dictionary<String, Any> {
-        return _locationDictionary
+    var pinType : PinType {
+        get {
+            return self._pinType
+        }
+        set {
+            self._pinType = newValue
+        }
     }
     
-    var locationId: String {
-        return self._locationId
+    var toWhom : [String] {
+        get {
+            return self._toWhom
+        }
+        set {
+            self._toWhom = newValue
+        }
     }
-    
-    var currenLocation: CLLocationCoordinate2D {
-        return self._currentLocation
+    var pictureURL : String {
+        get {
+            return self._pictureURL
+        }
+        set {
+            self._pictureURL = newValue
+        }
     }
-    
-    var isPinDropped: Bool {
-        return self._isPinDropped
+    var videoPictureURL : String {
+        get {
+            return self._videoPictureURL
+        }
+        set {
+            self._videoPictureURL = newValue
+        }
     }
-    
-    var userID : String {
-        return _userID
+    var textPictureURL : String {
+        get {
+            return self._textPictureURL
+        }
+        set {
+            self._textPictureURL = newValue
+        }
     }
-    
-    var countryCode : String {
-        return _countryCode
+    var videoURL : String {
+        get {
+            return self._videoURL
+        }
+        set {
+            self._videoURL = newValue
+        }
     }
-    
-    var countryName : String {
-        return _countryName
+    var text : String {
+        get {
+            return self._text
+        }
+        set {
+            self._text = newValue
+        }
     }
-    
-    var timeStamp : Int {
-        return _timeStamp
-    }
-    
-    var postalCode : String {
-        return _postalCode
-    }
-    
-    var thorough : String {
-        return _thorough
-    }
-    
-    var subThorough : String {
-        return _subThorough
-    }
-    
-    var latitude : Double {
-        return _latitude
-    }
-    
-    var longitude : Double {
-        return _longitude
-    }
-    
-    func setLocationId(inputLocationId: String) {
-        self._locationId = inputLocationId
-    }
-    
-    func setIsPinDropped(isPinDropped: Bool) {
-        self._isPinDropped = isPinDropped
-    }
-    
-    func setCurrentLocation(locationCoordinate: CLLocationCoordinate2D) {
-        self._currentLocation = locationCoordinate
-    }
-    
-    func setUserID(inputUserID : String) {
-        self._userID = inputUserID
-    }
-    
-    func setCountryCode(inputCountryCode : String) {
-        self._countryCode = inputCountryCode
-    }
-    
-    func setCountryName(inputCountryName : String) {
-        self._countryName = inputCountryName
-    }
-    
-    func setTimestamp(inputTimestamp : Int) {
-        self._timeStamp = inputTimestamp
-    }
-    
-    func setPostalCode(inputPostalCode : String) {
-        self._postalCode = inputPostalCode
-    }
-    
-    func setThorough(inputThorough : String) {
-        self._thorough = inputThorough
-    }
-    
-    func setSubThorough(inputSubThorough : String) {
-        self._subThorough = inputSubThorough
-    }
-    
-    func setLatitude(inputLatitude : Double) {
-        self._latitude = inputLatitude
-    }
-    
-    func setLongitude(inputLongitude : Double) {
-        self._longitude = inputLongitude
-    }
-    */
     
     func appendAttributeToDictionary(inputKey : String, inputValue : Any) {
         

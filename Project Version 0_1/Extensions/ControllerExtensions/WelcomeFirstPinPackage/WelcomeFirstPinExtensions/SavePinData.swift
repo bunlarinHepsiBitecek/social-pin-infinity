@@ -16,6 +16,7 @@ extension WelcomeFirstPinViewController {
         print("savePinData func is activated")
         loadVideoToStorage()
         loadPinImageToStorage()
+        loadVideoImageToStorage()
         loadTextImageToStorage()
         createPinToFirebase()
     }
@@ -30,7 +31,9 @@ extension WelcomeFirstPinViewController {
             return
         }
         
-        let videoID = NSUUID().uuidString
+        //let videoID = NSUUID().uuidString
+        let videoID = DatabaseUser.ds.generateAutoID()
+        
         
         let task = Storage.storage().reference().child(FirebaseModels.Users.CHILD_USERS).child(FirebaseModels.Locations.CHILD_LOCATIONS).child("\(videoID).mov").putFile(from: self.pinDataObject.videoDataUrl as URL, metadata: nil) { (metadata, error) in
             
@@ -74,7 +77,8 @@ extension WelcomeFirstPinViewController {
             return
         }
         
-        let imageID = NSUUID().uuidString
+        //let imageID = NSUUID().uuidString
+        let imageID = DatabaseUser.ds.generateAutoID()
         
         let storageReference = Storage.storage().reference().child(FirebaseStorageConstants.Users).child(FirebaseModels.Locations.CHILD_LOCATIONS).child("\(imageID).png")
         
@@ -105,6 +109,45 @@ extension WelcomeFirstPinViewController {
         }
     }
     
+    /* Load pinvideo image to firebase*/
+    func loadVideoImageToStorage() {
+        guard self.pinDataObject.videoExistFlag else {
+            print("Remzi: Video image yok return")
+            return
+        }
+        
+        let imageID = DatabaseUser.ds.generateAutoID()
+        
+        let storageReference = Storage.storage().reference().child(FirebaseStorageConstants.Users).child(FirebaseModels.Locations.CHILD_LOCATIONS).child("\(imageID).png")
+        
+        if let uploadData = UIImagePNGRepresentation(self.pinDataObject.videoCapture) {
+            
+            storageReference.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                
+                if error != nil {
+                    
+                    if let errorMessage = error as NSError? {
+                        
+                        print("loadVideoImageToStorage error")
+                        print("errorMessage : \(errorMessage.localizedDescription)")
+                        print("errorMessage : \(errorMessage.userInfo)")
+                    }
+                } else {
+                    
+                    if let storageUrl = (metadata?.downloadURL() as NSURL?) {
+                        print("Yükleme başarılı image storageUrl : \(storageUrl)")
+                        
+                        self.pinDataObject.setVideoIDOnPin(inputVideoIDOnPin: imageID)
+                        self.pinDataObject.setVideoDataUrlFirebase(inputVideoDataUrlFirebase: storageUrl)
+                        self.pinDataObject.setPinDataUploadedDatabase(inputBooleanValue: true)
+                        self.updatePinItem(key: FirebaseModelConstants.PinItem.videoPictureURL, value: storageUrl.absoluteString!)
+                    }
+                }
+            })
+        }
+    }
+    
+    
     /* Load Text Capture image to firebase*/
     func loadTextImageToStorage() {
         guard self.pinDataObject.isCapturedTextExist else {
@@ -112,7 +155,8 @@ extension WelcomeFirstPinViewController {
             return
         }
         
-        let imageID = NSUUID().uuidString
+        //let imageID = NSUUID().uuidString
+        let imageID = DatabaseUser.ds.generateAutoID()
         
         let storageReference = Storage.storage().reference().child(FirebaseStorageConstants.Users).child(FirebaseModels.Locations.CHILD_LOCATIONS).child("\(imageID).png")
         
@@ -143,7 +187,9 @@ extension WelcomeFirstPinViewController {
     }
     
     func createPinToFirebase() {
-        let locationID = NSUUID().uuidString
+        //let locationID = NSUUID().uuidString
+        let locationID = DatabaseUser.ds.generateAutoID()
+        
         //self.pinDataObject.location.setLocationId(inputLocationId: locationID)
         self.pinDataObject.location.locationId = locationID
         

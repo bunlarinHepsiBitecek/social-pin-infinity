@@ -6,7 +6,7 @@
 //  Copyright © 2017 Erkut Baş. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 let SPACE_CHARACTER = ""
 let DEFAULT_DOUBLE_VALUE = 0.0
@@ -25,5 +25,18 @@ struct Constants {
         static let Success = "Success"
         static let Dismiss = "Dismiss"
         static let Message = "İlk pininiz başarıyla kaydedildi. Aramıza hoşgeldiniz 🤗"
+    }
+}
+
+struct Storyboard {
+    
+    struct Feed {
+        static let FeedCell = "FeedCell"
+        static let FeedHeaderCell = "FeedHeaderCell"
+        static let FeedCellHeight: CGFloat = 250.0
+        static let FeedHeaderCellHeight: CGFloat = 50.0
+        static let CustomViewWidth: CGFloat = 250.0
+        static let CustomViewHeigh: CGFloat = 150.0
+        
     }
 }
