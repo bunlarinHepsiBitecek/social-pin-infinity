@@ -11,42 +11,30 @@ import UIKit
 class CustomView: FeedCarouselItem {
     
     //MARK: outlets
-    @IBOutlet var imageView: CachedImageView!
+    @IBOutlet var imageView: UIImageView!
     
     // MARK: - properties
     fileprivate var containerView: UIView!
     fileprivate let nibName = "CustomView"
-    
-    // MARK: variable
-    fileprivate var viewCreated = false
-    
-    var viewExists : Bool {
-        get {
-            return self.viewCreated
-        }
-        set {
-            self.viewCreated = newValue
-        }
-    }
-    
+    fileprivate var imageURL : String!
     
     // MARK: - init
-    convenience init(frame: CGRect, number: Int) {
+    convenience init(frame: CGRect, imageURL: String) {
         self.init(frame: frame)
-        
-        // MARK Remzi: when customview created
-        self.viewCreated = true
+        self.imageURL = imageURL
+        self.imageView.frame = frame
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.imageURL = SPACE_CHARACTER
         xibSetup()
         setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+        self.imageURL = SPACE_CHARACTER
         if self.subviews.count == 0 {
             xibSetup()
             setup()
@@ -76,5 +64,8 @@ class CustomView: FeedCarouselItem {
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.65
     }
-
+    
+    func getLoadImage() {
+        self.imageView.loadImageUsingUrlString(urlString: self.imageURL)
+    }
 }

@@ -20,23 +20,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvB-SK-c9h" userLabel="Main View">
-                    <rect key="frame" x="0.0" y="0.0" width="370" height="166"/>
+                    <rect key="frame" x="0.0" y="0.0" width="370" height="180"/>
                     <color key="backgroundColor" red="0.3453691002" green="1" blue="0.25905904190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkC-FF-X7h" userLabel="Bottom View">
-                    <rect key="frame" x="0.0" y="166" width="370" height="34"/>
+                    <rect key="frame" x="0.0" y="180" width="370" height="20"/>
                     <subviews>
                         <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ifI-Tf-8kJ">
-                            <rect key="frame" x="166" y="-1" width="39" height="37"/>
+                            <rect key="frame" x="166" y="-8" width="39" height="37"/>
                             <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="currentPageIndicatorTintColor" red="0.92549019610000005" green="0.69019607839999997" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </pageControl>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="ifI-Tf-8kJ" firstAttribute="centerY" secondItem="KkC-FF-X7h" secondAttribute="centerY" id="LaY-S1-Ye6"/>
-                        <constraint firstItem="ifI-Tf-8kJ" firstAttribute="centerX" secondItem="KkC-FF-X7h" secondAttribute="centerX" id="yz9-hv-ZGj"/>
-                        <constraint firstAttribute="height" constant="34" id="zX2-Iq-q3n"/>
+                        <constraint firstItem="ifI-Tf-8kJ" firstAttribute="centerX" secondItem="KkC-FF-X7h" secondAttribute="centerX" id="bez-S5-SNk"/>
+                        <constraint firstItem="ifI-Tf-8kJ" firstAttribute="centerY" secondItem="KkC-FF-X7h" secondAttribute="centerY" id="jcR-O0-nBQ"/>
+                        <constraint firstAttribute="height" constant="20" id="zX2-Iq-q3n"/>
                     </constraints>
                 </view>
             </subviews>

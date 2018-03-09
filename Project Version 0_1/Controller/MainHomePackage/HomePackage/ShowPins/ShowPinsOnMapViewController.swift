@@ -132,7 +132,7 @@ class ShowPinsOnMapViewController: UIViewController, MKMapViewDelegate, CLLocati
                         }
                         
                         if let dic = snapshotLocation.value as! Dictionary<String, Any>? {
-                            _ = Location(snapshot: dic, locationID: snap.key)
+                            _ = Location(data: dic, locationID: snap.key)
                         }
                         
                         /*

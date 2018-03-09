@@ -15,7 +15,7 @@ struct FirebaseConstants {
     }
     
     struct Query {
-        static let LastItemCount : UInt = UInt(20)
+        static let LastItemCount : UInt = UInt(5)
         static let NextItemCount : UInt = UInt(6)
     }
     
@@ -48,6 +48,10 @@ struct FirebaseModels {
     
     struct PinModels {
         static let childPinModels = "PinModels"
+    }
+    
+    struct Feed {
+        static let childFeed = "Feed"
     }
     
     struct NotificationSent {
@@ -86,6 +90,13 @@ struct FirebaseModelConstants {
         static let Latitude : String = "latitude"
         static let Longitude : String = "longitude"
         static let UserID : String = "userID"
+        static let PictureURL = "pictureURL"
+        static let VideoPictureURL = "videoPictureURL"
+        static let TextPictureURL = "textURL"
+        static let VideoURL = "videoURL"
+        static let Text = "text"
+        static let PinType = "pinType"
+        static let ToWhom = "toWhom"
     }
     
     struct PinItem {
@@ -110,6 +121,10 @@ struct FirebaseModelConstants {
         static let TextPictureURL = "textURL"
         static let VideoURL = "videoURL"
         static let Text = "text"
+    }
+    
+    struct Feed {
+        static let Timestamp = "timestamp"
         
     }
     

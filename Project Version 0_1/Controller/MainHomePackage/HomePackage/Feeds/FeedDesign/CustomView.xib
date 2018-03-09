@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="Project_Version_0_1" customModuleProvider="target">
             <connections>
-                <outlet property="imageView" destination="0X6-nQ-4iy" id="2zD-V4-4xU"/>
+                <outlet property="imageView" destination="0X6-nQ-4iy" id="K7c-Bk-zNZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

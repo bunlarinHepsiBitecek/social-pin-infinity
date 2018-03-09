@@ -52,6 +52,27 @@ class User {
         self._isUserGetInformedFromGuidance4 = false
     }
     
+    // MARK : for firebase create
+    init(data : Dictionary<String, Any>, userID : String ) {
+        self._userID = userID
+        self._userName = data[FirebaseModelConstants.Users.UserName] as? String ?? SPACE_CHARACTER
+        self._userNameSurname = data[FirebaseModelConstants.Users.NameSurname] as? String ?? SPACE_CHARACTER
+        self._email = data[FirebaseModelConstants.Users.Email] as? String ?? SPACE_CHARACTER
+        self._gender = data[FirebaseModelConstants.Users.Gender] as? String ?? SPACE_CHARACTER
+        self._birthday = data[FirebaseModelConstants.Users.Birthday] as? String ?? SPACE_CHARACTER
+        self._userProfilePictureUniqueID = data[FirebaseModelConstants.Users.ProfilePictureID] as? String ?? SPACE_CHARACTER
+        self._userProfilePictureUrl = data[FirebaseModelConstants.Users.ProfilePictureUrl] as? String ?? SPACE_CHARACTER
+        self._password = data[FirebaseModelConstants.Users.Password] as? String ?? SPACE_CHARACTER
+        self._mobilePhone = data[FirebaseModelConstants.Users.MobilePhone] as? String ?? SPACE_CHARACTER
+        self._provider = data[FirebaseModelConstants.Users.Provider] as? String ?? SPACE_CHARACTER
+        self._providerId = data[FirebaseModelConstants.Users.ProviderID] as? String ?? SPACE_CHARACTER
+        
+        self._userProfilePicture = UIImage()
+        self._userLocationObject = Location()
+        self._isUserGetInformedFromGuidence = false
+        self._isUserGetInformedFromGuidance4 = false
+    }
+    
     func printUserInfo() {
         print(FirebaseModelConstants.Users.UserID + " :" + _userID)
         print(FirebaseModelConstants.Users.UserName + " :" + _userName)

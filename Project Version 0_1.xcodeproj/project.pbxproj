@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0476E4F9FFF99A10D02F1BB7 /* Pods_Project_Version_0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2EAC58EB2B78FDCBF4F5D0 /* Pods_Project_Version_0_1.framework */; };
+		4518AA222041BBD80070F73F /* DatabaseFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518AA212041BBD80070F73F /* DatabaseFeed.swift */; };
+		45434B042051E85600B8F085 /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B032051E85600B8F085 /* FeedDataSource.swift */; };
+		45E12999204B262A00BC1868 /* FeedHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E12998204B262A00BC1868 /* FeedHeaderCell.swift */; };
 		A71811DE1FEA16B900771EE5 /* gloriahallelujah.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A71811DC1FEA16B900771EE5 /* gloriahallelujah.ttf */; };
 		A71811DF1FEA16B900771EE5 /* KGFonts-TOU.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71811DD1FEA16B900771EE5 /* KGFonts-TOU.txt */; };
 		A7194DB01FEA1FF700586038 /* guidance_step1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7194DAF1FEA1FF700586038 /* guidance_step1_ViewController.swift */; };
@@ -169,7 +172,6 @@
 		A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E361FD207CA0009322E /* UIViewExtensions.swift */; };
 		A7DD2E391FD2DC110009322E /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E381FD2DC110009322E /* Information.swift */; };
 		AD1A34411FE1C41B0054801D /* InformationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A34401FE1C41B0054801D /* InformationAlertView.swift */; };
-		AD32948F202F72FC0001CEF5 /* ExtentionTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD32948E202F72FC0001CEF5 /* ExtentionTemp.swift */; };
 		AD3326BB202F8C77008C68E7 /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3326B9202F8C76008C68E7 /* DiscardableImageCacheItem.swift */; };
 		AD3326BC202F8C77008C68E7 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3326BA202F8C76008C68E7 /* CachedImageView.swift */; };
 		AD48E13D2001037B0042020C /* DatabaseFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E13C2001037B0042020C /* DatabaseFriends.swift */; };
@@ -189,9 +191,6 @@
 		ADA889412025E78500A3E793 /* FeedCarousel.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADA889402025E78500A3E793 /* FeedCarousel.xib */; };
 		ADA889442025EB9800A3E793 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA889422025EB9800A3E793 /* CustomView.swift */; };
 		ADA889452025EB9800A3E793 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADA889432025EB9800A3E793 /* CustomView.xib */; };
-		ADA889472025EDDB00A3E793 /* remzi_profile1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADA889462025EDDB00A3E793 /* remzi_profile1.jpg */; };
-		ADA8894920262C2B00A3E793 /* remzi_profile2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADA8894820262C2B00A3E793 /* remzi_profile2.jpg */; };
-		ADA8894B2026361300A3E793 /* remzi_profile3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADA8894A2026361300A3E793 /* remzi_profile3.jpg */; };
 		ADB505AA1FDB1C6500F81046 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */; };
 		ADB505AB1FDB1C6500F81046 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */; };
 		ADB505AF1FDB333B00F81046 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB505AC1FDB333B00F81046 /* image1.png */; };
@@ -202,6 +201,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4518AA212041BBD80070F73F /* DatabaseFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFeed.swift; sourceTree = "<group>"; };
+		45434B032051E85600B8F085 /* FeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
+		45E12998204B262A00BC1868 /* FeedHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCell.swift; sourceTree = "<group>"; };
 		757CC8AC01F59DF3A869DAD9 /* Pods-Project Version 0_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.release.xcconfig"; sourceTree = "<group>"; };
 		A148C3682F780F8F696B8FB2 /* Pods-Project Version 0_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.debug.xcconfig"; sourceTree = "<group>"; };
 		A71811DC1FEA16B900771EE5 /* gloriahallelujah.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gloriahallelujah.ttf; sourceTree = "<group>"; };
@@ -369,7 +371,6 @@
 		A7DD2E361FD207CA0009322E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		A7DD2E381FD2DC110009322E /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		AD1A34401FE1C41B0054801D /* InformationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAlertView.swift; sourceTree = "<group>"; };
-		AD32948E202F72FC0001CEF5 /* ExtentionTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionTemp.swift; sourceTree = "<group>"; };
 		AD3326B9202F8C76008C68E7 /* DiscardableImageCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardableImageCacheItem.swift; sourceTree = "<group>"; };
 		AD3326BA202F8C76008C68E7 /* CachedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 		AD48E13C2001037B0042020C /* DatabaseFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFriends.swift; sourceTree = "<group>"; };
@@ -389,9 +390,6 @@
 		ADA889402025E78500A3E793 /* FeedCarousel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCarousel.xib; sourceTree = "<group>"; };
 		ADA889422025EB9800A3E793 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		ADA889432025EB9800A3E793 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
-		ADA889462025EDDB00A3E793 /* remzi_profile1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = remzi_profile1.jpg; sourceTree = "<group>"; };
-		ADA8894820262C2B00A3E793 /* remzi_profile2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = remzi_profile2.jpg; sourceTree = "<group>"; };
-		ADA8894A2026361300A3E793 /* remzi_profile3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = remzi_profile3.jpg; sourceTree = "<group>"; };
 		ADB505A81FDB1C6500F81046 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		ADB505A91FDB1C6500F81046 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		ADB505AC1FDB333B00F81046 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
@@ -1088,6 +1086,7 @@
 				A75CE07E1FEF0202004703F5 /* DatabasePinItems.swift */,
 				AD48E13C2001037B0042020C /* DatabaseFriends.swift */,
 				AD605C63201FA21C00ED08CE /* DatabasePinModels.swift */,
+				4518AA212041BBD80070F73F /* DatabaseFeed.swift */,
 			);
 			path = DatabaseServices;
 			sourceTree = "<group>";
@@ -1221,10 +1220,11 @@
 			children = (
 				ADA8893D2025D27300A3E793 /* FeedDesign */,
 				ADA889392025A20A00A3E793 /* FeedViewController.swift */,
+				45E12998204B262A00BC1868 /* FeedHeaderCell.swift */,
 				ADA8893B2025A28400A3E793 /* FeedCell.swift */,
-				AD32948E202F72FC0001CEF5 /* ExtentionTemp.swift */,
 				AD3326BA202F8C76008C68E7 /* CachedImageView.swift */,
 				AD3326B9202F8C76008C68E7 /* DiscardableImageCacheItem.swift */,
+				45434B032051E85600B8F085 /* FeedDataSource.swift */,
 			);
 			path = Feeds;
 			sourceTree = "<group>";
@@ -1232,9 +1232,6 @@
 		ADA8893D2025D27300A3E793 /* FeedDesign */ = {
 			isa = PBXGroup;
 			children = (
-				ADA889462025EDDB00A3E793 /* remzi_profile1.jpg */,
-				ADA8894820262C2B00A3E793 /* remzi_profile2.jpg */,
-				ADA8894A2026361300A3E793 /* remzi_profile3.jpg */,
 				ADA8893E2025D3D200A3E793 /* FeedCarousel.swift */,
 				ADA889402025E78500A3E793 /* FeedCarousel.xib */,
 				ADA889422025EB9800A3E793 /* CustomView.swift */,
@@ -1354,7 +1351,6 @@
 				A71811DF1FEA16B900771EE5 /* KGFonts-TOU.txt in Resources */,
 				A71B49FE1FD3112400B69E71 /* camera_icon_new.png in Resources */,
 				A72CAA841FD6855200308DED /* ic_eye_open.png in Resources */,
-				ADA8894B2026361300A3E793 /* remzi_profile3.jpg in Resources */,
 				A7B17CD01FE1CC5800A8B7DA /* WelcomeFirstPin.storyboard in Resources */,
 				ADB505B01FDB333B00F81046 /* image2.png in Resources */,
 				A75CE0941FF2AEB8004703F5 /* maps.png in Resources */,
@@ -1369,7 +1365,6 @@
 				A71BDC4D1FDF1EA80059EE43 /* error@2x.png in Resources */,
 				AD641ECE1FDDD254002E483B /* gender_man.png in Resources */,
 				A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */,
-				ADA8894920262C2B00A3E793 /* remzi_profile2.jpg in Resources */,
 				A75CE0951FF2AEB8004703F5 /* current-location.png in Resources */,
 				A75CE0A21FF2B36B004703F5 /* PersonPinDetailMapView.xib in Resources */,
 				A75E3F6D1FE79B69007165DE /* play-button.png in Resources */,
@@ -1398,7 +1393,6 @@
 				A72CAA821FD6855200308DED /* ic_password_checkmark@3x.png in Resources */,
 				A72CAA871FD6855200308DED /* ic_eye_closed@3x.png in Resources */,
 				ADB505AF1FDB333B00F81046 /* image1.png in Resources */,
-				ADA889472025EDDB00A3E793 /* remzi_profile1.jpg in Resources */,
 				A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */,
 				A75E3F541FE55296007165DE /* location.png in Resources */,
 				A75CE0901FF2AEB8004703F5 /* cancel.png in Resources */,
@@ -1511,6 +1505,7 @@
 				A72AE3882000E42300657A4D /* MainHomeViewController.swift in Sources */,
 				A767CEE71FD4AA4200E70B16 /* AlertControllerConstants.swift in Sources */,
 				A72AE4852007848100657A4D /* MapViewExtensions.swift in Sources */,
+				45434B042051E85600B8F085 /* FeedDataSource.swift in Sources */,
 				A72AE39220054A3B00657A4D /* PinDropViewController.swift in Sources */,
 				A7DD2E131FD1B1600009322E /* ServerAccessExtensionFunctions.swift in Sources */,
 				AD48E13F20010D7A0042020C /* PinModels.swift in Sources */,
@@ -1554,6 +1549,7 @@
 				A75CE09B1FF2B023004703F5 /* PersonAnnotation.swift in Sources */,
 				A72CAA921FD689D100308DED /* EntranceViewControllerExtention.swift in Sources */,
 				A767CEF01FD5392400E70B16 /* UIAlertControllerCustomDesign.swift in Sources */,
+				45E12999204B262A00BC1868 /* FeedHeaderCell.swift in Sources */,
 				A729EA87200B76F50051AC92 /* PinAnnotationProcess.swift in Sources */,
 				A72AFBE31FCDE9BF0018254E /* DirectViewToOtherPagesFunctions.swift in Sources */,
 				A767CEEB1FD4E61000E70B16 /* UINavigationItem.swift in Sources */,
@@ -1588,6 +1584,7 @@
 				ADA8893A2025A20A00A3E793 /* FeedViewController.swift in Sources */,
 				A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */,
 				A7407F0B1FC799FA00DAAF44 /* UIButtonExtensions.swift in Sources */,
+				4518AA222041BBD80070F73F /* DatabaseFeed.swift in Sources */,
 				A729EA8B200D3E300051AC92 /* PinDataSaveProcess.swift in Sources */,
 				A729EA81200A97060051AC92 /* ImageVideoProcess.swift in Sources */,
 				A72AFBDC1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift in Sources */,
@@ -1612,7 +1609,6 @@
 				A7194DB91FEA231700586038 /* guidance_step2_ViewController.swift in Sources */,
 				A778D9FB1FC9D5DF00F38438 /* PageViewController.swift in Sources */,
 				A72AFBE91FCDF77C0018254E /* InformationMessages.swift in Sources */,
-				AD32948F202F72FC0001CEF5 /* ExtentionTemp.swift in Sources */,
 				A75CE0611FED4280004703F5 /* PinDataPictureViewController.swift in Sources */,
 				AD48E14320011EA60042020C /* Friend.swift in Sources */,
 				A75CE0791FEE81AF004703F5 /* DecideToLoadVideo.swift in Sources */,

@@ -1,9 +1,9 @@
 //
 //  DiscardableImageCacheItem.swift
-//  Pods
+//  Project Version 0_1
 //
-//  Created by Brian Voong on 11/28/16.
-//
+//  Created by Remzi on 03/02/2018.
+//  Copyright © 2018 Erkut Baş. All rights reserved.
 //
 
 import UIKit
