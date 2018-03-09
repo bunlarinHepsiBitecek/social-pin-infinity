@@ -10,6 +10,9 @@
 		0476E4F9FFF99A10D02F1BB7 /* Pods_Project_Version_0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2EAC58EB2B78FDCBF4F5D0 /* Pods_Project_Version_0_1.framework */; };
 		4518AA222041BBD80070F73F /* DatabaseFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518AA212041BBD80070F73F /* DatabaseFeed.swift */; };
 		45434B042051E85600B8F085 /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B032051E85600B8F085 /* FeedDataSource.swift */; };
+		45434B1220528F4400B8F085 /* DatabasePinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B1120528F4400B8F085 /* DatabasePinModels.swift */; };
+		45434B142052911600B8F085 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B132052911500B8F085 /* Feed.swift */; };
+		45434B162052912300B8F085 /* DatabaseFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B152052912300B8F085 /* DatabaseFeed.swift */; };
 		45E12999204B262A00BC1868 /* FeedHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E12998204B262A00BC1868 /* FeedHeaderCell.swift */; };
 		A71811DE1FEA16B900771EE5 /* gloriahallelujah.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A71811DC1FEA16B900771EE5 /* gloriahallelujah.ttf */; };
 		A71811DF1FEA16B900771EE5 /* KGFonts-TOU.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71811DD1FEA16B900771EE5 /* KGFonts-TOU.txt */; };
@@ -237,7 +240,6 @@
 		AD7FB6801FF84ED4001AD14B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7FB67F1FF84ED4001AD14B /* MapKit.framework */; };
 		ADA8893A2025A20A00A3E793 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA889392025A20A00A3E793 /* FeedViewController.swift */; };
 		ADA8893C2025A28400A3E793 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA8893B2025A28400A3E793 /* FeedCell.swift */; };
-		ADA8893F2025D3D200A3E793 /* FeedCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA8893E2025D3D200A3E793 /* FeedCarousel.swift */; };
 		ADA889412025E78500A3E793 /* FeedCarousel.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADA889402025E78500A3E793 /* FeedCarousel.xib */; };
 		ADA889442025EB9800A3E793 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA889422025EB9800A3E793 /* CustomView.swift */; };
 		ADA889452025EB9800A3E793 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADA889432025EB9800A3E793 /* CustomView.xib */; };
@@ -253,6 +255,9 @@
 /* Begin PBXFileReference section */
 		4518AA212041BBD80070F73F /* DatabaseFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFeed.swift; sourceTree = "<group>"; };
 		45434B032051E85600B8F085 /* FeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
+		45434B1120528F4400B8F085 /* DatabasePinModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabasePinModels.swift; sourceTree = "<group>"; };
+		45434B132052911500B8F085 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		45434B152052912300B8F085 /* DatabaseFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseFeed.swift; sourceTree = "<group>"; };
 		45E12998204B262A00BC1868 /* FeedHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCell.swift; sourceTree = "<group>"; };
 		757CC8AC01F59DF3A869DAD9 /* Pods-Project Version 0_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.release.xcconfig"; sourceTree = "<group>"; };
 		A148C3682F780F8F696B8FB2 /* Pods-Project Version 0_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -977,6 +982,9 @@
 		A75E3F2E1FE29ABD007165DE /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
+				AD605C63201FA21C00ED08CE /* DatabasePinModels.swift */,
+				4518AA212041BBD80070F73F /* DatabaseFeed.swift */,
+				ADC406DC203859B100D7BB9A /* Feed.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -1142,6 +1150,7 @@
 		A75F401D1FC0D5EA00495228 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				45434B132052911500B8F085 /* Feed.swift */,
 				A75CE0991FF2B023004703F5 /* PersonAnnotation.swift */,
 				A75CE09A1FF2B023004703F5 /* PersonAnnotationView.swift */,
 				A75E3F621FE5E6A5007165DE /* UserLocation.swift */,
@@ -1260,6 +1269,8 @@
 		A778D9E11FC9AE4600F38438 /* DatabaseServices */ = {
 			isa = PBXGroup;
 			children = (
+				45434B152052912300B8F085 /* DatabaseFeed.swift */,
+				45434B1120528F4400B8F085 /* DatabasePinModels.swift */,
 				A778D9E21FC9AE6200F38438 /* DatabaseUser.swift */,
 				A75E3F601FE5B7A0007165DE /* DatabaseLocation.swift */,
 				A75E3F641FE5E831007165DE /* DatabaseUserLocation.swift */,
@@ -1688,7 +1699,8 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1772,6 +1784,7 @@
 				A72D9EE01FF5B1D3001C2098 /* AlertWarningConstants.swift in Sources */,
 				A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */,
 				A72D2C6D1FD98594008BE2D2 /* KeyChainConstants.swift in Sources */,
+				45434B162052912300B8F085 /* DatabaseFeed.swift in Sources */,
 				AD3326BB202F8C77008C68E7 /* DiscardableImageCacheItem.swift in Sources */,
 				A7DD2E371FD207CA0009322E /* UIViewExtensions.swift in Sources */,
 				AD3326BC202F8C77008C68E7 /* CachedImageView.swift in Sources */,
@@ -1783,6 +1796,7 @@
 				A72AE38C2001362300657A4D /* HomePageViewController.swift in Sources */,
 				A75E3F441FE29FE4007165DE /* UIControl+Point.swift in Sources */,
 				A738703C203AFFF100436C87 /* PhotoLibraryCollectionViewCell.swift in Sources */,
+				45434B142052911600B8F085 /* Feed.swift in Sources */,
 				A75CE07F1FEF0202004703F5 /* DatabasePinItems.swift in Sources */,
 				A75E3F481FE29FE4007165DE /* FTPopOverMenu.swift in Sources */,
 				A7194DB01FEA1FF700586038 /* guidance_step1_ViewController.swift in Sources */,
@@ -1854,6 +1868,7 @@
 				AD48E14920012BF90042020C /* ShowPinsOnMapViewController.swift in Sources */,
 				A775EDC92039C123007231FF /* PhotoPicker2ViewController.swift in Sources */,
 				A7B1E9E6203AF52800536E50 /* PhotoPicker3ViewController.swift in Sources */,
+				45434B1220528F4400B8F085 /* DatabasePinModels.swift in Sources */,
 				A72D2C751FDB00A4008BE2D2 /* NavigationBarExtensionFunctions.swift in Sources */,
 				A7DD2E111FD1A8440009322E /* PerformSegueExtensionFunctions.swift in Sources */,
 				A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */,
