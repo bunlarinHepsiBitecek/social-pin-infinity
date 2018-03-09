@@ -18,7 +18,7 @@ class DatabaseUser {
     
     // firebase database reference definitions
     private var _database_reference = databaseReferenceObject
-    private var _database_reference_User = databaseReferenceObject.child("Users")
+    private var _database_reference_User = databaseReferenceObject.child(FirebaseModels.Users.CHILD_USERS)
     
     var getDatabaseReference : DatabaseReference {
         
@@ -43,10 +43,12 @@ class DatabaseUser {
     }
     
     func createFirbaseDatabaseUser(userID: String, userData: Dictionary<String, String>) {
-        print("createFirbaseDatabaseUser starts")
         print("userID : \(userID)")
         getDatabaseReferenceUser.child(userID).updateChildValues(userData)
-        
+    }
+    
+    func generateAutoID() -> String {
+        return getDatabaseReferenceUser.child(FirebaseModels.Users.CHILD_USERS).childByAutoId().key
     }
     
 }
