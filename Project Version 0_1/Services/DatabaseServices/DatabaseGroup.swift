@@ -5,7 +5,6 @@
 //  Created by Erkut Baş on 10.02.2018.
 //  Copyright © 2018 Erkut Baş. All rights reserved.
 //
-
 import Foundation
 import FirebaseDatabase
 import SwiftKeychainWrapper

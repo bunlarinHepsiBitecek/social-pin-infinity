@@ -1640,6 +1640,7 @@
         <image name="next.png" width="512" height="512"/>
         <image name="party.png" width="512" height="512"/>
         <image name="photo-camera (3).png" width="32" height="32"/>
+        <image name="photo-camera.png" width="512" height="512"/>
         <image name="rounded-check-mark- (1).png" width="32" height="32"/>
         <image name="toxic-cross.png" width="512" height="512"/>
         <image name="user.png" width="512" height="512"/>

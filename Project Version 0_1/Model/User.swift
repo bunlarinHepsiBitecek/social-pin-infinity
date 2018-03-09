@@ -76,6 +76,8 @@ class User {
         self._userLocationObject = Location()
         self._isUserGetInformedFromGuidence = false
         self._isUserGetInformedFromGuidance4 = false
+        self._isUserProfilePictureGet = false
+
     }
     
     func printUserInfo() {

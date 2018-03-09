@@ -10,6 +10,8 @@
 		0476E4F9FFF99A10D02F1BB7 /* Pods_Project_Version_0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2EAC58EB2B78FDCBF4F5D0 /* Pods_Project_Version_0_1.framework */; };
 		4518AA222041BBD80070F73F /* DatabaseFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518AA212041BBD80070F73F /* DatabaseFeed.swift */; };
 		45434B042051E85600B8F085 /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B032051E85600B8F085 /* FeedDataSource.swift */; };
+		45434B1E2052991D00B8F085 /* DatabaseGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B1D2052991D00B8F085 /* DatabaseGroup.swift */; };
+		45434B202052E22400B8F085 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B1F2052E22400B8F085 /* Feed.swift */; };
 		45E12999204B262A00BC1868 /* FeedHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E12998204B262A00BC1868 /* FeedHeaderCell.swift */; };
 		A71811DE1FEA16B900771EE5 /* gloriahallelujah.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A71811DC1FEA16B900771EE5 /* gloriahallelujah.ttf */; };
 		A71811DF1FEA16B900771EE5 /* KGFonts-TOU.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71811DD1FEA16B900771EE5 /* KGFonts-TOU.txt */; };
@@ -235,7 +237,6 @@
 		A7DD2E391FD2DC110009322E /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DD2E381FD2DC110009322E /* Information.swift */; };
 		A7E499FA202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E499F9202A114200B1CB24 /* SelectedFriendCollectionViewCell.swift */; };
 		A7E499FC202B65FC00B1CB24 /* UIImageCacheProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E499FB202B65FC00B1CB24 /* UIImageCacheProcess.swift */; };
-		A7E499FE202F147100B1CB24 /* DatabaseGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E499FD202F147100B1CB24 /* DatabaseGroup.swift */; };
 		A7E49A00202F1D1100B1CB24 /* IBActionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E499FF202F1D1100B1CB24 /* IBActionFunctions.swift */; };
 		A7E49A03202F1D8400B1CB24 /* EnumForSegmentedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E49A02202F1D8400B1CB24 /* EnumForSegmentedButtons.swift */; };
 		A7F05441203A0CC100B39B11 /* GridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F05440203A0CC100B39B11 /* GridView.xib */; };
@@ -267,12 +268,13 @@
 		ADB505B01FDB333B00F81046 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB505AD1FDB333B00F81046 /* image2.png */; };
 		ADB505B11FDB333B00F81046 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB505AE1FDB333B00F81046 /* image3.png */; };
 		ADB505B31FDB348500F81046 /* EntranceViewPerformSegueExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB505B21FDB348500F81046 /* EntranceViewPerformSegueExtention.swift */; };
-		ADC406DD203859B100D7BB9A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC406DC203859B100D7BB9A /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4518AA212041BBD80070F73F /* DatabaseFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFeed.swift; sourceTree = "<group>"; };
 		45434B032051E85600B8F085 /* FeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
+		45434B1D2052991D00B8F085 /* DatabaseGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseGroup.swift; sourceTree = "<group>"; };
+		45434B1F2052E22400B8F085 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		45E12998204B262A00BC1868 /* FeedHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCell.swift; sourceTree = "<group>"; };
 		757CC8AC01F59DF3A869DAD9 /* Pods-Project Version 0_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.release.xcconfig"; sourceTree = "<group>"; };
 		A148C3682F780F8F696B8FB2 /* Pods-Project Version 0_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1132,6 +1134,8 @@
 		A75E3F2E1FE29ABD007165DE /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
+				A7E499FD202F147100B1CB24 /* DatabaseGroup.swift */,
+				ADC406DC203859B100D7BB9A /* Feed.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -1297,6 +1301,7 @@
 		A75F401D1FC0D5EA00495228 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				45434B1F2052E22400B8F085 /* Feed.swift */,
 				A75CE0991FF2B023004703F5 /* PersonAnnotation.swift */,
 				A75CE09A1FF2B023004703F5 /* PersonAnnotationView.swift */,
 				A75E3F621FE5E6A5007165DE /* UserLocation.swift */,
@@ -1412,7 +1417,9 @@
 				A75E3F641FE5E831007165DE /* DatabaseUserLocation.swift */,
 				A75CE07E1FEF0202004703F5 /* DatabasePinItems.swift */,
 				AD48E13C2001037B0042020C /* DatabaseFriends.swift */,
-				A7E499FD202F147100B1CB24 /* DatabaseGroup.swift */,
+				AD605C63201FA21C00ED08CE /* DatabasePinModels.swift */,
+				4518AA212041BBD80070F73F /* DatabaseFeed.swift */,
+				45434B1D2052991D00B8F085 /* DatabaseGroup.swift */,
 			);
 			path = DatabaseServices;
 			sourceTree = "<group>";
@@ -1945,6 +1952,7 @@
 				A729EA85200B740B0051AC92 /* AlertProcessing.swift in Sources */,
 				A77E7B33203EE54300E26CC3 /* ScrollableImage.swift in Sources */,
 				A72CAA861FD6855200308DED /* PasswordToggleVisibilityView.swift in Sources */,
+				45434B1E2052991D00B8F085 /* DatabaseGroup.swift in Sources */,
 				A72AE48A200A507200657A4D /* SegueConstants.swift in Sources */,
 				A72AE38C2001362300657A4D /* HomePageViewController.swift in Sources */,
 				A75E3F441FE29FE4007165DE /* UIControl+Point.swift in Sources */,
@@ -1970,7 +1978,6 @@
 				A72D9ED91FF4E21B001C2098 /* UILabelExtensions.swift in Sources */,
 				A73BC647204E0AF300C5B9A1 /* DetailHeaderView.swift in Sources */,
 				A75CE09C1FF2B023004703F5 /* PersonAnnotationView.swift in Sources */,
-				A7E499FE202F147100B1CB24 /* DatabaseGroup.swift in Sources */,
 				A77E7B37203F49FE00E26CC3 /* RequiredUserData.swift in Sources */,
 				A75CE0A71FF37A24004703F5 /* LocationCoordinateConstantValues.swift in Sources */,
 				A7DD2E0F1FD1A7140009322E /* ProcessingUserData.swift in Sources */,
@@ -2008,6 +2015,7 @@
 				A728D74920415AA0002CB5E7 /* SearchBarExtensions.swift in Sources */,
 				A7D1CBA51FD44AEA0082BC02 /* UINavigationBarCustomDesign.swift in Sources */,
 				A7A58CF82032A75700BDBCE8 /* GroupCreation2CollectionViewCell.swift in Sources */,
+				ADA8893F2025D3D200A3E793 /* FeedCarousel.swift in Sources */,
 				A72705C31FC8973F006C2504 /* NavigationBarController.swift in Sources */,
 				A770437C20138C610081D242 /* TableViewConstants.swift in Sources */,
 				A7D1CBA21FD449780082BC02 /* UIButtonCustomDesign.swift in Sources */,
@@ -2044,6 +2052,7 @@
 				A72AFBDC1FCDE4150018254E /* SendEmailVerificationAgainFunctions.swift in Sources */,
 				A75CE0A11FF2B36B004703F5 /* PinView.swift in Sources */,
 				A760C49D20183B210050EA16 /* SectionBasedFriendsData.swift in Sources */,
+				45434B202052E22400B8F085 /* Feed.swift in Sources */,
 				A73828301FC35DCB003C1827 /* Validation.swift in Sources */,
 				A726DA5720248AA7009C2D1A /* ContactsNewTableViewCell.swift in Sources */,
 				A75CE0861FF04A7D004703F5 /* PinImageDataExtensions.swift in Sources */,
@@ -2080,7 +2089,6 @@
 				A770437420136CCA0081D242 /* AccountViewController.swift in Sources */,
 				A726DA592024F860009C2D1A /* PrepareSectionBasedFriendsList.swift in Sources */,
 				A75CE0791FEE81AF004703F5 /* DecideToLoadVideo.swift in Sources */,
-				ADC406DD203859B100D7BB9A /* Feed.swift in Sources */,
 				A77033301FFABB9B004E3C7B /* FacebookLoginProperties.swift in Sources */,
 				A7D1CBAE1FD460660082BC02 /* UITextFieldCustomDesign.swift in Sources */,
 				A76628DE1FF7C3750008FE63 /* guidance_step3_ViewController.swift in Sources */,
