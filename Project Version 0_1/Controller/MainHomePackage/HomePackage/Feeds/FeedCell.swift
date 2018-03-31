@@ -10,16 +10,20 @@ import UIKit
 
 protocol ConfigurableCell {
     associatedtype Object
-    func configure(object: Object)
+    func configure(object: Object, index: Int)
 }
 
-class FeedCell: UITableViewCell , FeedCarouselDelegate {
+class FeedCell: UITableViewCell, FeedCarouselDelegate {
     
     //outlets
     @IBOutlet var carouselView: FeedCarousel!
     
     //variable
-    weak var feed : Feed!
+    weak var feed : Feed! {
+        didSet {
+            setupCarousel()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,33 +41,28 @@ class FeedCell: UITableViewCell , FeedCarouselDelegate {
      */
     
     // MARK: - methods
-    
-    func setupCarousel(section: Int) {
-        print("section : \(section) selected index: \(carouselView.selectedIndex)")
+    func setupCarousel() {
+        
+        // MARK: init the first index
+        carouselView.backingSelectedIndex = feed.selectedIndex
+        
         carouselView.delegate = self
         carouselView.margin = 10
         // MARK : when first load (selectedIndex = -1 ) set center view: eg when 3 image then index 1 selected
-        if carouselView.selectedIndex == -1 {
-            carouselView.selectedIndex = feed.numberOfItem() / 2
-        }
-        //        carouselView.selectedIndex = feed.selectedIndex
+        carouselView.selectedIndex = feed.selectedIndex
         carouselView.type = .threeDimensional
     }
-    
+ 
     func numberOfItemsInCarouselView(_ carouselView: FeedCarousel) -> Int {
         return feed.numberOfItem()
     }
     
     func carouselView(_ carouselView: FeedCarousel, itemForRowAtIndex index: Int) -> FeedCarouselItem {
-        print("Rezik itemForRowAt: \(index)")
-        //print("Rezik locationID: \(feed.locationID)")
-        
         return feed.getCustomView(index: index)
     }
     
     func carouselView(_ carouselView: FeedCarousel, didSelectItemAtIndex index: Int) {
-        print("Tap on item at index \(index)")
-        
+        feed.selectedIndex = index
     }
     
     func carouselView(_ carouselView: FeedCarousel, willDisplayItem item: FeedCarouselItem, forIndex index: Int) {
@@ -74,7 +73,7 @@ class FeedCell: UITableViewCell , FeedCarouselDelegate {
 
 
 extension FeedCell: ConfigurableCell {
-    func configure(object: Feed) {
+    func configure(object: Feed, index: Int) {
         feed = object
     }
 }

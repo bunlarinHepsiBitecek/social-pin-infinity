@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseDatabase
 
 class FeedViewController: UIViewController {
     
@@ -19,55 +17,61 @@ class FeedViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     
     var feeds = [Feed]()
-    var startKey: String!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupTableView()
-        getDataFromFirebase()
-        
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func setupTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        // Add Refresh Control to Table View
-        if #available(iOS 10.0, *) {
-            tableView.refreshControl = refreshControl
-        } else {
-            tableView.addSubview(refreshControl)
-        }
+        setupTableView()
+        self.loadData()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("FVC viewWillAppear")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refresh(notification:)), name: Notification.Name.init(rawValue: "refresh"), object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func refresh(notification: NSNotification)  {
+//        let state = notification.object as! Bool
+        print("refresh function calisti")
+        self.feeds = FeedDataSource.shared.feeds
+        self.tableView.reloadData()
         
-        // Configure Refresh Control
-        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
-        refreshControl.attributedTitle = NSAttributedString(string: "Fetching data...")
-        
+//        var indexPaths = [IndexPath]()
+//        for section in feeds.indices {
+//            for row in 0..<(feeds[section].numberOfItem()) {
+//                print("section row: ",section, row)
+//                indexPaths.append(IndexPath(row: row, section: section))
+//            }
+//        }
+//        self.tableView.insertRows(at: indexPaths, with: .automatic)
     }
     
     @objc private func refreshData(_ sender: Any) {
         
         // get data async
-        // when get async, open below code comment
-        //self.refreshControl.endRefreshing()
         /*
         self.updateView()
         self.refreshControl.endRefreshing()
         self.activityIndicatorView.stopAnimating()
          */
-        //getDataFromFirebase()
-        
-        self.tableView.reloadData()
+        self.loadData()
         self.refreshControl.endRefreshing()
     }
     
-    // show/hide bar
+    // show/hide tab/bottom bar
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
             changeTabBar(hidden: true, animated: true)
@@ -95,118 +99,44 @@ class FeedViewController: UIViewController {
         }
     }
     
-    func getDataFromFirebase() {
-        let userID = Auth.auth().currentUser?.uid
-        
-        print("getPaginatedDataFromFirebase id: \(userID)")
-        let ref = DatabaseFeed.ds.getDatabaseReferenceFeed.child(userID!).queryOrdered(byChild: FirebaseModelConstants.Feed.Timestamp)
-        
-        if startKey == nil {
-            ref.queryLimited(toLast: FirebaseConstants.Query.LastItemCount).observe(.value) { (snapshot) in
-                guard snapshot.exists() else { return }
-                
-                guard let lastChildren = snapshot.children.allObjects.last as? DataSnapshot else {return}
-                print("*********************start************")
-                print(snapshot.value)
-                print("**********************end*************")
-                
-                if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
-                    for snap in snapshot {
-                        print("SNAP f: \(snap)")
-                        print("   SNAP k: \(snap.key)")
-                        print("   SNAP v: \(snap.value)")
-                        
-                        // MARK :
-                        self.getLocationDetail(locationID: snap.key)
-                        
-                    }
-                    self.startKey = lastChildren.key
-                    //self.tableView.reloadData()
-                }
-            }
-        } else {
-            ref.queryStarting(atValue: startKey).queryLimited(toLast: FirebaseConstants.Query.NextItemCount).observe(.value, with: { (snapshot) in
-                guard snapshot.exists() else { return }
-                
-                guard let lastChildren = snapshot.children.allObjects.last as? DataSnapshot else {return}
-                print("*********************start next************")
-                print(snapshot.value)
-                print("**********************end next*************")
-                
-                if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
-                    for snap in snapshot {
-                        print("SNAP f: \(snap)")
-                        print("   SNAP k: \(snap.key)")
-                        print("   SNAP v: \(snap.value)")
-                        
-                        // pass last item
-                        /*
-                        if snap.key != self.startKey {
-                            if let data = snap.value as! Dictionary<String, Any>? {
-                                let feedItem = Feed(snapshot: data, locationID: snap.key)
-                                print("Remzi locid:",feedItem.locationID)
-                                self.feeds.insert(feedItem, at: self.feeds.count)
-                            }
-                        } */
-                        
-                    }
-                    self.startKey = lastChildren.key
-                    self.tableView.reloadData()
-                    self.refreshControl.endRefreshing()
-                }
-                
-                
-            })
-            
-            
-        } // end of startKey
-    }
-    
-    func getLocationDetail(locationID: String) {
-        print("getLocationStart locationID: \(locationID)")
-        // MARK :
-        let ref = DatabaseLocation.ds.getDatabaseReferenceLocation.child(locationID)
-        
-        ref.observe(.value, with: { (snapshot) in
-            guard snapshot.exists() else { return }
-            
-            // MARK : Sil for
-            if let data = snapshot.value as! Dictionary<String, Any>? {
-                let location = Location(data: data, locationID: locationID)
-                
-                self.getUserDetail(userID: location.userID, completion: { (user) in
-                    
-                    // MARK : create a feed
-                    let feed = Feed(location: location, ownerUser: user!)
-                    self.feeds.insert(feed, at: self.feeds.count)
-                    
-                    self.tableView.reloadData()
-                    
-                })
-            }
-            
-        })
-    }
-    
-    func getUserDetail(userID: String, completion: @escaping (User?) -> Void) {
-        print("getUserDetail : \(userID)")
-        // MARK :
-        let ref = DatabaseUser.ds.getDatabaseReferenceUser.child(userID)
-        
-        ref.observe(.value, with: { (snapshot) in
-            guard snapshot.exists() else {
-                completion(nil)
-                return }
-            
-            if let data = snapshot.value as! Dictionary<String, Any>? {
-                completion(User(data: data, userID: userID))
-            }
-            
-        })
+    // MARK: when scroll bottom get more data
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let currentOffset = scrollView.contentOffset.y
+        let maxOffset = scrollView.contentSize.height - scrollView.frame.size.height
+
+        print("scrollllllllllllllll :\(maxOffset - currentOffset)")
+        if (maxOffset - currentOffset <= 40) {
+            print("firebaseMoreItem")
+            self.startFooterSpinner()
+            self.loadMoreData()
+        }
     }
 }
 
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        // Configure Refresh Control
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: Constants.Feed.FetchingData)
+        
+    }
+    
+    func startFooterSpinner() {
+        let pagingSpinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        pagingSpinner.startAnimating()
+        pagingSpinner.hidesWhenStopped = true
+        pagingSpinner.sizeToFit()
+        tableView.tableFooterView = pagingSpinner
+    }
     
     // MARK: section by per feed
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -215,14 +145,13 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return feeds.count
-        if (feeds.count > 0) {
-            return 1
-        }
-        return 0
+//        if (feeds.count > 0) {
+//            return 1
+//        }
+//        return 0
+        return feeds[section].rowCount
     
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("Remzi : \(feeds.count) cellForRowAt indexPath: \(indexPath)")
@@ -235,21 +164,10 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }()
         
-        // MARK: indexPath.item or indexPath.row cann't use cause of it sectional
-        self.configure(cell: cell, indexPath: indexPath)
-//        cell.feed = feeds[indexPath.section]
-//        cell.setupCarousel(section: indexPath.section)
-        
-        //didSelectRowAtIndexPath
-        //tableView.reloadRows(at: <#T##[IndexPath]#>, with: .automatic)
+        cell.feed = feeds[indexPath.section]
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Storyboard.Feed.FeedCellHeight
-    }
-    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -262,25 +180,56 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         }()
         
         headerCell.feed = feeds[section]
-        headerCell.setupHeaderView()
         
         return headerCell
         
     }
     
+//    // MARK: getMoreData from firebase
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        guard firstItem != nil else { return }
+//
+//        print("willDisplay: \(indexPath.section)")
+//        print("currentItem: \(feeds[indexPath.section].location.locationId) firstItem: \(firstItem.locationId)")
+//        if firstItem.locationId == feeds[indexPath.section].location.locationId {
+//            getDataFromFirebase()
+//        }
+//    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Storyboard.Feed.FeedCellHeight
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return Storyboard.Feed.FeedHeaderCellHeight
     }
-    
-    private func configure(cell: UITableViewCell, indexPath: IndexPath) {
-        if let cell = cell as? FeedCell {
-            //cell.feed = feeds[indexPath.section]
-            
-            let object = feeds[indexPath.section]
-            cell.configure(object: object)
-            cell.setupCarousel(section: indexPath.section)
-        }
-    }
- 
 }
+
+// MARK: Get Data
+extension FeedViewController {
+    func loadData() {
+        FeedDataSource.shared.loadData()
+        print("load Data compilation count: \(feeds.count)")
+    }
+    
+    func loadMoreData() {
+        FeedDataSource.shared.loadMoreData()
+        print("load More Data compilation count: \(feeds.count)")
+    }
+    
+    func apply(changes: SectionChanges) {
+        self.tableView?.beginUpdates()
+        
+        self.tableView?.deleteSections(changes.deletes, with: .fade)
+        self.tableView?.insertSections(changes.inserts, with: .fade)
+        
+        self.tableView?.reloadRows(at: changes.updates.reloads, with: .fade)
+        self.tableView?.insertRows(at: changes.updates.inserts, with: .fade)
+        self.tableView?.deleteRows(at: changes.updates.deletes, with: .fade)
+        
+        self.tableView?.endUpdates()
+    }
+    
+}
+
  

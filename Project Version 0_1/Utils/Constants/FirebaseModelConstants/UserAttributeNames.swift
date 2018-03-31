@@ -82,6 +82,7 @@ struct FirebaseModelConstants {
         static let Location : String = "Location"
         static let CountryCode : String = "countryCode"
         static let CountryName : String = "countryName"
+        static let CityName : String = "cityName"
         static let Timestamp : String = "timestamp"
         static let PostalCode : String = "postalCode"
         static let Thorough : String = "thorough"
@@ -125,7 +126,6 @@ struct FirebaseModelConstants {
     
     struct Feed {
         static let Timestamp = "timestamp"
-        
     }
     
     struct NotificationSent {

@@ -77,7 +77,6 @@ class User {
         self._isUserGetInformedFromGuidence = false
         self._isUserGetInformedFromGuidance4 = false
         self._isUserProfilePictureGet = false
-
     }
     
     func printUserInfo() {

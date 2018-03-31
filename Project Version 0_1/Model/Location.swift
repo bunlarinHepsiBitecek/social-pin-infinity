@@ -36,6 +36,7 @@ class Location {
     private var _userID : String
     private var _countryCode : String
     private var _countryName : String
+    private var _cityName : String
     private var _timeStamp : Int
     private var _postalCode : String
     private var _thorough : String
@@ -58,6 +59,7 @@ class Location {
         self._userID = SPACE_CHARACTER
         self._countryCode = SPACE_CHARACTER
         self._countryName = SPACE_CHARACTER
+        self._cityName = SPACE_CHARACTER
         self._timeStamp = DEFAULT_INTEGER_VALUE
         self._postalCode = SPACE_CHARACTER
         self._thorough = SPACE_CHARACTER
@@ -89,6 +91,7 @@ class Location {
         self._userID = data[FirebaseModelConstants.Locations.UserID] as? String ?? SPACE_CHARACTER
         self._countryCode = data[FirebaseModelConstants.Locations.CountryCode] as? String ?? SPACE_CHARACTER
         self._countryName = data[FirebaseModelConstants.Locations.CountryName] as? String ?? SPACE_CHARACTER
+        self._cityName = data[FirebaseModelConstants.Locations.CityName] as? String ?? SPACE_CHARACTER
         self._timeStamp = DEFAULT_INTEGER_VALUE
         self._postalCode = data[FirebaseModelConstants.Locations.PostalCode] as? String ?? SPACE_CHARACTER
         self._thorough = data[FirebaseModelConstants.Locations.Thorough] as? String ?? SPACE_CHARACTER
@@ -170,6 +173,15 @@ class Location {
         }
         set(inputValue) {
             self._countryName = inputValue
+        }
+    }
+    
+    var cityName: String {
+        get {
+            return self._cityName
+        }
+        set {
+            self._cityName = newValue
         }
     }
     
@@ -303,6 +315,10 @@ class Location {
         
         if !self._countryName.isEmpty {
             self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.CountryName, inputValue: self._countryName)
+        }
+        
+        if !self._cityName.isEmpty {
+            self.appendAttributeToDictionary(inputKey: FirebaseModelConstants.Locations.CityName, inputValue: self._cityName)
         }
         
         if self._timeStamp > 0 {

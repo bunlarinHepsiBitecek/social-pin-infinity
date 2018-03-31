@@ -107,7 +107,10 @@ extension UIImageView {
         
         let urlKey = urlString as NSString
         
+        // MARK: SIL
+        self.image = UIImage(named: "image2.png")
         
+        /*
         if let cachedItem = imageCache.object(forKey: urlKey) {
             self.image = cachedItem.image
             return
@@ -128,5 +131,7 @@ extension UIImageView {
             }
             
         }).resume()
+        
+        */
     }
 }

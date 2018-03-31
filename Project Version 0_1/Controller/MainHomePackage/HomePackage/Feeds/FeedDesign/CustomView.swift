@@ -49,7 +49,6 @@ class CustomView: FeedCarouselItem {
     }
     
     func loadViewFromNib() -> UIView {
-        print("CustomView loadViewFromNib")
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
@@ -63,6 +62,9 @@ class CustomView: FeedCarouselItem {
         layer.shadowRadius = 30
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.65
+        
+        imageView.layer.cornerRadius = 10
+        imageView.layer.masksToBounds = true
     }
     
     func getLoadImage() {

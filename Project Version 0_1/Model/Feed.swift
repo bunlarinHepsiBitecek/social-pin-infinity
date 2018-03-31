@@ -10,23 +10,30 @@ import UIKit
 
 class Feed {
     
-    private var _location : Location
-    private var _ownerUser : User
-    private var _timestamp : Int
-    private var _customViews : [CustomView]
+    private var _rowCount: Int
+    private var _location: Location
+    private var _ownerUser: User
+    private var _timestamp: Double
+    private var _customViews: [CustomView]
+    private var _selectedIndex: Int
     
     init() {
+        self._rowCount = 1
         self._location = Location()
         self._ownerUser = User()
-        self._timestamp = DEFAULT_INTEGER_VALUE
+        self._timestamp = DEFAULT_DOUBLE_VALUE
         self._customViews = []
+        self._selectedIndex = -1
     }
     
     init(location: Location, ownerUser: User) {
+        self._rowCount = 1
         self._location = location
         self._ownerUser = ownerUser
-        self._timestamp = DEFAULT_INTEGER_VALUE
+        self._timestamp = DEFAULT_DOUBLE_VALUE
         self._customViews = []
+        self._selectedIndex = -1
+//        self._carouselView = FeedCarousel()
         
         self.initCustomView()
     }
@@ -42,6 +49,9 @@ class Feed {
         if !self.location.textPictureURL.isEmpty {
              addCustomView(imageURL: self.location.textPictureURL)
         }
+        
+        // MARK:
+        self._selectedIndex = self.numberOfItem() / 2
     }
     
     private func addCustomView(imageURL: String) {
@@ -59,6 +69,15 @@ class Feed {
         }
         set {
             self._location = newValue
+        }
+    }
+    
+    var rowCount: Int {
+        get {
+            return self._rowCount
+        }
+        set {
+            self._rowCount = newValue
         }
     }
     
@@ -80,9 +99,43 @@ class Feed {
         }
     }
     
+    var selectedIndex: Int {
+        get {
+            return self._selectedIndex
+        }
+        set {
+            self._selectedIndex = newValue
+        }
+    }
+    
+    
+    
     func getCustomView(index: Int) -> CustomView {
         self.customViews[index].getLoadImage()
         return self.customViews[index]
     }
     
+    func locationToString() -> String {
+        let loc = self._location
+        let noText = ""
+        let seperator = "-"
+        
+        let countryName = !loc.countryName.isEmpty ? loc.countryName : noText
+        let cityName = !loc.cityName.isEmpty ? seperator + loc.cityName : noText
+        let thorough = !loc.thorough.isEmpty ? seperator + loc.thorough : noText
+        
+        return countryName + cityName + thorough
+    }
+    
+    func convertTimestamp() -> String {
+        let x = _timestamp / 1000
+        let date = NSDate(timeIntervalSince1970: x)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .medium
+        
+        return formatter.string(from: date as Date)
+    }
+    
 }
+

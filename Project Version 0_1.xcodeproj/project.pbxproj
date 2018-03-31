@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0476E4F9FFF99A10D02F1BB7 /* Pods_Project_Version_0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2EAC58EB2B78FDCBF4F5D0 /* Pods_Project_Version_0_1.framework */; };
+		450035D9205444F7003FDD27 /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 450035D7205444F5003FDD27 /* comment.png */; };
+		450035DA205444F7003FDD27 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 450035D8205444F6003FDD27 /* like.png */; };
 		4518AA222041BBD80070F73F /* DatabaseFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518AA212041BBD80070F73F /* DatabaseFeed.swift */; };
 		45434B042051E85600B8F085 /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B032051E85600B8F085 /* FeedDataSource.swift */; };
 		45434B1E2052991D00B8F085 /* DatabaseGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B1D2052991D00B8F085 /* DatabaseGroup.swift */; };
 		45434B202052E22400B8F085 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45434B1F2052E22400B8F085 /* Feed.swift */; };
+		45BD09C2206661360059D51E /* DifferenceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD09C1206661360059D51E /* DifferenceCalculator.swift */; };
 		45E12999204B262A00BC1868 /* FeedHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E12998204B262A00BC1868 /* FeedHeaderCell.swift */; };
 		A71811DE1FEA16B900771EE5 /* gloriahallelujah.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A71811DC1FEA16B900771EE5 /* gloriahallelujah.ttf */; };
 		A71811DF1FEA16B900771EE5 /* KGFonts-TOU.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71811DD1FEA16B900771EE5 /* KGFonts-TOU.txt */; };
@@ -271,10 +274,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		450035D7205444F5003FDD27 /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment.png; sourceTree = "<group>"; };
+		450035D8205444F6003FDD27 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
 		4518AA212041BBD80070F73F /* DatabaseFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFeed.swift; sourceTree = "<group>"; };
 		45434B032051E85600B8F085 /* FeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
 		45434B1D2052991D00B8F085 /* DatabaseGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseGroup.swift; sourceTree = "<group>"; };
 		45434B1F2052E22400B8F085 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		45BD09C1206661360059D51E /* DifferenceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceCalculator.swift; sourceTree = "<group>"; };
 		45E12998204B262A00BC1868 /* FeedHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCell.swift; sourceTree = "<group>"; };
 		757CC8AC01F59DF3A869DAD9 /* Pods-Project Version 0_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.release.xcconfig"; sourceTree = "<group>"; };
 		A148C3682F780F8F696B8FB2 /* Pods-Project Version 0_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -953,13 +959,6 @@
 			path = DefaultConstants;
 			sourceTree = "<group>";
 		};
-		A737FC55204AB1CE006AD1F6 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		A737FC5C204AE61B006AD1F6 /* GroupInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1438,7 +1437,6 @@
 			isa = PBXGroup;
 			children = (
 				A72F0BC6204B673D0091A8B9 /* zach-miles-229113-unsplash.jpg */,
-				A737FC55204AB1CE006AD1F6 /* New Group */,
 				A738703D203BC86700436C87 /* Contacts */,
 				A72D9EE41FF790BA001C2098 /* EntranceAnimations */,
 				A7194DB11FEA213B00586038 /* Guidance */,
@@ -1632,6 +1630,7 @@
 				AD3326BA202F8C76008C68E7 /* CachedImageView.swift */,
 				AD3326B9202F8C76008C68E7 /* DiscardableImageCacheItem.swift */,
 				45434B032051E85600B8F085 /* FeedDataSource.swift */,
+				45BD09C1206661360059D51E /* DifferenceCalculator.swift */,
 			);
 			path = Feeds;
 			sourceTree = "<group>";
@@ -1639,6 +1638,8 @@
 		ADA8893D2025D27300A3E793 /* FeedDesign */ = {
 			isa = PBXGroup;
 			children = (
+				450035D7205444F5003FDD27 /* comment.png */,
+				450035D8205444F6003FDD27 /* like.png */,
 				ADA8893E2025D3D200A3E793 /* FeedCarousel.swift */,
 				ADA889402025E78500A3E793 /* FeedCarousel.xib */,
 				ADA889422025EB9800A3E793 /* CustomView.swift */,
@@ -1790,6 +1791,7 @@
 				A72D2C661FD85AA4008BE2D2 /* Pacifico.ttf in Resources */,
 				A75CE0951FF2AEB8004703F5 /* current-location.png in Resources */,
 				A75CE0A21FF2B36B004703F5 /* PersonPinDetailMapView.xib in Resources */,
+				450035D9205444F7003FDD27 /* comment.png in Resources */,
 				A75E3F6D1FE79B69007165DE /* play-button.png in Resources */,
 				A72CAA811FD6855200308DED /* ic_eye_closed.png in Resources */,
 				A7194DB71FEA224D00586038 /* right-drawn-arrow_white.png in Resources */,
@@ -1809,6 +1811,7 @@
 				A72CAA7D1FD6855200308DED /* ic_eye_open@3x.png in Resources */,
 				A7C4DF251FF4C4B9009656F3 /* rounded-check-mark-.png in Resources */,
 				A71811DE1FEA16B900771EE5 /* gloriahallelujah.ttf in Resources */,
+				450035DA205444F7003FDD27 /* like.png in Resources */,
 				A72AE3962005CE8300657A4D /* plus.png in Resources */,
 				A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */,
 				ADA889412025E78500A3E793 /* FeedCarousel.xib in Resources */,
@@ -1978,6 +1981,7 @@
 				A72D9ED91FF4E21B001C2098 /* UILabelExtensions.swift in Sources */,
 				A73BC647204E0AF300C5B9A1 /* DetailHeaderView.swift in Sources */,
 				A75CE09C1FF2B023004703F5 /* PersonAnnotationView.swift in Sources */,
+				45BD09C2206661360059D51E /* DifferenceCalculator.swift in Sources */,
 				A77E7B37203F49FE00E26CC3 /* RequiredUserData.swift in Sources */,
 				A75CE0A71FF37A24004703F5 /* LocationCoordinateConstantValues.swift in Sources */,
 				A7DD2E0F1FD1A7140009322E /* ProcessingUserData.swift in Sources */,

@@ -120,7 +120,6 @@ open class FeedCarousel: UIView {
     }
     
     func xibSetup() {
-        print("Remzi xibSetup")
         containerView = loadViewFromNib()
         containerView.frame = bounds
         containerView.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
@@ -128,8 +127,6 @@ open class FeedCarousel: UIView {
     }
     
     func loadViewFromNib() -> UIView {
-        print("Remzi loadViewFromNib count: \(self.subviews.count)")
-        
         let bundle = Bundle(for: FeedCarousel.self )
         let nib = UINib(nibName: nibName, bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
@@ -388,7 +385,6 @@ open class FeedCarousel: UIView {
     func updatePageControl(_ index: Int) {
         pageControl.currentPage = index
     }
-    
     
 }
 

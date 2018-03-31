@@ -7,8 +7,3 @@
 //
 
 import Foundation
-
-let USER_SEND_VERIFICATION_TIME : String = "user_email_verification_time_id"
-let USER_ID : String = "user_id"
-
-
